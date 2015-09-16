@@ -1,58 +1,58 @@
 package rtx;
 
 /**
- * ·â×°¶ÔRTXµÄ²Ù×÷
+ * å°è£…å¯¹RTXçš„æ“ä½œ
  * <p>Title: </p>
  * <p>Description: </p>
  * <p>Copyright: Copyright (c) 2007</p>
  * <p>Company: Tencent C0. Ltd</p>
- * @author herolin
+ * @author gaowenhui 20150916
  * @version 1.0
  */
 public class RTXSvrApi {
 
-    //¿Í»§¶ËÓëserver´«µİµÄĞ­Òé
-    static int PRO_ADDUSER = 0x0001; //Ìí¼ÓÓÃ»§ĞÅÏ¢
-    static int PRO_DELUSER = 0x0002; //É¾³ıÓÃ»§ĞÅÏ¢
-    static int PRO_GETUSERDETAILINFO = 0x0004; //»ñÈ¡ÓÃ»§ÏêÏ¸ĞÅÏ¢
-    static int PRO_SETUSERDETAILINFO = 0x0005; //¸üĞÂÓÃ»§ÏêÏ¸ĞÅÏ¢
-    static int PRO_GETUSERSMPLINFO = 0x0006; //»ñÈ¡ÓÃ»§¼òÒªĞÅÏ¢
-    static int PRO_SETUSERSMPLINFO = 0x0003; //¸ü¸ÄÓÃ»§¼òÒªĞÅÏ¢
-    static int PRO_SETUSERPRIVILEGE = 0x0007; //ÉèÖÃÓÃ»§È¨ÏŞ
-    static int PRO_IFEXIST = 0x0008; //ÅĞ¶ÏÓÃ»§ÊÇ·ñ´æÔÚ
-    static int PRO_TRANUSER = 0X0009; //ÓÃ»§ÃûÓëUINµÄ»¥×ª
+    //å®¢æˆ·ç«¯ä¸serverä¼ é€’çš„åè®®
+    static int PRO_ADDUSER = 0x0001; //æ·»åŠ ç”¨æˆ·ä¿¡æ¯
+    static int PRO_DELUSER = 0x0002; //åˆ é™¤ç”¨æˆ·ä¿¡æ¯
+    static int PRO_GETUSERDETAILINFO = 0x0004; //è·å–ç”¨æˆ·è¯¦ç»†ä¿¡æ¯
+    static int PRO_SETUSERDETAILINFO = 0x0005; //æ›´æ–°ç”¨æˆ·è¯¦ç»†ä¿¡æ¯
+    static int PRO_GETUSERSMPLINFO = 0x0006; //è·å–ç”¨æˆ·ç®€è¦ä¿¡æ¯
+    static int PRO_SETUSERSMPLINFO = 0x0003; //æ›´æ”¹ç”¨æˆ·ç®€è¦ä¿¡æ¯
+    static int PRO_SETUSERPRIVILEGE = 0x0007; //è®¾ç½®ç”¨æˆ·æƒé™
+    static int PRO_IFEXIST = 0x0008; //åˆ¤æ–­ç”¨æˆ·æ˜¯å¦å­˜åœ¨
+    static int PRO_TRANUSER = 0X0009; //ç”¨æˆ·åä¸UINçš„äº’è½¬
 
-    static int PRO_ADDDEPT = 0x0101; //Ôö¼Ó²¿ÃÅ
-    static int PRO_DELDEPT = 0x0102; //É¾³ı²¿ÃÅ
-    static int PRO_SETDEPT = 0x0103; //¸üĞÂ²¿ÃÅĞÅÏ¢
-    static int PRO_GETCHILDDEPT = 0x0104; //»ñÈ¡×Ó²¿ÃÅ
-    static int PRO_GETDEPTALLUSER = 0x0105; //»ñÈ¡²¿ÃÅÓÃ»§
-    static int PRO_SETDEPTPRIVILEGE = 0x0106; //ÉèÖÃ²¿ÃÅÈ¨ÏŞ
-    static int PRO_GETDEPTSMPLINFO = 0x0107; //»ñÈ¡²¿ÃÅĞÅÏ¢
+    static int PRO_ADDDEPT = 0x0101; //å¢åŠ éƒ¨é—¨
+    static int PRO_DELDEPT = 0x0102; //åˆ é™¤éƒ¨é—¨
+    static int PRO_SETDEPT = 0x0103; //æ›´æ–°éƒ¨é—¨ä¿¡æ¯
+    static int PRO_GETCHILDDEPT = 0x0104; //è·å–å­éƒ¨é—¨
+    static int PRO_GETDEPTALLUSER = 0x0105; //è·å–éƒ¨é—¨ç”¨æˆ·
+    static int PRO_SETDEPTPRIVILEGE = 0x0106; //è®¾ç½®éƒ¨é—¨æƒé™
+    static int PRO_GETDEPTSMPLINFO = 0x0107; //è·å–éƒ¨é—¨ä¿¡æ¯
 
     static int PRO_SMS_LOGON = 0x1000;
-    static int PRO_SMS_SEND = 0x1001; //·¢ËÍ¶ÌĞÅ ¶à¸öÊÖ»úºÅÂë(¶ººÅ·Ö¸ô)¿ÉÈº·¢
-    static int PRO_SMS_NICKLIST = 0x1002; //°´ÓÃ»§¶ÁÈ¡¶ÌĞÅ
-    static int PRO_SMS_FUNCLIST = 0x1003; //°´¹¦ÄÜºÅ¶ÁÈ¡¶ÌĞÅ
-    static int PRO_SMS_CHECK = 0x1004; //»ñÈ¡Î´¶Á¶ÌĞÅÊıÁ¿
+    static int PRO_SMS_SEND = 0x1001; //å‘é€çŸ­ä¿¡ å¤šä¸ªæ‰‹æœºå·ç (é€—å·åˆ†éš”)å¯ç¾¤å‘
+    static int PRO_SMS_NICKLIST = 0x1002; //æŒ‰ç”¨æˆ·è¯»å–çŸ­ä¿¡
+    static int PRO_SMS_FUNCLIST = 0x1003; //æŒ‰åŠŸèƒ½å·è¯»å–çŸ­ä¿¡
+    static int PRO_SMS_CHECK = 0x1004; //è·å–æœªè¯»çŸ­ä¿¡æ•°é‡
 
-    static int PRO_SYS_GETSESSIONKEY = 0x2000; //µ¥µãÑéÖ¤»ñÈ¡sessionKey
-    static int PRO_SYS_GETUSERSTATUS = 0x2001; //²éÑ¯ÓÃ»§ÔÚÏß×´Ì¬
-    static int PRO_SYS_SENDIM = 0x2002; //·¢ËÍIMÏûÏ¢
-    static int PRO_SYS_SESSIONKEYVERIFY = 0x2003; //ÑéÖ¤sessionKey
+    static int PRO_SYS_GETSESSIONKEY = 0x2000; //å•ç‚¹éªŒè¯è·å–sessionKey
+    static int PRO_SYS_GETUSERSTATUS = 0x2001; //æŸ¥è¯¢ç”¨æˆ·åœ¨çº¿çŠ¶æ€
+    static int PRO_SYS_SENDIM = 0x2002; //å‘é€IMæ¶ˆæ¯
+    static int PRO_SYS_SESSIONKEYVERIFY = 0x2003; //éªŒè¯sessionKey
 
-    static int PRO_EXT_NOTIFY = 0x2100; //¼´Ê±ÏûÏ¢ÌáĞÑ
+    static int PRO_EXT_NOTIFY = 0x2100; //å³æ—¶æ¶ˆæ¯æé†’
 
-	static int PRO_IMPORTUSER = 0x0001; //µ¼ÈëxmlÓÃ»§Êı¾İ
-	static int PRO_EXMPORTUSER = 0x0002; //µ¼³öxmlÓÃ»§Êı¾İ
+	static int PRO_IMPORTUSER = 0x0001; //å¯¼å…¥xmlç”¨æˆ·æ•°æ®
+	static int PRO_EXMPORTUSER = 0x0002; //å¯¼å‡ºxmlç”¨æˆ·æ•°æ®
 	
-    //¶ÔÏóÃû³Æ
-    static String OBJNAME_RTXEXT = "EXTTOOLS"; //À©Õ¹¶ÔÏó
-    static String OBJNAME_RTXSYS = "SYSTOOLS"; //ÏµÍ³¶ÔÏó
-    static String OBJNAME_DEPTMANAGER = "DEPTMANAGER"; //²¿ÃÅ¶ÔÏó
-    static String OBJNAME_USERMANAGER = "USERMANAGER"; //ÓÃ»§¶ÔÏó
-    static String OBJNAME_SMSMANAGER = "SMSOBJECT"; //¶ÌĞÅ¶ÔÏó
-    static String OBJNAME_USERSYNC = "USERSYNC"; //ÓÃ»§Êı¾İµ¼Èëµ¼³ö
+    //å¯¹è±¡åç§°
+    static String OBJNAME_RTXEXT = "EXTTOOLS"; //æ‰©å±•å¯¹è±¡
+    static String OBJNAME_RTXSYS = "SYSTOOLS"; //ç³»ç»Ÿå¯¹è±¡
+    static String OBJNAME_DEPTMANAGER = "DEPTMANAGER"; //éƒ¨é—¨å¯¹è±¡
+    static String OBJNAME_USERMANAGER = "USERMANAGER"; //ç”¨æˆ·å¯¹è±¡
+    static String OBJNAME_SMSMANAGER = "SMSOBJECT"; //çŸ­ä¿¡å¯¹è±¡
+    static String OBJNAME_USERSYNC = "USERSYNC"; //ç”¨æˆ·æ•°æ®å¯¼å…¥å¯¼å‡º
 
 
     static String KEY_TYPE = "TYPE";
@@ -60,31 +60,31 @@ public class RTXSvrApi {
     static String KEY_USERID = "USERID";
     static String KEY_USERNAME = "USERNAME";
     static String KEY_UINTYPE = "UINTYPE";
-    static String KEY_UIN = "UIN"; //RTX±àºÅ
-    static String KEY_NICK = "NICK"; //µÇÂ½Ãû
-    static String KEY_MOBILE = "MOBILE"; //ÊÖ»ú
+    static String KEY_UIN = "UIN"; //RTXç¼–å·
+    static String KEY_NICK = "NICK"; //ç™»é™†å
+    static String KEY_MOBILE = "MOBILE"; //æ‰‹æœº
     static String KEY_OUTERUIN = "OUTERUIN";
     static String KEY_LASTMODIFYTIME = "LASTMODIFYTIME";
-    static String KEY_FACE = "FACE";	//Í·Ïñ
-    static String KEY_PASSWORD = "PWD";	//ÃÜÂë
+    static String KEY_FACE = "FACE";	//å¤´åƒ
+    static String KEY_PASSWORD = "PWD";	//å¯†ç 
 
-    static String KEY_AGE = "AGE";	//ÄêÁä
-    static String KEY_GENDER = "GENDER";	//ĞÔ±ğ
-    static String KEY_BIRTHDAY = "BIRTHDAY";	//ÉúÈÕ
-    static String KEY_BLOODTYPE = "BLOODTYPE";	//ÑªĞÍ
-    static String KEY_CONSTELLATION = "CONSTELLATION";	//ĞÇ×ù
-    static String KEY_COLLAGE = "COLLAGE";	//´óÑ§
-    static String KEY_HOMEPAGE = "HOMEPAGE";	//Ö÷Ò³
-    static String KEY_EMAIL = "EMAIL";	//ÓÊÏä
-    static String KEY_PHONE = "PHONE";	//µç»°
-    static String KEY_FAX = "FAX";	//µç»°·Ö»úºÅÂë
-    static String KEY_ADDRESS = "ADDRESS";	//µØÖ·
-    static String KEY_POSTCODE = "POSTCODE";	//ÓÊ±àºÅÂë
-    static String KEY_COUNTRY = "COUNTRY";	//¹ú¼Ò
-    static String KEY_PROVINCE = "PROVINCE";	//Ê¡·İ
-    static String KEY_CITY = "CITY";	//³ÇÊĞ
-    static String KEY_MEMO = "MEMO";	//¸öÈËËµÃ÷
-    static String KEY_STREET = "STREET";	//½ÖµÀ
+    static String KEY_AGE = "AGE";	//å¹´é¾„
+    static String KEY_GENDER = "GENDER";	//æ€§åˆ«
+    static String KEY_BIRTHDAY = "BIRTHDAY";	//ç”Ÿæ—¥
+    static String KEY_BLOODTYPE = "BLOODTYPE";	//è¡€å‹
+    static String KEY_CONSTELLATION = "CONSTELLATION";	//æ˜Ÿåº§
+    static String KEY_COLLAGE = "COLLAGE";	//å¤§å­¦
+    static String KEY_HOMEPAGE = "HOMEPAGE";	//ä¸»é¡µ
+    static String KEY_EMAIL = "EMAIL";	//é‚®ç®±
+    static String KEY_PHONE = "PHONE";	//ç”µè¯
+    static String KEY_FAX = "FAX";	//ç”µè¯åˆ†æœºå·ç 
+    static String KEY_ADDRESS = "ADDRESS";	//åœ°å€
+    static String KEY_POSTCODE = "POSTCODE";	//é‚®ç¼–å·ç 
+    static String KEY_COUNTRY = "COUNTRY";	//å›½å®¶
+    static String KEY_PROVINCE = "PROVINCE";	//çœä»½
+    static String KEY_CITY = "CITY";	//åŸå¸‚
+    static String KEY_MEMO = "MEMO";	//ä¸ªäººè¯´æ˜
+    static String KEY_STREET = "STREET";	//è¡—é“
     static String KEY_MOBILETYPE = "MOBILETYPE";	
     static String KEY_AUTHTYPE = "AUTHTYPE";
     static String KEY_POSITION = "POSITION";
@@ -107,18 +107,18 @@ public class RTXSvrApi {
     static String KEY_COMPLETEDELBS = "COMPLETEDELBS";
 
 
-    //È¨ÏŞÏà¹Ø
+    //æƒé™ç›¸å…³
     static String KEY_DENY = "DENY";
     static String KEY_ALLOW = "ALLOW";
 
     static String KEY_SESSIONKEY = "SESSIONKEY";
 
 
-	//µ¼Èëµ¼³öxmlÊı¾İÏà¹Ø
+	//å¯¼å…¥å¯¼å‡ºxmlæ•°æ®ç›¸å…³
 	static String KEY_MODIFYMODE = "MODIFYMODE";
 	static String KEY_DATA = "DATA";
 	
-    //¶ÌĞÅÏà¹Ø
+    //çŸ­ä¿¡ç›¸å…³
     static String KEY_SENDER = "SENDER";
     static String KEY_FUNNO = "FUNCNO";
     static String KEY_RECEIVER = "RECEIVER";
@@ -129,29 +129,29 @@ public class RTXSvrApi {
     static String KEY_DELFLAG = "DELFLAG";
 
 
-    //RTXServerÒµÎñÂß¼­
+    //RTXServerä¸šåŠ¡é€»è¾‘
     static String KEY_RECVUSERS = "RECVUSERS";
     static String KEY_IMMSG = "IMMSG";
 
 
-    //ÏûÏ¢ÌáĞÑ
+    //æ¶ˆæ¯æé†’
     static String KEY_MSGID = "MSGID";
     static String KEY_MSGINFO = "MSGINFO";
     static String KEY_ASSISTANTTYPE = "ASSTYPE";
     static String KEY_TITLE = "TITLE";
 	static String KEY_DELAYTIME = "DELAYTIME";
 
-    //½á¹û¼¯ºÏµÄÃèÊö
-    static String KEY_RESULT_INCODE = "INNERCODE"; //ÄÚ²¿´íÎó
+    //ç»“æœé›†åˆçš„æè¿°
+    static String KEY_RESULT_INCODE = "INNERCODE"; //å†…éƒ¨é”™è¯¯
     static String KEY_RESULT_ERR_INFO = "ERR_INFO";
-    static String KEY_RESULT_CODE = "CODE"; //·µ»Ø´íÎó
-    static String KEY_RESULT_TYPE = "TYPE"; //·µ»ØÀàĞÍ
+    static String KEY_RESULT_CODE = "CODE"; //è¿”å›é”™è¯¯
+    static String KEY_RESULT_TYPE = "TYPE"; //è¿”å›ç±»å‹
     static String KEY_RESULT_NAME = "NAME";
     static String KEY_RESULT_VALUE = "VALUE";
     static String KEY_RESULT_VARIANT = "VARIANT";
 
 
-    //Ë½ÓĞÊôĞÔ
+    //ç§æœ‰å±æ€§
     private int iObj;
     private int iProp;
     private int innerCode;
@@ -162,111 +162,111 @@ public class RTXSvrApi {
     }
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    //                                         ÏµÍ³×Ô´øµÄº¯Êı                                                           //
+    //                                         ç³»ç»Ÿè‡ªå¸¦çš„å‡½æ•°                                                           //
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-	//³õÊ¼»¯Àà
+	//åˆå§‹åŒ–ç±»
     public native boolean Init();	
 
-	//Îö¹¹Àà
+	//ææ„ç±»
     public native void UnInit();	
 
-	//Í¨¹ıintÀàĞÍµÄ´íÎó´úÂë»ñÈ¡´íÎóĞÅÏ¢
+	//é€šè¿‡intç±»å‹çš„é”™è¯¯ä»£ç è·å–é”™è¯¯ä¿¡æ¯
     public native String GetError(int innerCode);	
 
-	//»ñÈ¡°æ±¾ºÅ
+	//è·å–ç‰ˆæœ¬å·
     public native String GetVersion();	
 
-	//Í¨¹ı¶ÔÏóÃû³Æ´´½¨Ò»¸ö¶ÔÏó,¶ÔÏóÃû³ÆÈçOBJNAME_RTXEXT£¬·µ»ØintÀàĞÍµÄ¾ä±ú£¬ÔÚ±¾ÎÄ³ÆÎªiObjectHandle
+	//é€šè¿‡å¯¹è±¡åç§°åˆ›å»ºä¸€ä¸ªå¯¹è±¡,å¯¹è±¡åç§°å¦‚OBJNAME_RTXEXTï¼Œè¿”å›intç±»å‹çš„å¥æŸ„ï¼Œåœ¨æœ¬æ–‡ç§°ä¸ºiObjectHandle
     public native int GetNewObject(String szObjectName);	
 
-	//Í¨¹ı¾ä±ú»ñÈ¡¶ÔÏóÃû³Æ(¸Ã·½·¨Ò»°ãÓÃ²»ÉÏ)
+	//é€šè¿‡å¥æŸ„è·å–å¯¹è±¡åç§°(è¯¥æ–¹æ³•ä¸€èˆ¬ç”¨ä¸ä¸Š)
     public native String GetObjectName(int iObjectHandle);
 
-	//ÉèÖÃ¾ä±úµÄ¶ÔÏóÃû³Æ(¸Ã·½·¨Ò»°ãÓÃ²»ÉÏ)
+	//è®¾ç½®å¥æŸ„çš„å¯¹è±¡åç§°(è¯¥æ–¹æ³•ä¸€èˆ¬ç”¨ä¸ä¸Š)
     public native int SetObjectName(int iObjectHandle, String szObjectName);
 
-	//»ñÈ¡ÊôĞÔ¼¯ºÏ¾ä±ú 
+	//è·å–å±æ€§é›†åˆå¥æŸ„ 
     public native int GetNewPropertys();
 
-	//¸ÃintÀàĞÍµÄÊıÊÇ·ñÊÇ¾ä±ú (¸Ã·½·¨Ò»°ãÓÃ²»ÉÏ)
+	//è¯¥intç±»å‹çš„æ•°æ˜¯å¦æ˜¯å¥æŸ„ (è¯¥æ–¹æ³•ä¸€èˆ¬ç”¨ä¸ä¸Š)
     public native int IsHandle(int iHandle);
 
-	//ÒıÓÃ¼ÆÊı(¸Ã·½·¨Ò»°ãÓÃ²»ÉÏ)
+	//å¼•ç”¨è®¡æ•°(è¯¥æ–¹æ³•ä¸€èˆ¬ç”¨ä¸ä¸Š)
     public native int AddRefHandle(int iHandle);
 
-	//ÊÍ·Å¾ä±ú
+	//é‡Šæ”¾å¥æŸ„
     public native int ReleaseHandle(int iHandle);
 
-	//ÏòÊôĞÔ¼¯ºÏÌí¼ÓÊôĞÔ,iHandle±íÊ¾ÊôĞÔ¼¯ºÏµÄ¾ä±ú
+	//å‘å±æ€§é›†åˆæ·»åŠ å±æ€§,iHandleè¡¨ç¤ºå±æ€§é›†åˆçš„å¥æŸ„
     public native int AddProperty(int iPropertyHandle, String szName, String szValue);
 
-	//ÔÚÊôĞÔ¼¯ºÏÖĞÉ¾³ıÄ³¸öÊôĞÔ£¬Í¨¹ıË÷ÒıÉ¾³ı
+	//åœ¨å±æ€§é›†åˆä¸­åˆ é™¤æŸä¸ªå±æ€§ï¼Œé€šè¿‡ç´¢å¼•åˆ é™¤
     public native int ClearProperty(int iPropertyHandle, int iIndex);
 
-	//ÔÚÊôĞÔ¼¯ºÏÖĞÉ¾³ıÄ³¸öÊôĞÔ,Í¨¹ıÊôĞÔÃûÉ¾³ı
+	//åœ¨å±æ€§é›†åˆä¸­åˆ é™¤æŸä¸ªå±æ€§,é€šè¿‡å±æ€§ååˆ é™¤
     public native int RemoveProperty(int iPropertyHandle, String szName);
 
-	//»ñÈ¡ÊôĞÔ¼¯ºÏÖĞÄ³¸öÊôĞÔµÄÖµ
+	//è·å–å±æ€§é›†åˆä¸­æŸä¸ªå±æ€§çš„å€¼
     public native String GetProperty(int iPropertyHandle, String szName);
 
-	//ÉèÖÃ·şÎñÆ÷IPµØÖ·
+	//è®¾ç½®æœåŠ¡å™¨IPåœ°å€
     public native int SetServerIP(int iObjectHandle, String szServerIP);
 
-	//»ñÈ¡·şÎñÆ÷IPµØÖ·
+	//è·å–æœåŠ¡å™¨IPåœ°å€
     public native String GetServerIP(int iObjectHandle);
 
-	//»ñÈ¡·şÎñÆ÷IPµØÖ·
+	//è·å–æœåŠ¡å™¨IPåœ°å€
     public native int GetServerPort(int iObjectHandle);
 
-	//ÉèÖÃ·şÎñÆ÷¶Ë¿Ú
+	//è®¾ç½®æœåŠ¡å™¨ç«¯å£
     public native int SetServerPort(int iObjectHandle, int iPort);
 
-	//»ñÈ¡ÊôĞÔ¼¯ºÏÖĞÊôĞÔµÄ×ÜÊı
+	//è·å–å±æ€§é›†åˆä¸­å±æ€§çš„æ€»æ•°
     public native int GetPropertysCount(int iHandle);
 
-	//Í¨¹ıË÷Òı»ñÈ¡ÊôĞÔ¼¯ºÏÖĞµÄÌõÄ¿
+	//é€šè¿‡ç´¢å¼•è·å–å±æ€§é›†åˆä¸­çš„æ¡ç›®
     public native int GetPropertysItem(int iHandle, int iIndex);
 
-	//µ÷ÓÃSDK£¬´«Èë¶ÔÏó¾ä±ú£¬ÊôĞÔ¾ä±ú£¬ÃüÁîID
+	//è°ƒç”¨SDKï¼Œä¼ å…¥å¯¹è±¡å¥æŸ„ï¼Œå±æ€§å¥æŸ„ï¼Œå‘½ä»¤ID
     public native int Call(int iObjectHandle, int iPropertyHandle, int iCmdID);
 
-	//»ñÈ¡·µ»Ø½á¹ûµÄ¼¯ĞÔ¼¯ºÏ£¬´«ÈëÒ»¸ö·µ»Ø½á¹ûµÄ¾ä±ú
+	//è·å–è¿”å›ç»“æœçš„é›†æ€§é›†åˆï¼Œä¼ å…¥ä¸€ä¸ªè¿”å›ç»“æœçš„å¥æŸ„
     public native int GetResultPropertys(int iResultHandle);
 
-	//Í¨¹ı´«ÈëÒ»¸ö·µ»Ø½á¹ûµÄ¾ä±ú£¬»ñÈ¡¸Ã¾ä±úµÄ½á¹û£¬ÒÔintÀàĞÍ±íÊ¾
+	//é€šè¿‡ä¼ å…¥ä¸€ä¸ªè¿”å›ç»“æœçš„å¥æŸ„ï¼Œè·å–è¯¥å¥æŸ„çš„ç»“æœï¼Œä»¥intç±»å‹è¡¨ç¤º
     public native int GetResultInt(int iResultHandle);
 
-	//Í¨¹ı´«ÈëÒ»¸ö·µ»Ø½á¹ûµÄ¾ä±ú£¬»ñÈ¡¸Ã¾ä±úµÄ½á¹û£¬ÒÔStringÀàĞÍ±íÊ¾
+	//é€šè¿‡ä¼ å…¥ä¸€ä¸ªè¿”å›ç»“æœçš„å¥æŸ„ï¼Œè·å–è¯¥å¥æŸ„çš„ç»“æœï¼Œä»¥Stringç±»å‹è¡¨ç¤º
     public native String GetResultString(int iResultHandle);
 
-	//»ñÈ¡Ò»¸öÊôĞÔµÄÃû³Æ
+	//è·å–ä¸€ä¸ªå±æ€§çš„åç§°
     public String GetPropertyItemName(int iHandle) {
         return GetProperty(iHandle, KEY_RESULT_NAME);
     }
 
-	//»ñÈ¡Ò»¸öÊôĞÔµÄÖµ
+	//è·å–ä¸€ä¸ªå±æ€§çš„å€¼
     public String GetPropertyItemValue(int iHandle) {
         return GetProperty(iHandle, KEY_RESULT_VALUE);
     }
 
-	//»ñÈ¡ÄÚ²¿´íÎó´úÂë
+	//è·å–å†…éƒ¨é”™è¯¯ä»£ç 
     public int GetResultInnerCode(int iHandle) {
         String sz = GetProperty(iHandle, KEY_RESULT_INCODE);
         return Integer.parseInt(sz);
     }
-	//»ñÈ¡ÄÚ²¿´íÎóĞÅÏ¢
+	//è·å–å†…éƒ¨é”™è¯¯ä¿¡æ¯
     public String GetResultErrString(int iHandle) {
         String sz = GetProperty(iHandle, KEY_RESULT_ERR_INFO);
         return sz;
     }
-	//»ñÈ¡SDKµ÷ÓÃ·µ»Ø½á¹ûµÄCode£¬0±íÊ¾³É¹¦£¬ÆäËû±íÊ¾Ê§°Ü
+	//è·å–SDKè°ƒç”¨è¿”å›ç»“æœçš„Codeï¼Œ0è¡¨ç¤ºæˆåŠŸï¼Œå…¶ä»–è¡¨ç¤ºå¤±è´¥
     public int GetResultCode(int iHandle) {
         String sz = GetProperty(iHandle, KEY_RESULT_CODE);
         return Integer.parseInt(sz);
     }
 
-	//»ñÈ¡Ä³¸öÊôĞÔµÄÀàĞÍ(Ò»°ãÓÃ²»ÉÏ)
+	//è·å–æŸä¸ªå±æ€§çš„ç±»å‹(ä¸€èˆ¬ç”¨ä¸ä¸Š)
     public int GetResultType(int iHandle) {
         String sz = GetProperty(iHandle, KEY_RESULT_TYPE);
         return Integer.parseInt(sz);
@@ -275,11 +275,11 @@ public class RTXSvrApi {
 
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    //                                           À©Õ¹µÄº¯Êı                                                           //
+    //                                           æ‰©å±•çš„å‡½æ•°                                                           //
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     
     /**
-     * ³õÊ¼»¯¶ÔÏó
+     * åˆå§‹åŒ–å¯¹è±¡
      * @param objName String
      */
     private void svrInit(String objName) {
@@ -288,7 +288,7 @@ public class RTXSvrApi {
     }
 
     /**
-     * ÊÍ·Å×ÊÔ´
+     * é‡Šæ”¾èµ„æº
      */
     private void release() {
         ReleaseHandle(iObj);
@@ -297,7 +297,7 @@ public class RTXSvrApi {
     }
 
    /**
-    * ÉèÖÃ·şÎñÆ÷IP
+    * è®¾ç½®æœåŠ¡å™¨IP
     * @param strIP String
     */
    public void setServerIP(String strIP){
@@ -308,8 +308,8 @@ public class RTXSvrApi {
    }
 
    /**
-    * ÉèÖÃ·şÎñÆ÷¶Ë¿Ú
-    * @param iPort int ¶Ë¿Ú£¬Ä¬ÈÏÊÇ6000
+    * è®¾ç½®æœåŠ¡å™¨ç«¯å£
+    * @param iPort int ç«¯å£ï¼Œé»˜è®¤æ˜¯6000
     */
    public void setServerPort(int iPort){
        svrInit(OBJNAME_RTXSYS);
@@ -318,7 +318,7 @@ public class RTXSvrApi {
    }
 
    /**
-    * È¡·şÎñÆ÷IP
+    * å–æœåŠ¡å™¨IP
     *@param iPort int
     */
    public String getServerIP(){
@@ -329,8 +329,8 @@ public class RTXSvrApi {
    }
 
    /**
-    * È¡·şÎñÆ÷¶Ë¿Ú
-    * @return String ·şÎñÆ÷µØÖ·
+    * å–æœåŠ¡å™¨ç«¯å£
+    * @return String æœåŠ¡å™¨åœ°å€
     */
    public int getServerPort(){
        svrInit(OBJNAME_RTXSYS);
@@ -340,22 +340,22 @@ public class RTXSvrApi {
    }
 
     /**
-     * ²éÑ¯ÓÃ»§ÔÚÏß×´Ì¬
-     * @param UserName String ÓÃ»§ÕÊºÅ
-     * @return int 0:ÀëÏß 1:ÔÚÏß 2:Àë¿ª 11:²»´æÔÚ¸ÃÓÃ»§ ÆäËü:Î´Öª×´Ì¬
+     * æŸ¥è¯¢ç”¨æˆ·åœ¨çº¿çŠ¶æ€
+     * @param UserName String ç”¨æˆ·å¸å·
+     * @return int 0:ç¦»çº¿ 1:åœ¨çº¿ 2:ç¦»å¼€ 11:ä¸å­˜åœ¨è¯¥ç”¨æˆ· å…¶å®ƒ:æœªçŸ¥çŠ¶æ€
      */
     public int QueryUserState(String UserName) {
     	
         svrInit(OBJNAME_RTXSYS);
         
         AddProperty(iProp, KEY_USERNAME, UserName);
-         //AddProperty(iProp,KEY_UINTYPE,"Account"); Èç¹ûÉèÖÃKEY_UINTYPE ÎªAccount£¬ÎŞÂÛ´«½øÈ¥ÊÇ´¿Êı×Ö»¹ÊÇ×Ö·û´®£¬¶¼ÈÏÎªÊÇÕÊºÅ¡£
+         //AddProperty(iProp,KEY_UINTYPE,"Account"); å¦‚æœè®¾ç½®KEY_UINTYPE ä¸ºAccountï¼Œæ— è®ºä¼ è¿›å»æ˜¯çº¯æ•°å­—è¿˜æ˜¯å­—ç¬¦ä¸²ï¼Œéƒ½è®¤ä¸ºæ˜¯å¸å·ã€‚
 
         int iResult = Call(iObj, iProp, PRO_SYS_GETUSERSTATUS);
         int innerCode = GetResultInnerCode(iResult);
         int iRTXState = GetResultInt(iResult);
         if (innerCode != 0) {
-            System.out.println("´íÎó´úÂë:" + innerCode + "\t" + "´íÎóĞÅÏ¢£º"+ GetResultErrString(iResult) );
+            System.out.println("é”™è¯¯ä»£ç :" + innerCode + "\t" + "é”™è¯¯ä¿¡æ¯ï¼š"+ GetResultErrString(iResult) );
             release();
             return innerCode;
         } 
@@ -367,9 +367,9 @@ public class RTXSvrApi {
 
 
     /**
-     * É¾³ıÓÃ»§ĞÅÏ¢
-     * @param String UserNameÓÃ»§ÕÊºÅ
-     * @return int  0 ²Ù×÷³É¹¦ ·Ç0ÎªÊ§°Ü
+     * åˆ é™¤ç”¨æˆ·ä¿¡æ¯
+     * @param String UserNameç”¨æˆ·å¸å·
+     * @return int  0 æ“ä½œæˆåŠŸ é0ä¸ºå¤±è´¥
      */
     public int deleteUser(String UserName) {
         if(UserName==null || "".equals(UserName)){
@@ -379,12 +379,12 @@ public class RTXSvrApi {
         svrInit(OBJNAME_USERMANAGER);
         
         AddProperty(iProp,KEY_USERNAME,UserName);
-       //AddProperty(iProp,KEY_UINTYPE,"Account"); Èç¹ûÉèÖÃKEY_UINTYPE ÎªAccount£¬ÎŞÂÛ´«½øÈ¥ÊÇ´¿Êı×Ö»¹ÊÇ×Ö·û´®£¬¶¼ÈÏÎªÊÇÕÊºÅ¡£
+       //AddProperty(iProp,KEY_UINTYPE,"Account"); å¦‚æœè®¾ç½®KEY_UINTYPE ä¸ºAccountï¼Œæ— è®ºä¼ è¿›å»æ˜¯çº¯æ•°å­—è¿˜æ˜¯å­—ç¬¦ä¸²ï¼Œéƒ½è®¤ä¸ºæ˜¯å¸å·ã€‚
 
         iResult=Call(iObj,iProp,PRO_DELUSER);
         innerCode = GetResultInnerCode(iResult);
         if(innerCode!=0){
-			System.out.println("´íÎó´úÂë:" + innerCode + "\t" + "´íÎóĞÅÏ¢£º"+ GetResultErrString(iResult) );
+			System.out.println("é”™è¯¯ä»£ç :" + innerCode + "\t" + "é”™è¯¯ä¿¡æ¯ï¼š"+ GetResultErrString(iResult) );
 		}
 		
         release();
@@ -393,28 +393,28 @@ public class RTXSvrApi {
 
 
     /**
-     * ĞÂÔöÓÃ»§
-     * @param UserName string ÓÃ»§ÕÊºÅ
-     * @param DeptID String ²¿ÃÅID	
-     * @paramint ChsName String ÓÃ»§ĞÕÃû
-     * @paramint Pwd String ÃÜÂë
-     * @return int  0 ²Ù×÷³É¹¦ ·Ç0ÎªÊ§°Ü
+     * æ–°å¢ç”¨æˆ·
+     * @param UserName string ç”¨æˆ·å¸å·
+     * @param DeptID String éƒ¨é—¨ID	
+     * @paramint ChsName String ç”¨æˆ·å§“å
+     * @paramint Pwd String å¯†ç 
+     * @return int  0 æ“ä½œæˆåŠŸ é0ä¸ºå¤±è´¥
      */
     public int addUser(String UserName, String DeptID, String ChsName, String Pwd ) {
     	
         svrInit(OBJNAME_USERMANAGER);
         
-        AddProperty(iProp,KEY_NICK,UserName); //ÓÃ»§Ãû
-        AddProperty(iProp, KEY_DEPTID, DeptID); //×éÖ¯ID
-        AddProperty(iProp, KEY_NAME, ChsName); //ÕæÊµÃû
-        AddProperty(iProp, KEY_PASSWORD, Pwd);//ÃÜÂë
+        AddProperty(iProp,KEY_NICK,UserName); //ç”¨æˆ·å
+        AddProperty(iProp, KEY_DEPTID, DeptID); //ç»„ç»‡ID
+        AddProperty(iProp, KEY_NAME, ChsName); //çœŸå®å
+        AddProperty(iProp, KEY_PASSWORD, Pwd);//å¯†ç 
 
         iResult=Call(iObj,iProp,PRO_ADDUSER);
         innerCode = GetResultInnerCode(iResult);
         
         if (innerCode != 0)
         {
-            System.out.println("´íÎó´úÂë:" + innerCode + "\t" + "´íÎóĞÅÏ¢£º"+ GetResultErrString(iResult) );
+            System.out.println("é”™è¯¯ä»£ç :" + innerCode + "\t" + "é”™è¯¯ä¿¡æ¯ï¼š"+ GetResultErrString(iResult) );
         }
         
         release();
@@ -422,9 +422,9 @@ public class RTXSvrApi {
     }
 
     /**
-     * ²é¿´ÓÃ»§¼òµ¥×ÊÁÏ
-     * @param UserName String ÓÃ»§ÕÊºÅ
-     * @return String[][]  ²Ù×÷³É¹¦·µ»ØÒ»¸ö¶şÎ¬Êı×é Ê§°ÜÎªnull
+     * æŸ¥çœ‹ç”¨æˆ·ç®€å•èµ„æ–™
+     * @param UserName String ç”¨æˆ·å¸å·
+     * @return String[][]  æ“ä½œæˆåŠŸè¿”å›ä¸€ä¸ªäºŒç»´æ•°ç»„ å¤±è´¥ä¸ºnull
       */
 	public String[][] GetUserSimpleInfo(String UserName)
 	{
@@ -434,12 +434,12 @@ public class RTXSvrApi {
 		svrInit(OBJNAME_USERMANAGER);
 		
         AddProperty(iProp, KEY_USERNAME, UserName);
-        //AddProperty(iProp,KEY_UINTYPE,"Account"); Èç¹ûÉèÖÃKEY_UINTYPE ÎªAccount£¬ÎŞÂÛ´«½øÈ¥ÊÇ´¿Êı×Ö»¹ÊÇ×Ö·û´®£¬¶¼ÈÏÎªÊÇÕÊºÅ¡£
+        //AddProperty(iProp,KEY_UINTYPE,"Account"); å¦‚æœè®¾ç½®KEY_UINTYPE ä¸ºAccountï¼Œæ— è®ºä¼ è¿›å»æ˜¯çº¯æ•°å­—è¿˜æ˜¯å­—ç¬¦ä¸²ï¼Œéƒ½è®¤ä¸ºæ˜¯å¸å·ã€‚
 
         int iResult = Call(iObj, iProp, PRO_GETUSERSMPLINFO);
         int innerCode = GetResultInnerCode(iResult);
         if (innerCode != 0) {
-            System.out.println("´íÎó´úÂë:" + innerCode + "\t" + "´íÎóĞÅÏ¢£º"+ GetResultErrString(iResult) );
+            System.out.println("é”™è¯¯ä»£ç :" + innerCode + "\t" + "é”™è¯¯ä¿¡æ¯ï¼š"+ GetResultErrString(iResult) );
         } else {
             int iProps = GetResultPropertys(iResult);
             int iCount = GetPropertysCount(iProps);
@@ -457,29 +457,29 @@ public class RTXSvrApi {
 	}
 	
 	/**
-     * ÉèÖÃÓÃ»§¼òµ¥×ÊÁÏ
-     * @param UserName String ÓÃ»§ÕÊºÅ
-     * @param ChsName String ÓÃ»§ĞÕÃû
-     * @param email String ÓÊÏäµØÖ·
-     * @param gender String ĞÔ±ğ£¬ÄĞÎª0£¬Å®Îª1
-     * @param mobile String ÊÖ»úºÅÂë
-     * @param phone String  µç»°
-     * @param pwd String ÃÜÂë
-     * @return int  0 ²Ù×÷³É¹¦ ·Ç0ÎªÊ§°Ü
+     * è®¾ç½®ç”¨æˆ·ç®€å•èµ„æ–™
+     * @param UserName String ç”¨æˆ·å¸å·
+     * @param ChsName String ç”¨æˆ·å§“å
+     * @param email String é‚®ç®±åœ°å€
+     * @param gender String æ€§åˆ«ï¼Œç”·ä¸º0ï¼Œå¥³ä¸º1
+     * @param mobile String æ‰‹æœºå·ç 
+     * @param phone String  ç”µè¯
+     * @param pwd String å¯†ç 
+     * @return int  0 æ“ä½œæˆåŠŸ é0ä¸ºå¤±è´¥
       */
 	public int SetUserSimpleInfo(String UserName,String ChsName,String email,String gender,String mobile,String phone,String pwd)
 	{
 
 		svrInit(OBJNAME_USERMANAGER);
 		
-		//°Ñ×ÊÁÏ¶Á³öÀ´ÔÙĞ´»ØÈ¥
+		//æŠŠèµ„æ–™è¯»å‡ºæ¥å†å†™å›å»
         AddProperty(iProp, KEY_USERNAME, UserName);
-         //AddProperty(iProp,KEY_UINTYPE,"Account"); Èç¹ûÉèÖÃKEY_UINTYPE ÎªAccount£¬ÎŞÂÛ´«½øÈ¥ÊÇ´¿Êı×Ö»¹ÊÇ×Ö·û´®£¬¶¼ÈÏÎªÊÇÕÊºÅ¡£
+         //AddProperty(iProp,KEY_UINTYPE,"Account"); å¦‚æœè®¾ç½®KEY_UINTYPE ä¸ºAccountï¼Œæ— è®ºä¼ è¿›å»æ˜¯çº¯æ•°å­—è¿˜æ˜¯å­—ç¬¦ä¸²ï¼Œéƒ½è®¤ä¸ºæ˜¯å¸å·ã€‚
 
         iResult = Call(iObj, iProp, PRO_GETUSERSMPLINFO);
         innerCode = GetResultInnerCode(iResult);
         if ( innerCode!= 0) {
-            System.out.println("´íÎó´úÂë:" + innerCode + "\t" + "´íÎóĞÅÏ¢£º"+ GetResultErrString(iResult) );
+            System.out.println("é”™è¯¯ä»£ç :" + innerCode + "\t" + "é”™è¯¯ä¿¡æ¯ï¼š"+ GetResultErrString(iResult) );
             release();
         	return innerCode;
         } else {
@@ -491,7 +491,7 @@ public class RTXSvrApi {
            		if (i==9)
            		{
            			if (pwd != null && !"".equals(pwd) && !"null".equals(pwd)) {
-        				AddProperty(iProp, KEY_PASSWORD, pwd); //ÃÜÂë
+        				AddProperty(iProp, KEY_PASSWORD, pwd); //å¯†ç 
         			}
            		}
            		else 
@@ -505,30 +505,30 @@ public class RTXSvrApi {
 
         }	
         
-        //¸üĞÂÓÃ»§ĞÅÏ¢
+        //æ›´æ–°ç”¨æˆ·ä¿¡æ¯
         if (ChsName != null && !"".equals(ChsName) && !"null".equals(ChsName)) {
-        	AddProperty(iProp, KEY_NAME, ChsName); //ÖĞÎÄÃû
+        	AddProperty(iProp, KEY_NAME, ChsName); //ä¸­æ–‡å
         }
         if (gender != null && !"".equals(gender) && !"null".equals(gender)) {
-        	AddProperty(iProp, KEY_GENDER, gender); //ĞÔ±ğ
+        	AddProperty(iProp, KEY_GENDER, gender); //æ€§åˆ«
         }
         if (mobile != null && !"".equals(mobile) && !"null".equals(mobile)) {
-        	AddProperty(iProp, KEY_MOBILE, mobile); //ÊÖ»ú
+        	AddProperty(iProp, KEY_MOBILE, mobile); //æ‰‹æœº
         }
         if (phone != null && !"".equals(phone) && !"null".equals(phone)) {
-        	AddProperty(iProp, KEY_PHONE, phone); //µç»°
+        	AddProperty(iProp, KEY_PHONE, phone); //ç”µè¯
         }
         if (email != null && !"".equals(email) && !"null".equals(email)) {
-        	AddProperty(iProp, KEY_EMAIL, email); //ÓÊÏä
+        	AddProperty(iProp, KEY_EMAIL, email); //é‚®ç®±
         }
 
-       //AddProperty(iProp,KEY_UINTYPE,"Account"); Èç¹ûÉèÖÃKEY_UINTYPE ÎªAccount£¬ÎŞÂÛ´«½øÈ¥ÊÇ´¿Êı×Ö»¹ÊÇ×Ö·û´®£¬¶¼ÈÏÎªÊÇÕÊºÅ¡£
+       //AddProperty(iProp,KEY_UINTYPE,"Account"); å¦‚æœè®¾ç½®KEY_UINTYPE ä¸ºAccountï¼Œæ— è®ºä¼ è¿›å»æ˜¯çº¯æ•°å­—è¿˜æ˜¯å­—ç¬¦ä¸²ï¼Œéƒ½è®¤ä¸ºæ˜¯å¸å·ã€‚
 
-		//ÉèÖÃ°ÑÓÃ»§¼òµ¥×ÊÁÏĞ´»ØÈ¥
+		//è®¾ç½®æŠŠç”¨æˆ·ç®€å•èµ„æ–™å†™å›å»
         int iResult = Call(iObj, iProp, PRO_SETUSERSMPLINFO);
         int innerCode = GetResultInnerCode(iResult);
         if (innerCode != 0) {
-        	System.out.println("´íÎó´úÂë:" + innerCode + "\t" + "´íÎóĞÅÏ¢£º"+ GetResultErrString(iResult) );
+        	System.out.println("é”™è¯¯ä»£ç :" + innerCode + "\t" + "é”™è¯¯ä¿¡æ¯ï¼š"+ GetResultErrString(iResult) );
     	} 
         
         release();
@@ -536,29 +536,29 @@ public class RTXSvrApi {
 	}
 
 	/**
-     * ÉèÖÃÓÃ»§¼òµ¥×ÊÁÏ£¬Ö§³ÖÉèÖÃ²¿ÃÅID
-     * @param UserName String ÓÃ»§ÕÊºÅ
-     * @param DeptID String ²¿ÃÅID
-     * @param ChsName String ÓÃ»§ĞÕÃû
-     * @param email String ÓÊÏäµØÖ·
-     * @param gender String ĞÔ±ğ£¬ÄĞÎª0£¬Å®Îª1
-     * @param mobile String ÊÖ»úºÅÂë
-     * @param phone String  µç»°
-     * @param pwd String ÃÜÂë
-     * @return int  0 ²Ù×÷³É¹¦ ·Ç0ÎªÊ§°Ü
+     * è®¾ç½®ç”¨æˆ·ç®€å•èµ„æ–™ï¼Œæ”¯æŒè®¾ç½®éƒ¨é—¨ID
+     * @param UserName String ç”¨æˆ·å¸å·
+     * @param DeptID String éƒ¨é—¨ID
+     * @param ChsName String ç”¨æˆ·å§“å
+     * @param email String é‚®ç®±åœ°å€
+     * @param gender String æ€§åˆ«ï¼Œç”·ä¸º0ï¼Œå¥³ä¸º1
+     * @param mobile String æ‰‹æœºå·ç 
+     * @param phone String  ç”µè¯
+     * @param pwd String å¯†ç 
+     * @return int  0 æ“ä½œæˆåŠŸ é0ä¸ºå¤±è´¥
       */
 	public int SetUserSimpleInfoEx(String UserName,String DeptID, String ChsName,String email,String gender,String mobile,String phone,String pwd)
 	{
 
 		svrInit(OBJNAME_USERMANAGER);
 		
-		//°Ñ×ÊÁÏ¶Á³öÀ´ÔÙĞ´»ØÈ¥
+		//æŠŠèµ„æ–™è¯»å‡ºæ¥å†å†™å›å»
         AddProperty(iProp, KEY_USERNAME, UserName);
         
         iResult = Call(iObj, iProp, PRO_GETUSERSMPLINFO);
         innerCode = GetResultInnerCode(iResult);
         if ( innerCode!= 0) {
-            System.out.println("´íÎó´úÂë:" + innerCode + "\t" + "´íÎóĞÅÏ¢£º"+ GetResultErrString(iResult) );
+            System.out.println("é”™è¯¯ä»£ç :" + innerCode + "\t" + "é”™è¯¯ä¿¡æ¯ï¼š"+ GetResultErrString(iResult) );
             release();
         	return innerCode;
         } else {
@@ -570,7 +570,7 @@ public class RTXSvrApi {
            		if (i==9)
            		{
            			if (pwd != null && !"".equals(pwd) && !"null".equals(pwd)) {
-        				AddProperty(iProp, KEY_PASSWORD, pwd); //ÃÜÂë
+        				AddProperty(iProp, KEY_PASSWORD, pwd); //å¯†ç 
         			}
            		}
            		else 
@@ -584,32 +584,32 @@ public class RTXSvrApi {
 
         }	
         
-        //¸üĞÂÓÃ»§ĞÅÏ¢
+        //æ›´æ–°ç”¨æˆ·ä¿¡æ¯
         if (DeptID != null && !"".equals(DeptID) && !"null".equals(DeptID)) {
-        	AddProperty(iProp, KEY_DEPTID, DeptID); //²¿ÃÅID
+        	AddProperty(iProp, KEY_DEPTID, DeptID); //éƒ¨é—¨ID
         }
         if (ChsName != null && !"".equals(ChsName) && !"null".equals(ChsName)) {
-        	AddProperty(iProp, KEY_NAME, ChsName); //ÖĞÎÄÃû
+        	AddProperty(iProp, KEY_NAME, ChsName); //ä¸­æ–‡å
         }
         if (gender != null && !"".equals(gender) && !"null".equals(gender)) {
-        	AddProperty(iProp, KEY_GENDER, gender); //ĞÔ±ğ
+        	AddProperty(iProp, KEY_GENDER, gender); //æ€§åˆ«
         }
         if (mobile != null && !"".equals(mobile) && !"null".equals(mobile)) {
-        	AddProperty(iProp, KEY_MOBILE, mobile); //ÊÖ»ú
+        	AddProperty(iProp, KEY_MOBILE, mobile); //æ‰‹æœº
         }
         if (phone != null && !"".equals(phone) && !"null".equals(phone)) {
-        	AddProperty(iProp, KEY_PHONE, phone); //µç»°
+        	AddProperty(iProp, KEY_PHONE, phone); //ç”µè¯
         }
         if (email != null && !"".equals(email) && !"null".equals(email)) {
-        	AddProperty(iProp, KEY_EMAIL, email); //ÓÊÏä
+        	AddProperty(iProp, KEY_EMAIL, email); //é‚®ç®±
         }
 
         
-		//ÉèÖÃ°ÑÓÃ»§¼òµ¥×ÊÁÏĞ´»ØÈ¥
+		//è®¾ç½®æŠŠç”¨æˆ·ç®€å•èµ„æ–™å†™å›å»
         int iResult = Call(iObj, iProp, PRO_SETUSERSMPLINFO);
         int innerCode = GetResultInnerCode(iResult);
         if (innerCode != 0) {
-        	System.out.println("´íÎó´úÂë:" + innerCode + "\t" + "´íÎóĞÅÏ¢£º"+ GetResultErrString(iResult) );
+        	System.out.println("é”™è¯¯ä»£ç :" + innerCode + "\t" + "é”™è¯¯ä¿¡æ¯ï¼š"+ GetResultErrString(iResult) );
     	} 
         
         release();
@@ -617,9 +617,9 @@ public class RTXSvrApi {
 	}
 	
     /**
-     * ²é¿´ÓÃ»§ÏêÏ¸×ÊÁÏ
-     * @param UserName String ÓÃ»§ÕÊºÅ
-     * @return String[][] ²Ù×÷³É¹¦·µ»ØÒ»¸ö¶şÎ¬Êı×é Ê§°Ü·µ»Ønull
+     * æŸ¥çœ‹ç”¨æˆ·è¯¦ç»†èµ„æ–™
+     * @param UserName String ç”¨æˆ·å¸å·
+     * @return String[][] æ“ä½œæˆåŠŸè¿”å›ä¸€ä¸ªäºŒç»´æ•°ç»„ å¤±è´¥è¿”å›null
      */
     public String[][] GetUserDetailInfo(String UserName) {
 		
@@ -627,12 +627,12 @@ public class RTXSvrApi {
     	svrInit(OBJNAME_USERMANAGER);
     	
         AddProperty(iProp, KEY_USERNAME, UserName);
-         //AddProperty(iProp,KEY_UINTYPE,"Account"); Èç¹ûÉèÖÃKEY_UINTYPE ÎªAccount£¬ÎŞÂÛ´«½øÈ¥ÊÇ´¿Êı×Ö»¹ÊÇ×Ö·û´®£¬¶¼ÈÏÎªÊÇÕÊºÅ¡£
+         //AddProperty(iProp,KEY_UINTYPE,"Account"); å¦‚æœè®¾ç½®KEY_UINTYPE ä¸ºAccountï¼Œæ— è®ºä¼ è¿›å»æ˜¯çº¯æ•°å­—è¿˜æ˜¯å­—ç¬¦ä¸²ï¼Œéƒ½è®¤ä¸ºæ˜¯å¸å·ã€‚
 
         int iResult = Call(iObj, iProp, PRO_GETUSERDETAILINFO);
         int innerCode = GetResultInnerCode(iResult);
         if (innerCode != 0) {
-            System.out.println("´íÎó´úÂë:" + innerCode + "\t" + "´íÎóĞÅÏ¢£º"+ GetResultErrString(iResult) );
+            System.out.println("é”™è¯¯ä»£ç :" + innerCode + "\t" + "é”™è¯¯ä¿¡æ¯ï¼š"+ GetResultErrString(iResult) );
         } else {
             int iProps = GetResultPropertys(iResult);
             int iCount = GetPropertysCount(iProps);
@@ -650,27 +650,27 @@ public class RTXSvrApi {
     }
     
     /**
-     * ¸üĞÂÓÃ»§ĞÅÏ¢
+     * æ›´æ–°ç”¨æˆ·ä¿¡æ¯
      * @param UserName String
      * @param ....... String
      * @param MOBILE String
-     * @return int  0 ²Ù×÷³É¹¦ ·Ç0ÎªÊ§°Ü
+     * @return int  0 æ“ä½œæˆåŠŸ é0ä¸ºå¤±è´¥
      */
     public int setUserDetailInfo(String UserName,String ADDRESS,String AGE,String BIRTHDAY,
     String BLOODTYPE,String CITY,String COLLAGE,String CONSTELLATION,String COUNTRY,String FAX,
     String HOMEPAGE,String MEMO,String POSITION,String POSTCODE,String PROVINCE,String STREET,
     String PHONE,String MOBILE) {
         
-		//Ö÷ÒªÊÇµÃµ½DetpID
+		//ä¸»è¦æ˜¯å¾—åˆ°DetpID
 		svrInit(OBJNAME_USERMANAGER);
 		
         AddProperty(iProp, KEY_USERNAME, UserName);
-        //AddProperty(iProp,KEY_UINTYPE,"Account"); Èç¹ûÉèÖÃKEY_UINTYPE ÎªAccount£¬ÎŞÂÛ´«½øÈ¥ÊÇ´¿Êı×Ö»¹ÊÇ×Ö·û´®£¬¶¼ÈÏÎªÊÇÕÊºÅ¡£
+        //AddProperty(iProp,KEY_UINTYPE,"Account"); å¦‚æœè®¾ç½®KEY_UINTYPE ä¸ºAccountï¼Œæ— è®ºä¼ è¿›å»æ˜¯çº¯æ•°å­—è¿˜æ˜¯å­—ç¬¦ä¸²ï¼Œéƒ½è®¤ä¸ºæ˜¯å¸å·ã€‚
 
         iResult = Call(iObj, iProp, PRO_GETUSERSMPLINFO);
         innerCode = GetResultInnerCode(iResult);
         if ( innerCode!= 0) {
-            System.out.println("´íÎó´úÂë:" + innerCode + "\t" + "´íÎóĞÅÏ¢£º"+ GetResultErrString(iResult) );
+            System.out.println("é”™è¯¯ä»£ç :" + innerCode + "\t" + "é”™è¯¯ä¿¡æ¯ï¼š"+ GetResultErrString(iResult) );
             release();
         	return innerCode;
         } else {
@@ -682,81 +682,81 @@ public class RTXSvrApi {
 		
 		
         if (ADDRESS != null && !"".equals(ADDRESS) && !"null".equals(ADDRESS)) {
-            AddProperty(iProp, KEY_ADDRESS, ADDRESS); //×¡Ö·
+            AddProperty(iProp, KEY_ADDRESS, ADDRESS); //ä½å€
         }
         if (BLOODTYPE != null && !"".equals(BLOODTYPE) && !"null".equals(BLOODTYPE)) {
-            AddProperty(iProp, KEY_BLOODTYPE, BLOODTYPE); //ÑªĞÍ
+            AddProperty(iProp, KEY_BLOODTYPE, BLOODTYPE); //è¡€å‹
         }
         if (COUNTRY != null && !"".equals(COUNTRY) && !"null".equals(COUNTRY)) {
-            AddProperty(iProp, KEY_COUNTRY, COUNTRY); //¹ú¼Ò
+            AddProperty(iProp, KEY_COUNTRY, COUNTRY); //å›½å®¶
         }
         if (PROVINCE != null && !"".equals(PROVINCE) && !"null".equals(PROVINCE)) {
-            AddProperty(iProp, KEY_PROVINCE, PROVINCE); //Ê¡
+            AddProperty(iProp, KEY_PROVINCE, PROVINCE); //çœ
         }
         if (CITY != null && !"".equals(CITY) && !"null".equals(CITY)) {
-            AddProperty(iProp, KEY_CITY, CITY); //³ÇÊĞ
+            AddProperty(iProp, KEY_CITY, CITY); //åŸå¸‚
         }
         if (POSTCODE != null && !"".equals(POSTCODE) && !"null".equals(POSTCODE)) {
-            AddProperty(iProp, KEY_POSTCODE, POSTCODE); //ÓÊÕş±àÂë
+            AddProperty(iProp, KEY_POSTCODE, POSTCODE); //é‚®æ”¿ç¼–ç 
         }
         if (HOMEPAGE != null && !"".equals(HOMEPAGE) && !"null".equals(HOMEPAGE)) {
-            AddProperty(iProp, KEY_HOMEPAGE, HOMEPAGE); //¸öÈËÖ÷Ò³
+            AddProperty(iProp, KEY_HOMEPAGE, HOMEPAGE); //ä¸ªäººä¸»é¡µ
         }
         if (PHONE != null && !"".equals(PHONE) && !"null".equals(PHONE)) {
-            AddProperty(iProp, KEY_PHONE, PHONE); //µç»°
+            AddProperty(iProp, KEY_PHONE, PHONE); //ç”µè¯
         }
         if (MOBILE != null && !"".equals(MOBILE) && !"null".equals(MOBILE)) {
-            AddProperty(iProp, KEY_MOBILE, MOBILE); //ÒÆ¶¯µç»°
+            AddProperty(iProp, KEY_MOBILE, MOBILE); //ç§»åŠ¨ç”µè¯
         }
         if (MEMO != null && !"".equals(MEMO) && !"null".equals(MEMO)) {
-            AddProperty(iProp, KEY_MEMO, MEMO); //¸öÈË¼ò½é
+            AddProperty(iProp, KEY_MEMO, MEMO); //ä¸ªäººç®€ä»‹
         }
         if (POSITION != null && !"".equals(POSITION) && !"null".equals(POSITION)) {
-            AddProperty(iProp, KEY_POSITION, POSITION); //Ö°Îñ
+            AddProperty(iProp, KEY_POSITION, POSITION); //èŒåŠ¡
         }
         if (FAX != null && !"".equals(FAX) && !"null".equals(FAX)) {
-            AddProperty(iProp, KEY_FAX, FAX); //´«Õæ
+            AddProperty(iProp, KEY_FAX, FAX); //ä¼ çœŸ
         }
         if (AGE != null && !"".equals(AGE) && !"null".equals(AGE)) {
-            AddProperty(iProp, KEY_AGE, AGE); //ÄêÁä
+            AddProperty(iProp, KEY_AGE, AGE); //å¹´é¾„
         }
         if (BIRTHDAY != null && !"".equals(BIRTHDAY) && !"null".equals(BIRTHDAY)) {
-            AddProperty(iProp, KEY_BIRTHDAY, BIRTHDAY); //ÉúÈÕ
+            AddProperty(iProp, KEY_BIRTHDAY, BIRTHDAY); //ç”Ÿæ—¥
         }
         if (COLLAGE != null && !"".equals(COLLAGE) && !"null".equals(COLLAGE)) {
-            AddProperty(iProp, KEY_COLLAGE, COLLAGE); //´óÑ§
+            AddProperty(iProp, KEY_COLLAGE, COLLAGE); //å¤§å­¦
         }
         if (STREET != null && !"".equals(STREET) && !"null".equals(STREET)) {
-            AddProperty(iProp, KEY_STREET, STREET); //½ÖµÀ
+            AddProperty(iProp, KEY_STREET, STREET); //è¡—é“
         }
 
-        //AddProperty(iProp,KEY_UINTYPE,"Account"); Èç¹ûÉèÖÃKEY_UINTYPE ÎªAccount£¬ÎŞÂÛ´«½øÈ¥ÊÇ´¿Êı×Ö»¹ÊÇ×Ö·û´®£¬¶¼ÈÏÎªÊÇÕÊºÅ¡£
+        //AddProperty(iProp,KEY_UINTYPE,"Account"); å¦‚æœè®¾ç½®KEY_UINTYPE ä¸ºAccountï¼Œæ— è®ºä¼ è¿›å»æ˜¯çº¯æ•°å­—è¿˜æ˜¯å­—ç¬¦ä¸²ï¼Œéƒ½è®¤ä¸ºæ˜¯å¸å·ã€‚
 
         iResult = Call(iObj, iProp, PRO_SETUSERDETAILINFO);
         innerCode = GetResultInnerCode(iResult);
         if (innerCode != 0) {
-        	System.out.println("´íÎó´úÂë:" + innerCode + "\t" + "´íÎóĞÅÏ¢£º"+ GetResultErrString(iResult) );
+        	System.out.println("é”™è¯¯ä»£ç :" + innerCode + "\t" + "é”™è¯¯ä¿¡æ¯ï¼š"+ GetResultErrString(iResult) );
     	} 
         release();
         return innerCode;
     }
 
     /**
-     * °ÑRTXºÅÂë×ª»»ÎªÄØ³Æ
-     * @param  UIN String RTXºÅÂë
-     * @return int  0 ²Ù×÷³É¹¦ ·Ç0ÎªÊ§°Ü
+     * æŠŠRTXå·ç è½¬æ¢ä¸ºå‘¢ç§°
+     * @param  UIN String RTXå·ç 
+     * @return int  0 æ“ä½œæˆåŠŸ é0ä¸ºå¤±è´¥
      */
 	public String UinToUserName ( String UIN)
 	{
 		String UserName = null;
 		svrInit(OBJNAME_USERMANAGER);
 		
-        AddProperty(iProp,KEY_USERNAME,UIN); //RTXºÅÂë
+        AddProperty(iProp,KEY_USERNAME,UIN); //RTXå·ç 
         
         iResult=Call(iObj,iProp,PRO_GETUSERSMPLINFO);
         innerCode = GetResultInnerCode(iResult);
         if ( innerCode != 0){
-        	System.out.println("´íÎó´úÂë:" + innerCode + "\t" + "´íÎóĞÅÏ¢£º"+ GetResultErrString(iResult) );
+        	System.out.println("é”™è¯¯ä»£ç :" + innerCode + "\t" + "é”™è¯¯ä¿¡æ¯ï¼š"+ GetResultErrString(iResult) );
         	release();
         	return null;
         }
@@ -771,13 +771,13 @@ public class RTXSvrApi {
 	}
 	
     /**
-     * Ìí¼Ó×éÖ¯ĞÅÏ¢
-     * @param deptId String		²¿ÃÅID
-     * @param DetpInfo String	²¿ÃÅĞÅÏ¢
-     * @param DeptName String	²¿ÃÅÃû³Æ
-     * @param ParentDeptId String 	¸¸²¿ÃÅID
-     * @param type String 	0:Ö»É¾³ıµ±Ç°×éÖ¯ 1:É¾³ıÏÂ¼¶×éÖ¯¼°ÓÃ»§
-     * @return int  0 ²Ù×÷³É¹¦ ·Ç0ÎªÊ§°Ü
+     * æ·»åŠ ç»„ç»‡ä¿¡æ¯
+     * @param deptId String		éƒ¨é—¨ID
+     * @param DetpInfo String	éƒ¨é—¨ä¿¡æ¯
+     * @param DeptName String	éƒ¨é—¨åç§°
+     * @param ParentDeptId String 	çˆ¶éƒ¨é—¨ID
+     * @param type String 	0:åªåˆ é™¤å½“å‰ç»„ç»‡ 1:åˆ é™¤ä¸‹çº§ç»„ç»‡åŠç”¨æˆ·
+     * @return int  0 æ“ä½œæˆåŠŸ é0ä¸ºå¤±è´¥
      */
     public int addDept(String deptId,String DetpInfo,String DeptName,String ParentDeptId ) {
    
@@ -791,7 +791,7 @@ public class RTXSvrApi {
         iResult = Call(iObj, iProp, PRO_ADDDEPT);
         innerCode = GetResultInnerCode(iResult);
         if(innerCode!=0){
-			System.out.println("´íÎó´úÂë:" + innerCode + "\t" + "´íÎóĞÅÏ¢£º"+ GetResultErrString(iResult) );
+			System.out.println("é”™è¯¯ä»£ç :" + innerCode + "\t" + "é”™è¯¯ä¿¡æ¯ï¼š"+ GetResultErrString(iResult) );
         }
         
         release();
@@ -799,12 +799,12 @@ public class RTXSvrApi {
     }
 
     /**
-     * ĞŞ¸Ä×éÖ¯ĞÅÏ¢
-     * @param deptId String 	²¿ÃÅID
-     * @param DetpInfo string 	²¿ÃÅĞÅÏ¢
-     * @param DeptName string 	²¿ÃÅÃû³Æ
-     * @param ParentDeptId string	¸¸²¿ÃÅID
-     * @return int  0 ²Ù×÷³É¹¦ ·Ç0ÎªÊ§°Ü
+     * ä¿®æ”¹ç»„ç»‡ä¿¡æ¯
+     * @param deptId String 	éƒ¨é—¨ID
+     * @param DetpInfo string 	éƒ¨é—¨ä¿¡æ¯
+     * @param DeptName string 	éƒ¨é—¨åç§°
+     * @param ParentDeptId string	çˆ¶éƒ¨é—¨ID
+     * @return int  0 æ“ä½œæˆåŠŸ é0ä¸ºå¤±è´¥
      */
     public int setDept(String deptId,String DetpInfo,String DeptName,String ParentDeptId ) {
    
@@ -818,7 +818,7 @@ public class RTXSvrApi {
         iResult = Call(iObj, iProp, PRO_SETDEPT);
         innerCode = GetResultInnerCode(iResult);
         if(innerCode!=0){
-			System.out.println("´íÎó´úÂë:" + innerCode + "\t" + "´íÎóĞÅÏ¢£º"+ GetResultErrString(iResult) );
+			System.out.println("é”™è¯¯ä»£ç :" + innerCode + "\t" + "é”™è¯¯ä¿¡æ¯ï¼š"+ GetResultErrString(iResult) );
         }
         
         release();
@@ -826,10 +826,10 @@ public class RTXSvrApi {
     }
 
     /**
-     * É¾³ı×éÖ¯ĞÅÏ¢
-     * @param deptId String	²¿ÃÅ
-     * @param type String 0:Ö»É¾³ıµ±Ç°×éÖ¯ 1:É¾³ıÏÂ¼¶×éÖ¯¼°ÓÃ»§
-     * @return int  0 ²Ù×÷³É¹¦ ·Ç0ÎªÊ§°Ü
+     * åˆ é™¤ç»„ç»‡ä¿¡æ¯
+     * @param deptId String	éƒ¨é—¨
+     * @param type String 0:åªåˆ é™¤å½“å‰ç»„ç»‡ 1:åˆ é™¤ä¸‹çº§ç»„ç»‡åŠç”¨æˆ·
+     * @return int  0 æ“ä½œæˆåŠŸ é0ä¸ºå¤±è´¥
      */
     public int deleteDept(String deptId,String type) {
    
@@ -841,7 +841,7 @@ public class RTXSvrApi {
         iResult = Call(iObj, iProp, PRO_DELDEPT);
         innerCode = GetResultInnerCode(iResult);
         if(innerCode!=0){
-			System.out.println("´íÎó´úÂë:" + innerCode + "\t" + "´íÎóĞÅÏ¢£º"+ GetResultErrString(iResult) );
+			System.out.println("é”™è¯¯ä»£ç :" + innerCode + "\t" + "é”™è¯¯ä¿¡æ¯ï¼š"+ GetResultErrString(iResult) );
         }
         
         release();
@@ -849,9 +849,9 @@ public class RTXSvrApi {
     }
 
     /**
-     * ÅĞ¶ÏÄ³¸ö×éÖ¯ÊÇ·ñ´æÔÚ
-     * @param deptId String ²¿ÃÅID
-     * @return int 0:´æÔÚ ·Ç0:²»´æÔÚ
+     * åˆ¤æ–­æŸä¸ªç»„ç»‡æ˜¯å¦å­˜åœ¨
+     * @param deptId String éƒ¨é—¨ID
+     * @return int 0:å­˜åœ¨ é0:ä¸å­˜åœ¨
      */
     public int deptIsExist(String deptId) {
         if(deptId==null || "".equals(deptId)){
@@ -873,9 +873,9 @@ public class RTXSvrApi {
     }
 
     /**
-     * È¡µ±Ç°×éÖ¯ÏÂµÄÓÃ»§
-     * @param DeptID String ²¿ÃÅID
-     * @return String[] ³É¹¦·µ»Ø²¿ÃÅÏÂÓÃ»§ÕÊºÅÊı×é£¬Ê§°Ü·µ»Ønull
+     * å–å½“å‰ç»„ç»‡ä¸‹çš„ç”¨æˆ·
+     * @param DeptID String éƒ¨é—¨ID
+     * @return String[] æˆåŠŸè¿”å›éƒ¨é—¨ä¸‹ç”¨æˆ·å¸å·æ•°ç»„ï¼Œå¤±è´¥è¿”å›null
      */
     public String[] getDeptUsers(String DeptID){
     	
@@ -889,7 +889,7 @@ public class RTXSvrApi {
         innerCode = GetResultInnerCode(iResult);
         if (innerCode != 0)
         {
-        	System.out.println("´íÎó´úÂë:" + innerCode + "\t" + "´íÎóĞÅÏ¢£º"+ GetResultErrString(iResult) );
+        	System.out.println("é”™è¯¯ä»£ç :" + innerCode + "\t" + "é”™è¯¯ä¿¡æ¯ï¼š"+ GetResultErrString(iResult) );
         }        
         int iProps=GetResultPropertys(iResult);
         int iCount=GetPropertysCount(iProps);
@@ -897,7 +897,7 @@ public class RTXSvrApi {
             user = new String[iCount];
             for (int i = 0; i < iCount; i++) {
                 int iHandler = GetPropertysItem(iProps, i);
-                user[i]=UinToUserName(GetPropertyItemValue(iHandler)) ; 	//iHandler»ñÈ¡³öÀ´µÄÊÇRTXºÅÂë
+                user[i]=UinToUserName(GetPropertyItemValue(iHandler)) ; 	//iHandlerè·å–å‡ºæ¥çš„æ˜¯RTXå·ç 
                 ReleaseHandle(iHandler);                
             }
         }
@@ -908,9 +908,9 @@ public class RTXSvrApi {
 
 
     /**
-     * È¡µ±Ç°×éÖ¯ÏÂµÄ×Ó²¿ÃÅID
-     * @param DeptID String ²¿ÃÅID
-     * @return String[] ³É¹¦·µ»Ø×Ó²¿ÃÅÊı×é£¬Ê§°Ü·µ»Ønull
+     * å–å½“å‰ç»„ç»‡ä¸‹çš„å­éƒ¨é—¨ID
+     * @param DeptID String éƒ¨é—¨ID
+     * @return String[] æˆåŠŸè¿”å›å­éƒ¨é—¨æ•°ç»„ï¼Œå¤±è´¥è¿”å›null
      */
     public String[] getChildDepts(String DeptID){
     	
@@ -923,7 +923,7 @@ public class RTXSvrApi {
         iResult =Call(iObj, iProp, PRO_GETCHILDDEPT);
         innerCode = GetResultInnerCode(iResult);
         if(innerCode!=0){
-          	System.out.println("´íÎó´úÂë:" + innerCode + "\t" + "´íÎóĞÅÏ¢£º"+ GetResultErrString(iResult) );
+          	System.out.println("é”™è¯¯ä»£ç :" + innerCode + "\t" + "é”™è¯¯ä¿¡æ¯ï¼š"+ GetResultErrString(iResult) );
           	release();
           	return null;
         }
@@ -944,32 +944,32 @@ public class RTXSvrApi {
     }
 
     /**
-     * ÅĞ¶ÏÄ³¸öÓÃ»§ÊÇ·ñ´æÔÚ
-     * @param UserName String ÓÃ»§ÕÊºÅ
-     * @return int 0:´æÔÚ ·Ç0:²»´æÔÚ
+     * åˆ¤æ–­æŸä¸ªç”¨æˆ·æ˜¯å¦å­˜åœ¨
+     * @param UserName String ç”¨æˆ·å¸å·
+     * @return int 0:å­˜åœ¨ é0:ä¸å­˜åœ¨
      */
     public int userIsExist(String UserName) {
     	
         svrInit(OBJNAME_USERMANAGER);
         
         AddProperty(iProp,KEY_USERNAME,UserName);
-        //AddProperty(iProp,KEY_UINTYPE,"Account"); Èç¹ûÉèÖÃKEY_UINTYPE ÎªAccount£¬ÎŞÂÛ´«½øÈ¥ÊÇ´¿Êı×Ö»¹ÊÇ×Ö·û´®£¬¶¼ÈÏÎªÊÇÕÊºÅ¡£
+        //AddProperty(iProp,KEY_UINTYPE,"Account"); å¦‚æœè®¾ç½®KEY_UINTYPE ä¸ºAccountï¼Œæ— è®ºä¼ è¿›å»æ˜¯çº¯æ•°å­—è¿˜æ˜¯å­—ç¬¦ä¸²ï¼Œéƒ½è®¤ä¸ºæ˜¯å¸å·ã€‚
 
         iResult = Call(iObj, iProp, PRO_IFEXIST);
         innerCode = GetResultInnerCode(iResult);
         int iExist=GetResultInt(iResult);
         release();
         if(innerCode!=0){
-          	System.out.println("´íÎó´úÂë:" + innerCode + "\t" + "´íÎóĞÅÏ¢£º"+ GetResultErrString(iResult) );
+          	System.out.println("é”™è¯¯ä»£ç :" + innerCode + "\t" + "é”™è¯¯ä¿¡æ¯ï¼š"+ GetResultErrString(iResult) );
         }
         
          return iExist;
     }
 
    /**
-    * »ñÈ¡sessionKey
-    * @param UserName String ÓÃ»§ÕÊºÅ
-    * @return String ³É¹¦·µ»ØSessionKey£¬Ê§°Ü·µ»Ønull
+    * è·å–sessionKey
+    * @param UserName String ç”¨æˆ·å¸å·
+    * @return String æˆåŠŸè¿”å›SessionKeyï¼Œå¤±è´¥è¿”å›null
     */
    public String getSessionKey(String UserName){
    	
@@ -981,7 +981,7 @@ public class RTXSvrApi {
        innerCode = GetResultInnerCode(iResult);
        String szKey = new String ("");
        if(innerCode!=0){
-           	System.out.println("´íÎó´úÂë:" + innerCode + "\t" + "´íÎóĞÅÏ¢£º"+ GetResultErrString(iResult) );
+           	System.out.println("é”™è¯¯ä»£ç :" + innerCode + "\t" + "é”™è¯¯ä¿¡æ¯ï¼š"+ GetResultErrString(iResult) );
        }else{
            szKey=GetResultString(iResult);
        }
@@ -993,13 +993,13 @@ public class RTXSvrApi {
 
    
    /**
-     * ·¢ËÍÏûÏ¢ÌáĞÑ
-     * @param receivers String ½ÓÊÕÈË(¶à¸ö½ÓÊÕÈËÒÔ¶ººÅ·Ö¸ô)
-     * @param title String ÏûÏ¢±êÌâ
-     * @param msg String ÏûÏ¢ÄÚÈİ
-     * @param type String 0:ÆÕÍ¨ÏûÏ¢ 1:½ô¼±ÏûÏ¢
-     * @param delayTime String ÏÔÊ¾Í£ÁôÊ±¼ä(ºÁÃë) 0:ÎªÓÀ¾ÃÍ£Áô(ÓÃ»§¹Ø±ÕÊ±²Å¹Ø±Õ)
-     * @return int 0:²Ù×÷³É¹¦ ·Ç0:²Ù×÷²»³É¹¦
+     * å‘é€æ¶ˆæ¯æé†’
+     * @param receivers String æ¥æ”¶äºº(å¤šä¸ªæ¥æ”¶äººä»¥é€—å·åˆ†éš”)
+     * @param title String æ¶ˆæ¯æ ‡é¢˜
+     * @param msg String æ¶ˆæ¯å†…å®¹
+     * @param type String 0:æ™®é€šæ¶ˆæ¯ 1:ç´§æ€¥æ¶ˆæ¯
+     * @param delayTime String æ˜¾ç¤ºåœç•™æ—¶é—´(æ¯«ç§’) 0:ä¸ºæ°¸ä¹…åœç•™(ç”¨æˆ·å…³é—­æ—¶æ‰å…³é—­)
+     * @return int 0:æ“ä½œæˆåŠŸ é0:æ“ä½œä¸æˆåŠŸ
      */
     public int sendNotify(String receivers,String title,String msg, String type,String delayTime) {
         
@@ -1011,7 +1011,7 @@ public class RTXSvrApi {
         AddProperty(iProp, KEY_TYPE, type);
         AddProperty(iProp, KEY_MSGID, "0");
         AddProperty(iProp, KEY_ASSISTANTTYPE, "0");
-       //AddProperty(iProp,KEY_UINTYPE,"Account"); Èç¹ûÉèÖÃKEY_UINTYPE ÎªAccount£¬ÎŞÂÛ´«½øÈ¥ÊÇ´¿Êı×Ö»¹ÊÇ×Ö·û´®£¬¶¼ÈÏÎªÊÇÕÊºÅ¡£
+       //AddProperty(iProp,KEY_UINTYPE,"Account"); å¦‚æœè®¾ç½®KEY_UINTYPE ä¸ºAccountï¼Œæ— è®ºä¼ è¿›å»æ˜¯çº¯æ•°å­—è¿˜æ˜¯å­—ç¬¦ä¸²ï¼Œéƒ½è®¤ä¸ºæ˜¯å¸å·ã€‚
 
         if(!"0".equals(delayTime))
             AddProperty(iProp, KEY_DELAYTIME, delayTime);
@@ -1024,13 +1024,13 @@ public class RTXSvrApi {
     }
 
     /**
-    * ·¢ËÍ¶ÌĞÅ
-    * @param sender String ·¢ËÍÈË
-    * @param receiver String ½ÓÊÕÈË(RTXÓÃ»§»òÊÖ»úºÅÂë¾ù¿É,×î¶à128¸ö)
-    * @param smsInfo String ¶ÌĞÅÄÚÈİ
-    * @param autoCut int ÊÇ·ñ×Ô¶¯·ÖÌõ·¢ËÍ 0:·ñ 1:ÊÇ
-    * @param noTitle int ÊÇ·ñ×Ô¶¯ÌîĞ´±êÌâ 0:×Ô¶¯ 1:ÖÆ¶¨
-    * @return int ³É¹¦·µ»Ø0£¬Ê§°Ü·µ»ØÆäËû
+    * å‘é€çŸ­ä¿¡
+    * @param sender String å‘é€äºº
+    * @param receiver String æ¥æ”¶äºº(RTXç”¨æˆ·æˆ–æ‰‹æœºå·ç å‡å¯,æœ€å¤š128ä¸ª)
+    * @param smsInfo String çŸ­ä¿¡å†…å®¹
+    * @param autoCut int æ˜¯å¦è‡ªåŠ¨åˆ†æ¡å‘é€ 0:å¦ 1:æ˜¯
+    * @param noTitle int æ˜¯å¦è‡ªåŠ¨å¡«å†™æ ‡é¢˜ 0:è‡ªåŠ¨ 1:åˆ¶å®š
+    * @return int æˆåŠŸè¿”å›0ï¼Œå¤±è´¥è¿”å›å…¶ä»–
     */
    public int sendSms(String sender, String receiver, String smsInfo,int autoCut, int noTitle) {
        
@@ -1041,21 +1041,21 @@ public class RTXSvrApi {
        AddProperty(iProp, KEY_SMS, smsInfo);
        AddProperty(iProp, KEY_CUT, String.valueOf(autoCut));
        AddProperty(iProp, KEY_NOTITLE, String.valueOf(noTitle));
-       //AddProperty(iProp,KEY_UINTYPE,"Account"); Èç¹ûÉèÖÃKEY_UINTYPE ÎªAccount£¬ÎŞÂÛ´«½øÈ¥ÊÇ´¿Êı×Ö»¹ÊÇ×Ö·û´®£¬¶¼ÈÏÎªÊÇÕÊºÅ¡£
+       //AddProperty(iProp,KEY_UINTYPE,"Account"); å¦‚æœè®¾ç½®KEY_UINTYPE ä¸ºAccountï¼Œæ— è®ºä¼ è¿›å»æ˜¯çº¯æ•°å­—è¿˜æ˜¯å­—ç¬¦ä¸²ï¼Œéƒ½è®¤ä¸ºæ˜¯å¸å·ã€‚
 
        iResult = Call(iObj, iProp, PRO_SMS_SEND);
        innerCode = GetResultInnerCode(iResult);
        if ( innerCode != 0)
        {
-       		System.out.println("´íÎó´úÂë:" + innerCode + "\t" + "´íÎóĞÅÏ¢£º"+ GetResultErrString(iResult) );
+       		System.out.println("é”™è¯¯ä»£ç :" + innerCode + "\t" + "é”™è¯¯ä¿¡æ¯ï¼š"+ GetResultErrString(iResult) );
        }
        release();
        return innerCode;
    }
    
     /**
-    * µ¼³örtxµÄÓÃ»§Êı¾İÎªxml
-    * @return string  ³É¹¦·µ»ØRTXÓÃ»§Êı¾İµÄxml,Ê§°Ü·µ»Ønull
+    * å¯¼å‡ºrtxçš„ç”¨æˆ·æ•°æ®ä¸ºxml
+    * @return string  æˆåŠŸè¿”å›RTXç”¨æˆ·æ•°æ®çš„xml,å¤±è´¥è¿”å›null
     */
 	public String exportXmldata()
 	{
@@ -1070,7 +1070,7 @@ public class RTXSvrApi {
 		innerCode = GetResultInnerCode(iResult);
 		if ( innerCode != 0)
 		{
-			System.out.println("´íÎó´úÂë:" + innerCode + "\t" + "´íÎóĞÅÏ¢£º"+ GetResultErrString(iResult) );
+			System.out.println("é”™è¯¯ä»£ç :" + innerCode + "\t" + "é”™è¯¯ä¿¡æ¯ï¼š"+ GetResultErrString(iResult) );
 		}
 	    strResult = GetResultString(iResult);
 		
@@ -1079,9 +1079,9 @@ public class RTXSvrApi {
 	}
 
 	/**
-    * µ¼ÈëxmlµÄÓÃ»§Êı¾İ
-    * @param xmldata String xmlÓÃ»§Êı¾İ
-    * @return int :³É¹¦·µ»Ø²¿ÃÅÃû³Æ£¬Ê§°Ü·µ»Ønull
+    * å¯¼å…¥xmlçš„ç”¨æˆ·æ•°æ®
+    * @param xmldata String xmlç”¨æˆ·æ•°æ®
+    * @return int :æˆåŠŸè¿”å›éƒ¨é—¨åç§°ï¼Œå¤±è´¥è¿”å›null
     */
 	public int  importXmldata(String xmldata)
 	{
@@ -1094,7 +1094,7 @@ public class RTXSvrApi {
 		innerCode = GetResultInnerCode(iResult);
 		if ( innerCode != 0)
 		{
-			System.out.println("´íÎó´úÂë:" + innerCode + "\t" + "´íÎóĞÅÏ¢£º"+ GetResultErrString(iResult) );
+			System.out.println("é”™è¯¯ä»£ç :" + innerCode + "\t" + "é”™è¯¯ä¿¡æ¯ï¼š"+ GetResultErrString(iResult) );
 		}
 		
 		release();
@@ -1102,9 +1102,9 @@ public class RTXSvrApi {
 	}
 
 	/**
-    * »ñÈ¡²¿ÃÅÃû³Æ
-    * @param deptID String ²¿ÃÅID
-    * @return String 0:²Ù×÷³É¹¦ ·Ç0:²Ù×÷²»³É¹¦
+    * è·å–éƒ¨é—¨åç§°
+    * @param deptID String éƒ¨é—¨ID
+    * @return String 0:æ“ä½œæˆåŠŸ é0:æ“ä½œä¸æˆåŠŸ
     */	
 	public String  GetDeptName(String deptID)
 	{
@@ -1117,7 +1117,7 @@ public class RTXSvrApi {
 		innerCode = GetResultInnerCode(iResult);
 		if ( innerCode != 0)
 		{
-			System.out.println("´íÎó´úÂë:" + innerCode + "\t" + "´íÎóĞÅÏ¢£º"+ GetResultErrString(iResult) );
+			System.out.println("é”™è¯¯ä»£ç :" + innerCode + "\t" + "é”™è¯¯ä¿¡æ¯ï¼š"+ GetResultErrString(iResult) );
 		}
 		else
 		{
