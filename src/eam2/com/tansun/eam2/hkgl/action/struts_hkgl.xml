@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<constant name="struts.ui.theme" value="simple" />
+	<constant name="struts.devMode" value="true" />
+	
+	<package name="hkgl" namespace="/hkgl" extends="default">
+		<action name="index">
+			<result>/pages/eam2/hkgl/index.jsp</result>
+		</action>
+		
+		<!-- 回款处理单表头表 -->
+		<action name="backCash_*" method="{1}" class="com.tansun.eam2.hkgl.action.BackCashAction">
+			<!-- <result name="tomodify" type="chain">
+				<param name="actionName">backCash_modifyHead</param>
+				<param name="namespace">/hkgl</param>
+			</result>
+			  -->
+			<result name="toWorkflow" type='chain'>
+      			<param name="actionName">hkglcldWorkflow_toResult</param>
+            	<param name="namespace">/hkglWorkflow</param>
+      		</result>
+      		<result name="tomodify" type='chain'>
+      			<param name="actionName">hkglcldWorkflow_toDraft</param>
+            	<param name="namespace">/hkglWorkflow</param>
+      		</result>
+			<result name="biaodan">/pages/eam2/hkgl/backCash/backCashHead.jsp</result>
+		</action>
+		
+		<action name="backConfirm_*" method="{1}" class="com.tansun.eam2.hkgl.action.BackConfirmAction">
+			<!-- <result name="tomodify" type="chain">
+				<param name="actionName">backConfirm_modifyHead</param>
+				<param name="namespace">/hkgl</param>
+			</result> -->
+			<result name="toWorkflow" type='chain'>
+      			<param name="actionName">hkglbldWorkflow_toResult</param>
+            	<param name="namespace">/hkglWorkflow</param>
+      		</result>
+      		<result name="tomodify" type='chain'>
+      			<param name="actionName">hkglbldWorkflow_toDraft</param>
+            	<param name="namespace">/hkglWorkflow</param>
+      		</result>
+			<result name="biaodan">/pages/eam2/hkgl/backConfirm/backConfirmHead.jsp</result>
+			<result name="chuzhi">/pages/eam2/hkgl/backConfirm/chuzhi.jsp</result>
+			<result name="shiti">/pages/eam2/hkgl/backConfirm/shiti.jsp</result>
+			<result name="zhaiquan">/pages/eam2/hkgl/backConfirm/zhaiquan.jsp</result>
+			<result name="qingsuan">/pages/eam2/hkgl/backConfirm/qingsuan.jsp</result>
+			<result name="qita">/pages/eam2/hkgl/backConfirm/qita.jsp</result>
+		</action>
+	</package>
+	<include file="com/tansun/eam2/zyzc/workflow/buy/action/hkgl_workflow.xml"/>
+</struts>

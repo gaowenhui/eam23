@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+  	<constant name="struts.devMode" value="true" />
+  	<constant name="struts.ui.theme" value="simple"/>
+	
+	<package name="htqs" namespace="/htqs" extends="default">
+		<!-- 合同查询 -->
+		<action name="ContractQuery_*"  method="{1}" class="com.tansun.eam2.jygdzc.action.ContractQueryAction">
+		
+			<result name="contract">/pages/eam2/jygdzc/contract/contractQuery.jsp</result>
+			<result name="liquidate">/pages/eam2/jygdzc/contract/contractQuery.jsp</result>
+			<result name="assetcontract">/pages/eam2/jygdzc/contract/contractQuery.jsp</result>
+			<result name="tenancy">/pages/eam2/jygdzc/tenancy/tenancyQuery.jsp</result>
+			<result name="list">	/pages/eam2/jygdzc/contract/list.jsp</result>
+			<result name="modifyDetail">/pages/eam2/jygdzc/liquidate/list.jsp</result>
+			<result name="modifyDetail1">/pages/eam2/jygdzc/liquidate/list1.jsp</result>
+			<result name="zulinInfo">/pages/eam2/jygdzc/contract/info1/zulin.jsp</result>
+			<result name="chexianInfo">/pages/eam2/jygdzc/contract/info1/chexian.jsp</result>
+			<result name="feichexianInfo">/pages/eam2/jygdzc/contract/info1/feichexian.jsp</result>
+			<result name="weiguanInfo">/pages/eam2/jygdzc/contract/info1/weiguan.jsp</result>
+			<result name="changeHistoryInfo">/pages/eam2/jygdzc/contract/info1/changeHistory.jsp</result>
+			<result name="liquidateInfo">/pages/eam2/jygdzc/contract/info1/liquidate.jsp</result>
+			<result name="contractInfo5">/pages/eam2/jygdzc/contract/contractInfo5.jsp</result>
+			<result name="flow1">/pages/eam2/jygdzc/contract/info1/flow.jsp</result>
+			<result name="flow">/pages/eam2/jygdzc/contract/Info/flow.jsp</result>
+			
+		</action>
+		<!-- 表头相关 -->
+		<action name="ContractManageHead_*"  method="{1}" class="com.tansun.eam2.jygdzc.action.ContractManageHeadAction">
+			<!--  
+			<result name="tomodify" type="chain">
+				<param name="actionName">ContractManageHead_modifyHead</param>
+				<param name="namespace">/htqs</param>
+			</result>	
+			-->  
+			<result name="toWorkflow" type='chain'>
+      			<param name="actionName">htqsWorkflow_toResult</param>
+            	<param name="namespace">/htqsWorkflow</param>
+      		</result>
+      		<result name="tomodify" type='chain'>
+      			<param name="actionName">htqsWorkflow_toDraft</param>
+            	<param name="namespace">/htqsWorkflow</param>
+      		</result>
+			<result name="contract">/pages/eam2/jygdzc/contract/contract.jsp</result>
+			<result name="contractInfo">/pages/eam2/jygdzc/contract/contract-add-info.jsp</result>
+			<result name="agentContract">/pages/eam2/jygdzc/contract/agentContract.jsp</result>
+		</action>
+		<!-- 表体相关  -->
+		<action name="ContractManageBody_*"  method="{1}" class="com.tansun.eam2.jygdzc.action.ContractManageBodyAction">
+		 
+		     <result name="tomodify" type="chain">
+				<param name="actionName">ContractManageBody_modifyBody</param>
+				<param name="namespace">/htqs</param>
+			</result>
+			
+			<result name="changeInfo">/pages/eam2/jygdzc/contract/changeInfo.jsp</result>
+			<result name="contract">/pages/eam2/jygdzc/contract/contract.jsp</result>
+			<result name="contractInfo">/pages/eam2/jygdzc/contract/contractInfo.jsp</result>
+			<result name="agentContract">/pages/eam2/jygdzc/contract/agentContract.jsp</result>
+			<result name="zhongzhi">/pages/eam2/jygdzc/contract/zz.jsp</result>
+			<!-- 添加 -->       
+			  
+			<result name="changeHistory">/pages/eam2/jygdzc/contract/Info/changeHistory.jsp</result>
+			<result name="liquidate">/pages/eam2/jygdzc/contract/Info/liquidate.jsp</result>
+			<result name="zulin">/pages/eam2/jygdzc/contract/Info/zulin.jsp</result>
+			<result name="chexian">/pages/eam2/jygdzc/contract/Info/chexian.jsp</result>
+			<result name="feichexian">/pages/eam2/jygdzc/contract/Info/feichexian.jsp</result>
+			<result name="weiguan">/pages/eam2/jygdzc/contract/Info/weiguan.jsp</result>
+		</action>
+	</package>
+	<include file="com/tansun/eam2/zyzc/workflow/buy/action/htqs_workflow.xml"/>
+</struts>

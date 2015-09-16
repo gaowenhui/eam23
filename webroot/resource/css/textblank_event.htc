@@ -1,0 +1,26 @@
+<PUBLIC:ATTACH EVENT="onfocus" ONEVENT="doOnFocus();"/>
+<PUBLIC:ATTACH EVENT="onblur" ONEVENT="doOnBlur();"/> 
+
+<SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript"> 
+
+<!-- 
+
+function doOnFocus() 
+{            
+       this.style.borderLeftStyle='groove'; 
+       this.style.borderRightStyle='groove'; 
+       this.style.borderTopStyle='groove'; 
+       this.style.borderBottomStyle='groove';
+       
+}
+function doOnBlur() 
+{    
+       this.style.borderLeftStyle='none'; 
+       this.style.borderRightStyle='none'; 
+       this.style.borderTopStyle='none'; 
+       this.style.borderBottomStyle='none'; 
+} 
+ 
+//--> 
+
+</SCRIPT> 

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+	<package name="stock" namespace="/stock" extends="default">
+		<action name="index">
+			<result>/pages/eam2/stock/index.jsp</result>
+		</action>		
+
+      	<action name="stock_*"  method="{1}" class="com.tansun.eam2.stock.action.stockInvestAction">
+       		<result name="stockList">/pages/eam2/stock/stockInvestList/stockInvest_List.jsp</result>
+       		<result name="viewStockInvest">/pages/eam2/stock/stockInvestList/debenture_detail.jsp</result>
+      	    <result name="viewStockInvestDetail">/pages/eam2/stock/stockInvestList/stockDetal.jsp</result>
+       	</action>	
+       	
+       	<action name="maintain_*"  method="{1}" class="com.tansun.eam2.stock.action.StockMaintainAction">
+       		<result name="stockMaintainList">/pages/eam2/stock/richangweihu/stock_List.jsp</result>
+      		<result name="newWork">/pages/eam2/stock/richangweihu/work_Info.jsp</result> 	
+       		<result name="tagPage">/pages/eam2/stock/richangweihu/tag.jsp</result>
+       		<result name="newInfo">/pages/eam2/stock/richangweihu/detailInfo.jsp</result>
+       		<result name="newWorkRecord">/pages/eam2/stock/richangweihu/work_record.jsp</result>
+       		<result name="popPageInfo">/pages/eam2/stock/richangweihu/import_year_record.jsp</result>
+       		<result name="viewStockList200906">/pages/eam2/stock/richangweihu/debenture_detail0906.jsp</result>
+       		<result name="look">/pages/eam2/stock/richangweihu/detailInfo1.jsp</result>
+       		<!--日志管理  -->
+       		<result name="lookLogInfo">/pages/eam2/stock/richangweihu/lookLogInfo.jsp</result>
+       		<!--相关流程信息  -->
+       		<result name="workFlow">/pages/eam2/stock/richangweihu/mutualityFlowList.jsp</result>
+       		<result name="viewFlow">/pages/eam2/stock/shixiangshenpi/add_approve.jsp</result>
+       	</action>	
+       	
+        <action name="approve_*"  method="{1}" class="com.tansun.eam2.stock.action.stockApproveHeadAction">
+       		<result name="modifyHead">/pages/eam2/stock/shixiangshenpi/add_approve.jsp</result>
+	       	<!-- <result name="tomodify" type="chain">
+				<param name="actionName">approve_modifyHead</param>
+				<param name="namespace">/stock</param>
+			</result> -->
+			
+			<result name="toWorkflow" type='chain'>
+      			<param name="actionName">approveWorkflow_toResult</param>
+            	<param name="namespace">/approveWorkflow</param>
+      		</result>
+      		<result name="tomodify" type='chain'>
+      			<param name="actionName">approveWorkflow_toDraft</param>
+            	<param name="namespace">/approveWorkflow</param>
+      		</result>
+       	</action>	
+	</package>
+	<include file="com/tansun/eam2/zyzc/workflow/buy/action/approve_workflow.xml"/>
+</struts>

@@ -1,0 +1,12 @@
+<?xml version="1.0"  encoding="UTF-8"?>
+<!DOCTYPE form-config SYSTEM "dynamic-form.dtd">
+<form-config>
+    <state-group>
+        <state id="readonly">
+	        <component id="LEADER" 							renderType="disable"  	userId="" roleId="" deptId="" />
+	        <component id="OPERATION_GROUP" 				renderType="disable"  	userId="" roleId="" deptId="" />
+	        <component id="DRAFT_DEPT" 						renderType="disable"   	userId="" roleId="" deptId="" />
+	        <component id="CHECK" 							renderType="disable"   	userId="" roleId="" deptId="" />
+        </state>
+    </state-group>
+</form-config>

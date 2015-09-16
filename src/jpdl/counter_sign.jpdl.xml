@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<process name="countersign" xmlns="http://jbpm.org/4.4/jpdl">
+	
+	<start g="270,39,48,48" name="start">
+		<transition g="-53,-17" name="开始" to="会签办理"/>
+	</start>
+	<task g="249,135,92,52" form="/countersign/countersign_todo.do" name="会签办理" assignee="#{assignee}">
+		<transition g="-83,-17" name="退回" to="结束"/>
+		<transition g="-83,-17" name="加签" to="会签办理"/>
+		<transition g="-83,-17" name="综合过程意见" to="会签办理"/>
+		<transition g="-83,-17" name="领导过程意见" to="结束"/>
+		<transition g="-83,-17" name="经办过程意见" to="结束"/>
+		<transition g="-83,-17" name="最终意见" to="结束"/>
+	</task>
+	<end g="275,338,48,48" name="结束" />
+	<migrate-instances versions="1..x"/>
+</process>

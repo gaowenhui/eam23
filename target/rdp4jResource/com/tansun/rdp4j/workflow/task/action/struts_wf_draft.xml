@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <package name="wf_draft" namespace="/wf_draft" extends="default">
+        <action name="wf_draft_*" method="{1}" class="com.tansun.rdp4j.workflow.task.action.OutComesAction">
+      		<result name="participationList" type='chain'>
+      			<param name="actionName">dept_getValue</param>
+            	<param name="namespace">/dept</param>
+      		</result>
+        </action>
+    </package>
+</struts>

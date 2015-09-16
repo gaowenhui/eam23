@@ -1,0 +1,203 @@
+<?xml version="1.0"  encoding="UTF-8"?>
+<!DOCTYPE form-config SYSTEM "dynamic-form.dtd">
+<form-config>
+    <state-group>
+    	<state id="会议组织">
+        	<component id="spsj" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="eventType" renderType="normal" userId="" roleId="" deptId="" />
+        	<component id="hycs" renderType="readonly" userId="" roleId="" deptId="" />
+        	<component id="zcrxm" renderType="readonly" userId="" roleId="" deptId="" />
+        	<component id="hyjyzlrxm" renderType="readonly" userId="" roleId="" deptId="" />
+        	<component id="zcrxmButton" renderType="normal" userId="" roleId="" deptId="" />
+        	<component id="hyjyzlrxmButton" renderType="normal" userId="" roleId="" deptId="" />        	
+        	<component id="bzsm" renderType="normal" userId="" roleId="" deptId="" />
+        	<component id="COMPERE" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="OPERATION_GROUP" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="DRAFT_DEPT" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="blyjButton" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="itemButton" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="itemAddButton" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="fspwyButton" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="endButton" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="viewBahz" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="hydd" renderType="normal" userId="" roleId="" deptId="" />
+        </state>
+        <state id="部门领导审核">
+        	<component id="spsj" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="eventType" renderType="normal" userId="" roleId="" deptId="" />
+        	<component id="hycs" renderType="readonly" userId="" roleId="" deptId="" />
+        	<component id="zcrxm" renderType="readonly" userId="" roleId="" deptId="" />
+        	<component id="hyjyzlrxm" renderType="readonly" userId="" roleId="" deptId="" />
+        	<component id="zcrxmButton" renderType="normal" userId="" roleId="" deptId="" />
+        	<component id="hyjyzlrxmButton" renderType="normal" userId="" roleId="" deptId="" /> 
+        	<component id="bzsm" renderType="normal" userId="" roleId="" deptId="" />
+        	<component id="COMPERE" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="OPERATION_GROUP" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="DRAFT_DEPT" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="blyjButton" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="itemButton" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="itemAddButton" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="fspwyButton" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="endButton" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="viewBahz" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="hydd" renderType="normal" userId="" roleId="" deptId="" />
+        </state>
+        <state id="业务运营组处理">
+        	<component id="spsj" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="eventType" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="hycs" renderType="readonly" userId="" roleId="" deptId="" />
+        	<component id="zcrxm" renderType="readonly" userId="" roleId="" deptId="" />
+        	<component id="hyjyzlrxm" renderType="readonly" userId="" roleId="" deptId="" />
+        	<component id="zcrxmButton" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="hyjyzlrxmButton" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="bzsm" renderType="readonly" userId="" roleId="" deptId="" />
+        	<component id="COMPERE" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="OPERATION_GROUP" renderType="normal" userId="" roleId="" deptId="" />
+        	<component id="DRAFT_DEPT" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="blyjButton" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="itemButton" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="itemAddButton" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="fspwyButton" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="endButton" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="viewBahz" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="hydd" renderType="normal" userId="" roleId="" deptId="" />
+        </state>
+        <state id="主持人确认">
+        	<component id="spsj" renderType="normal" userId="" roleId="" deptId="" />
+        	<component id="eventType" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="hycs" renderType="readonly" userId="" roleId="" deptId="" />
+        	<component id="zcrxm" renderType="readonly" userId="" roleId="" deptId="" />
+        	<component id="hyjyzlrxm" renderType="readonly" userId="" roleId="" deptId="" />
+        	<component id="zcrxmButton" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="hyjyzlrxmButton" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="bzsm" renderType="readonly" userId="" roleId="" deptId="" />
+        	<component id="COMPERE" renderType="normal" userId="" roleId="" deptId="" />
+        	<component id="OPERATION_GROUP" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="DRAFT_DEPT" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="blyjButton" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="itemButton" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="itemAddButton" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="fspwyButton" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="endButton" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="viewBahz" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="hydd" renderType="normal" userId="" roleId="" deptId="" />
+        </state>
+        <state id="安排会议">
+        	<component id="spsj" renderType="normal" userId="" roleId="" deptId="" />
+        	<component id="eventType" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="hycs" renderType="readonly" userId="" roleId="" deptId="" />
+        	<component id="zcrxm" renderType="readonly" userId="" roleId="" deptId="" />
+        	<component id="hyjyzlrxm" renderType="readonly" userId="" roleId="" deptId="" />
+        	<component id="zcrxmButton" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="hyjyzlrxmButton" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="bzsm" renderType="readonly" userId="" roleId="" deptId="" />
+        	<component id="COMPERE" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="OPERATION_GROUP" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="DRAFT_DEPT" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="blyjButton" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="itemButton" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="itemAddButton" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="fspwyButton" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="endButton" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="viewBahz" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="hydd" renderType="normal" userId="" roleId="" deptId="" />
+        </state>
+        <state id="主持人审批">
+        	<component id="spsj" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="eventType" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="hycs" renderType="readonly" userId="" roleId="" deptId="" />
+        	<component id="zcrxm" renderType="readonly" userId="" roleId="" deptId="" />
+        	<component id="hyjyzlrxm" renderType="readonly" userId="" roleId="" deptId="" />
+        	<component id="zcrxmButton" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="hyjyzlrxmButton" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="bzsm" renderType="readonly" userId="" roleId="" deptId="" />
+        	<component id="COMPERE" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="OPERATION_GROUP" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="DRAFT_DEPT" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="blyjButton" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="itemButton" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="itemAddButton" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="fspwyButton" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="endButton" renderType="disable" userId="" roleId="" deptId="" />
+           <component id="viewBahz" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="hydd" renderType="readonly" userId="" roleId="" deptId="" />
+        </state>
+        <state id="整理会议纪要">
+        	<component id="spsj" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="eventType" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="hycs" renderType="readonly" userId="" roleId="" deptId="" />
+        	<component id="zcrxm" renderType="readonly" userId="" roleId="" deptId="" />
+        	<component id="hyjyzlrxm" renderType="readonly" userId="" roleId="" deptId="" />
+        	<component id="zcrxmButton" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="hyjyzlrxmButton" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="bzsm" renderType="readonly" userId="" roleId="" deptId="" />
+        	<component id="COMPERE" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="OPERATION_GROUP" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="DRAFT_DEPT" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="blyjButton" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="itemButton" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="itemAddButton" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="fspwyButton" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="endButton" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="viewBahz" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="hydd" renderType="readonly" userId="" roleId="" deptId="" />
+        </state>
+        <state id="did">
+        	<component id="spsj" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="eventType" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="hycs" renderType="readonly" userId="" roleId="" deptId="" />
+        	<component id="zcrxm" renderType="readonly" userId="" roleId="" deptId="" />
+        	<component id="hyjyzlrxm" renderType="readonly" userId="" roleId="" deptId="" />
+        	<component id="zcrxmButton" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="hyjyzlrxmButton" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="bzsm" renderType="readonly" userId="" roleId="" deptId="" />
+        	<component id="COMPERE" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="OPERATION_GROUP" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="DRAFT_DEPT" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="blyjButton" renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="itemButton" renderType="normal" userId="" roleId="116" deptId="" />
+            <component id="itemAddButton" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="fspwyButton" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="endButton" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="viewBahz" renderType="disable" userId="" roleId="" deptId="" />
+        </state>
+        <state id="end">
+        	<component id="spsj" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="eventType" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="hycs" renderType="readonly" userId="" roleId="" deptId="" />
+        	<component id="zcrxm" renderType="readonly" userId="" roleId="" deptId="" />
+        	<component id="hyjyzlrxm" renderType="readonly" userId="" roleId="" deptId="" />
+        	<component id="zcrxmButton" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="hyjyzlrxmButton" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="bzsm" renderType="readonly" userId="" roleId="" deptId="" />
+        	<component id="COMPERE" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="OPERATION_GROUP" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="DRAFT_DEPT" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="blyjButton" renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="itemButton" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="itemAddButton" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="fspwyButton" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="endButton" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="viewBahz" renderType="normal" userId="" roleId="" deptId="" />
+        </state>
+        <state id="readonly">
+        	<component id="spsj" renderType="disable" userId="" roleId="" deptId="" />
+        	
+        	<component id="eventType" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="hycs" renderType="readonly" userId="" roleId="" deptId="" />
+        	<component id="zcrxm" renderType="readonly" userId="" roleId="" deptId="" />
+        	<component id="hyjyzlrxm" renderType="readonly" userId="" roleId="" deptId="" />
+        	<component id="zcrxmButton" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="hyjyzlrxmButton" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="bzsm" renderType="readonly" userId="" roleId="" deptId="" />
+        	<component id="COMPERE" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="OPERATION_GROUP" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="DRAFT_DEPT" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="blyjButton" renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="itemButton" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="itemAddButton" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="fspwyButton" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="endButton" renderType="disable" userId="" roleId="" deptId="" />
+        </state>
+    </state-group>
+</form-config>

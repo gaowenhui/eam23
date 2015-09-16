@@ -1,0 +1,38 @@
+<?xml version="1.0"  encoding="UTF-8"?>
+<!DOCTYPE form-config SYSTEM "dynamic-form.dtd">
+<form-config>
+    <state-group>
+        <state id="会议组织">
+        	<component id="spwys" renderType="readonly" userId="" roleId="" deptId="" />
+        	<component id="hbrxm" renderType="readonly" userId="" roleId="" deptId="" />
+        	<component id="yjhzrxm" renderType="readonly" userId="" roleId="" deptId="" />
+        </state>
+        <state id="did">
+        	<component id="spwys" renderType="readonly" userId="" roleId="" deptId="" />
+        	<component id="hbrxm" renderType="readonly" userId="" roleId="" deptId="" />
+        	<component id="yjhzrxm" renderType="readonly" userId="" roleId="" deptId="" />
+        	<component id="chooseSpwyCtl" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="chooseHbrCtl" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="chooseJcslxrCtl" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="chooseYjhzrCtl" renderType="disable" userId="" roleId="" deptId="" />
+        </state>
+        <state id="end">
+        	<component id="spwys" renderType="readonly" userId="" roleId="" deptId="" />
+        	<component id="hbrxm" renderType="readonly" userId="" roleId="" deptId="" />
+        	<component id="yjhzrxm" renderType="readonly" userId="" roleId="" deptId="" />
+         	<component id="chooseSpwyCtl" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="chooseHbrCtl" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="chooseJcslxrCtl" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="chooseYjhzrCtl" renderType="disable" userId="" roleId="" deptId="" />       	
+        </state>
+        <state id="readonly">
+        	<component id="spwys" renderType="readonly" userId="" roleId="" deptId="" />
+        	<component id="hbrxm" renderType="readonly" userId="" roleId="" deptId="" />
+        	<component id="yjhzrxm" renderType="readonly" userId="" roleId="" deptId="" />
+         	<component id="chooseSpwyCtl" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="chooseHbrCtl" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="chooseJcslxrCtl" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="chooseYjhzrCtl" renderType="disable" userId="" roleId="" deptId="" />       	
+        </state>
+    </state-group>
+</form-config>

@@ -1,0 +1,39 @@
+.STYLE1 {
+	font-size: 20px;
+	font-family: "simsun";
+	font-weight: bold;
+	color: #0000ff;
+}
+
+#idMenu2 {
+	clear: both;
+	width: auto;
+}
+
+#idMenu2 div {
+	float: right :       100px;
+}
+
+#idMenu2_6 a {
+	background-color: red;
+	border-color: red;
+	color: #ffb200;
+}
+
+.container {
+	width: 100px;
+}
+
+.on {
+	font-weight: bold;
+}
+
+.container2 {
+	width: 100px;
+	text-align: center;
+}
+
+.container2 div {
+	width: 100px;
+	line-height: 30px;
+}

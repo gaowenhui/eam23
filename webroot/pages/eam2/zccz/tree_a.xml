@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<tree id="0">
+	<item text="工作台" id="workflow" >
+			<item text="待办事宜" id="workflow1" ><userdata name="link">workflow/userTask_findMyTodo.do?subSystem=</userdata></item>
+			<item text="已办事宜" id="workflow2" ><userdata name="link">did/userDid_findDids.do?subSystem=</userdata></item>
+			<item text="办结事宜" id="workflow3" ><userdata name="link">end/userEnd_findEnds.do?subSystem=</userdata></item>
+			<item text="作废事宜" id="workflow4" ><userdata name="link">abandon/userAbandon_findAbandons.do?subSystem=</userdata></item>
+			<item text="草稿箱" id="workflow5" ><userdata name="link">draft/userDraft_findDrafts.do?subSystem=</userdata></item>
+	</item>
+	<item text="资产处置" id="scrap" open="1" call="1" select="1">
+		<item text="资产处置"  id="cardList" ><userdata name="link">zccz/assetDealHead_newHead.do?pdk=zccz_assetdeal</userdata></item>
+		<item text="实体整体处置" id="stztcz" ><userdata name="link">zccz/entityDealHead_newHead.do?pdk=zccz_assetdisposal</userdata></item>
+		<item text="实体人员安置" id="renyuananzhi" ><userdata name="link">zccz/personDealHead_newHead.do?pdk=zccz_persondeal</userdata></item>
+		<item text="安排审批待办" id="reduce" ><userdata name="link">zccz/dealToDo_init.do?itemType=dispose</userdata></item>
+		<item text="处置评估审查" id="chuzhipinggu" ><userdata name="link">zccz/dealEvalHead_newHead.do?pdk=zccz_pgsc</userdata></item>
+		<!-- <item text="处置评估审查(办理单)" id="chuzhipingguBld" ><userdata name="link">zccz/dealEvalHead_showBld.do?head.id=297e9a2f2d22d4d9012d23565795001f</userdata></item> -->
+		<item text="处置跟踪与结案" id="jiean" ><userdata name="link">zccz/dealTrace1Head_newHead.do?xmlx=0</userdata></item>
+		<item text="处置跟踪" id="chuzhigenzonglan" ><userdata name="link">zccz/disposeTrack_newTrack.do?zcIds=8a81893d2ca5ef45012ca678a0cc0041&amp;xmIds=11&amp;zcCzfs=zc1</userdata></item>
+		<item text="处置项目统计" id="chuzhixiangmutj"><userdata name="link">zccz/disposeItemStatic_init.do</userdata></item>
+		<item text="处置公告" id="chuzhigonggao"><userdata name="link">zccz/noticeHead_newHead.do?pdk=zccz_czgg</userdata></item>
+	</item>
+	<item text="评估审查" id="pinggushencha" open="1">
+		<item text="审查知识库维护"  id="gongju" ><userdata name="link">zccz/knowHead_newHead.do?pdk=zccz_evalknow</userdata></item>
+		<item text="审查知识库查询"  id="chaxun" ><userdata name="link">zccz/knowQuery_queryNew.do</userdata></item>
+		<item text="审查台账查询" id="taizhang" ><userdata name="link">zccz/evalBookQuery_init.do</userdata></item>
+		<item text="审查意见查询" id="yijian" ><userdata name="link">zccz/evalCommentQuery_init.do</userdata></item>
+		<item text="评估报告问题查询" id="baogao" ><userdata name="link">zccz/evalProblemQuery_init.do</userdata></item>
+	</item>
+</tree> 

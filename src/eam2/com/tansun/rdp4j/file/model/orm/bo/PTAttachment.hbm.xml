@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.tansun.rdp4j.file.model.orm.bo.PTAttachment" table="P_T_ATTACHMENT">
+        <id name="id" type="java.lang.String">
+            <column name="ID" length="32" />
+            <generator class="foreign" >
+            	<param name="property">blob</param>
+            </generator>
+        </id>
+        <property name="bdid" type="java.lang.String">
+            <column name="bdid" length="32" />
+        </property>
+        <property name="fjlx" type="java.lang.String">
+            <column name="FJLX" length="200" />
+        </property>
+        <property name="fjbt" type="java.lang.String">
+            <column name="FJBT" length="200" />
+        </property>
+        <property name="ywjm" type="java.lang.String">
+            <column name="YWJM" length="200" />
+        </property>
+        <property name="wjlx" type="java.lang.String">
+            <column name="WJLX" length="200" />
+        </property>
+        <property name="wjdx" type="java.lang.Long">
+            <column name="WJDX"  />
+        </property>
+        <property name="scrid" type="java.lang.String">
+            <column name="SCRID" length="200" />
+        </property>
+        <property name="scrbh" type="java.lang.String">
+            <column name="SCRBH" length="200" />
+        </property>
+        <property name="scsj" type="java.lang.String">
+            <column name="SCSJ" length="200" />
+        </property>
+        <property name="scbm" type="java.lang.String">
+            <column name="SCBM" length="200" />
+        </property>
+        <property name="del" type="java.lang.Long">
+            <column name="DEL" precision="22" scale="0" />
+        </property>
+        <property name="swid" type="java.lang.String">
+            <column name="SWID" length="32" />
+        </property>
+        <property name="templateid" type="java.lang.String">
+            <column name="TEMPLATEID" length="64" />
+        </property>
+        <property name="sortid" type="java.lang.String">
+            <column name="SORTID" />
+        </property>
+        <property name="zzfj" type="java.lang.String">
+            <column name="ZZFJ" />
+        </property>
+        <property name="state" type="java.lang.String">
+            <column name="STATE" />
+        </property>
+          <property name="sessionid" type="java.lang.String">
+            <column name="SESSIONID" />
+        </property>
+        <one-to-one name="blob" lazy="proxy"  constrained="true"/>
+    </class>
+</hibernate-mapping>

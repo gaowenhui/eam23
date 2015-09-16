@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src/eam2"/>
+	<classpathentry kind="src" path="src/external"/>
+	<classpathentry kind="src" path="src/jpdl"/>
+	<classpathentry kind="src" path="src/resource"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/XmlSchema-1.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/activation-1.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/antlr-runtime.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/antlr.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/aopalliance.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/apache-mime4j-0.6.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/aspectjrt.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/aspectjtools.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/aspectjweaver.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/axis.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/batik-anim.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/batik-awt-util.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/batik-bridge.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/batik-codec.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/batik-css.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/batik-dom.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/batik-ext.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/batik-gvt.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/batik-parser.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/batik-script.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/batik-svg-dom.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/batik-svggen.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/batik-transcoder.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/batik-util.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/batik-xml.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/c3p0-0.9.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/castor-1.3.1-core.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/castor-1.3.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/castor-spring-xml-1.2.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/cewolf-1.1.5.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/cglib-nodep-2.1_3.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/commons-beanutils-1.7.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/commons-codec-1.3.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/commons-collections-3.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/commons-configuration-1.4.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/commons-digester-1.8.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/commons-discovery-0.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/commons-discovery-0.4.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/commons-el-1.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/commons-fileupload-1.2.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/commons-httpclient-3.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/commons-io-1.3.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/commons-jexl-1.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/commons-lang-2.3.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/commons-logging-1.1.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/dom4j-1.6.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/ec-common-3.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/ec-ext-3.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/ec-extannotation-1.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/ehcache-core-2.3.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/ezmorph-1.0.6.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/freemarker-2.3.16.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/hibernate3.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/httpclient-4.0.3.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/httpcore-4.0.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/httpmime-4.0.3.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/iText-2.1.5.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/javassist-3.7.ga.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/jaxb-api-2.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/jaxb-xjc-2.0.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/jaxen-1.1-beta-9.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/jaxrpc.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/jbpm.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/jcommon-1.0.16.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/jdom-1.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/jfreechart-cn-1.0.13.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/json-lib-2.3-jdk15.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/jta.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/jxl.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/jxls-core-0.9.3.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/livetribe-jsr223.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/log4j-1.2.15.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/mail.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/ognl-3.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/ojdbc14.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/org.springframework.aop-3.0.2.RELEASE.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/org.springframework.asm-3.0.2.RELEASE.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/org.springframework.aspects-3.0.2.RELEASE.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/org.springframework.beans-3.0.2.RELEASE.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/org.springframework.context-3.0.2.RELEASE.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/org.springframework.context.support-3.0.2.RELEASE.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/org.springframework.core-3.0.2.RELEASE.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/org.springframework.expression-3.0.2.RELEASE.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/org.springframework.instrument-3.0.2.RELEASE.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/org.springframework.instrument.tomcat-3.0.2.RELEASE.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/org.springframework.jdbc-3.0.2.RELEASE.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/org.springframework.jms-3.0.2.RELEASE.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/org.springframework.orm-3.0.2.RELEASE.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/org.springframework.oxm-3.0.2.RELEASE.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/org.springframework.test-3.0.2.RELEASE.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/org.springframework.transaction-3.0.2.RELEASE.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/org.springframework.web-3.0.2.RELEASE.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/org.springframework.web.portlet-3.0.2.RELEASE.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/org.springframework.web.servlet-3.0.2.RELEASE.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/org.springframework.web.struts-3.0.2.RELEASE.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/pjl-comp-filter-1.7.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/poi-3.0-rc4-20070503.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/quartz-1.5.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/rdp4j-common-0.1.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/rdp4j-documentum-0.1.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/rdp4j-dynamicform-0.1.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/rdp4j-generalapps-0.1.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/rdp4j-query-0.1.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/rdp4j-report-0.1.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/rdp4j-workflow-0.1.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/saaj.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/slf4j-api-1.5.11.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/slf4j-jdk14-1.5.11.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/stax-api-1.0.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/stax-utils-20040917.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/struts2-core-2.2.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/struts2-dojo-plugin-2.2.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/struts2-scope-plugin-1.0.4.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/struts2-spring-plugin-2.1.6.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/struts2webflow-plugin-1.0.4-bundle.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/tlddoc.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/wsdl4j-1.6.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/wstx-asl-3.2.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/xbean-spring-2.8.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/xfire-all-1.2.6.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/xfire-jsr181-api-1.0-M1.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/xml-apis-ext.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/xml-apis.jar"/>
+	<classpathentry exported="true" kind="lib" path="webroot/WEB-INF/lib/xwork-core-2.2.1.jar"/>
+	<classpathentry kind="lib" path="etc/lib/j2ee.jar"/>
+	<classpathentry kind="lib" path="etc/lib/checkstyle-all-5.0.jar"/>
+	<classpathentry kind="lib" path="etc/lib/ant-contrib-1.0b3.jar"/>
+	<classpathentry kind="lib" path="etc/lib/junit.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6">
+		<attributes>
+			<attribute name="owner.project.facets" value="java"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="output" path="webroot/WEB-INF/classes"/>
+</classpath>

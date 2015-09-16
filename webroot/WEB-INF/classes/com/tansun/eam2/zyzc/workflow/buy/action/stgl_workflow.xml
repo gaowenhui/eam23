@@ -1,0 +1,881 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <package name="stglWorkflow" namespace="/stglWorkflow" extends="default">
+        <interceptors>
+    		<interceptor name="counterSignInterceptor" class="com.tansun.eam2.common.workflow.counterSign.action.CounterSignInterceptor"></interceptor>
+    	</interceptors>
+    	<!-- zengjianzi  start -->
+        <action name="zjzWorkflow_*" method="{1}" class="com.tansun.eam2.zyzc.workflow.buy.action.StglWorkflowAction">
+            <result name="newDraftResult" type='chain'>
+      			<param name="actionName">zengjianzi_newHead</param>
+            	<param name="namespace">/stgl</param>
+      		</result>
+      		<result name="toDraftResult" type='chain'>
+      			<param name="actionName">zengjianzi_modifyHead</param>
+            	<param name="namespace">/stgl</param>
+      		</result>
+      		<result name="newDraft" type='chain'>
+      			<param name="actionName">zjzWorkflow_newDraft</param>
+            	<param name="namespace">/stglWorkflow</param>
+      		</result>
+      		<result name="saveDraft" type='chain'>
+      			<param name="actionName">zjzWorkflow_saveDraft</param>
+            	<param name="namespace">/stglWorkflow</param>
+      		</result>
+      		<result name="saveTodo" type='chain'>
+      			<param name="actionName">zjzWorkflow_saveTodo</param>
+            	<param name="namespace">/stglWorkflow</param>
+      		</result>
+      		<result name="draftCommit" type='chain'>
+      			<param name="actionName">zjzWorkflow_draftCommit</param>
+            	<param name="namespace">/stglWorkflow</param>
+      		</result>
+      		<result name="draftCommitResult">
+      			/pages/rdp4j/workflow/task/todo.jsp
+      		</result>
+      		<result name="todoResult" type='chain'>
+      			<param name="actionName">zengjianzi_modifyHead</param>
+            	<param name="namespace">/stgl</param>
+      		</result>
+      		<result name="getParticipationListResult" type='chain'>
+      			<param name="actionName">dept_getValue</param>
+            	<param name="namespace">/dept</param>
+      		</result>
+      		<result name="completeTaskResult">
+      			/pages/rdp4j/workflow/task/todo.jsp
+      		</result>
+      		<result name="completeTask" type='chain'>
+      			<param name="actionName">zjzWorkflow_completeTask</param>
+            	<param name="namespace">/stglWorkflow</param>
+      		</result>
+      		<result name="abandonPiResult" type='chain'>
+      			<param name="actionName">userAbandon_findAbandons</param>
+            	<param name="namespace">/abandon</param>
+      		</result>
+      		<result name="abandonViewResult" type='chain'>
+      			<param name="actionName">zengjianzi_modifyHead</param>
+            	<param name="namespace">/stgl</param>
+      		</result>
+      		<result name="endPiResult" type='chain'>
+      			<param name="actionName">userEnd_findEnds</param>
+            	<param name="namespace">/end</param>
+      		</result>
+      		<result name="endViewResult" type='chain'>
+      			<param name="actionName">zengjianzi_modifyHead</param>
+            	<param name="namespace">/stgl</param>
+      		</result>
+      		<result name="didResult" type='chain'>
+      			<param name="actionName">zengjianzi_modifyHead</param>
+            	<param name="namespace">/stgl</param>
+      		</result>
+      		<result name="circulation" type='chain'>
+      			<param name="actionName">zjzWorkflow_circulation</param>
+            	<param name="namespace">/stglWorkflow</param>
+      		</result>
+      		<result name="circulationResult" type='chain'>
+      			<param name="actionName">zengjianzi_modifyHead</param>
+            	<param name="namespace">/stgl</param>
+      		</result>
+      		<result name="taskHisGraphResult">/pages/rdp4j/workflow/task/taskHisGraph.jsp</result>
+      		<interceptor-ref name="appdefault"></interceptor-ref>
+      		<interceptor-ref name="counterSignInterceptor">
+      			<param name="includeMethods">todo</param>
+      		</interceptor-ref>
+        </action>
+        <!-- zengjianzi  end -->
+        <!-- zengjianzi2  start -->
+        <action name="zjz2Workflow_*" method="{1}" class="com.tansun.eam2.zyzc.workflow.buy.action.StglWorkflowAction">
+            <result name="newDraftResult" type='chain'>
+      			<param name="actionName">zengjianzi2_newHead</param>
+            	<param name="namespace">/stgl</param>
+      		</result>
+      		<result name="toDraftResult" type='chain'>
+      			<param name="actionName">zengjianzi2_modifyHead</param>
+            	<param name="namespace">/stgl</param>
+      		</result>
+      		<result name="newDraft" type='chain'>
+      			<param name="actionName">zjz2Workflow_newDraft</param>
+            	<param name="namespace">/stglWorkflow</param>
+      		</result>
+      		<result name="saveDraft" type='chain'>
+      			<param name="actionName">zjz2Workflow_saveDraft</param>
+            	<param name="namespace">/stglWorkflow</param>
+      		</result>
+      		<result name="saveTodo" type='chain'>
+      			<param name="actionName">zjz2Workflow_saveTodo</param>
+            	<param name="namespace">/stglWorkflow</param>
+      		</result>
+      		<result name="draftCommit" type='chain'>
+      			<param name="actionName">zjz2Workflow_draftCommit</param>
+            	<param name="namespace">/stglWorkflow</param>
+      		</result>
+      		<result name="draftCommitResult">
+      			/pages/rdp4j/workflow/task/todo.jsp
+      		</result>
+      		<result name="todoResult" type='chain'>
+      			<param name="actionName">zengjianzi2_modifyHead</param>
+            	<param name="namespace">/stgl</param>
+      		</result>
+      		<result name="getParticipationListResult" type='chain'>
+      			<param name="actionName">dept_getValue</param>
+            	<param name="namespace">/dept</param>
+      		</result>
+      		<result name="completeTaskResult">
+      			/pages/rdp4j/workflow/task/todo.jsp
+      		</result>
+      		<result name="completeTask" type='chain'>
+      			<param name="actionName">zjz2Workflow_completeTask</param>
+            	<param name="namespace">/stglWorkflow</param>
+      		</result>
+      		<result name="abandonPiResult" type='chain'>
+      			<param name="actionName">userAbandon_findAbandons</param>
+            	<param name="namespace">/abandon</param>
+      		</result>
+      		<result name="abandonViewResult" type='chain'>
+      			<param name="actionName">zengjianzi2_modifyHead</param>
+            	<param name="namespace">/stgl</param>
+      		</result>
+      		<result name="endPiResult" type='chain'>
+      			<param name="actionName">userEnd_findEnds</param>
+            	<param name="namespace">/end</param>
+      		</result>
+      		<result name="endViewResult" type='chain'>
+      			<param name="actionName">zengjianzi2_modifyHead</param>
+            	<param name="namespace">/stgl</param>
+      		</result>
+      		<result name="didResult" type='chain'>
+      			<param name="actionName">zengjianzi2_modifyHead</param>
+            	<param name="namespace">/stgl</param>
+      		</result>
+      		<result name="circulation" type='chain'>
+      			<param name="actionName">zjz2Workflow_circulation</param>
+            	<param name="namespace">/stglWorkflow</param>
+      		</result>
+      		<result name="circulationResult" type='chain'>
+      			<param name="actionName">zengjianzi2_modifyHead</param>
+            	<param name="namespace">/stgl</param>
+      		</result>
+      		<result name="taskHisGraphResult">/pages/rdp4j/workflow/task/taskHisGraph.jsp</result>
+      		<interceptor-ref name="appdefault"></interceptor-ref>
+      		<interceptor-ref name="counterSignInterceptor">
+      			<param name="includeMethods">todo</param>
+      		</interceptor-ref>
+        </action>
+        <!-- zengjianzi2  end -->
+        <!-- yonggongjihua  start -->
+        <action name="ygjhWorkflow_*" method="{1}" class="com.tansun.eam2.zyzc.workflow.buy.action.StglWorkflowAction">
+            <result name="newDraftResult" type='chain'>
+      			<param name="actionName">yonggongjihua_newHead</param>
+            	<param name="namespace">/stgl</param>
+      		</result>
+      		<result name="toDraftResult" type='chain'>
+      			<param name="actionName">yonggongjihua_modifyHead</param>
+            	<param name="namespace">/stgl</param>
+      		</result>
+      		<result name="newDraft" type='chain'>
+      			<param name="actionName">ygjhWorkflow_newDraft</param>
+            	<param name="namespace">/stglWorkflow</param>
+      		</result>
+      		<result name="saveDraft" type='chain'>
+      			<param name="actionName">ygjhWorkflow_saveDraft</param>
+            	<param name="namespace">/stglWorkflow</param>
+      		</result>
+      		<result name="saveTodo" type='chain'>
+      			<param name="actionName">ygjhWorkflow_saveTodo</param>
+            	<param name="namespace">/stglWorkflow</param>
+      		</result>
+      		<result name="draftCommit" type='chain'>
+      			<param name="actionName">ygjhWorkflow_draftCommit</param>
+            	<param name="namespace">/stglWorkflow</param>
+      		</result>
+      		<result name="draftCommitResult" >
+      			/pages/rdp4j/workflow/task/todo.jsp
+      		</result>
+      		<result name="todoResult" type='chain'>
+      			<param name="actionName">yonggongjihua_modifyHead</param>
+            	<param name="namespace">/stgl</param>
+      		</result>
+      		<result name="getParticipationListResult" type='chain'>
+      			<param name="actionName">dept_getValue</param>
+            	<param name="namespace">/dept</param>
+      		</result>
+      		<result name="completeTaskResult">
+      			/pages/rdp4j/workflow/task/todo.jsp
+      		</result>
+      		<result name="completeTask" type='chain'>
+      			<param name="actionName">ygjhWorkflow_completeTask</param>
+            	<param name="namespace">/stglWorkflow</param>
+      		</result>
+      		<result name="abandonPiResult" type='chain'>
+      			<param name="actionName">userAbandon_findAbandons</param>
+            	<param name="namespace">/abandon</param>
+      		</result>
+      		<result name="abandonViewResult" type='chain'>
+      			<param name="actionName">yonggongjihua_modifyHead</param>
+            	<param name="namespace">/stgl</param>
+      		</result>
+      		<result name="endPiResult" type='chain'>
+      			<param name="actionName">userEnd_findEnds</param>
+            	<param name="namespace">/end</param>
+      		</result>
+      		<result name="endViewResult" type='chain'>
+      			<param name="actionName">yonggongjihua_modifyHead</param>
+            	<param name="namespace">/stgl</param>
+      		</result>
+      		<result name="didResult" type='chain'>
+      			<param name="actionName">yonggongjihua_modifyHead</param>
+            	<param name="namespace">/stgl</param>
+      		</result>
+      		<result name="circulation" type='chain'>
+      			<param name="actionName">ygjhWorkflow_circulation</param>
+            	<param name="namespace">/stglWorkflow</param>
+      		</result>
+      		<result name="circulationResult" type='chain'>
+      			<param name="actionName">yonggongjihua_modifyHead</param>
+            	<param name="namespace">/stgl</param>
+      		</result>
+      		<result name="taskHisGraphResult">/pages/rdp4j/workflow/task/taskHisGraph.jsp</result>
+      		<interceptor-ref name="appdefault"></interceptor-ref>
+      		<interceptor-ref name="counterSignInterceptor">
+      			<param name="includeMethods">todo</param>
+      		</interceptor-ref>
+        </action>
+        <!-- yonggongjihua  end -->
+        <!-- farendaibiao  start -->
+        <action name="frdbWorkflow_*" method="{1}" class="com.tansun.eam2.zyzc.workflow.buy.action.StglWorkflowAction">
+            <result name="newDraftResult" type='chain'>
+      			<param name="actionName">faren_newHead</param>
+            	<param name="namespace">/stgl</param>
+      		</result>
+      		<result name="toDraftResult" type='chain'>
+      			<param name="actionName">faren_modifyHead</param>
+            	<param name="namespace">/stgl</param>
+      		</result>
+      		<result name="newDraft" type='chain'>
+      			<param name="actionName">frdbWorkflow_newDraft</param>
+            	<param name="namespace">/stglWorkflow</param>
+      		</result>
+      		<result name="saveDraft" type='chain'>
+      			<param name="actionName">frdbWorkflow_saveDraft</param>
+            	<param name="namespace">/stglWorkflow</param>
+      		</result>
+      		<result name="saveTodo" type='chain'>
+      			<param name="actionName">frdbWorkflow_saveTodo</param>
+            	<param name="namespace">/stglWorkflow</param>
+      		</result>
+      		<result name="draftCommit" type='chain'>
+      			<param name="actionName">frdbWorkflow_draftCommit</param>
+            	<param name="namespace">/stglWorkflow</param>
+      		</result>
+      		<result name="draftCommitResult">
+      			/pages/rdp4j/workflow/task/todo.jsp
+      		</result>
+      		<result name="todoResult" type='chain'>
+      			<param name="actionName">faren_modifyHead</param>
+            	<param name="namespace">/stgl</param>
+      		</result>
+      		<result name="getParticipationListResult" type='chain'>
+      			<param name="actionName">dept_getValue</param>
+            	<param name="namespace">/dept</param>
+      		</result>
+      		<result name="completeTaskResult">
+      			/pages/rdp4j/workflow/task/todo.jsp
+      		</result>
+      		<result name="completeTask" type='chain'>
+      			<param name="actionName">frdbWorkflow_completeTask</param>
+            	<param name="namespace">/stglWorkflow</param>
+      		</result>
+      		<result name="abandonPiResult" type='chain'>
+      			<param name="actionName">userAbandon_findAbandons</param>
+            	<param name="namespace">/abandon</param>
+      		</result>
+      		<result name="abandonViewResult" type='chain'>
+      			<param name="actionName">faren_modifyHead</param>
+            	<param name="namespace">/stgl</param>
+      		</result>
+      		<result name="endPiResult" type='chain'>
+      			<param name="actionName">userEnd_findEnds</param>
+            	<param name="namespace">/end</param>
+      		</result>
+      		<result name="endViewResult" type='chain'>
+      			<param name="actionName">faren_modifyHead</param>
+            	<param name="namespace">/stgl</param>
+      		</result>
+      		<result name="didResult" type='chain'>
+      			<param name="actionName">faren_modifyHead</param>
+            	<param name="namespace">/stgl</param>
+      		</result>
+      		<result name="circulation" type='chain'>
+      			<param name="actionName">frdbWorkflow_circulation</param>
+            	<param name="namespace">/stglWorkflow</param>
+      		</result>
+      		<result name="circulationResult" type='chain'>
+      			<param name="actionName">faren_modifyHead</param>
+            	<param name="namespace">/stgl</param>
+      		</result>
+      		<result name="taskHisGraphResult">/pages/rdp4j/workflow/task/taskHisGraph.jsp</result>
+      		<interceptor-ref name="appdefault"></interceptor-ref>
+      		<interceptor-ref name="counterSignInterceptor">
+      			<param name="includeMethods">todo</param>
+      		</interceptor-ref>
+        </action>
+        <!-- farendaibiao  end -->
+        <!-- farendaibiao2  start -->
+        <action name="frdb2Workflow_*" method="{1}" class="com.tansun.eam2.zyzc.workflow.buy.action.StglWorkflowAction">
+            <result name="newDraftResult" type='chain'>
+      			<param name="actionName">faren2_newHead</param>
+            	<param name="namespace">/stgl</param>
+      		</result>
+      		<result name="toDraftResult" type='chain'>
+      			<param name="actionName">faren2_modifyHead</param>
+            	<param name="namespace">/stgl</param>
+      		</result>
+      		<result name="newDraft" type='chain'>
+      			<param name="actionName">frdb2Workflow_newDraft</param>
+            	<param name="namespace">/stglWorkflow</param>
+      		</result>
+      		<result name="saveDraft" type='chain'>
+      			<param name="actionName">frdb2Workflow_saveDraft</param>
+            	<param name="namespace">/stglWorkflow</param>
+      		</result>
+      		<result name="saveTodo" type='chain'>
+      			<param name="actionName">frdb2Workflow_saveTodo</param>
+            	<param name="namespace">/stglWorkflow</param>
+      		</result>
+      		<result name="draftCommit" type='chain'>
+      			<param name="actionName">frdb2Workflow_draftCommit</param>
+            	<param name="namespace">/stglWorkflow</param>
+      		</result>
+      		<result name="draftCommitResult" >
+      			/pages/rdp4j/workflow/task/todo.jsp
+      		</result>
+      		<result name="todoResult" type='chain'>
+      			<param name="actionName">faren2_modifyHead</param>
+            	<param name="namespace">/stgl</param>
+      		</result>
+      		<result name="getParticipationListResult" type='chain'>
+      			<param name="actionName">dept_getValue</param>
+            	<param name="namespace">/dept</param>
+      		</result>
+      		<result name="completeTaskResult">
+      			/pages/rdp4j/workflow/task/todo.jsp
+      		</result>
+      		<result name="completeTask" type='chain'>
+      			<param name="actionName">frdb2Workflow_completeTask</param>
+            	<param name="namespace">/stglWorkflow</param>
+      		</result>
+      		<result name="abandonPiResult" type='chain'>
+      			<param name="actionName">userAbandon_findAbandons</param>
+            	<param name="namespace">/abandon</param>
+      		</result>
+      		<result name="abandonViewResult" type='chain'>
+      			<param name="actionName">faren2_modifyHead</param>
+            	<param name="namespace">/stgl</param>
+      		</result>
+      		<result name="endPiResult" type='chain'>
+      			<param name="actionName">userEnd_findEnds</param>
+            	<param name="namespace">/end</param>
+      		</result>
+      		<result name="endViewResult" type='chain'>
+      			<param name="actionName">faren2_modifyHead</param>
+            	<param name="namespace">/stgl</param>
+      		</result>
+      		<result name="didResult" type='chain'>
+      			<param name="actionName">faren2_modifyHead</param>
+            	<param name="namespace">/stgl</param>
+      		</result>
+      		<result name="circulation" type='chain'>
+      			<param name="actionName">frdb2Workflow_circulation</param>
+            	<param name="namespace">/stglWorkflow</param>
+      		</result>
+      		<result name="circulationResult" type='chain'>
+      			<param name="actionName">faren2_modifyHead</param>
+            	<param name="namespace">/stgl</param>
+      		</result>
+      		<result name="taskHisGraphResult">/pages/rdp4j/workflow/task/taskHisGraph.jsp</result>
+      		<interceptor-ref name="appdefault"></interceptor-ref>
+      		<interceptor-ref name="counterSignInterceptor">
+      			<param name="includeMethods">todo</param>
+      		</interceptor-ref>
+        </action>
+        <!-- farendaibiao2  end -->
+        <!-- zhongdacaiwu  start -->
+        <action name="zdcwWorkflow_*" method="{1}" class="com.tansun.eam2.zyzc.workflow.buy.action.StglWorkflowAction">
+            <result name="newDraftResult" type='chain'>
+      			<param name="actionName">caiwu_newHead</param>
+            	<param name="namespace">/stgl</param>
+      		</result>
+      		<result name="toDraftResult" type='chain'>
+      			<param name="actionName">caiwu_modifyHead</param>
+            	<param name="namespace">/stgl</param>
+      		</result>
+      		<result name="newDraft" type='chain'>
+      			<param name="actionName">zdcwWorkflow_newDraft</param>
+            	<param name="namespace">/stglWorkflow</param>
+      		</result>
+      		<result name="saveDraft" type='chain'>
+      			<param name="actionName">zdcwWorkflow_saveDraft</param>
+            	<param name="namespace">/stglWorkflow</param>
+      		</result>
+      		<result name="saveTodo" type='chain'>
+      			<param name="actionName">zdcwWorkflow_saveTodo</param>
+            	<param name="namespace">/stglWorkflow</param>
+      		</result>
+      		<result name="draftCommit" type='chain'>
+      			<param name="actionName">zdcwWorkflow_draftCommit</param>
+            	<param name="namespace">/stglWorkflow</param>
+      		</result>
+      		<result name="draftCommitResult">
+      			/pages/rdp4j/workflow/task/todo.jsp
+      		</result>
+      		<result name="todoResult" type='chain'>
+      			<param name="actionName">caiwu_modifyHead</param>
+            	<param name="namespace">/stgl</param>
+      		</result>
+      		<result name="getParticipationListResult" type='chain'>
+      			<param name="actionName">dept_getValue</param>
+            	<param name="namespace">/dept</param>
+      		</result>
+      		<result name="completeTaskResult" >
+      			/pages/rdp4j/workflow/task/todo.jsp
+      		</result>
+      		<result name="completeTask" type='chain'>
+      			<param name="actionName">zdcwWorkflow_completeTask</param>
+            	<param name="namespace">/stglWorkflow</param>
+      		</result>
+      		<result name="abandonPiResult" type='chain'>
+      			<param name="actionName">userAbandon_findAbandons</param>
+            	<param name="namespace">/abandon</param>
+      		</result>
+      		<result name="abandonViewResult" type='chain'>
+      			<param name="actionName">caiwu_modifyHead</param>
+            	<param name="namespace">/stgl</param>
+      		</result>
+      		<result name="endPiResult" type='chain'>
+      			<param name="actionName">userEnd_findEnds</param>
+            	<param name="namespace">/end</param>
+      		</result>
+      		<result name="endViewResult" type='chain'>
+      			<param name="actionName">caiwu_modifyHead</param>
+            	<param name="namespace">/stgl</param>
+      		</result>
+      		<result name="didResult" type='chain'>
+      			<param name="actionName">caiwu_modifyHead</param>
+            	<param name="namespace">/stgl</param>
+      		</result>
+      		<result name="circulation" type='chain'>
+      			<param name="actionName">zdcwWorkflow_circulation</param>
+            	<param name="namespace">/stglWorkflow</param>
+      		</result>
+      		<result name="circulationResult" type='chain'>
+      			<param name="actionName">caiwu_modifyHead</param>
+            	<param name="namespace">/stgl</param>
+      		</result>
+      		<result name="taskHisGraphResult">/pages/rdp4j/workflow/task/taskHisGraph.jsp</result>
+      		<interceptor-ref name="appdefault"></interceptor-ref>
+      		<interceptor-ref name="counterSignInterceptor">
+      			<param name="includeMethods">todo</param>
+      		</interceptor-ref>
+        </action>
+        <!-- zhongdacaiwu  end -->
+        <!-- zhongdacaiwu2  start -->
+        <action name="zdcw2Workflow_*" method="{1}" class="com.tansun.eam2.zyzc.workflow.buy.action.StglWorkflowAction">
+            <result name="newDraftResult" type='chain'>
+      			<param name="actionName">caiwu2_newHead</param>
+            	<param name="namespace">/stgl</param>
+      		</result>
+      		<result name="toDraftResult" type='chain'>
+      			<param name="actionName">caiwu2_modifyHead</param>
+            	<param name="namespace">/stgl</param>
+      		</result>
+      		<result name="newDraft" type='chain'>
+      			<param name="actionName">zdcw2Workflow_newDraft</param>
+            	<param name="namespace">/stglWorkflow</param>
+      		</result>
+      		<result name="saveDraft" type='chain'>
+      			<param name="actionName">zdcw2Workflow_saveDraft</param>
+            	<param name="namespace">/stglWorkflow</param>
+      		</result>
+      		<result name="saveTodo" type='chain'>
+      			<param name="actionName">zdcw2Workflow_saveTodo</param>
+            	<param name="namespace">/stglWorkflow</param>
+      		</result>
+      		<result name="draftCommit" type='chain'>
+      			<param name="actionName">zdcw2Workflow_draftCommit</param>
+            	<param name="namespace">/stglWorkflow</param>
+      		</result>
+      		<result name="draftCommitResult">
+      			/pages/rdp4j/workflow/task/todo.jsp
+      		</result>
+      		<result name="todoResult" type='chain'>
+      			<param name="actionName">caiwu2_modifyHead</param>
+            	<param name="namespace">/stgl</param>
+      		</result>
+      		<result name="getParticipationListResult" type='chain'>
+      			<param name="actionName">dept_getValue</param>
+            	<param name="namespace">/dept</param>
+      		</result>
+      		<result name="completeTaskResult" >
+      			/pages/rdp4j/workflow/task/todo.jsp
+      		</result>
+      		<result name="completeTask" type='chain'>
+      			<param name="actionName">zdcw2Workflow_completeTask</param>
+            	<param name="namespace">/stglWorkflow</param>
+      		</result>
+      		<result name="abandonPiResult" type='chain'>
+      			<param name="actionName">userAbandon_findAbandons</param>
+            	<param name="namespace">/abandon</param>
+      		</result>
+      		<result name="abandonViewResult" type='chain'>
+      			<param name="actionName">caiwu2_modifyHead</param>
+            	<param name="namespace">/stgl</param>
+      		</result>
+      		<result name="endPiResult" type='chain'>
+      			<param name="actionName">userEnd_findEnds</param>
+            	<param name="namespace">/end</param>
+      		</result>
+      		<result name="endViewResult" type='chain'>
+      			<param name="actionName">caiwu2_modifyHead</param>
+            	<param name="namespace">/stgl</param>
+      		</result>
+      		<result name="didResult" type='chain'>
+      			<param name="actionName">caiwu2_modifyHead</param>
+            	<param name="namespace">/stgl</param>
+      		</result>
+      		<result name="circulation" type='chain'>
+      			<param name="actionName">zdcw2Workflow_circulation</param>
+            	<param name="namespace">/stglWorkflow</param>
+      		</result>
+      		<result name="circulationResult" type='chain'>
+      			<param name="actionName">caiwu2_modifyHead</param>
+            	<param name="namespace">/stgl</param>
+      		</result>
+      		<result name="taskHisGraphResult">/pages/rdp4j/workflow/task/taskHisGraph.jsp</result>
+      		<interceptor-ref name="appdefault"></interceptor-ref>
+      		<interceptor-ref name="counterSignInterceptor">
+      			<param name="includeMethods">todo</param>
+      		</interceptor-ref>
+        </action>
+        <!-- zhongdacaiwu2 end -->
+        <!-- quequan  start -->
+        <action name="qqWorkflow_*" method="{1}" class="com.tansun.eam2.zyzc.workflow.buy.action.StglWorkflowAction">
+            <result name="newDraftResult" type='chain'>
+      			<param name="actionName">quequan_newHead</param>
+            	<param name="namespace">/stgl</param>
+      		</result>
+      		<result name="toDraftResult" type='chain'>
+      			<param name="actionName">quequan_modifyHead</param>
+            	<param name="namespace">/stgl</param>
+      		</result>
+      		<result name="newDraft" type='chain'>
+      			<param name="actionName">qqWorkflow_newDraft</param>
+            	<param name="namespace">/stglWorkflow</param>
+      		</result>
+      		<result name="saveDraft" type='chain'>
+      			<param name="actionName">qqWorkflow_saveDraft</param>
+            	<param name="namespace">/stglWorkflow</param>
+      		</result>
+      		<result name="saveTodo" type='chain'>
+      			<param name="actionName">qqWorkflow_saveTodo</param>
+            	<param name="namespace">/stglWorkflow</param>
+      		</result>
+      		<result name="draftCommit" type='chain'>
+      			<param name="actionName">qqWorkflow_draftCommit</param>
+            	<param name="namespace">/stglWorkflow</param>
+      		</result>
+      		<result name="draftCommitResult">
+      			/pages/rdp4j/workflow/task/todo.jsp
+      		</result>
+      		<result name="todoResult" type='chain'>
+      			<param name="actionName">quequan_modifyHead</param>
+            	<param name="namespace">/stgl</param>
+      		</result>
+      		<result name="getParticipationListResult" type='chain'>
+      			<param name="actionName">dept_getValue</param>
+            	<param name="namespace">/dept</param>
+      		</result>
+      		<result name="completeTaskResult">
+      			/pages/rdp4j/workflow/task/todo.jsp
+      		</result>
+      		<result name="completeTask" type='chain'>
+      			<param name="actionName">qqWorkflow_completeTask</param>
+            	<param name="namespace">/stglWorkflow</param>
+      		</result>
+      		<result name="abandonPiResult" type='chain'>
+      			<param name="actionName">userAbandon_findAbandons</param>
+            	<param name="namespace">/abandon</param>
+      		</result>
+      		<result name="abandonViewResult" type='chain'>
+      			<param name="actionName">quequan_modifyHead</param>
+            	<param name="namespace">/stgl</param>
+      		</result>
+      		<result name="endPiResult" type='chain'>
+      			<param name="actionName">userEnd_findEnds</param>
+            	<param name="namespace">/end</param>
+      		</result>
+      		<result name="endViewResult" type='chain'>
+      			<param name="actionName">quequan_modifyHead</param>
+            	<param name="namespace">/stgl</param>
+      		</result>
+      		<result name="didResult" type='chain'>
+      			<param name="actionName">quequan_modifyHead</param>
+            	<param name="namespace">/stgl</param>
+      		</result>
+      		<result name="circulation" type='chain'>
+      			<param name="actionName">qqWorkflow_circulation</param>
+            	<param name="namespace">/stglWorkflow</param>
+      		</result>
+      		<result name="circulationResult" type='chain'>
+      			<param name="actionName">quequan_modifyHead</param>
+            	<param name="namespace">/stgl</param>
+      		</result>
+      		<result name="taskHisGraphResult">/pages/rdp4j/workflow/task/taskHisGraph.jsp</result>
+      		<interceptor-ref name="appdefault"></interceptor-ref>
+      		<interceptor-ref name="counterSignInterceptor">
+      			<param name="includeMethods">todo</param>
+      		</interceptor-ref>
+        </action>
+        <!-- quequan  end -->
+        <!-- quequan2  start -->
+        <action name="qq2Workflow_*" method="{1}" class="com.tansun.eam2.zyzc.workflow.buy.action.StglWorkflowAction">
+            <result name="newDraftResult" type='chain'>
+      			<param name="actionName">quequan2_newHead</param>
+            	<param name="namespace">/stgl</param>
+      		</result>
+      		<result name="toDraftResult" type='chain'>
+      			<param name="actionName">quequan2_modifyHead</param>
+            	<param name="namespace">/stgl</param>
+      		</result>
+      		<result name="newDraft" type='chain'>
+      			<param name="actionName">qq2Workflow_newDraft</param>
+            	<param name="namespace">/stglWorkflow</param>
+      		</result>
+      		<result name="saveDraft" type='chain'>
+      			<param name="actionName">qq2Workflow_saveDraft</param>
+            	<param name="namespace">/stglWorkflow</param>
+      		</result>
+      		<result name="saveTodo" type='chain'>
+      			<param name="actionName">qq2Workflow_saveTodo</param>
+            	<param name="namespace">/stglWorkflow</param>
+      		</result>
+      		<result name="draftCommit" type='chain'>
+      			<param name="actionName">qq2Workflow_draftCommit</param>
+            	<param name="namespace">/stglWorkflow</param>
+      		</result>
+      		<result name="draftCommitResult">
+      			/pages/rdp4j/workflow/task/todo.jsp
+      		</result>
+      		<result name="todoResult" type='chain'>
+      			<param name="actionName">quequan2_modifyHead</param>
+            	<param name="namespace">/stgl</param>
+      		</result>
+      		<result name="getParticipationListResult" type='chain'>
+      			<param name="actionName">dept_getValue</param>
+            	<param name="namespace">/dept</param>
+      		</result>
+      		<result name="completeTaskResult">
+      			/pages/rdp4j/workflow/task/todo.jsp
+      		</result>
+      		<result name="completeTask" type='chain'>
+      			<param name="actionName">qq2Workflow_completeTask</param>
+            	<param name="namespace">/stglWorkflow</param>
+      		</result>
+      		<result name="abandonPiResult" type='chain'>
+      			<param name="actionName">userAbandon_findAbandons</param>
+            	<param name="namespace">/abandon</param>
+      		</result>
+      		<result name="abandonViewResult" type='chain'>
+      			<param name="actionName">quequan2_modifyHead</param>
+            	<param name="namespace">/stgl</param>
+      		</result>
+      		<result name="endPiResult" type='chain'>
+      			<param name="actionName">userEnd_findEnds</param>
+            	<param name="namespace">/end</param>
+      		</result>
+      		<result name="endViewResult" type='chain'>
+      			<param name="actionName">quequan2_modifyHead</param>
+            	<param name="namespace">/stgl</param>
+      		</result>
+      		<result name="didResult" type='chain'>
+      			<param name="actionName">quequan2_modifyHead</param>
+            	<param name="namespace">/stgl</param>
+      		</result>
+      		<result name="circulation" type='chain'>
+      			<param name="actionName">qq2Workflow_circulation</param>
+            	<param name="namespace">/stglWorkflow</param>
+      		</result>
+      		<result name="circulationResult" type='chain'>
+      			<param name="actionName">quequan2_modifyHead</param>
+            	<param name="namespace">/stgl</param>
+      		</result>
+      		<result name="taskHisGraphResult">/pages/rdp4j/workflow/task/taskHisGraph.jsp</result>
+      		<interceptor-ref name="appdefault"></interceptor-ref>
+      		<interceptor-ref name="counterSignInterceptor">
+      			<param name="includeMethods">todo</param>
+      		</interceptor-ref>
+        </action>
+        <!-- quequan2  end -->
+        <!-- qita  start -->
+        <action name="qtWorkflow_*" method="{1}" class="com.tansun.eam2.zyzc.workflow.buy.action.StglWorkflowAction">
+            <result name="newDraftResult" type='chain'>
+      			<param name="actionName">qita_newHead</param>
+            	<param name="namespace">/stgl</param>
+      		</result>
+      		<result name="toDraftResult" type='chain'>
+      			<param name="actionName">qita_modifyHead</param>
+            	<param name="namespace">/stgl</param>
+      		</result>
+      		<result name="newDraft" type='chain'>
+      			<param name="actionName">qtWorkflow_newDraft</param>
+            	<param name="namespace">/stglWorkflow</param>
+      		</result>
+      		<result name="saveDraft" type='chain'>
+      			<param name="actionName">qtWorkflow_saveDraft</param>
+            	<param name="namespace">/stglWorkflow</param>
+      		</result>
+      		<result name="saveTodo" type='chain'>
+      			<param name="actionName">qtWorkflow_saveTodo</param>
+            	<param name="namespace">/stglWorkflow</param>
+      		</result>
+      		<result name="draftCommit" type='chain'>
+      			<param name="actionName">qtWorkflow_draftCommit</param>
+            	<param name="namespace">/stglWorkflow</param>
+      		</result>
+      		<result name="draftCommitResult">
+      			/pages/rdp4j/workflow/task/todo.jsp
+      		</result>
+      		<result name="todoResult" type='chain'>
+      			<param name="actionName">qita_modifyHead</param>
+            	<param name="namespace">/stgl</param>
+      		</result>
+      		<result name="getParticipationListResult" type='chain'>
+      			<param name="actionName">dept_getValue</param>
+            	<param name="namespace">/dept</param>
+      		</result>
+      		<result name="completeTaskResult">
+      			/pages/rdp4j/workflow/task/todo.jsp
+      		</result>
+      		<result name="completeTask" type='chain'>
+      			<param name="actionName">qtWorkflow_completeTask</param>
+            	<param name="namespace">/stglWorkflow</param>
+      		</result>
+      		<result name="abandonPiResult" type='chain'>
+      			<param name="actionName">userAbandon_findAbandons</param>
+            	<param name="namespace">/abandon</param>
+      		</result>
+      		<result name="abandonViewResult" type='chain'>
+      			<param name="actionName">qita_modifyHead</param>
+            	<param name="namespace">/stgl</param>
+      		</result>
+      		<result name="endPiResult" type='chain'>
+      			<param name="actionName">userEnd_findEnds</param>
+            	<param name="namespace">/end</param>
+      		</result>
+      		<result name="endViewResult" type='chain'>
+      			<param name="actionName">qita_modifyHead</param>
+            	<param name="namespace">/stgl</param>
+      		</result>
+      		<result name="didResult" type='chain'>
+      			<param name="actionName">qita_modifyHead</param>
+            	<param name="namespace">/stgl</param>
+      		</result>
+      		<result name="circulation" type='chain'>
+      			<param name="actionName">qtWorkflow_circulation</param>
+            	<param name="namespace">/stglWorkflow</param>
+      		</result>
+      		<result name="circulationResult" type='chain'>
+      			<param name="actionName">qita_modifyHead</param>
+            	<param name="namespace">/stgl</param>
+      		</result>
+      		<result name="taskHisGraphResult">/pages/rdp4j/workflow/task/taskHisGraph.jsp</result>
+      		<interceptor-ref name="appdefault"></interceptor-ref>
+      		<interceptor-ref name="counterSignInterceptor">
+      			<param name="includeMethods">todo</param>
+      		</interceptor-ref>
+        </action>
+        <!-- qita  end -->
+        <!-- shitigaizhi  start -->
+        <action name="stgzWorkflow_*" method="{1}" class="com.tansun.eam2.zyzc.workflow.buy.action.StglWorkflowAction">
+            <result name="newDraftResult" type='chain'>
+      			<param name="actionName">gaizhi_newHead</param>
+            	<param name="namespace">/stgl</param>
+      		</result>
+      		<result name="toDraftResult" type='chain'>
+      			<param name="actionName">gaizhi_modifyHead</param>
+            	<param name="namespace">/stgl</param>
+      		</result>
+      		<result name="newDraft" type='chain'>
+      			<param name="actionName">stgzWorkflow_newDraft</param>
+            	<param name="namespace">/stglWorkflow</param>
+      		</result>
+      		<result name="saveDraft" type='chain'>
+      			<param name="actionName">stgzWorkflow_saveDraft</param>
+            	<param name="namespace">/stglWorkflow</param>
+      		</result>
+      		<result name="saveTodo" type='chain'>
+      			<param name="actionName">stgzWorkflow_saveTodo</param>
+            	<param name="namespace">/stglWorkflow</param>
+      		</result>
+      		<result name="draftCommit" type='chain'>
+      			<param name="actionName">stgzWorkflow_draftCommit</param>
+            	<param name="namespace">/stglWorkflow</param>
+      		</result>
+      		<result name="draftCommitResult">
+      			/pages/rdp4j/workflow/task/todo.jsp
+      		</result>
+      		<result name="todoResult" type='chain'>
+      			<param name="actionName">gaizhi_modifyHead</param>
+            	<param name="namespace">/stgl</param>
+      		</result>
+      		<result name="getParticipationListResult" type='chain'>
+      			<param name="actionName">dept_getValue</param>
+            	<param name="namespace">/dept</param>
+      		</result>
+      		<result name="completeTaskResult">
+      			/pages/rdp4j/workflow/task/todo.jsp
+      		</result>
+      		<result name="completeTask" type='chain'>
+      			<param name="actionName">stgzWorkflow_completeTask</param>
+            	<param name="namespace">/stglWorkflow</param>
+      		</result>
+      		<result name="abandonPiResult" type='chain'>
+      			<param name="actionName">userAbandon_findAbandons</param>
+            	<param name="namespace">/abandon</param>
+      		</result>
+      		<result name="abandonViewResult" type='chain'>
+      			<param name="actionName">gaizhi_modifyHead</param>
+            	<param name="namespace">/stgl</param>
+      		</result>
+      		<result name="endPiResult" type='chain'>
+      			<param name="actionName">userEnd_findEnds</param>
+            	<param name="namespace">/end</param>
+      		</result>
+      		<result name="endViewResult" type='chain'>
+      			<param name="actionName">gaizhi_modifyHead</param>
+            	<param name="namespace">/stgl</param>
+      		</result>
+      		<result name="didResult" type='chain'>
+      			<param name="actionName">gaizhi_modifyHead</param>
+            	<param name="namespace">/stgl</param>
+      		</result>
+      		<result name="circulation" type='chain'>
+      			<param name="actionName">stgzWorkflow_circulation</param>
+            	<param name="namespace">/stglWorkflow</param>
+      		</result>
+      		<result name="circulationResult" type='chain'>
+      			<param name="actionName">gaizhi_modifyHead</param>
+            	<param name="namespace">/stgl</param>
+      		</result>
+      		<result name="taskHisGraphResult">/pages/rdp4j/workflow/task/taskHisGraph.jsp</result>
+      		<interceptor-ref name="appdefault"></interceptor-ref>
+      		<interceptor-ref name="counterSignInterceptor">
+      			<param name="includeMethods">todo</param>
+      		</interceptor-ref>
+        </action>
+        <!-- shitigaizhi  end -->
+    </package>
+</struts>

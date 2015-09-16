@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <package  name="dept" namespace="/dept" extends="default">
+      <action name="dept_*"  method="{1}" class="com.tansun.rdp4j.generalapps.dept.action.DeptAction">
+       <result name="toTree">/pages/rdp4j/generalapps/dept/dept_tree.jsp</result>
+       <result name="toTreeDept">/pages/rdp4j/generalapps/dept/dept_treeDept.jsp</result>
+       <result name="toTreeAssign">/pages/rdp4j/generalapps/dept/dept_treeAssign.jsp</result>
+       <result name="toSelectUsers">/pages/rdp4j/generalapps/dept/dept_users.jsp</result>
+       <result name="toList" type="freemarker">/pages/rdp4j/generalapps/dept/dept_list.jsp</result>
+       <result name="toAdd">/pages/rdp4j/generalapps/dept/dept_add.jsp</result>
+       <result name="toSelf">/pages/rdp4j/generalapps/dept/dept_viewSelf.jsp</result>
+       <result name="toTrueUpdate">/pages/rdp4j/generalapps/dept/dept_update.jsp</result>
+       <result name="getOneDep">/pages/rdp4j/generalapps/dept/dept_getOne.jsp</result>
+       <result name="success">/pages/rdp4j/generalapps/dept/dept_success.jsp</result>
+       <result name="toGetAllChildrens">/pages/rdp4j/generalapps/dept/dept_getAllChildrens.jsp</result>
+       <result name="toAddChild">/pages/rdp4j/generalapps/dept/dept_addChild.jsp</result>
+       <result name="splitDep">/pages/rdp4j/generalapps/dept/dept_splitDep.jsp</result>
+       <result name="combinationDep">/pages/rdp4j/generalapps/dept/dept_combinationDep.jsp</result>
+       <result name="toAjax">/pages/rdp4j/generalapps/dept/dept_myAjax.jsp</result>
+       <result name="toCombination">/pages/rdp4j/generalapps/dept/dept_combination.jsp</result>
+       <result name="addParent">/pages/rdp4j/generalapps/dept/dept_addParent.jsp</result>
+       <result name="info">/pages/rdp4j/common/menu/dept_menuinfo.jsp</result>
+       <result name="iframe">/pages/rdp4j/generalapps/dept/dept_iframe.jsp</result>
+       <result name="deptLeft">/pages/rdp4j/generalapps/dept/dept_deptLeft.jsp</result>
+      </action>
+    </package>
+</struts>

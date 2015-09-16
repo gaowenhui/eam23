@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="blyj" namespace="/blyj" extends="default">
+
+		<action name="according_*" method="{1}" class="com.tansun.rdp4j.common.web.action.AccordingManagementAction">
+			<result name="index">/pages/rdp4j/common/according/common_according.jsp</result>
+			<result name="openAccordingView">/pages/rdp4j/common/according/transact_bases.jsp</result>
+		</action>
+	</package>
+</struts>

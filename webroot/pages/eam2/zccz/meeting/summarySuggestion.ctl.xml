@@ -1,0 +1,80 @@
+<?xml version="1.0"  encoding="UTF-8"?>
+<!DOCTYPE form-config SYSTEM "dynamic-form.dtd">
+<form-config>
+    <state-group>
+        <state id="汇总审批意见">
+        	<component id="LEADER" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="OPERATION_GROUP" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="APPROVEMENT" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="SUMMARY_SUGGEST" renderType="normal" userId="" roleId="" deptId="" />
+        	<component id="endButton" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="spjl" renderType="normal" userId="" roleId="" deptId="" />
+        	<component id="sfba" renderType="normal" userId="" roleId="" deptId="" />
+        	<component id="czsx" renderType="normal" userId="" roleId="" deptId="" />
+        	<component id="fileButton" renderType="normal" userId="" roleId="" deptId="" />
+        </state>
+        <state id="审核汇总意见">
+        	<component id="LEADER" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="OPERATION_GROUP" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="APPROVEMENT" renderType="normal" userId="" roleId="" deptId="" />
+        	<component id="SUMMARY_SUGGEST" renderType="normal" userId="" roleId="" deptId="" />
+        	<component id="endButton" renderType="normal" userId="" roleId="" deptId="" />
+        	<component id="spjl" renderType="normal" userId="" roleId="" deptId="" />
+        	<component id="sfba" renderType="normal" userId="" roleId="" deptId="" />
+        	<component id="czsx" renderType="normal" userId="" roleId="" deptId="" />
+        	<component id="fileButton" renderType="normal" userId="" roleId="" deptId="" />
+        </state>
+        <state id="业务运营组处理">
+        	<component id="LEADER" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="OPERATION_GROUP" renderType="normal" userId="" roleId="" deptId="" />
+        	<component id="APPROVEMENT" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="SUMMARY_SUGGEST" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="endButton" renderType="normal" userId="" roleId="" deptId="" />
+        	<component id="spjl" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="sfba" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="czsx" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="fileButton" renderType="disable" userId="" roleId="" deptId="" />
+        </state>
+        <state id="公司领导批示">
+        	<component id="LEADER" renderType="normal" userId="" roleId="" deptId="" />
+        	<component id="OPERATION_GROUP" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="APPROVEMENT" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="SUMMARY_SUGGEST" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="endButton" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="spjl" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="sfba" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="czsx" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="fileButton" renderType="disable" userId="" roleId="" deptId="" />
+        </state>
+        <state id="did">
+        	<component id="LEADER" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="OPERATION_GROUP" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="APPROVEMENT" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="SUMMARY_SUGGEST" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="endButton" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="spjl" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="sfba" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="czsx" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="fileButton" renderType="disable" userId="" roleId="" deptId="" />
+        </state>
+        <state id="end">
+        	<component id="LEADER" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="OPERATION_GROUP" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="APPROVEMENT" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="SUMMARY_SUGGEST" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="endButton" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="spjl" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="sfba" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="czsx" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="fileButton" renderType="disable" userId="" roleId="" deptId="" />
+        </state>
+        <state id="readonly">
+        	<component id="LEADER" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="OPERATION_GROUP" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="APPROVEMENT" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="SUMMARY_SUGGEST" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="endButton" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="fileButton" renderType="disable" userId="" roleId="" deptId="" />
+        </state>
+    </state-group>
+</form-config>

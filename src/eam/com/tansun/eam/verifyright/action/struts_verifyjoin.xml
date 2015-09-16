@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="gbk" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+    <package name="verifyjoin" namespace="/verifyjoin" extends="default">
+      <action name="verifyjoin_*"  method="{1}" class="com.tansun.eam.verifyright.action.VerifyJoinAction">
+      	<result name="dptList">/pages/rdp4j/eam/verifyright/dptList.jsp</result>
+      	<result name="myTask" type='redirect'>/workflow/userTask_findTodoTasks.do</result>
+      	<result name="task">/pages/rdp4j/eam/verifyright/task.jsp</result>
+      	<result name="choiceUser">/pages/rdp4j/eam/verifyright/choiceUser.jsp</result>
+      	<result name="selectUser">/pages/rdp4j/generalapps/dept/selectUser.jsp</result>
+      	<result name="forkUserList">/pages/rdp4j/eam/verifyright/forkUserList.jsp</result>
+      	<result name="psstart">/pages/rdp4j/eam/verifyright/psstart.jsp</result>
+      	<result name="participationList" type='chain' >
+      		<param name="actionName">dept_getValue</param>
+            <param name="namespace">/dept</param>
+      	</result>
+      </action>
+    </package>
+</struts>
+<!--
+http://127.0.0.1:8080/rdp4j/verifyjoin/verifyjoin_startProcess.do?pdName=确权主流程
+-->

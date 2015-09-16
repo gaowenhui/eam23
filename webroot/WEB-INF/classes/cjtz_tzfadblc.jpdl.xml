@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<process name="cjtz_tzfadblc" xmlns="http://jbpm.org/4.4/jpdl">
+	
+	<start g="146,47,48,48" name="start">
+		<transition g="-53,-17" name="开始" to="拟稿"/>
+	</start>
+
+	<task assignee="#{assignee}" g="124,130,92,52" name="拟稿">
+		<transition g="-53,-17" name="拟稿" to="拟稿"/>
+		<transition g="-53,-17" name="秘书处综合处理" to="秘书处综合处理"/>
+		<transition g="-53,-17" name="backto秘书处综合处理" to="秘书处综合处理"/>
+		<transition g="-83,-17" name="作废" to="结束">
+			<event-listener class="com.tansun.eam2.cjtz.listener.CodeListener"/>
+			<event-listener class="com.tansun.eam2.common.workflow.listener.AbandonEventListener"/>
+		</transition>
+	</task>
+
+	<task g="124,268,92,52" name="秘书处综合处理">
+		<transition g="-53,-17" name="秘书处综合处理" to="秘书处综合处理"/>
+		<transition g="-53,-17" name="拟稿" to="拟稿"/>
+		<transition g="-53,-17" name="办理部门综合处理" to="办理部门综合处理"/>
+		<transition g="-53,-17" name="backto拟稿" to="拟稿"/>
+		<transition g="-53,-17" name="backto办理部门综合处理" to="办理部门综合处理"/>
+		<transition g="-53,-17" name="流程办结" to="结束">
+			<event-listener class="com.tansun.eam2.common.workflow.listener.EndEventListener"/>
+		</transition>
+	</task>
+
+	<task g="379,268,110,52" name="办理部门综合处理">
+		<transition g="-53,-17" name="办理部门综合处理" to="办理部门综合处理"/>
+		<transition g="-53,-17" name="秘书处综合处理" to="秘书处综合处理"/>
+		<transition g="-53,-17" name="办理部门组处理" to="办理部门组处理"/>
+		<transition g="-53,-17" name="backto秘书处综合处理" to="秘书处综合处理"/>
+		<transition g="-53,-17" name="backto办理部门组处理" to="办理部门组处理"/>
+	</task>
+
+	<task g="361,128,145,57" name="办理部门组处理">
+		<transition g="-53,-17" name="办理部门组处理" to="办理部门组处理"/>
+		<transition g="-53,-17" name="办理部门综合处理" to="办理部门综合处理"/>
+	 	<transition g="-53,-17" name="backto办理部门综合处理" to="办理部门综合处理"/> 
+		<transition g="-53,-17" name="backto办理部门组处理" to="办理部门组处理"/>
+	</task>
+	
+	<end g="146,406,48,48" name="结束"/>
+	<migrate-instances versions="1..x"/>
+</process>

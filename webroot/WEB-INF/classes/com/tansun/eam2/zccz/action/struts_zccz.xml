@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="zccz" namespace="/zccz" extends="default">
+		<action name="index">
+			<result>/pages/eam2/zccz/index.jsp</result>
+		</action>
+		
+		<!-- liubeiei  资产处置方案审批单 start -->
+      	<action name="assetDealHead_*"  method="{1}" class="com.tansun.eam2.zccz.action.AssetDealHeadAction">
+	      	<!-- <result name="tomodify" type="chain">
+				<param name="actionName">assetDealHead_newHead</param>
+				<param name="namespace">/zccz</param>
+			</result> -->
+			<result name="toWorkflow" type='chain'>
+      			<param name="actionName">zcczassetWorkflow_toResult</param>
+            	<param name="namespace">/zcczassetWorkflow</param>
+      		</result>
+      		<result name="tomodify" type='chain'>
+      			<param name="actionName">zcczassetWorkflow_toDraft</param>
+            	<param name="namespace">/zcczassetWorkflow</param>
+      		</result>
+       		<result name="openHead">/pages/eam2/zccz/assetDeal/zichan_nigao.jsp</result>
+       		<result name="expensesDetail">/pages/eam2/zccz/personDeal/feiyongDetail.jsp</result>
+       		
+       		<result name="showZcxx">/pages/eam2/zccz/assetDeal/gczq_zc.jsp</result>
+       		<result name="showCldxx">/pages/eam2/zccz/assetDeal/gczq_cld.jsp</result>
+      	</action>
+      	
+      	<action name="assetDealBody_*"  method="{1}" class="com.tansun.eam2.zccz.action.AssetDealBodyAction">
+       		<result name="addBody">/pages/eam2/zccz/assetDeal/project_add_info.jsp</result>
+       		<result name="modifyBody">/pages/eam2/zccz/assetDeal/ckmx.jsp</result>
+       		<result name="vidwBody">/pages/eam2/zccz/assetDeal/ckmx.jsp</result>
+      	</action>
+		<!-- liubeibei end -->
+		
+		<action name="xmshAction_*"  method="{1}" class="com.tansun.eam2.zccz.action.XmshAction">
+       		<result name="xmIndex">/pages/eam2/zccz/meeting/xmIndex.jsp</result>
+       		<result name="viewItemMeetingInfo">/pages/eam2/zccz/meeting/xmshxx.jsp</result>
+       		<result name="summarySuggestions">/pages/eam2/zccz/meeting/summarySuggestion.jsp</result>
+       		<result name="toWorkflow" type='chain'>
+      			<param name="actionName">zcczWorkflow_toResult</param>
+            	<param name="namespace">/zcczWorkflow</param>
+      		</result>
+      		<result name="itemAndAsset">/pages/eam2/zccz/meeting/itemAndAsset.jsp</result>
+      	</action>   
+		
+		<!--  实体整体处置start -->
+		 <action name="entityDealHead_*"  method="{1}" class="com.tansun.eam2.zccz.action.EntityDealHeadAction">
+       		<result name="toWorkflow" type='chain'>
+      			<param name="actionName">zcczWorkflow_toResult</param>
+            	<param name="namespace">/zcczWorkflow</param>
+      		</result>
+      		<result name="newHead">
+      			/pages/eam2/zccz/entityDeal/shiti_zhengti_chuzhi.jsp
+      		</result>
+      		<result name="tomodify" type='chain'>
+      			<param name="actionName">zcczWorkflow_toDraft</param>
+            	<param name="namespace">/zcczWorkflow</param>
+      		</result>
+      		<result name="showDebtListWin">/pages/eam2/zccz/entityDeal/deptListWin.jsp</result>
+      		<result name="showStczZc">/pages/eam2/zccz/entityDeal/shiti_zhengti_chuzhi_zc.jsp</result>
+      		<result name="showStczCld">/pages/eam2/zccz/entityDeal/shiti_zhengti_chuzhi_cld.jsp</result>
+      	</action>
+      	
+      	<action name="entityDealBody_*"  method="{1}" class="com.tansun.eam2.zccz.action.EntityDealBodyAction">
+       		<result name="addBody">/pages/eam2/zccz/entityDeal/entityList.jsp</result>
+       		<result name="modifyBody">/pages/eam2/zccz/entityDeal/ckmx.jsp</result>
+       		<result name="vidwBody">/pages/eam2/zccz/entityDeal/ckmx.jsp</result>
+      	</action>
+		
+
+      <!--  实体人员处置start -->
+		 <action name="personDealHead_*"  method="{1}" class="com.tansun.eam2.zccz.action.PersonDealHeadAction">
+       		<result name="toWorkflow" type='chain'>
+      			<param name="actionName">zcczperWorkflow_toResult</param>
+            	<param name="namespace">/zcczperWorkflow</param>
+      		</result>
+      		<result name="tomodify" type='chain'>
+      			<param name="actionName">zcczperWorkflow_toDraft</param>
+            	<param name="namespace">/zcczperWorkflow</param>
+      		</result>
+      		<result name="newHead">/pages/eam2/zccz/personDeal/personnel_install.jsp</result>
+			<result name="feiyongDetail">/pages/eam2/zccz/personDeal/feiyongDetail.jsp</result>
+			<result name="renyuanDetail">/pages/eam2/zccz/personDeal/renyuanDetail.jsp</result>
+			<result name="index">zccz/index.do</result>
+			<result name="showPersonCld">/pages/eam2/zccz/personDeal/personnel_cld.jsp</result>
+			<result name="showPersonZc">/pages/eam2/zccz/personDeal/personnel_zc.jsp</result>
+      	</action>
+      	
+      	<action name="personDealBody_*"  method="{1}" class="com.tansun.eam2.zccz.action.PersonDealBodyAction">
+       		<result name="addBody">/pages/eam2/zccz/personDeal/entityList.jsp</result>
+      	</action>
+      	
+      	 
+      	 
+      	<!--  安排审批待办start modify by lantianbo-->
+		<action name="dealToDo_*"  method="{1}" class="com.tansun.eam2.zccz.action.DealToDoAction">
+       		<result name="init">			/pages/eam2/zccz/dealToDo/shenpi_daiban.jsp</result>
+			<result name="addMeeting">		/pages/eam2/zccz/dealToDo/shenpi_huiyi.jsp</result>
+			<result name="getZcrOrSpwy">	/pages/eam2/zccz/dealToDo/shenpi_zcr_spwy.jsp</result>
+			<result name="tree">			/pages/eam2/zccz/tree/tree4Zccz.jsp</result>
+			<result name="info">			/pages/eam2/zccz/dealToDo/shenpi_huiyi_info.jsp</result>
+			<result name="hyJiyao">			/pages/eam2/zccz/dealToDo/shenpi_huiyi_jiyao.jsp</result>
+			<result name="czxmsp">			/pages/eam2/zccz/dealToDo/shenpi_chuzhixiangmushenpi.jsp</result>
+			<result name="czxm4Shyj">		/pages/eam2/zccz/dealToDo/shenpi_shanghuiyijian.jsp</result>
+			<result name="czxmxxItemInfo">          /pages/eam2/zccz/dealToDo/czxmxxItemInfo.jsp</result>
+			<result name="toWorkflow" type='chain'>
+      			<param name="actionName">zcczshWorkflow_toResult</param>
+            	<param name="namespace">/zcczshWorkflow</param>
+      		</result>
+      		<result name="tomodify" type='chain'>
+      			<param name="actionName">zcczshWorkflow_toDraft</param>
+            	<param name="namespace">/zcczshWorkflow</param>
+      		</result>
+      	</action>
+      	<!--  安排审批待办end -->
+      	      	 
+      	 <!--  项目OA发文start -->
+		 <action name="dealOA_*"  method="{1}" class="com.tansun.eam2.zccz.action.DealOAAction">
+       		<result name="init">/pages/eam2/zccz/dealOA/xiangmu_OA_fawen.jsp</result>
+
+      	</action>
+      	
+      	
+      	 <!--  处置评估审查start -->
+		 <action name="dealEvalHead_*"  method="{1}" class="com.tansun.eam2.zccz.action.DealEvalHeadAction">
+       		<result name="newHead">/pages/eam2/zccz/dealEval/chuzhi_pinggu.jsp</result>
+			<result name="showBld">/pages/eam2/zccz/dealEval/chuzhi_pinggu_bld.jsp</result>
+			<result name="editScyj">/pages/eam2/zccz/dealEval/editScyj.jsp</result>
+			<result name="editMessage1">/pages/eam2/zccz/dealEval/editMessage1.jsp</result>
+			<result name="toWorkflow" type='chain'>
+      			<param name="actionName">dealEvalHeadWorkflow_toResult</param>
+            	<param name="namespace">/dealEvalHeadWorkflow</param>
+      		</result>
+      		<result name="tomodify" type='chain'>
+      			<param name="actionName">dealEvalHeadWorkflow_toDraft</param>
+            	<param name="namespace">/dealEvalHeadWorkflow</param>
+      		</result>
+      	</action>
+      	
+      	<action name="dealEvalBody_*"  method="{1}" class="com.tansun.eam2.zccz.action.DealEvalBodyAction">
+       		<result name="addBody">/pages/eam2/zccz/dealEval/asset_List.jsp</result>
+			<result name="editPgxx">/pages/eam2/zccz/dealEval/pinggu_info.jsp</result>
+      	</action>
+      	
+      	
+      	
+      	<!--  处置方案1跟踪 start modify by lantianbo -->
+		<action name="dealTrace1Head_*"  method="{1}" class="com.tansun.eam2.zccz.action.DealTrace1HeadAction">
+       		<!-- <result name="tomodify" type="chain">
+				<param name="actionName">dealTrace1Head_modifyHead</param>
+				<param name="namespace">/zccz</param>
+			</result>	 -->
+			<result name="toWorkflow" type='chain'>
+      			<param name="actionName">zccz_gzja_Workflow_toResult</param>
+            	<param name="namespace">/zccz_gzja_Workflow</param>
+      		</result>
+      		<result name="tomodify" type='chain'>
+      			<param name="actionName">zccz_gzja_Workflow_toDraft</param>
+            	<param name="namespace">/zccz_gzja_Workflow</param>
+      		</result>
+       		<result name="newHead">				/pages/eam2/zccz/dealTrace1/chuzhi_jiean.jsp</result>
+       		<result name="editXm">				/pages/eam2/zccz/dealTrace1/updatejieanxiangmu.jsp</result>
+       		<result name="addHead">				/pages/eam2/zccz/dealTrace1/shenqin_jiean.jsp</result>
+       		<result name="disposeItemInfo">		/pages/eam2/zccz/dealTrace1/dispose_item.jsp</result>
+       		<result name="viewItemAssetInfo">	/pages/eam2/zccz/dealTrace1/aseet_info.jsp</result>
+       		<result name="zcczCld">			 	/pages/eam2/zccz/dealTrace1/zcczCld.jsp</result>
+       		<result name="itemShxx">			/pages/eam2/zccz/dealTrace1/itemShxx.jsp</result>
+       		<result name="summary">				/pages/eam2/zccz/dealTrace1/summary.jsp</result>
+       		<result name="summary2">			/pages/eam2/zccz/dealTrace1/summary2.jsp</result>
+       		<result name="viewItemFeiyongInfo">	/pages/eam2/zccz/dealTrace1/feiyongDetail.jsp</result>
+      	</action>
+      	<action name="disposeTrack_*"  method="{1}" class="com.tansun.eam2.zccz.action.DisposeTrackAction">
+       		<result name="toChildmodify" type="chain">
+				<param name="actionName">disposeTrack_modifyChildTrack</param>
+				<param name="namespace">/zccz</param>
+			</result>
+			<result name="tomodify" type="chain">
+				<param name="actionName">disposeTrack_modifyTrack</param>
+				<param name="namespace">/zccz</param>
+			</result>
+       		<!-- 公开拍卖 start -->
+       		<result name="disposeGkpmMain">			/pages/eam2/zccz/disposeTrack/disposeGkpm/disposeGkpmMain.jsp</result>
+       		<result name="disposeGkpmCgpmjg">		/pages/eam2/zccz/disposeTrack/disposeGkpm/disposeGkpmCgpmjg.jsp</result>
+       		<result name="disposeGkpmPmgg">			/pages/eam2/zccz/disposeTrack/disposeGkpm/disposeGkpmPmgg.jsp</result>
+       		<result name="disposeGkpmXcpm">			/pages/eam2/zccz/disposeTrack/disposeGkpm/disposeGkpmXcpm.jsp</result>
+       		<result name="disposeGkpmGh">			/pages/eam2/zccz/disposeTrack/disposeGkpm/disposeGkpmGh.jsp</result>
+       		<result name="disposeGkpmHkhs">			/pages/eam2/zccz/disposeTrack/disposeGkpm/disposeGkpmHkhs.jsp</result>
+       		<!-- 公开拍卖 end -->
+       		<!-- 交易所挂牌 start -->
+       		<result name="disposeJysgpMain">		/pages/eam2/zccz/disposeTrack/disposeJysgp/disposeJysgpMain.jsp</result>
+       		<result name="disposeJysgpCgzjjg">		/pages/eam2/zccz/disposeTrack/disposeJysgp/disposeJysgpCgzjjg.jsp</result>
+       		<result name="disposeJysgpGpjd">		/pages/eam2/zccz/disposeTrack/disposeJysgp/disposeJysgpGpjd.jsp</result>
+       		<result name="disposeJysgpGh">			/pages/eam2/zccz/disposeTrack/disposeJysgp/disposeJysgpGh.jsp</result>
+       		<result name="disposeJysgpHkhs">		/pages/eam2/zccz/disposeTrack/disposeJysgp/disposeJysgpHkhs.jsp</result>
+       		<!-- 交易所挂牌 end -->
+       		<!-- 协议转让 start -->
+       		<result name="disposeXyzrMain">			/pages/eam2/zccz/disposeTrack/disposeXyzr/disposeXyzrMain.jsp</result>
+       		<result name="disposeXyzrQdzrxy">		/pages/eam2/zccz/disposeTrack/disposeXyzr/disposeXyzrQdzrxy.jsp</result>
+       		<result name="disposeXyzrHkhs">			/pages/eam2/zccz/disposeTrack/disposeXyzr/disposeXyzrHkhs.jsp</result>
+       		<!-- 协议转让 end -->
+       		<!-- 拆迁转让 start -->
+       		<result name="disposeCqMain">			/pages/eam2/zccz/disposeTrack/disposeCq/disposeCqMain.jsp</result>
+       		<result name="disposeCqChild">			/pages/eam2/zccz/disposeTrack/disposeCq/disposeCqChild.jsp</result>
+       		<!-- 拆迁转让 end -->
+       		<!-- 破产注销 start -->
+       		<result name="disposePczxMain">			/pages/eam2/zccz/disposeTrack/disposePczx/disposePczxMain.jsp</result>
+       		<result name="disposePczxPcfyxx">		/pages/eam2/zccz/disposeTrack/disposePczx/disposePczxPcfyxx.jsp</result>
+       		<result name="disposePczxQs">			/pages/eam2/zccz/disposeTrack/disposePczx/disposePczxQs.jsp</result>
+       		<result name="disposePczxScqk">			/pages/eam2/zccz/disposeTrack/disposePczx/disposePczxScqk.jsp</result>
+       		<result name="disposePczxJxyyzz">		/pages/eam2/zccz/disposeTrack/disposePczx/disposePczxJxyyzz.jsp</result>
+       		<!-- 破产注销 end -->
+       		<!-- 清算注销 start -->
+       		<result name="disposeQszxMain">			/pages/eam2/zccz/disposeTrack/disposeQszx/disposeQszxMain.jsp</result>
+       		<result name="disposeQszxQs">			/pages/eam2/zccz/disposeTrack/disposeQszx/disposeQszxQs.jsp</result>
+       		<result name="disposeQszxScqk">			/pages/eam2/zccz/disposeTrack/disposeQszx/disposeQszxScqk.jsp</result>
+       		<result name="disposeQszxJxyyzz">		/pages/eam2/zccz/disposeTrack/disposeQszx/disposeQszxJxyyzz.jsp</result>
+       		<!-- 清算注销 end -->
+       		<!-- 股权转让 start -->
+       		<result name="disposeGqzrMain">			/pages/eam2/zccz/disposeTrack/disposeGqzr/disposeGqzrMain.jsp</result>
+       		<result name="disposeGqzrQsxy">			/pages/eam2/zccz/disposeTrack/disposeGqzr/disposeGqzrQsxy.jsp</result>
+       		<result name="disposeGqzrHkhs">			/pages/eam2/zccz/disposeTrack/disposeGqzr/disposeGqzrHkhs.jsp</result>
+       		<result name="disposeGqzrGqbg">			/pages/eam2/zccz/disposeTrack/disposeGqzr/disposeGqzrGqbg.jsp</result>
+       		<!-- 股权转让 end -->
+       		<!-- 实体人员安置 start -->
+       		<result name="disposeStryazMain">		/pages/eam2/zccz/disposeTrack/disposeStryaz/disposeStryazMain.jsp</result>
+       		<result name="disposeStryazPqls">		/pages/eam2/zccz/disposeTrack/disposeStryaz/disposeStryazPqls.jsp</result>
+       		<result name="disposeStryazAzgg">		/pages/eam2/zccz/disposeTrack/disposeStryaz/disposeStryazAzgg.jsp</result>
+       		<result name="disposeStryazFyzf">		/pages/eam2/zccz/disposeTrack/disposeStryaz/disposeStryazFyzf.jsp</result>
+       		<result name="disposeStryazJcldht">		/pages/eam2/zccz/disposeTrack/disposeStryaz/disposeStryazJcldht.jsp</result>
+       		<!-- 实体人员安置 end -->
+       		<!-- 执行情况 start -->
+       		<result name="disposeZxqkMain">			/pages/eam2/zccz/disposeTrack/disposeZxqk/disposeZxqkMain.jsp</result>
+       		<result name="disposeZxqkChild">		/pages/eam2/zccz/disposeTrack/disposeZxqk/disposeZxqkChild.jsp</result>
+       		<!-- 执行情况 end -->
+       		<result name="adjunct">				/pages/eam2/zccz/disposeTrack/adjunct.jsp</result>
+      	</action>
+      	<!--
+      	<action name="dealTrace1Body_*"  method="{1}" class="com.tansun.eam2.zccz.action.DealTrace1BodyAction">
+       		<result name="addBody">/pages/eam2/zccz/dealTrace1/shenqin_jiean.jsp</result>
+      	</action>
+      	
+      	  处置方案1跟踪 end modify by lantianbo -->
+      	
+      	
+      <!--  审查知识库维护单start -->
+		<action name="evalKnowHead_*"  method="{1}" class="com.tansun.eam2.zccz.action.EvalKnowHeadAction">
+       		<!-- <result name="tomodify" type="chain">
+				<param name="actionName">evalKnowHead_modifyHead</param>
+				<param name="namespace">/zccz</param>
+			</result> -->
+			
+			<result name="toWorkflow" type='chain'>
+      			<param name="actionName">evalKnowWorkflow_toResult</param>
+            	<param name="namespace">/evalKnowWorkflow</param>
+      		</result>
+      		<result name="tomodify" type='chain'>
+      			<param name="actionName">evalKnowWorkflow_toDraft</param>
+            	<param name="namespace">/evalKnowWorkflow</param>
+      		</result>
+       		<result name="evalKnow">/pages/eam2/zccz/evalKnow/evalKnow.jsp</result>
+      	</action>
+      	
+      	<action name="evalKnowBody_*"  method="{1}" class="com.tansun.eam2.zccz.action.EvalKnowBodyAction">
+       		<result name="addBody">/pages/eam2/zccz/evalKnow/eval_know_admin.jsp</result>
+       		<result name="modify">/pages/eam2/zccz/evalKnow/modify.jsp</result>
+       		<result name="examine">/pages/eam2/zccz/evalKnow/examine.jsp</result>
+       		<result name="添加一级分类">/pages/eam2/zccz/evalKnow/tianjia.jsp</result>
+			<result name="添加二级分类">/pages/eam2/zccz/evalKnow/tianjia2.jsp</result>
+      	</action>
+      	
+      	
+      <!--  审查知识库查询 -->
+		 <action name="evalKnowQuery_*"  method="{1}" class="com.tansun.eam2.zccz.action.EvalKnowQueryAction">
+       		<result name="init">/pages/eam2/zccz/evalKnowQuery/sczskcx.jsp</result>
+      	</action>
+      	
+      	 <action name="sczskAction_*"  method="{1}" class="com.tansun.eam2.zccz.action.SczskAction">
+       		<result name="query">/pages/eam2/zccz/evalKnow/sczskQuery.jsp</result>
+         </action>
+        <action name="sczskLsbAction_*"  method="{1}" class="com.tansun.eam2.zccz.action.SczskLsbAction">
+        
+        <result name="before">/pages/eam2/zccz/evalKnow/sczskLsbQuery.jsp</result>
+        <result name="after">/pages/eam2/zccz/evalKnow/czskLsbQueryBgh.jsp</result>
+        <result name="verify">/pages/eam2/zccz/evalKnow/sczskLsbQuerySph.jsp</result>
+        
+        
+       <result name="xmmc">/pages/eam2/zccz/evalKnow/xmgm.jsp</result>
+       <result name="ydgg">/pages/eam2/zccz/evalKnow/ydgg.jsp</result>
+       <result name="removeyd">/pages/eam2/zccz/evalKnow/ydsc.jsp</result>
+       <result name="xmsc">/pages/eam2/zccz/evalKnow/xmsc.jsp</result>
+       <result name="yjqy">/pages/eam2/zccz/evalKnow/yjqy.jsp</result>
+        </action>
+      	
+      	
+      	
+      	
+      <!--  评估台账查询 -->
+		 <action name="evalBookQuery_*"  method="{1}" class="com.tansun.eam2.zccz.action.EvalBookQueryAction">
+       		<result name="init">/pages/eam2/zccz/evalBookQuery/taizhang_List.jsp</result>
+
+      	</action>
+      	
+      	
+     <!--  评估意见查询 -->
+		 <action name="evalCommentQuery_*"  method="{1}" class="com.tansun.eam2.zccz.action.EvalCommentQueryAction">
+       		<result name="init">/pages/eam2/zccz/evalCommentQuery/shencha_yijian_List.jsp</result>
+
+      	</action>
+      	
+      	
+    <!--  评估报告问题查询 -->
+		 <action name="evalProblemQuery_*"  method="{1}" class="com.tansun.eam2.zccz.action.EvalProblemQueryAction">
+       		<result name="init">/pages/eam2/zccz/evalProblemQuery/baogao_wenti_List.jsp</result>
+
+      	</action>
+      	
+   <!-- 办理单Action -->
+		 <action name="bldAction_*"  method="{1}" class="com.tansun.eam2.zccz.action.BLDAction">
+       		<result name="showStztczBLD">/pages/eam2/zccz/bld/stztczBld.jsp</result>
+       		<result name="showStayazBLD">/pages/eam2/zccz/bld/stayazBld.jsp</result>
+       		<result name="showZcczBLD">/pages/eam2/zccz/bld/zcczBld.jsp</result>
+			<result name="openAdvice">/pages/eam2/zccz/bld/hegui_shencha_yijian.jsp</result>
+      	</action> 
+   <!-- 审批意见Action -->
+		 <action name="appAdviceAction_*"  method="{1}" class="com.tansun.eam2.zccz.action.ApproveAdviceAction">
+       		<result name="stztczAdviceForm">/pages/eam2/zccz/appAdvice/stztcz_shenpiyijian.jsp</result>
+       		<result name="stayazAdviceForm">/pages/eam2/zccz/appAdvice/stayaz_shenpiyijian.jsp</result>
+			<result name="zcczAdviceForm">/pages/eam2/zccz/appAdvice/zccz_shenpiyijian.jsp</result>       		
+			<result name="cjtzAdviceForm">/pages/eam2/zccz/appAdvice/cjtz_shenpiyijian.jsp</result>       		
+       		<result name="stztczJibenxinxi">/pages/eam2/zccz/appAdvice/stztcz_jibenxinxi.jsp</result>
+       		<result name="stayazJibenxinxi">/pages/eam2/zccz/appAdvice/stayaz_jibenxinxi.jsp</result>
+       		<result name="zcczJibenxinxi">/pages/eam2/zccz/appAdvice/zccz_jibenxinxi.jsp</result>
+      	</action>
+      	
+      	<!-- 知识库查询action -->
+      	<action name="knowQuery_*" method="{1}" class="com.tansun.eam2.zccz.action.KnowQueryAction" >
+      		<result name="query">/pages/eam2/zccz/know/knowQuery.jsp</result>
+      		<result name="queryNew">/pages/eam2/zccz/know/knowQueryNew.jsp</result>
+      		<result name="queryLSB">/pages/eam2/zccz/know/knowQuery.jsp</result>
+      	</action>
+      	
+      	<!-- 知识库head action -->
+      	<action name="knowHead_*" method="{1}" class="com.tansun.eam2.zccz.action.KnowHeadAction" >
+      		<result name="toWorkflow" type='chain'>
+      			<param name="actionName">evalKnowWorkflow_toResult</param>
+            	<param name="namespace">/evalKnowWorkflow</param>
+      		</result>
+      		<result name="tomodify" type='chain'>
+      			<param name="actionName">evalKnowWorkflow_toDraft</param>
+            	<param name="namespace">/evalKnowWorkflow</param>
+      		</result>
+      		<result name="biaodan">/pages/eam2/zccz/know/knowHead.jsp</result>
+      	</action>
+      	
+      	<!-- 知识库 body action -->
+      	<action name="knowBody_*" method="{1}" class="com.tansun.eam2.zccz.action.KnowBodyAction">
+      		<result name="openBody">/pages/eam2/zccz/know/knowBody.jsp</result>
+      		<result name="openMove">/pages/eam2/zccz/know/knowMove.jsp</result>
+      	</action>
+      	
+      	<!-- 统计查询 -->
+      	<action name="disposeItemStatic_*" method="{1}" class="com.tansun.eam2.zccz.action.DisposeItemStaticAction" >
+      		<result name="init">/pages/eam2/zccz/queryPage/disposeItemStatic.jsp</result>
+      	</action>
+      	
+      	<!-- 处置公告表头 -->
+      	<action name="noticeHead_*" method="{1}" class="com.tansun.eam2.zccz.action.NoticeHeadAction">
+      		<result name="toWorkflow" type='chain'>
+      			<param name="actionName">zcczCzggWorkflow_toResult</param>
+            	<param name="namespace">/zcczCzggWorkflow</param>
+      		</result>
+      		<result name="tomodify" type='chain'>
+      			<param name="actionName">zcczCzggWorkflow_toDraft</param>
+            	<param name="namespace">/zcczCzggWorkflow</param>
+      		</result>
+      		<result name="biaodan">/pages/eam2/zccz/notice/noticeHead.jsp</result>
+      	</action>
+      	
+      	<!-- 处置公告表体 -->
+      	<action name="noticeBody_*" method="{1}" class="com.tansun.eam2.zccz.action.NoticeBodyAction">
+      		<result name="openBody">/pages/eam2/zccz/notice/noticeBody.jsp</result>
+      	</action>
+      	
+      	<!-- 处置公告查询 -->
+      	<action name="noticeQuery_*" method="{1}" class="com.tansun.eam2.zccz.action.NoticeQueryAction">
+      		<result name="initST">/pages/eam2/zccz/notice/queryST.jsp</result>
+      		<result name="initZC">/pages/eam2/zccz/notice/queryZC.jsp</result>
+      		<result name="initZQ">/pages/eam2/zccz/notice/queryZQ.jsp</result>
+      	</action>
+      	
+	</package>
+	<!--  <include file="com/tansun/eam2/zccz/action/struts_wnb.xml" />-->
+	<include file="com/tansun/eam2/zyzc/workflow/buy/action/zccz_workflow.xml"/>
+	<include file="com/tansun/eam2/zyzc/workflow/buy/action/zccz_gzja_workflow.xml"/>
+	<include file="com/tansun/eam2/zyzc/workflow/buy/action/evalknow_workflow.xml"/>
+	<include file="com/tansun/eam2/zyzc/workflow/buy/action/zcczsh_workflow.xml"/>
+	<include file="com/tansun/eam2/zyzc/workflow/buy/action/zccz_per_workflow.xml"/>
+	<include file="com/tansun/eam2/zyzc/workflow/buy/action/zccz_asset_workflow.xml"/>
+	<include file="com/tansun/eam2/zyzc/workflow/buy/action/dealevalhead_workflow.xml"/>
+	<include file="com/tansun/eam2/zyzc/workflow/buy/action/zccz_czgg_workflow.xml"/>
+</struts>
+

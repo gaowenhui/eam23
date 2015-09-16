@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+    <package name="funcgroup" namespace='/funcgroup' extends="default">
+        <action name="funcgroup_*" method="{1}" class="com.tansun.rdp4j.generalapps.functiongroup.action.FunctionGroupAction">
+            <result name="list" type='freemarker'>/pages/rdp4j/generalapps/funcgroup/list.jsp</result>
+            <result name="edit">/pages/rdp4j/generalapps/funcgroup/functiongroup_info.jsp</result>
+            <result name="editsub">/pages/rdp4j/generalapps/funcgroup/functiongroup_info.jsp</result>
+            <result name="add">/pages/rdp4j/generalapps/funcgroup/functiongroup_add.jsp</result>
+            <result name="addsub">/pages/rdp4j/generalapps/funcgroup/functiongroup_info.jsp</result>
+            <result name="del">/pages/rdp4j/generalapps/funcgroup/funcgroup_delete.jsp</result>
+            <result name="toTree">/pages/rdp4j/generalapps/funcgroup/funcgroup_menutree.jsp</result>
+            <result name="selectfuncres" type='freemarker'>/pages/rdp4j/generalapps/funcgroup/functiongroup_selectfuncres.jsp</result>
+            <result name="checkboxtree">/pages/rdp4j/generalapps/funcgroup/functiongroup_checkboxtree.jsp</result>
+            <result name="usercheckboxtree">/pages/rdp4j/generalapps/funcgroup/functiongroup_usercheckboxtree.jsp</result>
+            
+            <result name="roleaddfungroup" type='redirect'>/priv/role_list.do</result>
+            <result name="listfunctionres">/pages/rdp4j/generalapps/funcgroup/functionres_list.jsp</result>
+            <result name="deletefunctionres">/pages/rdp4j/generalapps/funcgroup/funcgroup_delete.jsp</result>
+            <result name="queryFunctionres">/pages/rdp4j/generalapps/funcgroup/functionres_list.jsp</result>
+            <result name="rolelist">/pages/rdp4j/generalapps/funcgroup/role_list.jsp</result>
+            <result name="subrole">/pages/rdp4j/generalapps/funcgroup/functionres_subrole.jsp</result>
+        </action>
+        
+        <action name="funcres_*" method="{1}" class="com.tansun.rdp4j.generalapps.functiongroup.action.FunctionResAction">
+            <result name="toFuncResList">/pages/rdp4j/generalapps/funcgroup/functionres_list.jsp</result>
+        </action>
+    </package>
+    
+    <package name="menu" namespace="/menu" extends="default">
+        <action name="menu_*" method="{1}" class="com.tansun.rdp4j.generalapps.functiongroup.action.MenuAction">
+            <result name="mainpageleftmenutree">/pages/rdp4j/generalapps/funcgroup/menutree.jsp</result>
+            <result name="functiongrouptree">/pages/rdp4j/generalapps/funcgroup/funcgroup_menutree.jsp</result>
+        </action>
+    </package>
+</struts>

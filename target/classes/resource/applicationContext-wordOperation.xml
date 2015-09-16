@@ -1,0 +1,616 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context-3.0.xsd ">
+
+	<bean id="wordTemplates" class="com.tansun.eam2.common.word.components.WordTemplates" scope="singleton">
+		<property name="templates">
+			<map>				
+				<entry key="gzlxd"><ref bean="managerGzlxdTemplate" /></entry> 
+				<entry key="czbght"><ref bean="managerCzbgTemplate" /></entry> 
+				<entry key="AppTable"><ref bean="AppTable_Template" /></entry> 
+				<entry key="AppTable2"><ref bean="AppTable2_Template" /></entry>
+				<entry key="AppTable3"><ref bean="AppTable3_Template" /></entry> 
+				<entry key="zcczReport"><ref bean="czReportTemplate" /></entry> 
+				<entry key="zcczSummary"><ref bean="czSummaryTemplate" /></entry> 
+				<entry key="ExamineConclusion"><ref bean="ExamineConclusion_Template" /></entry> 
+				<entry key="ExamineConclusion_brich"><ref bean="ExamineConclusion_Template_brich" /></entry>
+				<entry key="Rulecheck"><ref bean="Rulecheck_Template" /></entry> 				
+				<entry key="czsp_HYJY"><ref bean="czsp_HYJY_Template" /></entry> 
+				<entry key="PrintCheapGoodsStockAppTable"><ref bean="printCheapGoodsStockAppTable_Template" /></entry> 
+				<entry key="Manager_AppTable"><ref bean="Manager_AppTable_Template" /></entry>
+				<entry key="Manager_ExamineConclusion"><ref bean="Manager_ExamineConclusion_Template" /></entry>
+				<entry key="ManagerReport"><ref bean="ManagerReport_Template" /></entry>
+				<entry key="Manager_HYJY"><ref bean="Manager_HYJY_Template" /></entry>
+				<entry key="cjwhyjyTemplate"><ref bean="cjwhyjyTemplate" /></entry>
+				<!-- fanjs add -->
+				<entry key="quequan"><ref bean="quequan" /></entry>
+				<entry key="OthersModelBean"><ref bean="OthersModelBean_Template" /></entry>
+				<entry key="BaofeiModelBean"><ref bean="BaofeiModelBean_Template" /></entry>
+				<entry key="QuequanModelBean"><ref bean="QuequanModelBean_Template" /></entry>
+				<entry key="PanyingModelBean"><ref bean="PanyingModelBean_Template" /></entry>
+				<entry key="PankuiModelBean"><ref bean="PankuiModelBean_Template" /></entry>
+				<entry key="RepairModelBean"><ref bean="RepairModelBean_Template" /></entry>
+				<entry key="UpgradingModelBean"><ref bean="UpgradingModelBean_Template" /></entry>
+				<entry key="ZulinModelBean"><ref bean="ZulinModelBean_Template" /></entry>
+				<entry key="GouzhiModelBean"><ref bean="GouzhiModelBean_Template" /></entry>
+				<!-- dxl add 租赁五类打印模板 -->
+				<entry key="ZulinModelBeanOne"><ref bean="ZulinModelBeanOne_Template" /></entry>
+				<entry key="ZulinModelBeanTwo"><ref bean="ZulinModelBeanTwo_Template" /></entry>
+				<entry key="ZulinModelBeanThree"><ref bean="ZulinModelBeanThree_Template" /></entry>
+				<entry key="ZulinModelBeanFour"><ref bean="ZulinModelBeanFour_Template" /></entry>
+				<entry key="ZulinModelBeanFive"><ref bean="ZulinModelBeanFive_Template" /></entry>
+				<!-- 退租变更 -->
+				<entry key="ZulinModelBeanSix"><ref bean="ZulinModelBeanSix_Template" /></entry>
+				<entry key="bank_Template"><ref bean="bank_Template" /></entry>
+				<entry key="blank_Template_jysy"><ref bean="blank_Template_jysy" /></entry>
+			</map>
+		</property>
+	</bean>	
+     <!-- 承继委会议纪要模板 -->
+    <bean id="cjwhyjyTemplate" class="com.tansun.eam2.common.word.components.WordTemplate">
+        <!-- word模板ID -->
+        <property name="wordTemplateID">
+            <value>cjw_hyjy_template</value>
+        </property>     
+        <!-- 表单域与word标签对应 field1|wordlabel1,field2|wordlabel2-->
+        <property name="fieldMapping">
+            <value>hyrq|hyrq,hysj|hysj,hydd|hydd,hyzc|hyzc,cxry|cxry,wcxry|wcxry,jcy|jcy,liexi|liexi,hyjyzlr|hyjyzlr,zhengwen|zhengwen,fsbm|fsbm</value>
+        </property>
+        <!-- 扩展javascript函数名 -->
+        <property name="extJSFunction">
+            <value>wordExtForbahzReport()</value>
+        </property>
+    </bean>	
+    <bean id="bank_Template" class="com.tansun.eam2.common.word.components.WordTemplate">
+        <!-- word模板ID -->
+        <property name="wordTemplateID">
+            <value>bank_Template</value>
+        </property>     
+        <!-- 表单域与word标签对应 field1|wordlabel1,field2|wordlabel2-->
+        <property name="fieldMapping">
+            <value> </value>
+        </property>
+        <!-- 扩展javascript函数名 -->
+        <property name="extJSFunction">
+            <value> </value>
+        </property>     
+    </bean>
+    <bean id="blank_Template_jysy" class="com.tansun.eam2.common.word.components.WordTemplate">
+        <!-- word模板ID -->
+        <property name="wordTemplateID">
+            <value>blank_Template_jysy</value>
+        </property>     
+        <!-- 表单域与word标签对应 field1|wordlabel1,field2|wordlabel2-->
+        <property name="fieldMapping">
+            <value> </value>
+        </property>
+        <!-- 扩展javascript函数名 -->
+        <property name="extJSFunction">
+            <value> </value>
+        </property>     
+    </bean>
+    
+    <!-- 工作联系单模板红头 -->
+    <bean id="managerGzlxdhtTemplate" class="com.tansun.eam2.common.word.components.WordTemplate">
+        <!-- word模板ID -->
+        <property name="wordTemplateID">
+            <value>manager_gzlxdht</value>
+        </property>
+        <!-- 表单域与word标签对应 field1|wordlabel1,field2|wordlabel2-->
+        <property name="fieldMapping">
+            <value></value>
+        </property>
+        <!-- 扩展javascript函数名 -->
+        <property name="extJSFunction">
+            <value></value>
+        </property>
+    </bean>
+    <!-- 工作联系单模板版计 -->
+    <bean id="managerGzlxdbjTemplate" class="com.tansun.eam2.common.word.components.WordTemplate">
+        <!-- word模板ID -->
+        <property name="wordTemplateID">
+            <value>manager_gzlxdbj</value>
+        </property>
+        <!-- 表单域与word标签对应 field1|wordlabel1,field2|wordlabel2-->
+        <property name="fieldMapping">
+            <value></value>
+        </property>
+        <!-- 扩展javascript函数名 -->
+        <property name="extJSFunction">
+            <value></value>
+        </property>
+    </bean>
+
+    <!-- 工作联系单模板 -->
+    <bean id="managerGzlxdTemplate" class="com.tansun.eam2.common.word.components.WordTemplate">
+        <!-- word模板ID -->
+        <property name="wordTemplateID">
+            <value>manager_gzlxd</value>
+        </property>     
+        <!-- 表单域与word标签对应 field1|wordlabel1,field2|wordlabel2-->
+        <property name="fieldMapping">
+            <value>BLBM|blbm,TITLE|title,NGBM|ngbm,SPBH|spbh</value>
+        </property>
+        <!-- 扩展javascript函数名 -->
+        <property name="extJSFunction">
+            <value></value>
+        </property>
+    </bean>
+ 
+     <!-- 处置报告模板 -->
+    <bean id="managerCzbgTemplate" class="com.tansun.eam2.common.word.components.WordTemplate">
+        <!-- word模板ID -->
+        <property name="wordTemplateID">
+            <value>manager_czbght</value>
+        </property>     
+        <!-- 表单域与word标签对应 field1|wordlabel1,field2|wordlabel2-->
+        <property name="fieldMapping">
+            <value>TITLE|cztzxmmc</value>
+        </property>
+        <!-- 扩展javascript函数名 -->
+        <property name="extJSFunction">
+            <value></value>
+        </property>
+    </bean>
+       
+    <!-- 资产处置报告 -->
+    <bean id="czReportTemplate" class="com.tansun.eam2.common.word.components.WordTemplate">
+        <!-- word模板ID -->
+        <property name="wordTemplateID">
+            <value>manager_zcczgg</value>
+        </property>     
+        <!-- 表单域与word标签对应 field1|wordlabel1,field2|wordlabel2-->
+        <property name="fieldMapping">
+            <value>fbrq|head.fbrq,ggyxq|head.ggyxq,yyyxq|head.yyyxq,gglxr|head.gglxr,gglxdh|head.gglxdh,gglxyj|head.gglxyj,jbdh|head.jbdh,jbyj|head.jbyj,jydxzg|head.jydxzg,jytj|head.jytj,beizhu|head.beizhu</value>
+        </property>
+        <!-- 扩展javascript函数名 -->
+        <property name="extJSFunction">
+            <value>wordExtForDisposalReport()</value>
+        </property>
+    </bean>
+     <!-- 资产处置审批委员会备案信息汇总 -->
+    <bean id="czSummaryTemplate" class="com.tansun.eam2.common.word.components.WordTemplate">
+        <!-- word模板ID -->
+        <property name="wordTemplateID">
+            <value>manager_zcczbahz</value>
+        </property>     
+        <!-- 表单域与word标签对应 field1|wordlabel1,field2|wordlabel2-->
+        <property name="fieldMapping">
+            <value>hycs|hyxx.hycs,spsj|hyxx.spsj,spzcr|hyxx.zcrxm,spwy|hyxx.spwy,hyjyzlr|hyxx.hyjyzlrxm</value>
+        </property>
+        <!-- 扩展javascript函数名 -->
+        <property name="extJSFunction">
+            <value>wordExtForbahzReport()</value>
+        </property>
+     </bean>
+    
+        <!-- 低值易耗采购申请单 -->
+    <bean id="printCheapGoodsStockAppTable_Template" class="com.tansun.eam2.common.word.components.WordTemplate">
+        <!-- word模板ID -->
+        <property name="wordTemplateID">
+            <value>cheapGoodsStock_table</value>
+        </property>     
+        <!-- 表单域与word标签对应 field1|wordlabel1,field2|wordlabel2-->
+        <property name="fieldMapping">
+            <value>sqrq|MyForm:createdate,sqh|MyForm:appflowno,sqbm|MyForm:appdepartment,jbr|MyForm:appperson,cgrq|MyForm:signdate,jbrdh|MyForm:apppersonphone,hjcd|MyForm:urgency_gen</value>
+        </property>
+        <!-- 扩展javascript函数名 -->
+        <property name="extJSFunction">
+            <value><![CDATA[cheapGoodsStockApp_word()]]></value>
+        </property>     
+    </bean>
+    
+	<!-- 申报单 -->
+	<bean id="AppTable_Template" class="com.tansun.eam2.common.word.components.WordTemplate">
+		<!-- word模板ID -->
+		<property name="wordTemplateID">
+			<value>czsp_sbd</value>
+		</property>		
+		<!-- 表单域与word标签对应 field1|wordlabel1,field2|wordlabel2-->
+		<property name="fieldMapping">
+			<value>ngrq|MyForm:createDate_gen,jbr|MyForm:appPersonCN,xmmc|MyForm:projectName,zczl|MyForm:projectType,hskm|MyForm:accountSubject,zcqs|MyForm:owner,zmyz|MyForm:formerValue,zmjz|MyForm:netValue,pjgz|MyForm:evaluateValue,czhsje|MyForm:returnMoney,czfy|MyForm:disposalMoney,yjssje|MyForm:lossValue,yjssl|MyForm:lossRate</value>
+		</property>
+		<!-- 扩展javascript函数名 -->
+		<property name="extJSFunction">
+			<value><![CDATA[wordExtForAppTable()]]></value>
+		</property>		
+	</bean>
+	<!-- 申报单(自行) -->
+	<bean id="AppTable2_Template" class="com.tansun.eam2.common.word.components.WordTemplate">
+		<!-- word模板ID -->
+		<property name="wordTemplateID">
+			<value>czsp_sbd2</value>
+		</property>		
+		<!-- 表单域与word标签对应 field1|wordlabel1,field2|wordlabel2-->
+		<property name="fieldMapping">
+			<value>ngrq|MyForm:createDate_gen,jbr|MyForm:appPersonCN,xmmc|MyForm:projectName,zczl|MyForm:projectType,hskm|MyForm:accountSubject,zcqs|MyForm:owner,zmyz|MyForm:formerValue,zmjz|MyForm:netValue,pjgz|MyForm:evaluateValue,czhsje|MyForm:returnMoney,czfy|MyForm:disposalMoney,yjssje|MyForm:lossValue,yjssl|MyForm:lossRate</value>
+		</property>
+		<!-- 扩展javascript函数名 -->
+		<property name="extJSFunction">
+			<value>wordExtForAppTable()</value>
+		</property>		
+	</bean>
+	<!-- 申报单(超限) -->
+	<bean id="AppTable3_Template" class="com.tansun.eam2.common.word.components.WordTemplate">
+		<!-- word模板ID -->
+		<property name="wordTemplateID">
+			<value>czsp_sbd3</value>
+		</property>		
+		<!-- 表单域与word标签对应 field1|wordlabel1,field2|wordlabel2-->
+		<property name="fieldMapping">
+			<value>ngrq|MyForm:createDate_gen,jbr|MyForm:appPersonCN,xmmc|MyForm:projectName,zczl|MyForm:projectType,hskm|MyForm:accountSubject,zcqs|MyForm:owner,zmyz|MyForm:formerValue,zmjz|MyForm:netValue,pjgz|MyForm:evaluateValue,czhsje|MyForm:returnMoney,czfy|MyForm:disposalMoney,yjssje|MyForm:lossValue,yjssl|MyForm:lossRate</value>
+		</property>
+		<!-- 扩展javascript函数名 -->
+		<property name="extJSFunction">
+			<value>wordExtForAppTable3()</value>
+		</property>		
+	</bean>
+
+	<!-- 审批结论 -->
+	<bean id="ExamineConclusion_Template" class="com.tansun.eam2.common.word.components.WordTemplate">
+		<!-- word模板ID -->
+		<property name="wordTemplateID">
+			<value>czsp_printSPConclusion</value>
+		</property>	
+		<!-- 表单域与word标签对应 field1|wordlabel1,field2|wordlabel2-->
+		<property name="fieldMapping">
+			<value>hycs|MyForm:meetingNumber,spsj|MyForm:examineDate,returnmomey|MyForm:returnMoney,zcczjbr|MyForm:appPersonCN,sbrq|MyForm:appDate,xmmc|MyForm:projectName,zcszwz|MyForm:projectLocation,sbbm|MyForm:appDepartment,slxh|MyForm:acceptNumber,zczl|MyForm:projectType,hskm|MyForm:accountSubject,zmyz|MyForm:formerValue,zmjz|MyForm:netValue,pgjz|MyForm:evaluateValue,czhsje|MyForm:accountSubject,czfy|MyForm:disposalMoney,yjssje|MyForm:lossValue,yjssl|MyForm:lossRate,zcqs|MyForm:owner</value>
+		</property>
+		<!-- 扩展javascript函数名 -->
+		<property name="extJSFunction">
+			<value>wordExtForConclusion()</value>
+		</property>
+	</bean>	
+	
+	<bean id="ExamineConclusion_Template_brich" class="com.tansun.eam2.common.word.components.WordTemplate">
+		<!-- word模板ID -->
+		<property name="wordTemplateID">
+			<value>czsp_printSPConclusion</value>
+		</property>	
+		<!-- 表单域与word标签对应 field1|wordlabel1,field2|wordlabel2-->
+		<property name="fieldMapping">
+			<value>hycs|MyForm:meetingNumber,spsj|MyForm:examineDate,returnmomey|MyForm:returnMoney,zcczjbr|MyForm:appPersonCN,sbrq|MyForm:appDate,xmmc|MyForm:projectName,zcszwz|MyForm:projectLocation,sbbm|MyForm:appDepartment,slxh|MyForm:acceptNumber,zczl|MyForm:projectType,hskm|MyForm:accountSubject,zmyz|MyForm:formerValue,zmjz|MyForm:netValue,pgjz|MyForm:evaluateValue,czhsje|MyForm:accountSubject,czfy|MyForm:disposalMoney,yjssje|MyForm:lossValue,yjssl|MyForm:lossRate,zcqs|MyForm:owner</value>
+		</property>
+		<!-- 扩展javascript函数名 -->
+		<property name="extJSFunction">
+			<value>wordExtForConclusion_brich()</value>
+		</property>
+	</bean>	
+	
+	<!-- 合规审查 -->
+	<bean id="Rulecheck_Template" class="com.tansun.eam2.common.word.components.WordTemplate">
+		<!-- word模板ID -->
+		<property name="wordTemplateID">
+			<value>czsp_printCheckup</value>
+		</property>		
+		<!-- 表单域与word标签对应 field1|wordlabel1,field2|wordlabel2-->
+		<property name="fieldMapping">
+			<value>xmmc|MyForm:projectName,zcszwz|MyForm:projectLocation,sbbm|MyForm:appDepartment,zcgs|MyForm:owner,slxh|MyForm:acceptNumber,zczl|MyForm:projectType,sbrq|MyForm:appDate,hskm|MyForm:accountSubject,zcczjbr|MyForm:appPersonCN,zmyz|MyForm:formerValue,zmjz|MyForm:netValue,pgjz|MyForm:evaluateValue,czhsje|MyForm:returnMoney,czfy|MyForm:disposalMoney,yjssje|MyForm:lossValue,yjssl|MyForm:lossRate</value>
+		</property>
+		<!-- 扩展javascript函数名 -->
+		<property name="extJSFunction">
+			<value>wordExtForCheckup()</value>
+		</property>
+	</bean>
+	
+	<!-- 会议纪要 -->
+	<bean id="czsp_HYJY_Template" class="com.tansun.eam2.common.word.components.WordTemplate">
+		<!-- word模板ID -->
+		<property name="wordTemplateID">
+			<value>czsp_createHYJY</value>
+		</property>		
+		<!-- 表单域与word标签对应 field1|wordlabel1,field2|wordlabel2-->
+		<property name="fieldMapping">
+			<value>wh|MyForm:textFileNumber,zs|MyForm:companySendCN,ngr|MyForm:cahierPersonName,zbbm|MyForm:cahierDept</value>
+		</property>
+		<!-- 扩展javascript函数名 -->
+		<property name="extJSFunction">
+			<value>wordExtForMeetingReport()</value>
+		</property>	
+	</bean>
+	
+	<!-- 经营分类认定申报单 -->
+	<bean id="Manager_AppTable_Template" class="com.tansun.eam2.common.word.components.WordTemplate">
+		<!-- word模板ID -->
+		<property name="wordTemplateID">
+			<value>manager_sbd</value>
+		</property>		
+		<!-- 表单域与word标签对应 field1|wordlabel1,field2|wordlabel2-->
+		<property name="fieldMapping">
+			<value>xmmc|MyForm:projectname,zczl|MyForm:projectType,zmyz|MyForm:formerValue,zmjz|MyForm:netValue,pjgz|MyForm:evaluateValue,zcqs|MyForm:owner,nzjsr|MyForm:yearEarning,jlr|MyForm:profit,fh|MyForm:melonCutting,qtsy|MyForm:elseIncome,zcsyl|MyForm:incomerate,tzhbl|MyForm:redoundrate</value>
+		</property>
+		<!-- 扩展javascript函数名 -->
+		<property name="extJSFunction">
+			<value>wordExtForManagerAppTable()</value>
+		</property>		
+	</bean>	
+	<!-- 经营分类认定审批结论 -->
+	<bean id="Manager_ExamineConclusion_Template" class="com.tansun.eam2.common.word.components.WordTemplate">
+		<!-- word模板ID -->
+		<property name="wordTemplateID">
+			<value>manager_printSPConclusion</value>
+		</property>	
+		<!-- 表单域与word标签对应 field1|wordlabel1,field2|wordlabel2-->
+		<property name="fieldMapping">
+			<value>xmmc|MyForm:projectname,zcszwz|MyForm:projectlocation,sqbm|MyForm:appDepartment,zcczjbr|MyForm:apppersoncn,sqrq|MyForm:createDate,slxh|MyForm:acceptNumber,zcqs|MyForm:owner,zczl|MyForm:projectType,zmyz|MyForm:formerValue,zmjz|MyForm:netValue,pgjgmc|MyForm:evaluateOrg,pgjz|MyForm:evaluateValue,nzjsr|MyForm:yearEarning,jlr|MyForm:profit,fh|MyForm:melonCutting,qtsy|MyForm:elseIncome,zcsyl|MyForm:incomerate,tzhbl|MyForm:redoundrate,spsj|MyForm:examinedate,hycs|MyForm:meetingNumber,nzjsr|MyForm:yearEarning,jlr|MyForm:profit,fh|MyForm:melonCutting,qtsy|MyForm:elseIncome,zcsyl|MyForm:incomerate,tzhbl|MyForm:redoundrate</value>
+		</property>
+		<!-- 扩展javascript函数名 -->
+		<property name="extJSFunction">
+			<value>wordExtForManagerConclusion()</value>
+		</property>
+	</bean>	
+	<!-- 经营分类报告 -->
+	<bean id="ManagerReport_Template" class="com.tansun.eam2.common.word.components.WordTemplate">
+		<!-- word模板ID -->
+		<property name="wordTemplateID">
+			<value>czsp_createCZReport</value>
+		</property>		
+		<!-- 表单域与word标签对应 field1|wordlabel1,field2|wordlabel2-->
+		<property name="fieldMapping">
+			<value></value>
+		</property>
+		<!-- 扩展javascript函数名 -->
+		<property name="extJSFunction">
+			<value>wordExtForManagerReport()</value>
+		</property>
+	</bean>
+	<!-- 经营分类会议纪要 -->
+	<bean id="Manager_HYJY_Template" class="com.tansun.eam2.common.word.components.WordTemplate">
+		<!-- word模板ID -->
+		<property name="wordTemplateID">
+			<value>czsp_createHYJY</value>
+		</property>		
+		<!-- 表单域与word标签对应 field1|wordlabel1,field2|wordlabel2-->
+		<property name="fieldMapping">
+			<value>wh|MyForm:textFileNumber,zs|MyForm:companySendCN,ngr|MyForm:cahierPersonName,spyjhjy|MyForm:assertsOpinion,zbbm|MyForm:cahierDept</value>
+		</property>
+		<!-- 扩展javascript函数名 -->
+		<property name="extJSFunction">
+			<value>wordExtForManagerMeetingReport()</value>
+		</property>	
+	</bean>
+	<!-- fanjs  add  确权单 -->
+    <bean id="quequan" class="com.tansun.eam2.common.word.components.WordTemplate">
+		<!-- word模板ID -->
+		<property name="wordTemplateID">
+			<value>quequan</value>
+		</property>		
+		<!-- 表单域与word标签对应 field1|wordlabel1,field2|wordlabel2-->
+		<property name="fieldMapping">
+			<value></value>
+		</property>
+		<!-- 扩展javascript函数名 -->
+		<property name="extJSFunction">
+			<value>wordExtForManagerMeetingReport()</value>
+		</property>	
+	</bean>	
+	
+    <bean id="OthersModelBean_Template" class="com.tansun.eam2.common.word.components.WordTemplate">
+		<!-- word模板ID -->
+		<property name="wordTemplateID">
+			<value>others</value>
+		</property>		
+		<!-- 表单域与word标签对应 field1|wordlabel1,field2|wordlabel2-->
+		<property name="fieldMapping">
+			<value></value>
+		</property>
+		<!-- 扩展javascript函数名 -->
+		<property name="extJSFunction">
+			<value>wordExtForOtherReport()</value>
+		</property>	
+	</bean>	
+	
+	<bean id="BaofeiModelBean_Template" class="com.tansun.eam2.common.word.components.WordTemplate">
+		<!-- word模板ID -->
+		<property name="wordTemplateID">
+			<value>baofei</value>
+		</property>		
+		<!-- 表单域与word标签对应 field1|wordlabel1,field2|wordlabel2-->
+		<property name="fieldMapping">
+			<value></value>
+		</property>
+		<!-- 扩展javascript函数名 -->
+		<property name="extJSFunction">
+			<value>wordExtForBaoFeiReport()</value>
+		</property>	
+	</bean>	
+	
+	<bean id="QuequanModelBean_Template" class="com.tansun.eam2.common.word.components.WordTemplate">
+		<!-- word模板ID -->
+		<property name="wordTemplateID">
+			<value>quequan</value>
+		</property>		
+		<!-- 表单域与word标签对应 field1|wordlabel1,field2|wordlabel2-->
+		<property name="fieldMapping">
+			<value></value>
+		</property>
+		<!-- 扩展javascript函数名 -->
+		<property name="extJSFunction">
+			<value>wordExtForquequannewReport()</value>
+		</property>	
+	</bean>	
+
+	<bean id="PanyingModelBean_Template" class="com.tansun.eam2.common.word.components.WordTemplate">
+		<!-- word模板ID -->
+		<property name="wordTemplateID">
+			<value>panying</value>
+		</property>		
+		<!-- 表单域与word标签对应 field1|wordlabel1,field2|wordlabel2-->
+		<property name="fieldMapping">
+			<value></value>
+		</property>
+		<!-- 扩展javascript函数名 -->
+		<property name="extJSFunction">
+			<value>wordExtForFeiYongReport()</value>
+		</property>	
+	</bean>	
+	
+	<bean id="PankuiModelBean_Template" class="com.tansun.eam2.common.word.components.WordTemplate">
+		<!-- word模板ID -->
+		<property name="wordTemplateID">
+			<value>pankui</value>
+		</property>		
+		<!-- 表单域与word标签对应 field1|wordlabel1,field2|wordlabel2-->
+		<property name="fieldMapping">
+			<value></value>
+		</property>
+		<!-- 扩展javascript函数名 -->
+		<property name="extJSFunction">
+			<value>wordExtForFeiYongReport()</value>
+		</property>	
+	</bean>	
+	
+	<bean id="RepairModelBean_Template" class="com.tansun.eam2.common.word.components.WordTemplate">
+		<!-- word模板ID -->
+		<property name="wordTemplateID">
+			<value>repair</value>
+		</property>		
+		<!-- 表单域与word标签对应 field1|wordlabel1,field2|wordlabel2-->
+		<property name="fieldMapping">
+			<value></value>
+		</property>
+		<!-- 扩展javascript函数名 -->
+		<property name="extJSFunction">
+			<value>wordExtForFeiYongReport()</value>
+		</property>	
+	</bean>	
+	
+	<bean id="UpgradingModelBean_Template" class="com.tansun.eam2.common.word.components.WordTemplate">
+		<!-- word模板ID -->
+		<property name="wordTemplateID">
+			<value>upgrading</value>
+		</property>		
+		<!-- 表单域与word标签对应 field1|wordlabel1,field2|wordlabel2-->
+		<property name="fieldMapping">
+			<value></value>
+		</property>
+		<!-- 扩展javascript函数名 -->
+		<property name="extJSFunction">
+			<value>wordExtForFeiYongReport()</value>
+		</property>	
+	</bean>	
+	
+	<bean id="ZulinModelBean_Template" class="com.tansun.eam2.common.word.components.WordTemplate">
+		<!-- word模板ID -->
+		<property name="wordTemplateID">
+			<value>lease</value>
+		</property>		
+		<!-- 表单域与word标签对应 field1|wordlabel1,field2|wordlabel2-->
+		<property name="fieldMapping">
+			<value></value>
+		</property>
+		<!-- 扩展javascript函数名 -->
+		<property name="extJSFunction">
+			<value>wordExtForLeasReport()</value>
+		</property>	
+	</bean>	
+	<!-- 车租赁 -->
+	<bean id="ZulinModelBeanOne_Template" class="com.tansun.eam2.common.word.components.WordTemplate">
+		<!-- word模板ID -->
+		<property name="wordTemplateID">
+			<value>lease-car</value>
+		</property>		
+		<!-- 表单域与word标签对应 field1|wordlabel1,field2|wordlabel2-->
+		<property name="fieldMapping">
+			<value></value>
+		</property>
+		<!-- 扩展javascript函数名 -->
+		<property name="extJSFunction">
+			<value>wordExtForLeasReport()</value>
+		</property>	
+	</bean>	
+	<!-- 第三方房租赁 -->
+	<bean id="ZulinModelBeanTwo_Template" class="com.tansun.eam2.common.word.components.WordTemplate">
+		<!-- word模板ID -->
+		<property name="wordTemplateID">
+			<value>lease-thirdHouse</value>
+		</property>		
+		<!-- 表单域与word标签对应 field1|wordlabel1,field2|wordlabel2-->
+		<property name="fieldMapping">
+			<value></value>
+		</property>
+		<!-- 扩展javascript函数名 -->
+		<property name="extJSFunction">
+			<value>wordExtForLeasReport()</value>
+		</property>	
+	</bean>	
+	<!-- 建行房租赁 -->
+	<bean id="ZulinModelBeanThree_Template" class="com.tansun.eam2.common.word.components.WordTemplate">
+		<!-- word模板ID -->
+		<property name="wordTemplateID">
+			<value>lease-ccbHouse</value>
+		</property>		
+		<!-- 表单域与word标签对应 field1|wordlabel1,field2|wordlabel2-->
+		<property name="fieldMapping">
+			<value></value>
+		</property>
+		<!-- 扩展javascript函数名 -->
+		<property name="extJSFunction">
+			<value>wordExtForLeasReport()</value>
+		</property>	
+	</bean>	
+	<!-- 设备租赁 -->
+	<bean id="ZulinModelBeanFour_Template" class="com.tansun.eam2.common.word.components.WordTemplate">
+		<!-- word模板ID -->
+		<property name="wordTemplateID">
+			<value>lease-equipment</value>
+		</property>		
+		<!-- 表单域与word标签对应 field1|wordlabel1,field2|wordlabel2-->
+		<property name="fieldMapping">
+			<value></value>
+		</property>
+		<!-- 扩展javascript函数名 -->
+		<property name="extJSFunction">
+			<value>wordExtForLeasReport()</value>
+		</property>	
+	</bean>	
+	<!-- 实体房租赁 -->
+	<bean id="ZulinModelBeanFive_Template" class="com.tansun.eam2.common.word.components.WordTemplate">
+		<!-- word模板ID -->
+		<property name="wordTemplateID">
+			<value>lease-entityHouse</value>
+		</property>		
+		<!-- 表单域与word标签对应 field1|wordlabel1,field2|wordlabel2-->
+		<property name="fieldMapping">
+			<value></value>
+		</property>
+		<!-- 扩展javascript函数名 -->
+		<property name="extJSFunction">
+			<value>wordExtForLeasReport()</value>
+		</property>	
+	</bean>	
+	<!-- 退租变更 -->
+	<bean id="ZulinModelBeanSix_Template" class="com.tansun.eam2.common.word.components.WordTemplate">
+		<!-- word模板ID -->
+		<property name="wordTemplateID">
+			<value>lease-throw</value>
+		</property>		
+		<!-- 表单域与word标签对应 field1|wordlabel1,field2|wordlabel2-->
+		<property name="fieldMapping">
+			<value></value>
+		</property>
+		<!-- 扩展javascript函数名 -->
+		<property name="extJSFunction">
+			<value></value>
+		</property>	
+	</bean>		
+	<bean id="GouzhiModelBean_Template" class="com.tansun.eam2.common.word.components.WordTemplate">
+		<!-- word模板ID -->
+		<property name="wordTemplateID">
+			<value>gouzhi</value>
+		</property>		
+		<!-- 表单域与word标签对应 field1|wordlabel1,field2|wordlabel2-->
+		<property name="fieldMapping">
+			<value></value>
+		</property>
+		<!-- 扩展javascript函数名 -->
+		<property name="extJSFunction">
+			<value>wordExtForFeiYongReport()</value>
+		</property>	
+	</bean>							
+</beans>

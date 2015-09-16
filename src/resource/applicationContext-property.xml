@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context-3.0.xsd ">
+
+	<bean id="readBolb" class="com.tansun.eam2.jiekou.erp.config.ReadBolb" scope="singleton" lazy-init="false">
+		<property name="readfilepath">
+			<map>				
+				<entry key="os" value="${attachment.os}"></entry>
+				<entry key="dbtype" value="${attachment.dbtype}"></entry>
+				<entry key="url" value="${attachment.url}"></entry>
+				<entry key="driver" value="${attachment.driver}"></entry>
+				<entry key="username" value="${attachment.username}"></entry>
+				<entry key="password" value="${attachment.password}"></entry>
+				<entry key="esb" value="${esb}"></entry>
+				<entry key="file4CardExcel" value="${attachment.file4CardExcel}"></entry>
+			</map>
+		</property>
+		<property name="readloadpath">
+			<map>				
+				<entry key="url" value="${dataload.url}"></entry> 
+				<entry key="driver" value="${dataload.driver}"></entry> 
+				<entry key="username" value="${dataload.username}"></entry> 
+				<entry key="password" value="${dataload.password}"></entry> 
+				<entry key="rarFileName" value="${dataload.rarFileName}"></entry> 
+				<entry key="unrarPath" value="${dataload.unrarPath}"></entry> 
+				<entry key="ctl" value="${dataload.ctl}"></entry> 
+				<entry key="unrarCmd" value="${dataload.unrarCmd}"></entry> 
+			</map>
+		</property>
+	</bean>	
+</beans>

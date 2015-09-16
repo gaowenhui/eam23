@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ECQuery>
+  <Query>
+  	<!--查询的ID，取该文件的文件名  -->
+    <QueryID>select_renew_assets.xml</QueryID>
+    <Description>续借物品查询</Description>
+    <!-- 没用到 -->
+    <Form></Form>
+    <!--每页展示数据条数  -->
+    <PageRows>20</PageRows>
+    <!--默认的排序字段 -->
+    <DefaultOrderBy>sbody_id</DefaultOrderBy>
+    <!-- 没用到 -->
+    <ClolapseColumns>0</ClolapseColumns>
+    <!--首次进入页面是否查询 -->
+    <IsQueryWhenFirst>true</IsQueryWhenFirst>
+    <!--导出excel  -->
+    <IsExportToExcel>true</IsExportToExcel>
+     <!--没用到，前台js分页还是后台数据库分页  -->
+    <PaginationType>SERVER</PaginationType>
+    <!-- 没用到 -->
+    <PojoName/>
+    <!-- 没用到 -->
+    <DataInterface/>
+    <!-- 固定 -->
+    <LangueType>SQL</LangueType>
+    <DBServerType>ORACLE</DBServerType>
+    <Popedom/>
+    <!-- 没用 -->
+    <Category></Category>
+    <!-- 没用 -->
+    <QueryExtInterface/>
+    <!--查询语句  -->
+    <QuerySentence><![CDATA[select * from ZY_SBODY where #1 ]]></QuerySentence>
+    <!-- 没用 -->
+    <Buttons></Buttons>
+    <Columns>
+    
+	<!-- 查询结果展现列表配置 -->    
+     <column>
+        <!--对应数据库中表的字段名  -->
+        <ColumnID>SBODY_ID</ColumnID>
+        <!--结果展现顺序  -->
+        <ColumnOrder>1</ColumnOrder>
+        <!--查询列表该列的表头  -->
+        <Title>分类</Title>
+        <Formula><![CDATA[@field001]]></Formula>
+        <!-- 固定 -->
+        <ColumnType>text</ColumnType>
+        <!-- 没用 -->
+        <Footer/>
+         <!-- 没用 -->
+        <OrderColumnName/>
+         <!-- html单元格标记-->
+        <FormulaType/>
+        <!-- 数据类型 -->
+        <DataType>string</DataType>
+           <!-- 没用 -->
+        <HiddenCondition/>
+           <!-- 没用 -->
+        <StyleClass/>
+         <!-- 没用 -->
+        <IsSort>false</IsSort>
+          <!-- 没用 -->
+        <IsOrderOnclick>false</IsOrderOnclick>
+      </column>
+   
+    </Columns>
+    
+    <!--查询条件配置  -->
+    <Conditions>
+      <condition>
+        <ConditionID>1</ConditionID>
+        <Description>大类选择</Description>
+        <LeftBracket/>
+        <ColumnName>sbody_id</ColumnName>
+        <!--查询条件 全匹配  -->
+        <Operator>=</Operator>
+        <!--表单中提交值  -->
+        <QueryValue>'[QUERYFORM]'</QueryValue>
+        <!--下拉列表  --> 
+        
+        <InputType>selectOne</InputType>
+        <!--下拉列表中的数据来源于数据字典，数据字典的查询语句  -->
+        <ConditionField>select code_key as tid,code_value as tname from code where code.code_type='YIJIFENLEI'</ConditionField>
+        <FieldType>string</FieldType>
+        <DefaultValue/>
+        <RightBracket/>
+        <LogicOperator/>
+        <ShowControl/>
+        <ReplaceExpression>true</ReplaceExpression>
+      </condition> 
+      
+    </Conditions>
+  </Query>
+</ECQuery>

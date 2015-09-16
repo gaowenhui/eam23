@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<tree id="0">
+	<item text="诉讼管理" id="scrap" open="1">
+		<item text="诉讼案件查询"  id="cardList" ><userdata name="link">ssgl/lawsuit_query.do</userdata></item>
+		<item text="诉讼案件新增" id="cardadd" ><userdata name="link">ssgl/lawsuit_newHead.do	</userdata></item>
+	</item>
+</tree> 

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<process name="cjtz_shenpi" xmlns="http://jbpm.org/4.4/jpdl">
+	<start g="382,33,48,48" name="start">
+		<transition g="-59,-60" name="开始" to="拟稿"/>
+	</start>
+	<task assignee="#{assignee}" g="360,131,92,52" name="拟稿">
+      <transition g="37,-170" name="拟稿部门综合处理" to="拟稿部门综合处理"/>
+      <transition g="16,-151" name="组审核" to="组审核"/>
+      <transition g="-74,-137" name="部门领导审批" to="部门领导审批"/>
+      <transition g="96,-167" name="内控组审核" to="内控组审核"/>
+      <transition g="165,-189" name="backto内控组审核" to="内控组审核"/>
+      <transition g="-126,88" name="backto拟稿部门综合处理" to="拟稿部门综合处理"/>
+      <transition g="-126,88" name="backto项目受理" to="项目受理"/>
+      <transition g="-83,-17" name="作废" to="结束">
+      	<event-listener class="com.tansun.eam2.cjtz.listener.TZLCZFEventListener"/>
+		<event-listener class="com.tansun.eam2.common.workflow.listener.AbandonEventListener"/>
+	  </transition>      
+	</task>
+	<task g="245,273,122,52" name="内控组审核">
+	  <transition g="-185,16" name="内控组审核" to="内控组审核"/>
+      <transition g="-185,16" name="拟稿" to="拟稿"/>
+      <transition g="-233,-18" name="组审核" to="组审核"/>
+      <transition g="-238,-101" name="拟稿部门综合处理" to="拟稿部门综合处理"/>
+      <transition g="-223,59" name="backto拟稿" to="拟稿"/>
+      <transition g="-185,16" name="backto内控组审核" to="内控组审核"/>
+      <transition g="-126,88" name="backto拟稿部门综合处理" to="拟稿部门综合处理"/>
+	</task>
+	<task g="447,274,92,52" name="组审核">
+	  <transition g="-185,16" name="组审核" to="组审核"/>
+      <transition g="130,-41" name="拟稿" to="拟稿"/>
+      <transition g="5,-134" name="部门领导审批" to="部门领导审批"/>
+      <transition g="163,-75" name="内控组审核" to="内控组审核"/>
+      <transition g="104,-169" name="拟稿部门综合处理" to="拟稿部门综合处理"/>
+      <transition g="28,338" name="backto拟稿" to="拟稿"/>
+      <transition g="165,-189" name="backto内控组审核" to="内控组审核"/>
+      <transition g="165,-189" name="backto组审核" to="组审核"/>
+      <transition g="-126,88" name="backto拟稿部门综合处理" to="拟稿部门综合处理"/>
+	</task>
+	<task g="584,276,120,52" name="部门领导审批">
+	  <transition g="185,25" name="部门领导审批" to="部门领导审批"/>
+      <transition g="185,25" name="拟稿" to="拟稿"/>
+      <transition g="149,-29" name="组审核" to="组审核"/>
+      <transition g="187,-92" name="拟稿部门综合处理" to="拟稿部门综合处理"/>
+      <transition g="194,54" name="backto拟稿" to="拟稿"/>
+      <transition g="165,-189" name="backto组审核" to="组审核"/>
+      <transition g="185,25" name="backto部门领导审批" to="部门领导审批"/>
+      <transition g="-126,88" name="backto拟稿部门综合处理" to="拟稿部门综合处理"/>
+      <transition g="-126,88" name="backto项目受理" to="项目受理"/>
+      <transition g="-69,-22" name="项目受理" to="项目受理"/>
+	</task>
+	<task g="333,408,146,52" name="拟稿部门综合处理">
+	  <transition g="-126,88" name="拟稿部门综合处理" to="拟稿部门综合处理"/>
+      <transition g="-126,88" name="拟稿" to="拟稿"/>
+      <transition g="-104,90" name="内控组审核" to="内控组审核"/>
+      <transition g="-166,45" name="组审核" to="组审核"/>
+      <transition g="-259,108" name="部门领导审批" to="部门领导审批"/>
+      <transition g="-129,-100" name="项目受理" to="项目受理"/>
+      <transition g="174,-65" name="backto拟稿" to="拟稿"/>
+      <transition g="165,-189" name="backto组审核" to="组审核"/>
+      <transition g="165,-189" name="backto内控组审核" to="内控组审核"/>
+      <transition g="-126,88" name="backto拟稿部门综合处理" to="拟稿部门综合处理"/>
+      <transition g="-126,88" name="backto项目受理" to="项目受理"/>
+      <transition g="185,25" name="backto部门领导审批" to="部门领导审批"/>
+      <transition g="-190,35" name="backto业务运营组处理" to="业务运营组处理"/>
+      <transition g="-105,-22" name="业务运营组处理" to="业务运营组处理"/>
+	</task>
+	<task g="349,543,119,52" name="项目受理">
+      <transition g="49,41" name="拟稿部门综合处理" to="拟稿部门综合处理"/>
+      <transition g="59,-54" name="会议组织" to="会议组织">
+      	<event-listener class="com.tansun.eam2.cjtz.listener.TZXMSLEventListener"/>
+      </transition>
+      <transition g="-140,122" name="backto拟稿" to="拟稿"/>
+      <transition g="185,25" name="backto部门领导审批" to="部门领导审批"/>
+      <transition g="-126,88" name="backto拟稿部门综合处理" to="拟稿部门综合处理"/>
+      <transition g="-113,-60" name="backto会议组织" to="会议组织"></transition>
+      <transition g="-93,-22" name="部门领导审批" to="部门领导审批"/>
+	</task>
+   <task g="366,715,92,52" name="会议组织">
+      <!-- <transition g="-113,23" name="会议组织" to="会议组织"/>
+      <transition g="-113,23" name="合规审查" to="合规审查"/> -->
+      <transition g="-93,-52" name="提交上会" to="上会中">
+      	<event-listener class="com.tansun.eam2.cjtz.listener.TZHYZZEventListener"/>
+      </transition>
+      <!-- <transition g="-113,23" name="backto会议组织" to="会议组织"/>
+      <transition g="-113,-60" name="backto合规审查" to="合规审查"/> -->
+   </task>
+   <task g="367,806,92,52" name="上会中">
+      <transition g="-132,-54" name="汇总审批意见" to="汇总审批意见"/>
+   </task>
+   <task g="367,890,92,52" name="汇总审批意见">
+      <transition g="-143,-67" name="汇总审批意见" to="汇总审批意见"/>
+      <transition g="-143,-67" name="审核汇总意见" to="审核汇总意见"/>
+      <transition g="-143,-67" name="backto汇总审批意见" to="汇总审批意见"/>
+   </task>
+   <task g="354,984,119,52" name="审核汇总意见">
+      <transition g="-136,-54" name="审核汇总意见" to="审核汇总意见"/>
+      <transition g="-147,28" name="汇总审批意见" to="汇总审批意见"/>
+      <transition g="-163,-56" name="业务运营组处理" to="业务运营组处理"/>
+      <transition g="525,1116;527,1278;528,1454:-328,-148" name="提交意见触发会议纪要整理" to="结束">
+      	<event-listener class="com.tansun.eam2.cjtz.listener.TZENDEventListener"/>
+      	<event-listener class="com.tansun.eam2.common.workflow.listener.EndEventListener"/>
+	  </transition>
+      <transition g="-136,-54" name="backto审核汇总意见" to="审核汇总意见"/>
+      <transition g="-143,-67" name="backto汇总审批意见" to="汇总审批意见"/>
+   </task>
+   <task g="558,982,112,52" name="业务运营组处理">
+      <transition g="-190,35" name="业务运营组处理" to="业务运营组处理"/>
+      <transition g="-135,-49" name="公司领导批示" to="公司领导批示"/>
+      <transition g="-135,-49" name="审核汇总意见" to="审核汇总意见"/>
+      <transition g="525,1116;527,1278;528,1454:-328,-148" name="提交意见触发会议纪要整理" to="结束">
+      	<event-listener class="com.tansun.eam2.cjtz.listener.TZENDEventListener"/>
+      	<event-listener class="com.tansun.eam2.common.workflow.listener.EndEventListener"/>
+	  </transition>
+	  <transition g="-126,88" name="backto审核汇总意见" to="审核汇总意见"/>
+      <transition g="-190,35" name="backto业务运营组处理" to="业务运营组处理"/>
+      <transition g="-147,41" name="backto公司领导批示" to="公司领导批示"/>
+      <transition g="-126,88" name="backto拟稿部门综合处理" to="拟稿部门综合处理"/>
+      <transition g="-117,-22" name="拟稿部门综合处理" to="拟稿部门综合处理"/>
+   </task>
+   <task g="571,1123,92,52" name="公司领导批示">
+      <transition g="-147,41" name="业务运营组处理" to="业务运营组处理"/>
+      <transition g="-147,41" name="backto公司领导批示" to="公司领导批示"/>
+      <transition g="-190,35" name="backto业务运营组处理" to="业务运营组处理"/>
+   </task>
+   <end g="163,986,48,48" name="结束"/>
+   <migrate-instances versions="1..x"/>
+</process>

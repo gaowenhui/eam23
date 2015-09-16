@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <package name="hkglWorkflow" namespace="/hkglWorkflow" extends="default">
+        <interceptors>
+    		<interceptor name="counterSignInterceptor" class="com.tansun.eam2.common.workflow.counterSign.action.CounterSignInterceptor"></interceptor>
+    	</interceptors>
+        <action name="hkglcldWorkflow_*" method="{1}" class="com.tansun.eam2.zyzc.workflow.buy.action.HkglWorkflowAction">
+            <result name="newDraftResult" type='chain'>
+      			<param name="actionName">backCash_newHead</param>
+            	<param name="namespace">/hkgl</param>
+      		</result>
+      		<result name="toDraftResult" type='chain'>
+      			<param name="actionName">backCash_modifyHead</param>
+            	<param name="namespace">/hkgl</param>
+      		</result>
+      		<result name="newDraft" type='chain'>
+      			<param name="actionName">hkglcldWorkflow_newDraft</param>
+            	<param name="namespace">/hkglWorkflow</param>
+      		</result>
+      		<result name="saveDraft" type='chain'>
+      			<param name="actionName">hkglcldWorkflow_saveDraft</param>
+            	<param name="namespace">/hkglWorkflow</param>
+      		</result>
+      		<result name="saveTodo" type='chain'>
+      			<param name="actionName">hkglcldWorkflow_saveTodo</param>
+            	<param name="namespace">/hkglWorkflow</param>
+      		</result>
+      		<result name="draftCommit" type='chain'>
+      			<param name="actionName">hkglcldWorkflow_draftCommit</param>
+            	<param name="namespace">/hkglWorkflow</param>
+      		</result>
+      		<result name="draftCommitResult">
+      			/pages/rdp4j/workflow/task/todo.jsp
+      		</result>
+      		<result name="todoResult" type='chain'>
+      			<param name="actionName">backCash_modifyHead</param>
+            	<param name="namespace">/hkgl</param>
+      		</result>
+      		<result name="getParticipationListResult" type='chain'>
+      			<param name="actionName">dept_getValue</param>
+            	<param name="namespace">/dept</param>
+      		</result>
+      		<result name="completeTaskResult">
+      			/pages/rdp4j/workflow/task/todo.jsp
+      		</result>
+      		<result name="completeTask" type='chain'>
+      			<param name="actionName">hkglcldWorkflow_completeTask</param>
+            	<param name="namespace">/hkglWorkflow</param>
+      		</result>
+      		<result name="abandonPiResult" type='chain'>
+      			<param name="actionName">userAbandon_findAbandons</param>
+            	<param name="namespace">/abandon</param>
+      		</result>
+      		<result name="abandonViewResult" type='chain'>
+      			<param name="actionName">backCash_modifyHead</param>
+            	<param name="namespace">/hkgl</param>
+      		</result>
+      		<result name="endPiResult" type='chain'>
+      			<param name="actionName">userEnd_findEnds</param>
+            	<param name="namespace">/end</param>
+      		</result>
+      		<result name="endViewResult" type='chain'>
+      			<param name="actionName">backCash_modifyHead</param>
+            	<param name="namespace">/hkgl</param>
+      		</result>
+      		<result name="didResult" type='chain'>
+      			<param name="actionName">backCash_modifyHead</param>
+            	<param name="namespace">/hkgl</param>
+      		</result>
+      		<result name="circulation" type='chain'>
+      			<param name="actionName">hkglcldWorkflow_circulation</param>
+            	<param name="namespace">/hkglWorkflow</param>
+      		</result>
+      		<result name="circulationResult" type='chain'>
+      			<param name="actionName">backCash_modifyHead</param>
+            	<param name="namespace">/hkgl</param>
+      		</result>
+      		<result name="ngbmTodoResult" type='chain'>
+      			<param name="actionName">backConfirm_modifyHead</param>
+            	<param name="namespace">/hkgl</param>
+      		</result>
+      		<result name="ngbmDidResult" type='chain'>
+      			<param name="actionName">backCash_modifyHead</param>
+            	<param name="namespace">/hkgl</param>
+      		</result>
+      		<result name="cbbmTodoResult" type='chain'>
+      			<param name="actionName">backCash_modifyHead</param>
+            	<param name="namespace">/hkgl</param>
+      		</result>
+      		<result name="cbbmDidResult" type='chain'>
+      			<param name="actionName">backConfirm_modifyHead</param>
+            	<param name="namespace">/hkgl</param>
+      		</result>
+      		<result name="xmslCommit" type='chain'>
+      			<param name="actionName">hkglcldWorkflow_xmslCommit</param>
+            	<param name="namespace">/hkglWorkflow</param>
+      		</result>   
+      		<result name="taskHisGraphResult">/pages/rdp4j/workflow/task/taskHisGraph.jsp</result>
+      		<interceptor-ref name="appdefault"></interceptor-ref>
+      		<interceptor-ref name="counterSignInterceptor">
+      			<param name="includeMethods">todo</param>
+      		</interceptor-ref>
+        </action>
+        <action name="hkglbldWorkflow_*" method="{1}" class="com.tansun.eam2.zyzc.workflow.buy.action.HkglWorkflowAction">
+            <result name="newDraftResult" type='chain'>
+      			<param name="actionName">backConfirm_newHead</param>
+            	<param name="namespace">/hkgl</param>
+      		</result>
+      		<result name="toDraftResult" type='chain'>
+      			<param name="actionName">backConfirm_modifyHead</param>
+            	<param name="namespace">/hkgl</param>
+      		</result>
+      		<result name="newDraft" type='chain'>
+      			<param name="actionName">hkglbldWorkflow_newDraft</param>
+            	<param name="namespace">/hkglWorkflow</param>
+      		</result>
+      		<result name="saveDraft" type='chain'>
+      			<param name="actionName">hkglbldWorkflow_saveDraft</param>
+            	<param name="namespace">/hkglWorkflow</param>
+      		</result>
+      		<result name="saveTodo" type='chain'>
+      			<param name="actionName">hkglbldWorkflow_saveTodo</param>
+            	<param name="namespace">/hkglWorkflow</param>
+      		</result>
+      		<result name="draftCommit" type='chain'>
+      			<param name="actionName">hkglbldWorkflow_draftCommit</param>
+            	<param name="namespace">/hkglWorkflow</param>
+      		</result>
+      		<result name="draftCommitResult" >
+      			/pages/rdp4j/workflow/task/todo.jsp
+      		</result>
+      		<result name="todoResult" type='chain'>
+      			<param name="actionName">backConfirm_modifyHead</param>
+            	<param name="namespace">/hkgl</param>
+      		</result>
+      		<result name="getParticipationListResult" type='chain'>
+      			<param name="actionName">dept_getValue</param>
+            	<param name="namespace">/dept</param>
+      		</result>
+      		<result name="completeTaskResult">
+      			/pages/rdp4j/workflow/task/todo.jsp
+      		</result>
+      		<result name="completeTask" type='chain'>
+      			<param name="actionName">hkglbldWorkflow_completeTask</param>
+            	<param name="namespace">/hkglWorkflow</param>
+      		</result>
+      		<result name="abandonPiResult" type='chain'>
+      			<param name="actionName">userAbandon_findAbandons</param>
+            	<param name="namespace">/abandon</param>
+      		</result>
+      		<result name="abandonViewResult" type='chain'>
+      			<param name="actionName">backConfirm_modifyHead</param>
+            	<param name="namespace">/hkgl</param>
+      		</result>
+      		<result name="endPiResult" type='chain'>
+      			<param name="actionName">userEnd_findEnds</param>
+            	<param name="namespace">/end</param>
+      		</result>
+      		<result name="endViewResult" type='chain'>
+      			<param name="actionName">backConfirm_modifyHead</param>
+            	<param name="namespace">/hkgl</param>
+      		</result>
+      		<result name="didResult" type='chain'>
+      			<param name="actionName">backConfirm_modifyHead</param>
+            	<param name="namespace">/hkgl</param>
+      		</result>
+      		<result name="circulation" type='chain'>
+      			<param name="actionName">hkglbldWorkflow_circulation</param>
+            	<param name="namespace">/hkglWorkflow</param>
+      		</result>
+      		<result name="circulationResult" type='chain'>
+      			<param name="actionName">backConfirm_modifyHead</param>
+            	<param name="namespace">/hkgl</param>
+      		</result>
+      		<result name="cbbmTodoResult" type='chain'>
+      			<param name="actionName">backCash_modifyHead</param>
+            	<param name="namespace">/hkgl</param>
+      		</result>
+      		<result name="cbbmDidResult" type='chain'>
+      			<param name="actionName">backConfirm_modifyHead</param>
+            	<param name="namespace">/hkgl</param>
+      		</result>
+      		<result name="xmslCommit" type='chain'>
+      			<param name="actionName">hkglbldWorkflow_xmslCommit</param>
+            	<param name="namespace">/hkglWorkflow</param>
+      		</result>   
+      		<result name="taskHisGraphResult">/pages/rdp4j/workflow/task/taskHisGraph.jsp</result>
+      		<interceptor-ref name="appdefault"></interceptor-ref>
+      		<interceptor-ref name="counterSignInterceptor">
+      			<param name="includeMethods">todo</param>
+      		</interceptor-ref>
+        </action>
+    </package>
+</struts>

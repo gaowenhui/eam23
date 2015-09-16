@@ -1,0 +1,1 @@
+这3个包要放在C:\tomcat6\apache-tomcat-6.0.29\lib下，因为jbpm要用到，并且el-api.jar与其中一个包冲突，要替换掉el-api.jar这个包

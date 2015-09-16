@@ -1,0 +1,24 @@
+<%@ page language="java" pageEncoding="UTF-8"%>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>welcome.html</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+
+  </head>
+ 
+  <body> 
+    welcome:${loginId} <br>
+    <a href="../priv/role_list.do">角色管理</a><br>
+     <a href="../user/userRole_userList.do">用户角色分配</a><br>
+    <a href="/struts2/demoproject/common/jsp/index.jsp">组织机构管理</a><br>
+<a href="/struts2/form/form_xml.do?actionBeanID=p_agent"  target='_blank'>XML配置</a>	<br>
+<a href="/struts2/query/query.do?actionsBeanID=test"  target='_blank'>通用查询</a><br>
+<a href="/struts2/form/form_add.do?type=add&actionBeanID=p_agent" 	target='_blank'>电子表单</a><br>
+  </body>
+</html>

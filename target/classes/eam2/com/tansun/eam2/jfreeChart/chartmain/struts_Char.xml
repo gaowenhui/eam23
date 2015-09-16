@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+  	<constant name="struts.devMode" value="true" />
+	<package name="char" namespace="/char" extends="default">
+		<action name="CharAction_*"  method="{1}" class="com.tansun.eam2.jfreeChart.chartmain.ChartAction">
+			<result name="stfyByMonth">/pages/chart/stfyMonth.jsp</result>
+			<result name="czlByYear">/pages/chart/czlYear.jsp</result>
+		    <result name="stfyMonth">/pages/chart/stfyMonth.jsp</result>
+		    <result name="czlByMonth">/pages/chart/czlMonth.jsp</result>
+		    <result name="czlCountLastMonths">/pages/chart/czlLastMonths.jsp</result>
+		    <result name="susongLine">/pages/chart/ssajLine.jsp</result>
+		    <result name="stfyYear">/pages/chart/strcfyYear.jsp</result>
+		    <result name="strcfyTjByMonths">/pages/chart/strcfyLastMonths.jsp</result>
+		    <result name="czryazLine">/pages/chart/czryazLine.jsp</result>
+		    <result name="zcjgtj">/pages/chart/zcjgtj.jsp</result>
+		    <result name="wtdk">/pages/chart/wtdkPie.jsp</result>
+		    <result name="wtdkByLastMonth">/pages/chart/wtdkByLastMonthLine.jsp</result>
+		    <result name="wtdkByYear">/pages/chart/wtdkByYearLine.jsp</result>
+		    <result name="wtdkArea">/pages/chart/wtdkArea.jsp</result>
+		    <result name="wtdkQuarter">/pages/chart/wtdkByQuarterLine.jsp</result>
+		    <result name="wtdkMonths">/pages/chart/wtdkMonths.jsp</result>
+		    <result name="homePage">/pages/chart/home.jsp</result>
+		    <result name="rcfyByLastMonths">/pages/chart/rcfyLastMonths.jsp</result>
+		    <result name="htzjByLastMonths">/pages/chart/htzjLastMonths.jsp</result>
+		    <result name="htzjsrByYears">/pages/chart/htzjsrByYears.jsp</result>
+		    <result name="htzjByMonth">/pages/chart/htzjByMonth.jsp</result>
+		    <result name="rcfyByYearLine">/pages/chart/rcfyByYearLine.jsp</result>
+		    <result name="rcfyMonths">/pages/chart/rcfyMonths.jsp</result>
+		    <result name="toWtdkExcel">/pages/chart/wtdkListExcel.jsp</result>
+		</action>
+	</package>
+</struts>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="reference" namespace="/reference" extends="default">
+		<action name="reference_*" method="{1}" class="com.tansun.rdp4j.generalapps.reference.action.ReferenceAction">
+		   <result name="toList">/pages/rdp4j/generalapps/reference/reference_list.jsp</result>
+		   <result name="toTree">/pages/rdp4j/generalapps/reference/reference_tree.jsp</result>
+		   <result name="toPage">/pages/rdp4j/generalapps/reference/reference_referenceIframe.jsp</result>
+		   <result name="toAdd">/pages/rdp4j/generalapps/reference/reference_add.jsp</result>
+		   <result name="toUpdate">/pages/rdp4j/generalapps/reference/reference_update.jsp</result>
+		   <result name="addChild">/pages/rdp4j/generalapps/reference/reference_addChild.jsp</result>
+		   <result name="success">/pages/rdp4j/generalapps/reference/reference_success.jsp</result>
+		</action>
+	</package>
+</struts>

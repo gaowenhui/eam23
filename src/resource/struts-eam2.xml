@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<include file="struts_auth.xml" />
+	<include file="com/tansun/eam2/zyzc/action/struts_zyzc.xml" />
+	<include file="com/tansun/eam2/kpgl/action/struts_kpgl.xml" />
+	<include file="com/tansun/eam2/jygdzc/action/struts_jygdzc.xml" />
+	<include file="com/tansun/eam2/stgl/actions/struts_stgl.xml" />
+	<include file="com/tansun/eam2/zccz/action/struts_zccz.xml" />
+    <include file="com/tansun/eam2/common/web/actions/struts_cclog.xml" />
+	<include file="com/tansun/eam2/stock/action/struts_stock.xml" />
+	<include file="com/tansun/eam2/zqgl/action/struts_zqgl.xml" />
+	<include file="com/tansun/eam2/wtdk/action/struts_wtdk.xml" />
+	<include file="com/tansun/eam2/ssgl/action/struts_ssgl.xml" />
+	<include file="com/tansun/eam2/cjtz/action/struts_cjtz.xml" />
+	<include file="com/tansun/eam2/jiekou/erp/action/struts_jiekou.xml" />
+
+
+
+	<include file="com/tansun/eam2/hkgl/action/struts_hkgl.xml" />
+	<include file="com/tansun/eam2/user/action/struts_user.xml" />
+	<include file="com/tansun/eam2/jfreeChart/chartmain/struts_Char.xml" />
+	<include file="com/tansun/eam2/jfreeChart/action/struts_Tj.xml" />
+</struts>

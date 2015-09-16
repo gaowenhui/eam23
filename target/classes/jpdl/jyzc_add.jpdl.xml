@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<process name="jyzc_add" xmlns="http://jbpm.org/4.4/jpdl">
+	
+	<start g="279,39,48,48" name="start">
+		<transition g="-53,-17" name="开始" to="拟稿"/>
+	</start>
+
+	<task assignee="#{assignee}" g="257,135,92,52" name="拟稿">
+		<transition g="-53,-17" name="组审核" to="组审核"/>
+		<transition g="-53,-17" name="backto组审核" to="组审核"/>
+		<transition g="-53,-17" name="作废" to="结束">
+		   <event-listener class="com.tansun.eam2.jygdzc.listener.ReleaseZzjzNumEventListener"/>
+			<event-listener class="com.tansun.eam2.common.workflow.listener.AbandonEventListener"/>
+		</transition>
+	</task>
+
+	<task g="257,295,92,52" name="组审核">
+		<transition g="-53,-17" name="组审核" to="组审核"/>
+		<transition g="-53,-17" name="拟稿" to="拟稿"/>
+		<transition g="-53,-17" name="backto拟稿" to="拟稿"/>
+		<transition g="-53,-17" name="流程办结" to="结束">
+			<event-listener class="com.tansun.eam2.common.workflow.listener.EndEventListener"/>
+		</transition>
+	</task>
+
+	<end g="279,400,48,48" name="结束"/>
+	<migrate-instances versions="1..x"/>
+</process>

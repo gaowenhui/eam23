@@ -1,0 +1,106 @@
+<?xml version="1.0"  encoding="UTF-8"?>
+<!DOCTYPE form-config SYSTEM "dynamic-form.dtd">
+<form-config>
+    <state-group>
+        <state id="合规审查">
+        	<component id="czxmmc" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="jhcd" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="lxdh" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="CCzfs" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="czsbfs" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="stywry" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="jydx" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="stywyxzc" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="sfsh" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="zcpgzWY" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="stpgzWY" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="pgjg" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="stxzName" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="sfName" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="LEADER" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="OPERATION_GROUP" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="DRAFT_DEPT" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="shitiList" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="BLYJ_ZZYJ" renderType="normal" userId="" roleId="96" deptId="" />
+            <component id="BLYJ_THYJ" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="BLYJ_GCYJ" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="CHECK_DEPT_MODIFY" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="authority" renderType="disable" userId="" roleId="" deptId="" />
+        </state>
+        <state id="did">
+        	<component id="czxmmc" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="jhcd" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="lxdh" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="CCzfs" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="czsbfs" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="stywry" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="jydx" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="stywyxzc" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="sfsh" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="zcpgzWY" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="stpgzWY" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="pgjg" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="stxzName" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="sfName" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="LEADER" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="OPERATION_GROUP" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="DRAFT_DEPT" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="shitiList" renderType="normal" 	userId="" roleId="" deptId="" />
+            <component id="BLYJ_ZZYJ" renderType="disable" userId="" roleId="96" deptId="" />
+            <component id="BLYJ_THYJ" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="BLYJ_GCYJ" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="CHECK_DEPT_MODIFY" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="authority" renderType="normal" userId="" roleId="" deptId="" />
+        </state>
+        <state id="end">
+            <component id="authority" renderType="normal" userId="" roleId="" deptId="" />
+        	<component id="czxmmc" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="jhcd" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="lxdh" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="CCzfs" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="czsbfs" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="stywry" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="jydx" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="stywyxzc" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="sfsh" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="zcpgzWY" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="stpgzWY" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="pgjg" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="stxzName" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="sfName" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="LEADER" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="OPERATION_GROUP" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="DRAFT_DEPT" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="shitiList" renderType="normal" 	userId="" roleId="" deptId="" />
+            <component id="BLYJ_ZZYJ" renderType="disable" userId="" roleId="96" deptId="" />
+            <component id="BLYJ_THYJ" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="BLYJ_GCYJ" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="CHECK_DEPT_MODIFY" renderType="disable" userId="" roleId="" deptId="" />
+        </state>
+        <state id="readonly">
+            <component id="authority" renderType="normal" userId="" roleId="" deptId="" />
+        	<component id="czxmmc" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="jhcd" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="lxdh" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="CCzfs" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="czsbfs" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="stywry" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="jydx" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="stywyxzc" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="sfsh" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="zcpgzWY" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="stpgzWY" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="pgjg" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="stxzName" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="sfName" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="LEADER" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="OPERATION_GROUP" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="DRAFT_DEPT" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="shitiList" renderType="normal" 	userId="" roleId="" deptId="" />
+            <component id="BLYJ_ZZYJ" renderType="disable" userId="" roleId="96" deptId="" />
+            <component id="BLYJ_THYJ" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="BLYJ_GCYJ" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="CHECK_DEPT_MODIFY" renderType="disable" userId="" roleId="" deptId="" />
+        </state>
+    </state-group>
+</form-config>

@@ -1,0 +1,190 @@
+<?xml version="1.0"  encoding="UTF-8"?>
+<!DOCTYPE form-config SYSTEM "dynamic-form.dtd">
+<form-config>
+    <state-group>
+        <state id="拟稿">
+	        <component id="biaoti"  	renderType="normal" 	userId="" roleId="" deptId="" />
+	        <component id="bianhao" 	renderType="normal" 	userId="" roleId="" deptId="" />
+	        <component id="jhcd" 		renderType="normal" 	userId="" roleId="" deptId="" />
+            <component id="ngrmc"		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="lxdh" 		renderType="normal" 	userId="" roleId="" deptId="" />
+            <component id="ngrq" 		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="ngbm" 		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="zjfs" 		renderType="normal" 	userId="" roleId="" deptId="" />
+            <component id="zykpxz" 		renderType="normal" 	userId="" roleId="" deptId="" />
+            <component id="kpblsm" 		renderType="normal" 	userId="" roleId="" deptId="" />
+            <component id="bz" 			renderType="normal" 	userId="" roleId="" deptId="" />
+            <component id="DRAFT_DEPT"  renderType="normal" 	userId="" roleId="" deptId="" />
+            <component id="ERP_RESULT"  renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="CHECK_DEPT"  renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="purchase_list"  	  renderType="normal" 	userId="" roleId="" deptId="" />
+            <component id="private_use"  	  renderType="normal" 	userId="" roleId="" deptId="" />
+            <component id="blyj_reason_list"  renderType="normal" 	userId="" roleId="" deptId="" />
+            <component id="file_list"  		  renderType="normal" 	userId="" roleId="" deptId="" />
+            <component id="bianhao_button"    renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="fserp"  	  	renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="sctz"  	  	renderType="disable" 	userId="" roleId="" deptId="" />
+        </state>
+        <state id="组审核">
+            <component id="biaoti"  	renderType="normal" 	userId="" roleId="" deptId="" />
+	        <component id="bianhao" 	renderType="normal" 	userId="" roleId="" deptId="" />
+	        <component id="jhcd" 		renderType="normal" 	userId="" roleId="" deptId="" />
+            <component id="ngrmc"		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="lxdh" 		renderType="normal" 	userId="" roleId="" deptId="" />
+            <component id="ngrq" 		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="ngbm" 		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="zjfs" 		renderType="normal" 	userId="" roleId="" deptId="" />
+            <component id="zykpxz" 		renderType="normal" 	userId="" roleId="" deptId="" />
+            <component id="kpblsm" 		renderType="normal" 	userId="" roleId="" deptId="" />
+            <component id="bz" 			renderType="normal" 	userId="" roleId="" deptId="" />
+            <component id="DRAFT_DEPT"  renderType="normal" 	userId="" roleId="" deptId="" />
+            <component id="ERP_RESULT"  renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="CHECK_DEPT"  renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="purchase_list"  	  renderType="normal" 	userId="" roleId="" deptId="" />
+            <component id="private_use"  	  renderType="normal" 	userId="" roleId="" deptId="" />
+            <component id="blyj_reason_list"  renderType="normal" 	userId="" roleId="" deptId="" />
+            <component id="file_list"  		  renderType="normal" 	userId="" roleId="" deptId="" />
+            <component id="bianhao_button"    renderType="normal" 	userId="" roleId="" deptId="" />
+            <component id="fserp"  	  	renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="sctz"  	  	renderType="disable" 	userId="" roleId="" deptId="" />
+        </state>
+        <state id="经办人处理">
+            <component id="biaoti"  	renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="bianhao" 	renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="jhcd" 		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="ngrmc"		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="lxdh" 		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="ngrq" 		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="ngbm" 		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="zjfs" 		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="zykpxz" 		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="kpblsm" 		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="bz" 			renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="DRAFT_DEPT"  renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="ERP_RESULT"  renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="CHECK_DEPT"  renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="purchase_list"  	  renderType="normal" 	userId="" roleId="" deptId="" />
+            <component id="private_use"  	  renderType="normal" 	userId="" roleId="" deptId="" />
+            <component id="blyj_reason_list"  renderType="normal" 	userId="" roleId="" deptId="" />
+            <component id="file_list"  		  renderType="normal" 	userId="" roleId="" deptId="" />
+            <component id="bianhao_button"    renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="fserp"  	  	renderType="normal" 	userId="" roleId="" deptId="" />
+            <component id="sctz"  	  	renderType="normal" 	userId="" roleId="" deptId="" />
+        </state>
+        <state id="财务会计部综合处理">
+            <component id="biaoti"  	renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="bianhao" 	renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="jhcd" 		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="ngrmc"		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="lxdh" 		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="ngrq" 		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="ngbm" 		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="zjfs" 		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="zykpxz" 		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="kpblsm" 		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="bz" 			renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="DRAFT_DEPT"  renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="ERP_RESULT"  renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="CHECK_DEPT"  renderType="normal" 	userId="" roleId="" deptId="" />
+            <component id="purchase_list"  	  renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="private_use"  	  renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="blyj_reason_list"  renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="file_list"  		  renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="bianhao_button"    renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="fserp"  	  	renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="sctz"  	  	renderType="disable" 	userId="" roleId="" deptId="" />
+        </state>
+        <state id="财务会计部处理">
+            <component id="biaoti"  	renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="bianhao" 	renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="jhcd" 		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="ngrmc"		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="lxdh" 		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="ngrq" 		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="ngbm" 		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="zjfs" 		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="zykpxz" 		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="kpblsm" 		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="bz" 			renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="DRAFT_DEPT"  renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="ERP_RESULT"  renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="CHECK_DEPT"  renderType="normal" 	userId="" roleId="" deptId="" />
+            <component id="purchase_list"  	  renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="private_use"  	  renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="blyj_reason_list"  renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="file_list"  		  renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="bianhao_button"    renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="fserp"  	  	renderType="normal" 	userId="" roleId="" deptId="" />
+            <component id="sctz"  	  	renderType="normal" 	userId="" roleId="" deptId="" />
+        </state>
+        <state id="readonly">
+            <component id="biaoti"  	renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="bianhao" 	renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="jhcd" 		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="ngrmc"		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="lxdh" 		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="ngrq" 		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="ngbm" 		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="zjfs" 		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="zykpxz" 		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="kpblsm" 		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="bz" 			renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="DRAFT_DEPT"  renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="ERP_RESULT"  renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="CHECK_DEPT"  renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="purchase_list"  	  renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="private_use"  	  renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="blyj_reason_list"  renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="file_list"  		  renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="bianhao_button"    renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="fserp"  	  	renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="sctz"  	  	renderType="disable" 	userId="" roleId="" deptId="" />
+        </state>
+        <state id="end">
+            <component id="biaoti"  	renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="bianhao" 	renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="jhcd" 		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="ngrmc"		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="lxdh" 		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="ngrq" 		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="ngbm" 		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="zjfs" 		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="zykpxz" 		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="kpblsm" 		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="bz" 			renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="DRAFT_DEPT"  renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="ERP_RESULT"  renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="CHECK_DEPT"  renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="purchase_list"  	  renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="private_use"  	  renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="blyj_reason_list"  renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="file_list"  		  renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="bianhao_button"    renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="fserp"  	  	renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="sctz"  	  	renderType="disable" 	userId="" roleId="" deptId="" />
+        </state>
+        <state id="did">
+            <component id="biaoti"  	renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="bianhao" 	renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="jhcd" 		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="ngrmc"		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="lxdh" 		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="ngrq" 		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="ngbm" 		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="zjfs" 		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="zykpxz" 		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="kpblsm" 		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="bz" 			renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="DRAFT_DEPT"  renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="ERP_RESULT"  renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="CHECK_DEPT"  renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="purchase_list"  	  renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="private_use"  	  renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="blyj_reason_list"  renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="file_list"  		  renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="bianhao_button"    renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="fserp"  	  	renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="sctz"  	  	renderType="disable" 	userId="" roleId="" deptId="" />
+        </state>
+    </state-group>
+</form-config>

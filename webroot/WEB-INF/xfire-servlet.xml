@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+	<import resource="classpath:org/codehaus/xfire/spring/xfire.xml" />
+	
+	<bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+		<property name="urlMap">
+			<map>
+				<entry key="/ws/eam2oa.ws">
+					<ref bean="eam2oaService" />
+				</entry>
+			</map>
+		</property>
+	</bean>
+	
+	<bean id="baseWebService" class="org.codehaus.xfire.spring.remoting.XFireExporter" lazy-init="false" abstract="true">
+       <property name="serviceFactory" ref="xfire.serviceFactory" />
+       <property name="xfire" ref="xfire" />
+       <property name="namespace" value="http://www.jic.cn/soa" />
+    </bean>
+    
+     <bean name="eam2oaService" parent="baseWebService">
+        <property name="serviceBean" ref="oAInter"/>
+		<property name="serviceClass" value="com.tansun.eam2.oa.IOAInter"/>
+    </bean>
+
+	 <bean id="oAInter" class="com.tansun.eam2.oa.impl.OAInter" >
+         <property name="prefix" value="${eam2.prefix}" />
+     </bean>
+    <!--访问OA的客户端，注意参数后面-->
+    <bean id="oaService" class="com.tansun.eam2.oa.GetsubjectService" scope="singleton" >
+        <property name="oaUrl" value="${esb}" />
+        <property name="authUser" value="oa"/>
+        <property name="authPassword" value="w0rkfl0w"/>
+        <property name="svcName" value="OAWorkflowWS"/>
+        <property name="svcOperation" value=""/>
+        <property name="svcVersion" value="1.0"/>
+        <property name="reqAppName" value="EAM"/>
+        <property name="devMode" value="${dev.mode}"/>
+    </bean>
+    <!-- 正式环境中向门户推送等办的客户端，handler用于ESB,如果ESB没有，不受影响。
+     <bean id="pand" class="org.codehaus.xfire.spring.remoting.XFireClientFactoryBean">
+        <property name="serviceClass" value="com.panding.webservice.IPandingInterfaceWebservice" />
+        <property name="wsdlDocumentUrl" value="http://10.1.9.210:8080/jicpending/services/IPandingInterfaceWebservice?wsdl" />
+    </bean>
+     -->
+    <!--开发环境测试用，与上面的互斥。正式环境需要删除或者注释。-->
+   
+    <bean id="pand" class="com.panding.webservice.PandInterfaceWebservice">
+             <property name="portalUrl" value="${esb}" />
+             <property name="authUser" value="portal" />
+             <property name="authPassword" value="xdruider" />
+             <property name="svcName" value="PORTALPandingWS" />
+             <property name="svcOperation" value="" />
+             <property name="svcVersion" value="1.0" />
+             <property name="reqAppName" value="EAM" />
+             <property name="devMode" value="${dev.mode}" />
+    </bean>
+</beans>

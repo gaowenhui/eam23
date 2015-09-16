@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<!-- Add packages here -->
+	<include file="com/tansun/rdp4j/workflow/task/action/struts_task.xml"/>
+	<include file="com/tansun/rdp4j/workflow/task/action/TestAction.xml"></include>
+	<include file="com/tansun/rdp4j/workflow/task/action/struts_draft.xml"></include>
+	<include file="com/tansun/rdp4j/workflow/task/action/struts_did.xml"></include>
+	<include file="com/tansun/rdp4j/workflow/task/action/struts_end.xml"></include>
+	<include file="com/tansun/rdp4j/workflow/task/action/struts_message.xml"></include>
+	<include file="com/tansun/rdp4j/workflow/task/action/struts_abandon.xml"></include>	
+	<include file="com/tansun/rdp4j/workflow/task/action/struts_wf_draft.xml"></include>
+	<include file="com/tansun/rdp4j/workflow/task/action/struts_workflow.xml"/>
+</struts>

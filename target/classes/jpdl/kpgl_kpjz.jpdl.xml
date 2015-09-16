@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<process name="kpgl_kpjz" xmlns="http://jbpm.org/4.4/jpdl">
+
+	<start g="270,39,48,48" name="start">
+		<transition g="-53,-17" name="开始" to="拟稿"/>
+	</start>
+
+	<task assignee="#{assignee}" g="234,135,120,52" name="拟稿">
+		<transition g="-53,-17" name="组审核" to="组审核"/>
+		<transition g="-53,-17" name="backto组审核" to="组审核"/>
+		<transition g="-53,-17" name="作废" to="结束">
+			<event-listener class="com.tansun.eam2.kpgl.listener.CodeListener"/>
+			<event-listener class="com.tansun.eam2.common.workflow.listener.AbandonEventListener"/>
+		</transition>
+	</task>
+
+	<task g="234,244,120,52" name="组审核">
+		<transition g="-53,-17" name="组审核" to="组审核"/>
+		<transition g="-53,-17" name="拟稿" to="拟稿"/>
+		<transition g="-53,-17" name="经办人处理" to="经办人处理"/>
+		<transition g="-53,-17" name="backto拟稿" to="拟稿"/>
+		<transition g="-53,-17" name="backto组审核" to="组审核"/>
+		<transition g="-53,-17" name="backto经办人处理" to="经办人处理"/>
+	</task>
+
+	<task g="234,351,120,52" name="经办人处理">
+		<transition g="-53,-17" name="经办人处理" to="经办人处理"/>
+		<transition g="-53,-17" name="组审核" to="组审核"/>
+		<transition g="-53,-17" name="backto组审核" to="组审核"/>
+		<transition g="-53,-17" name="生成台账" to="结束">
+			<event-listener class="com.tansun.eam2.common.workflow.listener.EndEventListener"/>
+		</transition>
+	</task>
+
+	<end g="270,448,48,48" name="结束"/>
+	<migrate-instances versions="1..x"/>
+</process>

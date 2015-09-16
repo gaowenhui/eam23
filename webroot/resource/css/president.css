@@ -1,0 +1,95 @@
+body{margin:0; font-size:12px;}
+ul,li{list-style:none; font-size:12px;}
+a{text-decoration:none;}
+h1{font-size:12px;}
+
+#lightbox{overflow:hidden; min-height:460px; height:auto; min-width:600px; width:auto; padding:10px 20px 0 20px; text-align:center; background:#fff;}
+#lightbox h1{ color:#2D66B2; font-size:14px; margin:0; padding:0;}
+#lightbox .data_wrap{overflow:hidden; text-align:left;}
+#lightbox .top_bar{overflow:hidden; padding:10px 20px;}
+#lightbox .searchbar{float:left;}
+#lightbox .searchbar span{ line-height:20px; padding-left:10px;}
+#lightbox .searchbar input{ color:#666; font-size:12px;}
+#lightbox .searchbar select{ color:#666; font-size:12px;}
+#lightbox .chart_icon{float:right;}
+#lightbox .chart_icon ul{}
+#lightbox .chart_icon li{ float:left;  margin:0 15px 0 5px; color:#666;}
+#lightbox .chart_icon li.blueicon{ width:13px; height:13px; overflow:hidden; background:#2DB3E3; border:1px solid #AEB6C1; margin-right:0; padding-left:5px;}
+#lightbox .chart_icon li.pinkicon{ width:13px; height:13px; overflow:hidden; background:#EE404B; border:1px solid #AEB6C1; margin-right:0; padding-left:5px;}
+#lightbox .chart_frame{text-align:center; padding:10px 0;}
+#lightbox .submit_btn{ overflow:hidden; text-align:center;}
+
+#content{width:788px; padding:0; margin:0; border:0;}
+.wrap{overflow:hidden; margin-bottom:6px;}
+
+.bar_closed a{overflow:hidden; width:788px; height:23px; background:url(../images/frame_bar.png) left -24px no-repeat;}
+.bar_closed a:hover{overflow:hidden; width:788px; height:23px; background:url(../images/frame_bar.png) top right no-repeat;color:#2D66B2;text-decoration:none;}
+.closedicon{height:23px; font-size:12px; line-height:26px; display:block; text-indent:32px;color:#2D66B2;}
+
+.bar_open{overflow:hidden; width:788px; height:23px; background:url(../images/frame_bar.png) left -72px no-repeat;}
+.bar_open a:hover{overflow:hidden; width:788px; height:23px; background:url(../images/frame_bar.png) left -48px no-repeat;color:#2D66B2;text-decoration:none;}
+.openicon{height:23px; font-size:12px; text-indent:32px; line-height:26px; display:block;color:#2D66B2;font-weight:bold;}
+
+.outline{border:0px solid #E4E4E4; border-top:0; padding:13px 0 10px 20px; overflow:hidden; width:760px;}
+.outline h1{background:url(../images/titleicon.gif) left 7px no-repeat; padding:0 0 5px 10px; line-height:24px; margin:0; font-weight:normal;}
+.disline{width:740px; height:1px; overflow:hidden; background:#C8C8C8; float:left;}
+
+.tab{overflow:hidden;}
+.tab ul{ margin:0; padding:0;}
+.tab li{float:left; color:#666; margin-left:6px; line-height:24px; height:21px; overflow:hidden;}
+.tab li.now{background:url(../images/tab.gif) top right no-repeat; height:21px; padding-right:12px; font-weight:bold; color:#2D66B2; margin-left:0;}
+.tab li.now a{color:#2D66B2;}
+.tab li.now_left{width:13px; height:21px; overflow:hidden; background:url(../images/tab_left_now.gif) left top no-repeat;}
+.tab li.left{width:13px; height:21px; overflow:hidden; background:url(../images/tab_left.gif) left top no-repeat;}
+.tab li.right{background:url(../images/tab.gif) right -22px no-repeat; height:21px; padding-right:12px; color:#666; margin-left:0;}
+.tab li.right a{color:#666;}
+
+.title{color:#000; overflow:hidden;}
+.title ul{margin:8px; padding:0;}
+.title li{ float:left; background:url(../images/titleicon.gif) left 6px no-repeat; padding-left:10px; margin-right:20px; line-height:24px;}
+.title li a{ color:#000; font-weight:normal;}
+.title li a:hover{ text-decoration:underline; color:#000;}
+.title li.now a{ color:#FF9900; font-weight:bold;}
+.title li.now a:hover{ color:#FF9900;}
+
+.graphic{overflow:hidden; padding:10px 30px; text-align:center;}
+.graphic_bar{overflow:hidden; padding:10px 0 25px 0}
+.graphic_bar ul{ margin:0; padding:0; float:right;}
+.graphic_bar li{float:left; margin:0 15px 0 5px; color:#666; font-family:Tahoma, Geneva, sans-serif;}
+.graphic_bar li.text{overflow:hidden; line-height:14px;}
+.graphic_bar li.green{width:13px; height:13px; overflow:hidden; background:#0FAC17; border:1px solid #AEB6C1; margin:0;}
+.graphic_bar li.yellow{width:13px; height:13px; overflow:hidden; background:#FBF24B; border:1px solid #AEB6C1; margin:0;}
+.graphic_bar li.orange{width:13px; height:13px; overflow:hidden; background:#F9A501; border:1px solid #AEB6C1; margin:0;}
+.graphic_bar li.red{width:13px; height:13px; overflow:hidden; background:#F91E01; border:1px solid #AEB6C1; margin:0;}
+
+.dialog{width:226px; overflow:hidden;}
+.dialog .top_bg{width:226px; height:9px; overflow:hidden; background:url(../images/dialog_top.png) left top no-repeat;}
+.dialog .btm_bg{width:226px; padding:0 20px 10px 20px; overflow:hidden; background:url(../images/dialog_btm.png) left bottom no-repeat;}
+.dialog .itemname{color:#000; font-weight:bold; float:left; display:block; width:100px; padding-top:3px;}
+.dialog .btm_bg p{ margin:10px 0;}
+.dialog .line{height:1px; border-bottom:1px dashed #ccc; width:182px;}
+.dialog .btn{background:url(../images/blue_btn.gif) left top no-repeat; float:left; font-weight:normal; color:#fff; width:85px}
+.dialog .btn a{width:70px; height:19px; color:#fff; line-height:20px; padding-left:15px;}
+.dialog .btn_s{background:url(../images/blue_btn_s.gif) left top no-repeat; float:left; font-weight:normal; color:#fff; width:61px; margin-left:25px; }
+.dialog .btn_s a{color:#fff; line-height:20px; padding-left:15px;}
+.dialog .btm_bg p.heights{margin:2px 0 0 0; padding:0;}
+.dialog h1{ margin:5px 0 0 0;}
+.dialog h3{ margin:7px 0 4px 0; font-size:12px; font-weight:normal;border-bottom:1px dotted #ccc;}
+
+.dialog_s{width:155px; overflow:hidden;}
+.dialog_s h1{ margin:5px 0 0 0;}
+.dialog_s h2{ margin:5px 0 0 0;}
+.dialog_s h3{ margin:7px 0 2px 0; font-size:12px; font-weight:normal;border-bottom:1px dotted #ccc;}
+.dialog_s .top_bg{width:155px; height:8px; overflow:hidden; background:url(../images/dialog_top_s.png) left top no-repeat; float:left;}
+.dialog_s .btm_bg{width:155px; padding:0 20px 10px 20px; overflow:hidden; background:url(../images/dialog_btm_s.png) left bottom no-repeat;} float:left;
+.dialog_s .btm_bg h1{color:#000; font-weight:bold;}
+.dialog_s .btm_bg h2{color:#000; font-weight:normal; font-size:12px; color:#333;}
+.dialog_s .btm_bg p{ margin:2px 0;}
+.dialog_s .btm_bg p.heights{ margin:0; padding:0;}
+
+.cleardiv{clear:both;}
+.btmdiv{height:5px; overflow:hidden;}
+.item{font-weight:bold; color:#2D66B2;}
+.datas{font-weight:bold; color:#FF2400; padding-left:12px; font-family:Arial, Helvetica, sans-serif; margin-right:3px; line-height:14px;}
+.datas_first{font-weight:bold; color:#FF2400; font-family:Arial, Helvetica, sans-serif; margin-right: 3px; line-height:14px;}
+

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+    <package name="users" namespace="/users" extends="default">
+        <action name="users_*" method="{1}"
+            class="com.tansun.rdp4j.generalapps.user.action.UserAction">
+            <result name="toList">/pages/rdp4j/generalapps/user/user_list.jsp</result>
+            <result name="toAdd">/pages/rdp4j/generalapps/user/user_add.jsp</result>
+            <result name="toView">/pages/rdp4j/generalapps/user/user_view.jsp</result>
+            <result name="toTrueUpdate">/pages/rdp4j/generalapps/user/user_update.jsp</result>
+            <result name="toListUsers">/pages/rdp4j/generalapps/user/user_listUsers.jsp</result>
+            <result name="toUsersInDep">/pages/rdp4j/generalapps/depuser/user_toUsersInDep.jsp</result>
+            <result name="toUsersNotInDep" >/pages/rdp4j/generalapps/depuser/user_listUsersNotInDep.jsp</result>
+             <result name="listDept" >/pages/rdp4j/generalapps/user/user_userListDept.jsp</result>
+            <result name="success">/pages/rdp4j/generalapps/depuser/user_success.jsp</result>
+        </action>
+
+        <!-- 
+        <action name="user_*" method="{1}"
+            class="com.tansun.rdp4j.generalapps.user.action.UserAction">
+            <result name="welcome">/pages/rdp4j/common/user/mainpage.jsp</result>
+            <result name="login">/pages/rdp4j/common/user/login.jsp</result>
+            <result name="failed">/pages/rdp4j/common/user/login.jsp</result>
+            <result name="register" type="freemarker">/pages/rdp4j/common/user/register.html</result>
+        </action>
+        auth/auth_login
+        -->
+
+        <action name="userRole_*" method="{1}"
+            class="com.tansun.rdp4j.generalapps.user.action.UserRoleAction">
+            <result name="userlist" type="freemarker">/pages/rdp4j/generalapps/user/user_userRolelist.html</result>
+            <result name="userrole" type="freemarker">/pages/rdp4j/generalapps/user/user_userRole.html</result>
+            <result name="editsub" type="freemarker">/pages/rdp4j/generalapps/user/user_userRolelist.html</result>
+        </action>
+        
+        <action name="depUser_*" method="{1}" class="com.tansun.rdp4j.generalapps.user.action.DepUserAction">
+        <result name="toUsersNotInDep">/pages/rdp4j/generalapps/user/user_listUsersNotInDep.jsp</result>
+        <result name="toUsersInDep" >/pages/rdp4j/generalapps/user/user_toUsersInDep.jsp</result>
+        <result name="success">/pages/rdp4j/generalapps/user/user_success.jsp</result>
+      </action>
+    </package>
+</struts>

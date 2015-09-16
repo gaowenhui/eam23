@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+  	<constant name="struts.devMode" value="true" />
+	<package name="tj" namespace="/tj" extends="default">
+		<action name="WtdkTjAction_*"  method="{1}" class="com.tansun.eam2.jfreeChart.action.WtdkTjAction">
+			<result name="wtdk">/pages/chart/wtdkPie.jsp</result>
+		    <result name="wtdkByLastMonth">/pages/chart/wtdkByLastMonthLine.jsp</result>
+		    <result name="wtdkByYear">/pages/chart/wtdkByYearLine.jsp</result>
+		    <result name="wtdkArea">/pages/chart/wtdkArea.jsp</result>
+		    <result name="wtdkMonths">/pages/chart/wtdkMonths.jsp</result>
+		 </action>
+		 
+		 <action name="MapTjAction_*"  method="{1}" class="com.tansun.eam2.jfreeChart.action.MapTjAction">
+		     <result name="qzctjChart">/pages/chart/qzctjChart.jsp</result>
+		     <result name="jylzctjChart">/pages/chart/jyzcChart.jsp</result>
+		     <result name="zcrcfyChart">/pages/chart/rcfy.jsp</result>
+		     <result name="htzjsrChart">/pages/chart/htzjChart.jsp</result>
+		     
+		     <result name="jyxqzctjChart">/pages/chart/jyxgdzcQzc.jsp</result>
+		     <result name="jyxzctjChart">/pages/chart/jyxgdzcJyl.jsp</result>
+		     <result name="jyxrcfyChart">/pages/chart/jyxgdzcRcfy.jsp</result>
+		     <result name="jyxhtzjChart">/pages/chart/jyxgdzcHtzj.jsp</result>
+		     
+		     <result name="wtdkChart">/pages/chart/wtdkye.jsp</result>
+		     <result name="dxwtdkChart">/pages/chart/dxwtdkye.jsp</result>
+		    
+		     <result name="strcfyChart">/pages/chart/strcfy.jsp</result>
+		     
+		     <result name="zqChart">/pages/chart/zcjgzq.jsp</result>
+		     <result name="zq2Chart">/pages/chart/zcjgzq2.jsp</result>
+		     
+		     <result name="zcczChart">/pages/chart/zccz.jsp</result>
+		     <result name="stztczChart">/pages/chart/stztcz.jsp</result>
+		     <result name="stryazChart">/pages/chart/stryaz.jsp</result>
+		     
+		     <result name="ssajChart">/pages/chart/ssaj.jsp</result>
+		     
+		 </action>
+		 
+	</package>
+	
+	
+</struts>

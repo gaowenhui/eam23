@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+<!-- -->
+	<constant name="struts.objectFactory" value="spring" />
+	<package name="default" extends="struts-default">
+		<interceptors>
+			<interceptor name="profiler" class="com.tansun.rdp4j.common.web.interceptor.ProfilerInterceptor"/>
+			<interceptor name="authority" class="com.tansun.rdp4j.common.web.interceptor.AuthorityInterceptor"/>
+			<interceptor name="bean-scope" class="com.googlecode.scopeplugin.ScopeInterceptor"/>
+			<interceptor name="dynamic-form" class="com.tansun.rdp4j.dynamicform.web.interceptor.DynamicFormInterceptor"/>
+			<interceptor name="encoding" class="com.tansun.eam2.common.web.interceptor.EncodingInterceptor"></interceptor>
+			<interceptor name="opinion" class="com.tansun.eam2.common.web.interceptor.OpinionInterceptor"></interceptor>
+			<interceptor-stack name="appdefault">
+				<!-- 权限令牌	 -->
+				
+				<interceptor-ref name="authority"/>
+				<!-- scope拦截器 -->
+				<interceptor-ref name="bean-scope"/>
+				<interceptor-ref name="dynamic-form"/>
+				<interceptor-ref name="fileUpload"/>
+				<!-- 定义拦截器栈包含default-stack拦截器栈 -->
+				<interceptor-ref name="basicStack"/>
+				<!-- 此拦截器为事务切面，必须放在 basicStack 下层进行调用，因为basicStack会吞掉异常信息，导致事务无法回滚--> 
+				<interceptor-ref name="profiler"/>
+				<interceptor-ref name="encoding"/>
+				<interceptor-ref name="opinion"/>
+			</interceptor-stack>
+		</interceptors>
+
+		<!-- 定义struts2默认拦截器 -->
+		<default-interceptor-ref name="appdefault"/>
+
+		<global-results>
+			<result name="dao-exception">/pages/rdp4j/common/error.html</result>
+			<result name="biz-exception" type="freemarker"> /pages/rdp4j/common/error.html </result>
+			<result name="code-exception" type="freemarker"> /pages/rdp4j/common/codeexception.html </result>
+			<result name="auth-exception">/pages/rdp4j/common/noright.html</result>
+			<result name="file-exception">/pages/rdp4j/common/fileerror.html</result>
+
+			<result name="login" type="redirect">/pages/rdp4j/common/user/login.jsp </result>
+		</global-results>
+
+		<global-exception-mappings>
+			<exception-mapping result="dao-exception" exception="com.tansun.rdp4j.common.exception.DAOException"/>
+			<exception-mapping result="biz-exception" exception="com.tansun.rdp4j.common.exception.BizException"/>
+			<exception-mapping result="biz-exception" exception="com.tansun.rdp4j.common.exception.TokenException"/>
+			<exception-mapping result="unlogin-exception" exception="com.tansun.rdp4j.common.exception.UnLoginException"/>
+			<exception-mapping result="auth-exception" exception="com.tansun.rdp4j.common.exception.WithoutAuthorityException"/>
+			<exception-mapping result="code-exception" exception="java.lang.NullPointerException"/>
+			<exception-mapping result="code-exception" exception="java.lang.Exception"/>
+		</global-exception-mappings>
+
+	</package>
+    <package name="index-default" namespace="/" extends="default">
+        <action name="index">
+            <result>/pages/eam2/index/mainpage.jsp</result>
+        </action>
+        <action name="chooseHqbm">
+            <result>/pages/eam2/common/tree4hqbm.jsp</result>
+        </action>
+    </package>
+	<!-- Add packages here -->
+	<include file="struts-rdp4j.xml"/>
+	<include file="struts-workflow.xml"/>
+	<include file="struts-eam2.xml"/>
+	<include file="com/tansun/rdp4j/file/action/struts_file.xml"></include>
+	<include file="com/tansun/rdp4j/common/web/action/struts_blyj.xml"></include>
+	<include file="com/tansun/eam2/common/workflow/counterSign/action/struts_countersign.xml"/>
+	<include file="com/tansun/eam2/common/workflow/pgsc/action/struts_pgsc_countersign.xml"/>
+</struts>

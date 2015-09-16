@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="gbk" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+    <package name="pgscCountersign" namespace="/pgscCountersign" extends="default">
+      <action name="pgscCountersign_*"  method="{1}" class="com.tansun.eam2.common.workflow.pgsc.action.CounterSignAction">
+      	<result name="todo" type='chain'>
+      		<param name="actionName">${actionName}</param>
+            <param name="namespace">/${namespace}</param>
+		</result>
+      	<result name="psstart">/pages/rdp4j/workflow/task/psstart.jsp</result>
+      	<result name="counterSignList">/pages/rdp4j/workflow/task/pgscCounterSignList.jsp</result>
+      	<result name="findCSPartUserListResult">/pages/rdp4j/workflow/task/pgscCounterSignPartUserList.jsp</result>
+      	<result name="getParticipants" type='chain'>
+      		<param name="actionName">dept_getValue</param>
+        	<param name="namespace">/dept</param>
+      	</result>
+      	<result name="findUnCounterSignDeptZHListResult" type='chain'>
+      		<param name="actionName">dept_getValue</param>
+            <param name="namespace">/dept</param>
+      	</result>
+      </action>
+      <action name="startPgscCountersign_*"  method="{1}" class="com.tansun.eam2.common.workflow.pgsc.action.StartCounterSignAction">
+      	<result name="init">/pages/rdp4j/workflow/task/startPgscCounterSign.jsp</result>
+      	<result name="query">/pages/rdp4j/workflow/task/queryPgscCounterSign.jsp</result>
+      	<result name="findUnCounterSignDeptZHListResult" type='chain'>
+      		<param name="actionName">dept_getValue</param>
+            <param name="namespace">/dept</param>
+      	</result>
+      	<result name="startResult" type='chain'>
+      		<param name="actionName">${actionName}</param>
+            <param name="namespace">/${namespace}</param>
+		</result>
+		<result name="getParticipationListResult" type='chain'>
+      		<param name="actionName">dept_getValue</param>
+            <param name="namespace">/dept</param>
+      	</result>
+      </action>
+    </package>
+    
+ 
+</struts>

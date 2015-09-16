@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE form-config SYSTEM "dynamic-form.dtd">
+<form-config>
+    <state-group>
+        <state id="wf01">
+	        <component id="button1" renderType="disable" userId="" roleId="" deptId="" />
+	        <component id="button2" renderType="normal" userId="" roleId="" deptId="" />
+	        <component id="button3" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="title" renderType="readonly" userId="" roleId="" deptId="" />
+            <component id="applyDate" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="applyDept" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="eventType" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="comments" renderType="disable" userId="" roleId="" deptId="" />
+        </state>
+        <state id="wf02">
+            <component id="button1" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="button2" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="button3" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="title" renderType="readonly" userId="" roleId="" deptId="" />
+            <component id="applyDate" renderType="readonly" userId="" roleId="" deptId="" />
+            <component id="applyDept" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="eventType" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="comments" renderType="normal" userId="" roleId="" deptId="" />
+        </state>
+        <state id="wf03">
+            <component id="button1" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="button2" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="button3" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="title" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="applyDate" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="applyDept" renderType="readonly" userId="" roleId="" deptId="" />
+            <component id="eventType" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="comments" renderType="readonly" userId="" roleId="" deptId="" />
+        </state>
+    </state-group>
+</form-config>

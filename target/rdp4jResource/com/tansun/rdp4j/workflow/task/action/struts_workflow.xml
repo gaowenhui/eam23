@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <package name="workflow" namespace="/workflow" extends="default">
+        <action name="workflow_*" method="{1}" class="com.tansun.rdp4j.workflow.task.action.WorkflowAction">
+            <result name="getParticipationListResult" type='chain'>
+      			<param name="actionName">dept_getValue</param>
+            	<param name="namespace">/dept</param>
+      		</result>
+      		<result name="completeTaskResult" type='chain'>
+      			<param name="actionName">userDid_findDids</param>
+            	<param name="namespace">/did</param>
+      		</result>
+      		<result name="abandonPiResult" type='chain'>
+      			<param name="actionName">userAbandon_findAbandons</param>
+            	<param name="namespace">/abandon</param>
+      		</result>
+      		<result name="endPiResult" type='chain'>
+      			<param name="actionName">userEnd_findEnds</param>
+            	<param name="namespace">/end</param>
+      		</result>
+      		<result name="todoResult">/pages/rdp4j/workflow/task/task.jsp</result>
+      		<result name="startPDResult">/pages/rdp4j/workflow/task/psstart.jsp</result>
+      		<result name="deployPDResult">/pages/rdp4j/workflow/task/deployPD.jsp</result>
+      		<result name="backtoResult">/pages/rdp4j/workflow/task/backto.jsp</result>
+      		<result name="readMsgResult">/pages/rdp4j/workflow/task/showMsg.jsp</result>
+        </action>
+    </package>
+</struts>

@@ -1,0 +1,15 @@
+<#macro showFieldErrors field>
+  <#list action.fieldErrors[field]! as errMsg> 
+    ${errMsg} 
+  </#list>
+</#macro>
+
+<#-- 
+	1.使用时在相应页面上引入如下标签：
+	<#include "../common/showError.html">
+	
+	2.使用时在相应页面上增加如下标签：
+	<@showFieldErrors field="userName"/>
+							 
+	field:要显示错误信息的name属性
+-->

@@ -1,0 +1,88 @@
+<#macro showPageField actionAndMethod pageableList pagebleListName>
+
+<script language="javascript"> 
+	function addElement(elementName,elementValue){ 
+		var autoAddDiv =document.getElementById("autoAdd"); 
+		var newInput = document.createElement("input");  
+		newInput.type="hidden";  
+		newInput.name=elementName; 
+		newInput.value=elementValue; 
+		autoAddDiv.appendChild(newInput);
+	
+		//document.forms[0].submit();					
+	} 
+	
+	function go(){
+		var go_input=document.getElementById("goInput").value;
+		if(isNaN(go_input) || go_input < 1 || go_input > ${pageableList.paginator.pageCount!}){    
+ 			alert('请输入1--' + ${pageableList.paginator.pageCount!} + '的整数');  
+ 			document.getElementById("goInput").value = "";
+ 			return false;
+		}else{
+			addElement('${pagebleListName}.paginator.currentPage',go_input);
+			addElement('${pagebleListName}.paginator.sorttye','${pageableList.paginator.sorttye!}');
+			addElement('${pagebleListName}.paginator.sortname','${pageableList.paginator.sortname!}');
+			document.forms[0].submit();
+			
+		} 
+	}
+	
+	
+	function go2(elementName,elementValue,sorttye,sortname){
+		addElement(elementName,elementValue)
+		var go_input=document.getElementById("goInput").value;
+		//addElement('${pagebleListName}.paginator.currentPage','${pageableList.paginator.currentPage+1}');
+		addElement('${pagebleListName}.paginator.sorttye',sorttye);
+		addElement('${pagebleListName}.paginator.sortname',sortname);
+    			
+		document.forms[0].submit();
+	}
+	
+	function gosort(elementName,elementValue,sorttye,sortname){
+		addElement('${pagebleListName}.paginator.currentPage','${pageableList.paginator.currentPage!}');
+		addElement('${pagebleListName}.paginator.sorttye',sorttye);
+		addElement('${pagebleListName}.paginator.sortname',sortname);
+		document.forms[0].submit();
+	}			
+</script>
+
+
+<table class="table1" cellSpacing="1" cellPadding="1">
+	<tr align="left">
+		<td align="right">
+			第${pageableList.paginator.currentPage!}页&nbsp;&nbsp;共${pageableList.paginator.pageCount!}页&nbsp;
+			当前显示${pageableList.paginator.currentStart!}-${pageableList.paginator.currentEnd!}条
+			&nbsp;
+			<a href="#"
+				onclick="go2('${pagebleListName}.paginator.currentPage','1','${pageableList.paginator.sorttye!}','${pageableList.paginator.sortname!}')">首页</a>
+			&nbsp; <#if pageableList.paginator.hasPreviousPage!false>
+			<a href="#"
+				onclick="go2('${pagebleListName}.paginator.currentPage','${pageableList.paginator.currentPage-1}','${pageableList.paginator.sorttye!}','${pageableList.paginator.sortname!}')"">上一页</a>
+			</#if> &nbsp; <#if pageableList.paginator.hasNextPage!false>
+			<a href="#"
+				onclick="go2('${pagebleListName}.paginator.currentPage','${pageableList.paginator.currentPage+1}','${pageableList.paginator.sorttye!}','${pageableList.paginator.sortname!}')">下一页</a>
+			</#if> &nbsp;
+			<a href="#"
+				onclick="go2('${pagebleListName}.paginator.currentPage','${pageableList.paginator.pageCount}','${pageableList.paginator.sorttye!}','${pageableList.paginator.sortname!}')">末页</a>&nbsp;
+		</td>
+		<td width="80" align="right">
+			<input type="text" style="width: 20px;font-size:9px;" maxlength="3"
+				value='${pageableList.paginator.currentPage}'
+				title="请输入 1--${pageableList.paginator.pageCount!} 的整数"
+				name="goInput" />
+			&nbsp;页&nbsp;
+		</td>
+		<td width="30">
+			<input name="" type="image" src="../resource/images/go.gif" alt="go"
+				align="left" onclick="go();return false;" />
+		</td>
+	</tr>
+</table>
+<div id="autoAdd"></div>
+</#macro> <#-- 1.使用时在需分页的相应页面上引入如下标签： <#include
+"../common/paginator.html"> 2.使用时在需分页的相应页面上分页显示处增加如下标签： <@showPageField
+actionAndMethod="history_showOrder" pageableList=historyList
+pagebleListName="historyList" /> (1)actionAndMethod:
+该属性对应Action当中的方法名(包括Action响应前缀)
+(2)pageableList：该属性对应Action中对应的分页查询返回的属性名
+(3)pagebleListName：该属性对应Action中对应的分页查询返回的属性名 -->

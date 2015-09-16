@@ -1,0 +1,330 @@
+.hint {
+	BORDER-RIGHT: #989795 1px dashed;
+	PADDING-RIGHT: 15px;
+	BORDER-TOP: #989795 1px dashed;
+	PADDING-LEFT: 15px;
+	FONT-SIZE: 12px;
+	BACKGROUND: #ffffcd;
+	MARGIN-BOTTOM: 5px;
+	PADDING-BOTTOM: 2px;
+	MARGIN-LEFT: 9px;
+	BORDER-LEFT: #989795 1px dashed;
+	MARGIN-RIGHT: 9px;
+	PADDING-TOP: 4px;
+	BORDER-BOTTOM: #989795 1px dashed
+	text-align: left;
+}
+
+body {
+	margin: 0 0 0 0;
+	background-color: #8BB9EB;
+	FONT-SIZE: 12px;
+	SCROLLBAR-FACE-COLOR: #ffffff;
+	SCROLLBAR-HIGHLIGHT-COLOR: #ffffff;
+	SCROLLBAR-SHADOW-COLOR: #1A62AE;
+	SCROLLBAR-3DLIGHT-COLOR: #1A62AE;
+	SCROLLBAR-ARROW-COLOR: #1A62AE;
+	SCROLLBAR-TRACK-COLOR: #ffffff;
+	SCROLLBAR-DARKSHADOW-COLOR: #ffffff;
+	SCROLLBAR-BASE-COLOR: #ffffff;
+}
+
+.body1 {
+	margin: 2 2 2 2;
+	background-color: white;
+	FONT-SIZE: 12px;
+}
+
+/*输出列表样式（不带鼠标跟踪）*/
+table.table1 {
+	width: 100%;
+	margin: 2 2 2 0;
+	background-color: #89ACC8;
+	FONT-SIZE: 12px;
+	COLOR: #222222;
+	TEXT-DECORATION: none;
+	line-height: 120%
+}
+
+table.table1 tr {
+	background-color: "#FFFFFF";
+	height: 22px;
+}
+
+table.table1 th {
+	background-color: #CDDFF7;
+	background-image: url(<r:url value="/resource/images/titlebg.gif')
+}
+
+/*输出表单样式*/
+table.tableedit {
+	width: 100%;
+	margin: 2 2 2 0;
+	background-color: #89ACC8;
+	FONT-SIZE: 12px;
+	COLOR: #222222;
+	TEXT-DECORATION: none;
+}
+
+table.tableedit tr {
+	height: 25px;
+	background-color: white
+}
+
+table.tableedit th {
+	background-color: #CDDFF7;
+	background-image: url('../../resource/images/titlebg.gif')
+}
+
+table.tableedit td {
+	behavior: url('../../css/td_event.htc');
+}
+
+table.tableedit td.label {
+   background-color: #E7F7FF;
+	width: 160px;
+   text-align: right;
+   padding-right: 4px;
+}
+table.tableedit td.value {
+	padding-left: 2px;
+}
+
+/*输出列表样式*/
+table.tablelist {
+	width: 98%;
+	margin: 9 0 9 0;
+	background-color: #89ACC8;
+	FONT-SIZE: 12px;
+	COLOR: #222222;
+	TEXT-DECORATION: none;
+	line-height: 120%
+}
+
+table.tablelist tr {
+	cursor: hand;
+	background-color: "#FFFFFF";
+	behavior: url('../../css/list_event.htc');
+	height: 22px;
+}
+
+table.tablelist th {
+	cursor: auto;
+	background-color: #CDDFF7;
+	background-image: url('../../resource/images/titlebg.gif')
+}
+
+/*输出列表样式*/
+table.tablelist1 {
+	width: 98%;
+	margin: 9 0 9 0;
+	background-color: #89ACC8;
+	FONT-SIZE: 12px;
+	COLOR: #222222;
+	TEXT-DECORATION: none;
+	line-height: 120%
+}
+
+table.tablelist1 tr {
+	cursor: auto;
+	background-color: "#FFFFFF";
+	behavior: url('../../css/list_event1.htc');
+	height: 22px;
+}
+
+table.tablelist1 th {
+	cursor: auto;
+	background-color: #CDDFF7;
+	background-image: url('../../resource/images/titlebg.gif');
+	height: 25px;
+}
+
+/*输出表单标题表格样式*/
+table.tabletitle {
+	margin: 0 0 0 0;
+	background-color: #89ACC8;
+	width: 100%;
+	height: 100%
+	
+/*	
+border:1px solid black;
+border-collapse:collapse;
+table-layout:fixed;*/
+}
+
+table.tabletitle tr {
+	background-color: white;
+}
+
+table.tabletitle tr.navigation {
+    background-color: white;
+    height: 24px;
+}
+
+table.tabletitle th {
+	cursor: auto;
+	background-color: #CDDFF7;
+	background-image: url('../../resource/images/titlebg.gif');
+	height: 25px;
+	font-size: 12px;
+	text-align: center;
+	padding-left: 5px;
+}
+
+/*输出表单标题样式*/
+.formtitle {
+	background-color: white;
+	background-image: url('../../resource/images/titlebg.gif');
+	background-repeat: repeat-x;
+	FONT-SIZE: 12px;
+}
+
+.shadowfont {
+	FILTER: dropshadow(color = #555666, offx =   1, offy =   1, positive =   1);
+	color: #999888;
+}
+
+.button0 {
+	cursor: hand;
+	background-image: url('../../resource/images/btn.gif');
+	height: 20px;
+	font-size: 12px;
+	padding: 2px 4px;
+	border-top: 1px solid #848484;
+	border-right: 1px solid #848484;
+	border-bottom: 1px solid #848484;
+	border-left: 1px solid #848484;
+	text-align: center;
+	min-width: 60px;
+	color: #333333;
+	behavior: url('../../css/btn_event.htc')
+}
+
+.button1_old {
+	cursor: hand;
+	background-color: #E3ECFA;
+	height: 18px;
+	font-size: 12px;
+	padding: 1px 8px;
+	border-top: 1px solid #009999;
+	border-right: 1px solid #009999;
+	border-bottom: 1px solid #009999;
+	border-left: 1px solid #009999;
+	text-align: center;
+	min-width: 30px;
+	color: #222222
+}
+
+
+.button1{
+	font-family:"Tahoma";
+	FONT-SIZE: 11px;
+	color:#000000;
+	HEIGHT: 20px;
+	background-image: url(../ProjectImages/bg_20.gif);
+	cursor:hand;
+    BORDER-RIGHT: 1px solid #122A4C; 
+	BORDER-TOP: 1px solid #1C5180; 
+	BORDER-LEFT: 1px solid #1C5180; 
+	BORDER-BOTTOM: 1px solid #122A4C; 
+}
+.button2 {
+	cursor: hand;
+	background-image: url('../../resource/images/btn.gif');
+	height: 23px;
+	font-size: 12px;
+	padding: 4px 8px;
+	border-top: 1px solid #848484;
+	border-right: 1px solid #848484;
+	border-bottom: 1px solid #848484;
+	border-left: 1px solid #848484;
+	text-align: center;
+	min-width: 70px;
+	color: #333333;
+	behavior: url('../../css/btn_event.htc')
+}
+
+.text1 {
+	FONT-SIZE: 12px;
+	border: 1px solid #ADAAAD;
+}
+
+.textarea1 {
+	FONT-SIZE: 12px;
+	border: 1px solid #ADAAAD;
+}
+
+.curposition1 {
+	FONT-SIZE: 12px;
+	COLOR: #FF00FF;
+}
+
+.select1 {
+	FONT-SIZE: 12px;
+	border: 1px solid #ADAAAD;
+}
+
+.textline {
+	BORDER-LEFT-STYLE: none;
+	BORDER-RIGHT-STYLE: none;
+	BORDER-TOP-STYLE: none;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	padding-left: 4px;
+	padding-right: 4px;
+	padding-top: 1px;
+	padding-bottom: 1px
+}
+
+.textblank {
+	BORDER-LEFT-STYLE: none;
+	BORDER-RIGHT-STYLE: none;
+	BORDER-TOP-STYLE: none;
+	BORDER-bottom-STYLE: none;
+	border-top-width: 1px;
+	behavior: url('../../css/textblank_event.htc');
+}
+
+a {
+	color: #2C64B9;
+	text-decoration: none
+}
+
+a:hover {
+	color: #FF0000;
+	text-decoration: underline
+}
+
+.labelstyle {
+	background-color:#E3ECFA;
+	text-align:right;
+	font-weight: bold;
+}
+
+FORM {
+	margin:0px;/*去除表单下边的空隙*/
+}
+
+/*---分页样式---*/	 
+.pagenavpage {
+	font-size: 12px; 
+	line-height: 18px;
+	border: 1px #07746F solid; 
+	background-color: #FFFFFF; 
+	width:20px;
+}
+.pagenavbtngo { 
+	border: 1px #07746F solid; 
+	background-color: #FFFFFF; 
+	color:000000;
+	height:18px;
+}
+.pagenav{ 
+	font-size: 12px; 
+	padding-top:5px;
+	padding-bottom:5px;
+	height:15px  
+}
+.pagenav form{ 
+	margin:0;
+}

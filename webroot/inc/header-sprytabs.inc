@@ -1,0 +1,2 @@
+<link href="<s:url value="/resource/SpryAssets/SpryTabbedPanels.css" />" rel="stylesheet" type="text/css" />
+<script src="<s:url value="/resource/SpryAssets/SpryTabbedPanels.js" />" type="text/javascript"></script> 

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+	<package name="zqgl" namespace="/zqgl" extends="default">
+		<action name="index">
+			<result>/pages/eam2/zqgl/index.jsp</result>
+		</action>		
+
+      	<action name="outEntity_*"  method="{1}" class="com.tansun.eam2.zqgl.action.OutEntityAction">
+       		<result name="outEntityList">/pages/eam2/zqgl/out_entity_list/out_entity_List.jsp</result>
+       		<result name="newAdd">/pages/eam2/zqgl/out_entity_list/entity_info_add.jsp</result>
+       	</action>	
+       	
+       	
+       	<action name="debt_*"  method="{1}" class="com.tansun.eam2.zqgl.action.creditorMaintainAction">
+       		<result name="debtList">/pages/eam2/zqgl/debtInfo/basic_debt_list.jsp</result>
+       		<result name="newDebtInfo">/pages/eam2/zqgl/debtInfo/debt_Info.jsp</result>
+         	<result name="debtWorklogList">/pages/eam2/zqgl/debtInfo/transcat_gist.jsp</result>
+      	    <result name="newDebtWorklog">/pages/eam2/zqgl/debtInfo/record_info.jsp</result>
+       	</action>	
+       	
+	</package>
+	
+</struts>

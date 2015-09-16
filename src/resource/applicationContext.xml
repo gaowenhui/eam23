@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context-3.0.xsd
+	http://www.springframework.org/schema/aop
+	http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+	http://www.springframework.org/schema/tx 
+	http://www.springframework.org/schema/tx/spring-tx-3.0.xsd">
+
+	<import resource="classpath:applicationContext-wordOperation.xml" />
+	<import resource="classpath:applicationContext-property.xml" />
+	<!--
+	<aop:aspectj-autoproxy proxy-target-class="true"/>
+	-->
+	<!-- 
+		<import resource="classpath:xfire-servlet.xml" />
+		<import resource="timerTask/timerTask*.xml"/>
+	-->
+	
+
+	<context:annotation-config />
+	<context:component-scan base-package="com.tansun" />
+
+	<!-- Database connection data source -->
+	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
+		destroy-method="close">
+		<property name="driverClass" value="oracle.jdbc.driver.OracleDriver" />
+		<!--
+			<property name="jdbcUrl" value="jdbc:oracle:thin:@10.1.9.12:1521:eamtest" />
+			<property name="jdbcUrl" value="jdbc:oracle:thin:@10.1.9.55:1521:eam55" />		
+			<property name="jdbcUrl" value="jdbc:oracle:thin:@127.0.0.1:1521:orcl" />
+			<property name="jdbcUrl" value="jdbc:oracle:thin:@ 172.16.1.11:1521:eam2inst" />
+		  -->
+		<!--
+		<property name="jdbcUrl" value="jdbc:oracle:thin:@10.1.9.199:1521:eam" />
+		<property name="user" value="eam2" />
+		<property name="password" value="eam2" />
+		<property name="minPoolSize" value="5" />
+		<property name="maxPoolSize" value="5" />
+		-->
+        
+	 	<property name="jdbcUrl" value="jdbc:oracle:thin:@127.0.0.1:1521:ORCL" />
+		<property name="user" value="eam2" />
+		<property name="password" value="eam2" />
+		<property name="minPoolSize" value="5" />
+		<property name="maxPoolSize" value="5" /> 
+        
+  <!-- 
+ <property name="jdbcUrl" value="jdbc:oracle:thin:@127.0.0.1:1521:neweam" />
+		<property name="user" value="eam4" />
+		<property name="password" value="eam4" />
+		<property name="minPoolSize" value="5" />
+		<property name="maxPoolSize" value="5" /> 
+  -->
+		<!--
+		<property name="maxIdleTime" value="180" />
+		-->
+	</bean>
+	
+	<bean id="propertyConfigurer"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+				<value>classpath*:properties/erp-*.properties</value>
+				<!-- <value>classpath*:properties/erp-Dataload.properties</value>    -->
+				<value>classpath*:properties/esb.properties</value>
+				<value>classpath*:properties/eam2.properties</value>
+			</list>
+		</property>
+	</bean>
+<!-- -->
+	<bean id="springContext"
+		class="com.tansun.eam2.common.util.SpringContextHelper" />
+	<!-- Jbpm4 integration begin -->
+	<bean id="springHelper"
+		class="org.jbpm.pvm.internal.processengine.SpringHelper">
+		<!-- 
+		<property name="jbpmCfg" value="jbpm.cfg.xml" />
+		 -->
+	</bean>
+	<bean id="processEngine" factory-bean="springHelper"
+		factory-method="createProcessEngine" />
+	<!-- Jbpm4 integration end -->
+	
+	<bean id="sessionFactory" name="sessionFactory"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean"
+		abstract="false">
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+		
+		<property name="lobHandler">
+			<bean
+				class="org.springframework.jdbc.support.lob.DefaultLobHandler" />
+		</property>
+
+		<!-- Jbpm4 configuration file location -->
+		<!---->
+		<property name="configLocation" value="classpath:oracle.hibernate.cfg.xml" />
+		<!-- General application mapping file, TODO: these should be replaced by annotation feature -->
+
+		<property name="mappingLocations">
+			<list>
+				<value>
+					classpath*:/com/tansun/eam2/common/model/orm/bo/*.xml
+				</value>
+				<value>
+					classpath*:/com/tansun/eam2/jiekou/erp/model/bo/*.xml
+				</value>
+				<value>
+					classpath*:/com/tansun/eam2/common/workflow/counterSign/model/*.xml
+				</value>
+				<value>
+					classpath*:/com/tansun/eam/verifyright/model/*.xml
+				</value>
+				<value>
+					classpath*:/com/tansun/eam/quequan/model/*.xml
+				</value>
+				<value>
+					classpath*:/com/tansun/rdp4j/common/model/orm/bo/*.xml
+				</value>
+				<value>
+					classpath*:/com/tansun/rdp4j/file/model/orm/bo/*.xml
+				</value>
+				<value>
+					classpath*:/com/tansun/rdp4j/generalapps/dept/model/*.xml
+				</value>
+				<value>
+					classpath*:/com/tansun/rdp4j/generalapps/user/model/*.xml
+				</value>
+				<value>
+					classpath*:/com/tansun/rdp4j/generalapps/depuser/model/*.xml
+				</value>
+				<value>
+					classpath*:/com/tansun/rdp4j/generalapps/privileges/model/*.xml
+				</value>
+				<value>
+					classpath*:/com/tansun/rdp4j/generalapps/menu/model/*.xml
+				</value>
+				<value>
+					classpath*:/com/tansun/rdp4j/workflow/common/model/*.xml
+				</value>
+			</list>
+		</property>
+		
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">
+					org.hibernate.dialect.Oracle9iDialect
+				</prop>
+				<prop key="hibernate.show_sql">false</prop>
+				<prop key="hibernate.hbm2ddl.auto">true</prop>
+				<prop key="hibernate.format_sql">false</prop>
+				<prop key="hibernate.hbm2ddl.auto">true</prop>
+				<prop key="hibernate.generate_statistics">true</prop>
+				<prop key="hibernate.cache.provider_class">
+					org.hibernate.cache.EhCacheProvider
+				</prop>
+				<prop key="hibernate.cache.use_query_cache">true</prop>
+				<!-- <prop key="hibernate.query.factory_class">org.hibernate.hql.classic.ClassicQueryTranslatorFactory</prop> -->
+			</props>
+		</property>
+
+		<property name="eventListeners">
+			<map>
+				<entry key="merge">
+					<bean
+						class="org.springframework.orm.hibernate3.support.IdTransferringMergeEventListener"
+						abstract="false" />
+				</entry>
+			</map>
+		</property>
+	</bean>
+
+	<bean id="jdbcTemplate"
+		class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+	</bean>
+
+	<bean id="hibernateTemplate"
+		class="org.springframework.orm.hibernate3.HibernateTemplate">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+		<property name="nestedTransactionAllowed" value="true" />
+	</bean>
+	<bean id="exceptionLogAdvice"
+		class="com.tansun.rdp4j.common.exception.ExceptionInterceptor" />
+
+<!--
+	<bean id="eam2TODO"
+		class="org.springframework.aop.support.RegexpMethodPointcutAdvisor">
+		<property name="advice">
+			<ref local="portalTodoAdvice" />
+		</property>
+		<property name="patterns">
+			<list>
+				<value>
+					com.tansun.rdp4j.workflow.task.service.WorkflowBS.endPi(..)
+				</value>
+				<value>
+					com.tansun.rdp4j.workflow.task.service.WorkflowBS.complete*(..)
+				</value>
+			</list>
+		</property>
+	</bean>
+	<bean id="eam2MethodCachePointCut"
+		class="org.springframework.aop.support.RegexpMethodPointcutAdvisor">
+		<property name="advice">
+			<ref local="eam2QueryCache" />
+		</property>
+		<property name="patterns">
+			<list>
+				<value>
+					com.tansun.eam2.common.ucc.DeptTreeUccImpl.getEAMDept*
+				</value>
+				<value>
+					com.tansun.eam2.common.ucc.MenuTreeUccImpl.getFuncGroup*
+				</value>
+				<value>
+					com.tansun.eam2.common.ucc.MenuTreeUccImpl.getSonItem*
+				</value>
+				<value>
+					com.tansun.eam2.common.ucc.IndividualTreeImpl.find*
+				</value>
+			</list>
+		</property>
+	</bean>
+-->
+
+	<bean id="oaBlyjAdvice" class="com.tansun.eam2.oa.OAInterceptor">
+		<property name="oaService" ref="oaService" />
+	</bean>
+	
+	<bean id="eam2QueryCache"
+		class="com.tansun.eam2.common.util.MethodCacheInterceptor">
+		<property name="cache" ref="ehCache" />
+	</bean>
+
+	<bean id="esbBean"
+		class="com.tansun.eam2.common.util.ESBBean">
+		<property name="mode" value="${dev.mode}" />
+		<property name="esb" value="${eam2.prefix}" />
+	</bean>
+
+	<bean id="portalTodoAdvice"
+		class="com.tansun.eam2.portal.PortalPanding">
+		<property name="pand" ref="pand" />
+		<property name="prefix" value="${eam2.prefix}" />
+	</bean>
+<!-- -->
+	<tx:advice id="txAdvice" transaction-manager="transactionManager">
+		<tx:attributes>
+			<!--
+			<tx:method name="get*" read-only="true" />
+			<tx:method name="set*" read-only="true" />
+			<tx:method name="find*" read-only="true" />
+			<tx:method name="*"
+				rollback-for="Exception" />
+			-->
+			<tx:method name="get*" read-only="true" />
+			<tx:method name="set*" read-only="true" />
+			<tx:method name="find*" read-only="true" />
+			<tx:method name="intercept*" propagation="REQUIRED" rollback-for="Exception" />
+		</tx:attributes>
+	</tx:advice>	
+	<aop:config>
+		<aop:advisor id="portalTodoAdvisor" pointcut="execution(* com.tansun.rdp4j.workflow.task.service.WorkflowBS.endPi(..)) || execution(* com.tansun.rdp4j.workflow.task.service.WorkflowBS.abandonPi(..)) || execution(* com.tansun.rdp4j.workflow.task.service.WorkflowBS.circulation(..)) || execution(* com.tansun.rdp4j.workflow.task.service.WorkflowBS.readMsg(..)) || execution(* com.tansun.rdp4j.workflow.task.service.WorkflowBS.complete*(..)) || execution(* com.tansun.rdp4j.workflow.task.service.WorkflowBS.todo(..)) || execution(* com.tansun.eam2.common.workflow.counterSign.service.ETCounterSignBS.todo(..)) || execution(* com.tansun.eam2.common.workflow.pgsc.service.ETPgscCounterSignBS.todo(..)) ||execution(* com.tansun.eam2.common.workflow.counterSign.service.ETCounterSignBS.commitZHGCContent(..))|| execution(* com.tansun.eam2.common.workflow.counterSign.service.ETCounterSignBS.commitFinalContent(..)) || execution(* com.tansun.eam2.common.workflow.counterSign.service.ETCounterSignBS.commitJBGCContent(..)) || execution(* com.tansun.eam2.common.workflow.counterSign.service.ETCounterSignBS.startCounterSignParticipant(..)) || execution(* com.tansun.eam2.common.workflow.pgsc.service.ETPgscCounterSignBS.startCounterSignParticipant(..)) || execution(* com.tansun.eam2.common.workflow.counterSign.service.ETCounterSignBS.startCounterSign(..)) || execution(* com.tansun.eam2.common.workflow.pgsc.service.ETPgscCounterSignBS.commitZHGCContent(..)) || execution(* com.tansun.eam2.common.workflow.pgsc.service.ETPgscCounterSignBS.commitJBGCContent(..)) || execution(* com.tansun.eam2.common.workflow.pgsc.service.ETPgscCounterSignBS.commitZHFinalContent(..)) || execution(* com.tansun.eam2.common.workflow.pgsc.service.ETPgscCounterSignBS.commitFinalContent(..)) || execution(* com.tansun.eam2.common.workflow.pgsc.service.ETPgscCounterSignBS.editPortal(..))"
+			advice-ref="portalTodoAdvice" order="1"/>
+		<aop:advisor id="eam2QueryCacheAdvisor" pointcut="execution(* com.tansun.eam2.common.ucc.DeptTreeUccImpl.getEAMDept*(..)) || execution(* com.tansun.eam2.common.ucc.MenuTreeUccImpl.getFuncGroup*(..)) || execution(* com.tansun.eam2.common.ucc.MenuTreeUccImpl.getSonItem*(..)) || execution(* com.tansun.eam2.common.ucc.IndividualTreeImpl.find*(..))"
+			advice-ref="eam2QueryCache" order="2"/>
+		<aop:advisor id="exceptionLog" pointcut="execution(* com.tansun.rdp4j.common.web.interceptor.ProfilerInterceptor.intercept*(..))"
+			advice-ref="exceptionLogAdvice" order="3"/>
+		<aop:advisor id="managerTx" pointcut="execution(* com.tansun.rdp4j.common.web.interceptor.ProfilerInterceptor.intercept*(..)) || execution(* com.tansun.eam2.common.web.interceptor.OpinionInterceptor.intercept*(..))"
+			advice-ref="txAdvice" order="4"/>
+		<aop:advisor id="oaBlyjAdvisor" pointcut="execution(* com.tansun.rdp4j.common.util.ucc.impl.AccordingUCCImpl.queryOAWorkflow(..)) "
+			advice-ref="oaBlyjAdvice" order="5"/>
+	</aop:config>
+	<bean id="defaultCacheManager"
+		class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean">
+		<property name="configLocation">
+			<value>classpath:ehcache.xml</value>
+		</property>
+	</bean>
+
+	<!-- 定义ehCache的工厂，并设置所使用的Cache name -->
+	<bean id="ehCache"
+		class="org.springframework.cache.ehcache.EhCacheFactoryBean">
+		<property name="cacheManager">
+			<ref local="defaultCacheManager" />
+		</property>
+		<property name="cacheName">
+			<value>DEFAULT_CACHE</value>
+		</property>
+	</bean>
+
+</beans>

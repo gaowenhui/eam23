@@ -1,0 +1,671 @@
+<?xml version="1.0"  encoding="UTF-8"?>
+<!DOCTYPE form-config SYSTEM "dynamic-form.dtd">
+<form-config>
+    <state-group>
+        <state id="拟稿">
+            <component id="jskp"  		renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="biaoti"  		renderType="normal" 	userId="" roleId="" deptId="" />
+	        <component id="chengsong" 		renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="scbh" 		renderType="normal" 	userId="" roleId="" deptId="" />
+	        <!-- ======================== -->
+	        <component id="sczw" 			renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="ckzw"  			renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="hczw"  			renderType="disable" 	userId="" roleId="" deptId="" />
+	        <!-- ======================== -->
+	        <component id="sczwjysy" 		renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="ckzwjysy"  		renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="hczwjysy"  		renderType="disable" 	userId="" roleId="" deptId="" />
+	        <!-- ======================== -->
+	        <component id="ngbm" 		 	renderType="normal" 	userId="" roleId="" deptId="" />
+            <component id="jhcd"			renderType="normal" 	userId="" roleId="" deptId="" />
+            <component id="lxdh" 			renderType="normal" 	userId="" roleId="" deptId="" />
+            <component id="hqbmvalue" 		renderType="readonly" 	userId="" roleId="" deptId="" />
+            <component id="LEADER" 			renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="OPERATION_GROUP" renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="MEETING_DEPT" 	renderType="disable" 	userId="" roleId="" deptId="10775" />
+            <component id="HANDLE_DEPT" 		renderType="disable" 	userId="" roleId="" deptId="" />
+       		<component id="WORK_MANAGE_DEPT" 		renderType="disable" 	userId="" roleId="" deptId="" />
+       		<component id="AGENT_MANAGE_DEPT" 		renderType="disable" 	userId="" roleId="" deptId="" />
+       		<component id="REMARK" 			renderType="normal" 	userId="" roleId="" deptId="" />
+       		<component id="purchase_list"      renderType="normal" 	userId="" roleId="" deptId="" />
+            <component id="blyj_reason_list"      renderType="normal" 	userId="" roleId="" deptId="" />
+            <component id="file_list"      renderType="normal" 	userId="" roleId="" deptId="" />
+            <component id="xzhq"			renderType="disable" 	userId="" roleId="" deptId="" />  
+            <component id="syxzhq"			renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="sydeptids" 		renderType="normal" 	userId="" roleId="" deptId="" />
+            <component id="jtdeptids" 		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="banjie"			renderType="disable" 	userId="" roleId="" deptId="" /> 
+            <component id="AGENT_MEETING_DEPT"			renderType="disable" 	userId="" roleId="" deptId="113" /> 
+        </state>
+        <state id="建银实业综合处理">
+            <component id="jskp"  		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="biaoti"  		renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="chengsong" 		renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="scbh" 		renderType="disable" 	userId="" roleId="" deptId="" />
+	        <!-- ======================== -->
+	        <component id="sczw" 			renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="ckzw"  			renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="hczw"  			renderType="disable" 	userId="" roleId="" deptId="" />
+	        <!-- ======================== -->
+	        <component id="sczwjysy" 		renderType="normal" 	userId="" roleId="" deptId="" />
+	        <component id="ckzwjysy"  		renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="hczwjysy"  		renderType="normal" 	userId="" roleId="" deptId="" />
+	        <!-- ======================== -->
+	        <component id="ngbm" 		 	renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="jhcd"			renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="lxdh" 			renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="hqbmvalue" 		renderType="readonly" 	userId="" roleId="" deptId="" />
+            <component id="LEADER" 			renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="OPERATION_GROUP" renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="MEETING_DEPT" 	renderType="disable" 	userId="" roleId="" deptId="10775" />
+            <component id="HANDLE_DEPT" 		renderType="disable" 	userId="" roleId="" deptId="" />
+       		<component id="WORK_MANAGE_DEPT" 		renderType="disable" 	userId="" roleId="" deptId="" />
+       		<component id="AGENT_MANAGE_DEPT" 		renderType="normal" 	userId="" roleId="" deptId="" />
+       		<component id="REMARK" 			renderType="disable" 	userId="" roleId="" deptId="" />
+       		<component id="purchase_list"      renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="blyj_reason_list"      renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="file_list"      renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="xzhq"			renderType="disable" 	userId="" roleId="" deptId="" />  
+            <component id="syxzhq"			renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="sydeptids" 		renderType="normal" 	userId="" roleId="" deptId="" />
+            <component id="jtdeptids" 		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="banjie"			renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="AGENT_MEETING_DEPT"			renderType="disable" 	userId="" roleId="" deptId="113" />
+        </state>
+        <state id="建银实业经办人处理">
+            <component id="jskp"  		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="biaoti"  		renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="chengsong" 		renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="scbh" 		renderType="disable" 	userId="" roleId="" deptId="" />
+	        <!-- ======================== -->
+	        <component id="sczw" 			renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="ckzw"  			renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="hczw"  			renderType="disable" 	userId="" roleId="" deptId="" />
+	        <!-- ======================== -->
+	        <component id="sczwjysy" 		renderType="normal" 	userId="" roleId="" deptId="" />
+	        <component id="ckzwjysy"  		renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="hczwjysy"  		renderType="disable" 	userId="" roleId="" deptId="" />
+	        <!-- ======================== -->
+	        <component id="ngbm" 		 	renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="jhcd"			renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="lxdh" 			renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="hqbmvalue" 		renderType="readonly" 	userId="" roleId="" deptId="" />
+            <component id="LEADER" 			renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="OPERATION_GROUP" renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="MEETING_DEPT" 	renderType="disable" 	userId="" roleId="" deptId="10775" />
+            <component id="HANDLE_DEPT" 		renderType="disable" 	userId="" roleId="" deptId="" />
+       		<component id="WORK_MANAGE_DEPT" 		renderType="disable" 	userId="" roleId="" deptId="" />
+       		<component id="AGENT_MANAGE_DEPT" 		renderType="normal" 	userId="" roleId="" deptId="" />
+       		<component id="REMARK" 			renderType="disable" 	userId="" roleId="" deptId="" />
+       		<component id="purchase_list"      renderType="normal" 	userId="" roleId="" deptId="" />
+            <component id="blyj_reason_list"      renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="file_list"      renderType="normal" 	userId="" roleId="" deptId="" />
+            <component id="xzhq"			renderType="disable" 	userId="" roleId="" deptId="" />  
+            <component id="syxzhq"			renderType="normal" 	userId="" roleId="" deptId="" />
+            <component id="sydeptids" 		renderType="normal" 	userId="" roleId="" deptId="" />
+            <component id="jtdeptids" 		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="banjie"			renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="AGENT_MEETING_DEPT"			renderType="disable" 	userId="" roleId="" deptId="113" />
+        </state>
+        <state id="建银实业部门领导审核">
+            <component id="jskp"  		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="biaoti"  		renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="chengsong" 		renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="scbh" 		renderType="normal" 	userId="" roleId="" deptId="" />
+	        <!-- ======================== -->
+	        <component id="sczw" 			renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="ckzw"  			renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="hczw"  			renderType="disable" 	userId="" roleId="" deptId="" />
+	        <!-- ======================== -->
+	        <component id="sczwjysy" 		renderType="normal" 	userId="" roleId="" deptId="" />
+	        <component id="ckzwjysy"  		renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="hczwjysy"  		renderType="disable" 	userId="" roleId="" deptId="" />
+	        <!-- ======================== --> 
+	        <component id="ngbm" 		 	renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="jhcd"			renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="lxdh" 			renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="hqbmvalue" 		renderType="readonly" 	userId="" roleId="" deptId="" />
+            <component id="LEADER" 			renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="OPERATION_GROUP" renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="MEETING_DEPT" 	renderType="disable" 	userId="" roleId="" deptId="10775" />
+            <component id="HANDLE_DEPT" 		renderType="disable" 	userId="" roleId="" deptId="" />
+       		<component id="WORK_MANAGE_DEPT" 		renderType="disable" 	userId="" roleId="" deptId="" />
+       		<component id="AGENT_MANAGE_DEPT" 		renderType="normal" 	userId="" roleId="" deptId="" />
+       		<component id="REMARK" 			renderType="disable" 	userId="" roleId="" deptId="" />
+       		<component id="purchase_list"      renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="blyj_reason_list"      renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="file_list"      renderType="normal" 	userId="" roleId="" deptId="" />
+            <component id="xzhq"			renderType="disable" 	userId="" roleId="" deptId="" />  
+            <component id="syxzhq"			renderType="normal" 	userId="" roleId="" deptId="" />
+            <component id="sydeptids" 		renderType="normal" 	userId="" roleId="" deptId="" />
+            <component id="jtdeptids" 		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="banjie"			renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="AGENT_MEETING_DEPT"			renderType="disable" 	userId="" roleId="" deptId="113" />
+        </state>
+        <state id="建银实业公司领导审核">
+            <component id="jskp"  		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="biaoti"  		renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="chengsong" 		renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="scbh" 		renderType="disable" 	userId="" roleId="" deptId="" />
+	        <!-- ======================== -->
+	        <component id="sczw" 			renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="ckzw"  			renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="hczw"  			renderType="disable" 	userId="" roleId="" deptId="" />
+	        <!-- ======================== -->
+	        <component id="sczwjysy" 		renderType="normal" 	userId="" roleId="" deptId="" />
+	        <component id="ckzwjysy"  		renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="hczwjysy"  		renderType="disable" 	userId="" roleId="" deptId="" />
+	        <!-- ======================== -->
+	        <component id="ngbm" 		 	renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="jhcd"			renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="lxdh" 			renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="hqbmvalue" 		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="LEADER" 			renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="OPERATION_GROUP" renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="MEETING_DEPT" 	renderType="disable" 	userId="" roleId="" deptId="10775" />
+            <component id="HANDLE_DEPT" 		renderType="disable" 	userId="" roleId="" deptId="" />
+       		<component id="WORK_MANAGE_DEPT" 		renderType="disable" 	userId="" roleId="" deptId="" />
+       		<component id="AGENT_MANAGE_DEPT" 		renderType="normal" 	userId="" roleId="" deptId="" />
+       		<component id="REMARK" 			renderType="disable" 	userId="" roleId="" deptId="" />
+       		<component id="purchase_list"      renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="blyj_reason_list"      renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="file_list"      renderType="normal" 	userId="" roleId="" deptId="" />
+            <component id="xzhq"			renderType="disable" 	userId="" roleId="" deptId="" />  
+            <component id="syxzhq"			renderType="normal" 	userId="" roleId="" deptId="" />
+            <component id="sydeptids" 		renderType="normal" 	userId="" roleId="" deptId="" />
+            <component id="jtdeptids" 		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="banjie"			renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="AGENT_MEETING_DEPT"			renderType="disable" 	userId="" roleId="" deptId="113" />
+        </state>
+        <state id="业务管理部门综合处理">
+            <component id="jskp"  		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="biaoti"  		renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="chengsong" 		renderType="normal" 	userId="" roleId="" deptId="" />
+	        <component id="scbh" 		renderType="disable" 	userId="" roleId="" deptId="" />
+	        <!-- ======================== -->
+	        <component id="sczw" 			renderType="normal" 	userId="" roleId="" deptId="" />
+	        <component id="ckzw"  			renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="hczw"  			renderType="normal" 	userId="" roleId="" deptId="" />
+	        <!-- ======================== -->
+	        <component id="sczwjysy" 		renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="ckzwjysy"  		renderType="normal" 	userId="" roleId="" deptId="" />
+	        <component id="hczwjysy"  		renderType="disable" 	userId="" roleId="" deptId="" />
+	        <!-- ======================== -->  
+	        <component id="ngbm" 		 	renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="jhcd"			renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="lxdh" 			renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="hqbmvalue" 		renderType="readonly" 	userId="" roleId="" deptId="" />
+            <component id="LEADER" 			renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="OPERATION_GROUP" renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="MEETING_DEPT" 	renderType="disable" 	userId="" roleId="" deptId="10775" />
+            <component id="HANDLE_DEPT" 		renderType="disable" 	userId="" roleId="" deptId="" />
+       		<component id="WORK_MANAGE_DEPT" 		renderType="normal" 	userId="" roleId="" deptId="" />
+       		<component id="AGENT_MANAGE_DEPT" 		renderType="disable" 	userId="" roleId="" deptId="" />
+       		<component id="REMARK" 			renderType="disable" 	userId="" roleId="" deptId="" />
+       		<component id="purchase_list"      renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="blyj_reason_list"      renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="file_list"      renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="xzhq"			renderType="disable" 	userId="" roleId="" deptId="" />  
+            <component id="syxzhq"			renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="sydeptids" 		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="jtdeptids" 		renderType="normal" 	userId="" roleId="" deptId="" />
+            <component id="banjie"			renderType="normal" 	userId="" roleId="" deptId="" />
+            <component id="AGENT_MEETING_DEPT"			renderType="disable" 	userId="" roleId="" deptId="113" />
+        </state>
+        <state id="业务管理组处理">
+            <component id="jskp"  		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="biaoti"  		renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="chengsong" 		renderType="normal" 	userId="" roleId="" deptId="" />
+	        <component id="scbh" 		renderType="disable" 	userId="" roleId="" deptId="" />
+	        <!-- ======================== -->
+	        <component id="sczw" 			renderType="normal" 	userId="" roleId="" deptId="" />
+	        <component id="ckzw"  			renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="hczw"  			renderType="disable" 	userId="" roleId="" deptId="" />
+	        <!-- ======================== -->
+	        <component id="sczwjysy" 		renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="ckzwjysy"  		renderType="normal" 	userId="" roleId="" deptId="" />
+	        <component id="hczwjysy"  		renderType="disable" 	userId="" roleId="" deptId="" />
+	        <!-- ======================== --> 
+	        <component id="ngbm" 		 	renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="jhcd"			renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="lxdh" 			renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="hqbmvalue" 		renderType="readonly" 	userId="" roleId="" deptId="" />
+            <component id="LEADER" 			renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="OPERATION_GROUP" renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="MEETING_DEPT" 	renderType="disable" 	userId="" roleId="" deptId="10775" />
+            <component id="HANDLE_DEPT" 		renderType="disable" 	userId="" roleId="" deptId="" />
+       		<component id="WORK_MANAGE_DEPT" 		renderType="normal" 	userId="" roleId="" deptId="" />
+       		<component id="AGENT_MANAGE_DEPT" 		renderType="disable" 	userId="" roleId="" deptId="" />
+       		<component id="REMARK" 			renderType="disable" 	userId="" roleId="" deptId="" />
+       		<component id="purchase_list"      renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="blyj_reason_list"      renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="file_list"      renderType="normal" 	userId="" roleId="" deptId="" />
+            <component id="xzhq"			renderType="normal" 	userId="" roleId="" deptId="" />  
+            <component id="syxzhq"			renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="sydeptids" 		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="jtdeptids" 		renderType="normal" 	userId="" roleId="" deptId="" />
+            <component id="banjie"			renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="AGENT_MEETING_DEPT"			renderType="disable" 	userId="" roleId="" deptId="113" />
+        </state>
+        <state id="业务管理部门领导审核">
+            <component id="jskp"  		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="biaoti"  		renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="chengsong" 		renderType="normal" 	userId="" roleId="" deptId="" />
+	        <component id="scbh" 		renderType="disable" 	userId="" roleId="" deptId="" />
+	        <!-- ======================== -->
+	        <component id="sczw" 			renderType="normal" 	userId="" roleId="" deptId="" />
+	        <component id="ckzw"  			renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="hczw"  			renderType="disable" 	userId="" roleId="" deptId="" />
+	        <!-- ======================== -->
+	        <component id="sczwjysy" 		renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="ckzwjysy"  		renderType="normal" 	userId="" roleId="" deptId="" />
+	        <component id="hczwjysy"  		renderType="disable" 	userId="" roleId="" deptId="" />
+	        <!-- ======================== --> 
+	        <component id="ngbm" 		 	renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="jhcd"			renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="lxdh" 			renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="hqbmvalue" 		renderType="readonly" 	userId="" roleId="" deptId="" />
+            <component id="LEADER" 			renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="OPERATION_GROUP" renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="MEETING_DEPT" 	renderType="disable" 	userId="" roleId="" deptId="10775" />
+            <component id="HANDLE_DEPT" 		renderType="disable" 	userId="" roleId="" deptId="" />
+       		<component id="WORK_MANAGE_DEPT" 		renderType="normal" 	userId="" roleId="" deptId="" />
+       		<component id="AGENT_MANAGE_DEPT" 		renderType="disable" 	userId="" roleId="" deptId="" />
+       		<component id="REMARK" 			renderType="disable" 	userId="" roleId="" deptId="" />
+       		<component id="purchase_list"      renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="blyj_reason_list"      renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="file_list"      renderType="normal" 	userId="" roleId="" deptId="" />
+            <component id="xzhq"			renderType="normal" 	userId="" roleId="" deptId="" />  
+            <component id="syxzhq"			renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="sydeptids" 		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="jtdeptids" 		renderType="normal" 	userId="" roleId="" deptId="" />
+            <component id="banjie"			renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="AGENT_MEETING_DEPT"			renderType="disable" 	userId="" roleId="" deptId="113" />
+        </state>
+        <state id="承办部门综合处理">
+            <component id="jskp"  		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="biaoti"  		renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="chengsong" 		renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="scbh" 		renderType="disable" 	userId="" roleId="" deptId="" />
+	        <!-- ======================== -->
+	        <component id="sczw" 			renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="ckzw"  			renderType="normal" 	userId="" roleId="" deptId="" />
+	        <component id="hczw"  			renderType="disable" 	userId="" roleId="" deptId="" />
+	        <!-- ======================== -->
+	        <component id="sczwjysy" 		renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="ckzwjysy"  		renderType="normal" 	userId="" roleId="" deptId="" />
+	        <component id="hczwjysy"  		renderType="disable" 	userId="" roleId="" deptId="" />
+	        <!-- ======================== -->
+	        <component id="ngbm" 		 	renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="jhcd"			renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="lxdh" 			renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="hqbmvalue" 		renderType="readonly" 	userId="" roleId="" deptId="" />
+            <component id="LEADER" 			renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="OPERATION_GROUP" renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="MEETING_DEPT" 	renderType="disable" 	userId="" roleId="" deptId="10775" />
+            <component id="HANDLE_DEPT" 		renderType="normal" 	userId="" roleId="" deptId="" />
+       		<component id="WORK_MANAGE_DEPT" 		renderType="disable" 	userId="" roleId="" deptId="" />
+       		<component id="AGENT_MANAGE_DEPT" 		renderType="disable" 	userId="" roleId="" deptId="" />
+       		<component id="REMARK" 			renderType="disable" 	userId="" roleId="" deptId="" />
+       		<component id="purchase_list"      renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="blyj_reason_list"      renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="file_list"      renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="xzhq"			renderType="disable" 	userId="" roleId="" deptId="" />  
+            <component id="syxzhq"			renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="sydeptids" 		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="jtdeptids" 		renderType="normal" 	userId="" roleId="" deptId="" />
+            <component id="banjie"			renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="AGENT_MEETING_DEPT"			renderType="disable" 	userId="" roleId="" deptId="113" />
+        </state>
+        <state id="承办部门组处理">
+            <component id="jskp"  		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="biaoti"  		renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="chengsong" 		renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="scbh" 		renderType="disable" 	userId="" roleId="" deptId="" />
+	        <!-- ======================== -->
+	        <component id="sczw" 			renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="ckzw"  			renderType="normal" 	userId="" roleId="" deptId="" />
+	        <component id="hczw"  			renderType="disable" 	userId="" roleId="" deptId="" />
+	        <!-- ======================== -->
+	        <component id="sczwjysy" 		renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="ckzwjysy"  		renderType="normal" 	userId="" roleId="" deptId="" />
+	        <component id="hczwjysy"  		renderType="disable" 	userId="" roleId="" deptId="" />
+	        <!-- ======================== -->
+	        <component id="ngbm" 		 	renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="jhcd"			renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="lxdh" 			renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="hqbmvalue" 		renderType="readonly" 	userId="" roleId="" deptId="" />
+            <component id="LEADER" 			renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="OPERATION_GROUP" renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="MEETING_DEPT" 	renderType="disable" 	userId="" roleId="" deptId="10775" />
+            <component id="HANDLE_DEPT" 		renderType="normal" 	userId="" roleId="" deptId="" />
+       		<component id="REMARK" 			renderType="disable" 	userId="" roleId="" deptId="" />
+       		<component id="WORK_MANAGE_DEPT" 		renderType="disable" 	userId="" roleId="" deptId="" />
+       		<component id="AGENT_MANAGE_DEPT" 		renderType="disable" 	userId="" roleId="" deptId="" />
+       		<component id="purchase_list"      renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="blyj_reason_list"      renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="file_list"      renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="xzhq"			renderType="disable" 	userId="" roleId="" deptId="" />  
+            <component id="syxzhq"			renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="sydeptids" 		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="jtdeptids" 		renderType="normal" 	userId="" roleId="" deptId="" />
+            <component id="banjie"			renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="AGENT_MEETING_DEPT"			renderType="disable" 	userId="" roleId="" deptId="113" />
+        </state>
+        <state id="承办部门负责人审批">
+            <component id="jskp"  		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="biaoti"  		renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="chengsong" 		renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="scbh" 		renderType="disable" 	userId="" roleId="" deptId="" />
+	        <!-- ======================== -->
+	        <component id="sczw" 			renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="ckzw"  			renderType="normal" 	userId="" roleId="" deptId="" />
+	        <component id="hczw"  			renderType="disable" 	userId="" roleId="" deptId="" />
+	        <!-- ======================== -->
+	        <component id="sczwjysy" 		renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="ckzwjysy"  		renderType="normal" 	userId="" roleId="" deptId="" />
+	        <component id="hczwjysy"  		renderType="disable" 	userId="" roleId="" deptId="" />
+	        <!-- ======================== --> 
+	        <component id="ngbm" 		 	renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="jhcd"			renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="lxdh" 			renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="hqbmvalue" 		renderType="readonly" 	userId="" roleId="" deptId="" />
+            <component id="LEADER" 			renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="OPERATION_GROUP" renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="MEETING_DEPT" 	renderType="disable" 	userId="" roleId="" deptId="10775" />
+            <component id="HANDLE_DEPT" 		renderType="normal" 	userId="" roleId="" deptId="" />
+       		<component id="WORK_MANAGE_DEPT" 		renderType="disable" 	userId="" roleId="" deptId="" />
+       		<component id="AGENT_MANAGE_DEPT" 		renderType="disable" 	userId="" roleId="" deptId="" />
+       		<component id="REMARK" 			renderType="disable" 	userId="" roleId="" deptId="" />
+       		<component id="purchase_list"      renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="blyj_reason_list"      renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="file_list"      renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="xzhq"			renderType="disable" 	userId="" roleId="" deptId="" />  
+            <component id="syxzhq"			renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="sydeptids" 		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="jtdeptids" 		renderType="normal" 	userId="" roleId="" deptId="" />
+            <component id="banjie"			renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="AGENT_MEETING_DEPT"			renderType="disable" 	userId="" roleId="" deptId="113" />
+        </state>
+        <state id="业务运营组处理">
+            <component id="jskp"  		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="biaoti"  		renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="chengsong" 		renderType="normal" 	userId="" roleId="" deptId="" />
+	        <component id="scbh" 		renderType="disable" 	userId="" roleId="" deptId="" />
+	        <!-- ======================== -->
+	        <component id="sczw" 			renderType="normal" 	userId="" roleId="" deptId="" />
+	        <component id="ckzw"  			renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="hczw"  			renderType="disable" 	userId="" roleId="" deptId="" />
+	        <!-- ======================== -->
+	        <component id="sczwjysy" 		renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="ckzwjysy"  		renderType="normal" 	userId="" roleId="" deptId="" />
+	        <component id="hczwjysy"  		renderType="disable" 	userId="" roleId="" deptId="" />
+	        <!-- ======================== -->
+	        <component id="ngbm" 		 	renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="jhcd"			renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="lxdh" 			renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="hqbmvalue" 		renderType="readonly" 	userId="" roleId="" deptId="" />
+            <component id="LEADER" 			renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="OPERATION_GROUP" renderType="normal" 	userId="" roleId="" deptId="" />
+            <component id="MEETING_DEPT" 	renderType="disable" 	userId="" roleId="" deptId="10775" />
+            <component id="HANDLE_DEPT" 		renderType="disable" 	userId="" roleId="" deptId="" />
+       		<component id="WORK_MANAGE_DEPT" 		renderType="disable" 	userId="" roleId="" deptId="" />
+       		<component id="AGENT_MANAGE_DEPT" 		renderType="disable" 	userId="" roleId="" deptId="" />
+       		<component id="REMARK" 			renderType="disable" 	userId="" roleId="" deptId="" />
+       		<component id="purchase_list"      renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="blyj_reason_list"      renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="file_list"      renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="xzhq"			renderType="disable" 	userId="" roleId="" deptId="" />  
+            <component id="syxzhq"			renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="sydeptids" 		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="jtdeptids" 		renderType="normal" 	userId="" roleId="" deptId="" />
+            <component id="banjie"			renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="AGENT_MEETING_DEPT"			renderType="disable" 	userId="" roleId="" deptId="113" />
+        </state>
+        <state id="公司领导批示">
+            <component id="jskp"  		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="biaoti"  		renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="chengsong" 		renderType="normal" 	userId="" roleId="" deptId="" />
+	        <component id="scbh" 		renderType="disable" 	userId="" roleId="" deptId="" />
+	        <!-- ======================== -->
+	        <component id="sczw" 			renderType="normal" 	userId="" roleId="" deptId="" />
+	        <component id="ckzw"  			renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="hczw"  			renderType="disable" 	userId="" roleId="" deptId="" />
+	        <!-- ======================== -->
+	        <component id="sczwjysy" 		renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="ckzwjysy"  		renderType="normal" 	userId="" roleId="" deptId="" />
+	        <component id="hczwjysy"  		renderType="disable" 	userId="" roleId="" deptId="" />
+	        <!-- ======================== -->
+	        <component id="ngbm" 		 	renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="jhcd"			renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="lxdh" 			renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="hqbmvalue" 		renderType="readonly" 	userId="" roleId="" deptId="" />
+            <component id="LEADER" 			renderType="normal" 	userId="" roleId="" deptId="" />
+            <component id="OPERATION_GROUP" renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="MEETING_DEPT" 	renderType="disable" 	userId="" roleId="" deptId="10775" />
+            <component id="HANDLE_DEPT" 		renderType="disable" 	userId="" roleId="" deptId="" />
+       		<component id="WORK_MANAGE_DEPT" 		renderType="disable" 	userId="" roleId="" deptId="" />
+       		<component id="AGENT_MANAGE_DEPT" 		renderType="disable" 	userId="" roleId="" deptId="" />
+       		<component id="REMARK" 			renderType="disable" 	userId="" roleId="" deptId="" />
+       		<component id="purchase_list"      renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="blyj_reason_list"      renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="file_list"      renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="xzhq"			renderType="disable" 	userId="" roleId="" deptId="" />  
+            <component id="syxzhq"			renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="sydeptids" 		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="jtdeptids" 		renderType="normal" 	userId="" roleId="" deptId="" />
+            <component id="banjie"			renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="AGENT_MEETING_DEPT"			renderType="disable" 	userId="" roleId="" deptId="113" />
+        </state>
+        <state id="readonly">
+            <component id="jskp"  		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="biaoti"  		renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="chengsong" 		renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="scbh" 		renderType="disable" 	userId="" roleId="" deptId="" />
+	        <!-- ======================== -->
+	        <component id="sczw" 			renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="ckzw"  			renderType="normal" 	userId="" roleId="" deptId="" />
+	        <component id="hczw"  			renderType="disable" 	userId="" roleId="" deptId="" />
+	        <!-- ======================== -->
+	        <component id="sczwjysy" 		renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="ckzwjysy"  		renderType="normal" 	userId="" roleId="" deptId="" />
+	        <component id="hczwjysy"  		renderType="disable" 	userId="" roleId="" deptId="" />
+	        <!-- ======================== -->
+	        <component id="ngbm" 		 	renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="jhcd"			renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="lxdh" 			renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="hqbmvalue" 		renderType="readonly" 	userId="" roleId="" deptId="" />
+            <component id="REMARK" 			renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="LEADER" 			renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="OPERATION_GROUP" renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="MEETING_DEPT" 	renderType="disable" 	userId="" roleId="" deptId="10775" />
+            <component id="HANDLE_DEPT" 		renderType="disable" 	userId="" roleId="" deptId="" />
+       		<component id="WORK_MANAGE_DEPT" 		renderType="disable" 	userId="" roleId="" deptId="" />
+       		<component id="AGENT_MANAGE_DEPT" 		renderType="disable" 	userId="" roleId="" deptId="" />
+       		<component id="purchase_list"      renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="blyj_reason_list"      renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="file_list"      renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="xzhq"			renderType="disable" 	userId="" roleId="" deptId="" />  
+            <component id="syxzhq"			renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="sydeptids" 		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="jtdeptids" 		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="banjie"			renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="AGENT_MEETING_DEPT"			renderType="disable" 	userId="" roleId="" deptId="113" />
+        </state>
+        <state id="signTodo">
+            <component id="jskp"  		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="biaoti"  		renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="chengsong" 		renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="scbh" 		renderType="disable" 	userId="" roleId="" deptId="" />
+	        <!-- ======================== -->
+	        <component id="sczw" 			renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="ckzw"  			renderType="normal" 	userId="" roleId="" deptId="" />
+	        <component id="hczw"  			renderType="disable" 	userId="" roleId="" deptId="" />
+	        <!-- ======================== -->
+	        <component id="sczwjysy" 		renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="ckzwjysy"  		renderType="normal" 	userId="" roleId="" deptId="" />
+	        <component id="hczwjysy"  		renderType="disable" 	userId="" roleId="" deptId="" />
+	        <!-- ======================== --> 
+	        <component id="ngbm" 		 	renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="jhcd"			renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="lxdh" 			renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="hqbmvalue" 		renderType="readonly" 	userId="" roleId="" deptId="" />
+            <component id="REMARK" 			renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="LEADER" 			renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="OPERATION_GROUP" renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="MEETING_DEPT" 	renderType="disable" 	userId="" roleId="" deptId="10775" />
+            <component id="HANDLE_DEPT" 		renderType="disable" 	userId="" roleId="" deptId="" />
+       		<component id="WORK_MANAGE_DEPT" 		renderType="disable" 	userId="" roleId="" deptId="" />
+       		<component id="AGENT_MANAGE_DEPT" 		renderType="disable" 	userId="" roleId="" deptId="" />
+       		<component id="purchase_list"      renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="blyj_reason_list"      renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="file_list"      renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="xzhq"			renderType="disable" 	userId="" roleId="" deptId="" />  
+            <component id="syxzhq"			renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="sydeptids" 		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="jtdeptids" 		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="banjie"			renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="AGENT_MEETING_DEPT"			renderType="disable" 	userId="" roleId="" deptId="113" />
+        </state>
+        <state id="signDid">
+            <component id="jskp"  		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="biaoti"  		renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="chengsong" 		renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="scbh" 		renderType="disable" 	userId="" roleId="" deptId="" />
+	        <!-- ======================== -->
+	        <component id="sczw" 			renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="ckzw"  			renderType="normal" 	userId="" roleId="" deptId="" />
+	        <component id="hczw"  			renderType="disable" 	userId="" roleId="" deptId="" />
+	        <!-- ======================== -->
+	        <component id="sczwjysy" 		renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="ckzwjysy"  		renderType="normal" 	userId="" roleId="" deptId="" />
+	        <component id="hczwjysy"  		renderType="disable" 	userId="" roleId="" deptId="" />
+	        <!-- ======================== --> 
+	        <component id="ngbm" 		 	renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="jhcd"			renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="lxdh" 			renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="hqbmvalue" 		renderType="readonly" 	userId="" roleId="" deptId="" />
+            <component id="REMARK" 			renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="LEADER" 			renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="OPERATION_GROUP" renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="MEETING_DEPT" 	renderType="disable" 	userId="" roleId="" deptId="10775" />
+            <component id="HANDLE_DEPT" 		renderType="disable" 	userId="" roleId="" deptId="" />
+       		<component id="WORK_MANAGE_DEPT" 		renderType="disable" 	userId="" roleId="" deptId="" />
+       		<component id="AGENT_MANAGE_DEPT" 		renderType="disable" 	userId="" roleId="" deptId="" />
+       		<component id="purchase_list"      renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="blyj_reason_list"      renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="file_list"      renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="xzhq"			renderType="disable" 	userId="" roleId="" deptId="" />  
+            <component id="syxzhq"			renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="sydeptids" 		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="jtdeptids" 		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="banjie"			renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="AGENT_MEETING_DEPT"			renderType="disable" 	userId="" roleId="" deptId="113" />
+        </state>
+        <state id="signEnd">
+            <component id="jskp"  		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="biaoti"  		renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="chengsong" 		renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="scbh" 		renderType="disable" 	userId="" roleId="" deptId="" />
+	        <!-- ======================== -->
+	        <component id="sczw" 			renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="ckzw"  			renderType="normal" 	userId="" roleId="" deptId="" />
+	        <component id="hczw"  			renderType="disable" 	userId="" roleId="" deptId="" />
+	        <!-- ======================== -->
+	        <component id="sczwjysy" 		renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="ckzwjysy"  		renderType="normal" 	userId="" roleId="" deptId="" />
+	        <component id="hczwjysy"  		renderType="disable" 	userId="" roleId="" deptId="" />
+	        <!-- ======================== --> 
+	        <component id="ngbm" 		 	renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="jhcd"			renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="lxdh" 			renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="hqbmvalue" 		renderType="readonly" 	userId="" roleId="" deptId="" />
+            <component id="REMARK" 			renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="LEADER" 			renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="OPERATION_GROUP" renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="MEETING_DEPT" 	renderType="disable" 	userId="" roleId="" deptId="10775" />
+            <component id="HANDLE_DEPT" 		renderType="disable" 	userId="" roleId="" deptId="" />
+       		<component id="WORK_MANAGE_DEPT" 		renderType="disable" 	userId="" roleId="" deptId="" />
+       		<component id="AGENT_MANAGE_DEPT" 		renderType="disable" 	userId="" roleId="" deptId="" />
+       		<component id="purchase_list"      renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="blyj_reason_list"      renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="file_list"      renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="xzhq"			renderType="disable" 	userId="" roleId="" deptId="" />  
+            <component id="syxzhq"			renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="sydeptids" 		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="jtdeptids" 		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="banjie"			renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="AGENT_MEETING_DEPT"			renderType="disable" 	userId="" roleId="" deptId="113" />
+        </state>
+        <state id="end">
+            <component id="jskp"  			renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="biaoti"  		renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="chengsong" 		renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="scbh" 			renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="ngbm" 		 	renderType="disable" 	userId="" roleId="" deptId="" />
+	        <!-- ======================== -->
+	        <component id="sczw" 			renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="ckzw"  			renderType="normal" 	userId="" roleId="" deptId="" />
+	        <component id="hczw"  			renderType="disable" 	userId="" roleId="" deptId="" />
+	        <!-- ======================== -->
+	        <component id="sczwjysy" 		renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="ckzwjysy"  		renderType="normal" 	userId="" roleId="" deptId="" />
+	        <component id="hczwjysy"  		renderType="disable" 	userId="" roleId="" deptId="" />
+	        <!-- ======================== -->
+            <component id="jhcd"			renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="lxdh" 			renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="hqbmvalue" 		renderType="readonly" 	userId="" roleId="" deptId="" />
+            <component id="REMARK" 			renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="LEADER" 			renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="OPERATION_GROUP" renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="MEETING_DEPT" 	renderType="disable" 	userId="" roleId="" deptId="10775" />
+            <component id="HANDLE_DEPT" 		renderType="disable" 	userId="" roleId="" deptId="" />
+       		<component id="WORK_MANAGE_DEPT" 		renderType="disable" 	userId="" roleId="" deptId="" />
+       		<component id="AGENT_MANAGE_DEPT" 		renderType="disable" 	userId="" roleId="" deptId="" />
+       		<component id="purchase_list"      renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="blyj_reason_list"      renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="file_list"      renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="xzhq"			renderType="disable" 	userId="" roleId="" deptId="" />  
+            <component id="syxzhq"			renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="sydeptids" 		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="jtdeptids" 		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="banjie"			renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="AGENT_MEETING_DEPT"			renderType="disable" 	userId="" roleId="" deptId="113" />
+        </state>
+        <state id="did">
+            <component id="jskp"  			renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="biaoti"  		renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="chengsong" 		renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="scbh" 			renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="ngbm" 		 	renderType="disable" 	userId="" roleId="" deptId="" />
+	        <!-- ======================== -->
+	        <component id="sczw" 			renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="ckzw"  			renderType="normal" 	userId="" roleId="" deptId="" />
+	        <component id="hczw"  			renderType="disable" 	userId="" roleId="" deptId="" />
+	        <!-- ======================== -->
+	        <component id="sczwjysy" 		renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="ckzwjysy"  		renderType="normal" 	userId="" roleId="" deptId="" />
+	        <component id="hczwjysy"  		renderType="disable" 	userId="" roleId="" deptId="" />
+	        <!-- ======================== --> 
+            <component id="jhcd"			renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="lxdh" 			renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="hqbmvalue" 		renderType="readonly" 	userId="" roleId="" deptId="" />
+            <component id="REMARK" 			renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="LEADER" 			renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="OPERATION_GROUP" renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="MEETING_DEPT" 	renderType="disable" 	userId="" roleId="" deptId="10775" />
+            <component id="HANDLE_DEPT" 		renderType="disable" 	userId="" roleId="" deptId="" />
+       		<component id="WORK_MANAGE_DEPT" 		renderType="disable" 	userId="" roleId="" deptId="" />
+       		<component id="AGENT_MANAGE_DEPT" 		renderType="disable" 	userId="" roleId="" deptId="" />
+       		<component id="purchase_list"      renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="blyj_reason_list"      renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="file_list"      renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="xzhq"			renderType="disable" 	userId="" roleId="" deptId="" />  
+            <component id="syxzhq"			renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="sydeptids" 		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="jtdeptids" 		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="banjie"			renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="AGENT_MEETING_DEPT"			renderType="disable" 	userId="" roleId="" deptId="113" />
+        </state>
+    </state-group>
+</form-config>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<constant name="struts.ui.theme" value="simple"/>
+	<constant name="struts.devMode" value="true" />
+	
+	<package name="kpgl" namespace="/kpgl" extends="default">
+		<!-- card index -->
+		<action name="index">
+			<result>/pages/eam2/kpgl/index.jsp</result>
+		</action>
+
+		<!-- card head -->
+		<action name="cardHead_*" method="{1}" class="com.tansun.eam2.kpgl.action.CardHeadAction">
+			<!--<result name="tomodify" type="chain">
+				<param name="actionName">cardHead_modifyHead</param>
+				<param name="namespace">/kpgl</param>
+			</result>  -->
+			<result name="toWorkflow" type='chain'>
+      			<param name="actionName">kpglWorkflow_toResult</param>
+            	<param name="namespace">/kpglWorkflow</param>
+      		</result>
+      		<result name="tomodify" type='chain'>
+      			<param name="actionName">kpglWorkflow_toDraft</param>
+            	<param name="namespace">/kpglWorkflow</param>
+      		</result>
+			<result name="add">					/pages/eam2/kpgl/cardAdd/cardAddHead.jsp</result>
+			<result name="reduce">				/pages/eam2/kpgl/cardReduce/cardReduceHead.jsp</result>
+			<result name="modify">				/pages/eam2/kpgl/cardModify/cardModifyHead.jsp</result>
+			<result name="devalue">				/pages/eam2/kpgl/cardDevalue/cardDevalueHead.jsp</result>
+			<result name="allocate">			/pages/eam2/kpgl/cardAllocate/cardAllocateHead.jsp</result>
+			<result name="split">				/pages/eam2/kpgl/cardSplit/cardSplitHead.jsp</result>
+			<result name="merge">				/pages/eam2/kpgl/cardMerge/cardMergeHead.jsp</result>
+			<result name="change">				/pages/eam2/kpgl/cardChange/cardChangeHead.jsp</result>
+		</action>
+		
+		<!-- card body -->
+		<action name="cardBody_*" method="{1}" class="com.tansun.eam2.kpgl.action.CardBodyAction">
+			<result name="head">				/pages/eam2/kpgl/cardAdd/cardAddHead.jsp</result>
+			<result name="add">					/pages/eam2/kpgl/cardAdd/cardAddBody.jsp</result>
+			<result name="reduce">				/pages/eam2/kpgl/cardReduce/cardReduceBody.jsp</result>
+			<result name="modify">				/pages/eam2/kpgl/cardModify/cardModifyBody.jsp</result>
+			<result name="devalue">				/pages/eam2/kpgl/cardDevalue/cardDevalueBody.jsp</result>
+			<result name="allocate">			/pages/eam2/kpgl/cardAllocate/cardAllocateBody.jsp</result>
+			<result name="split">				/pages/eam2/kpgl/cardSplit/cardSplitMode.jsp</result>
+			<result name="merge">				/pages/eam2/kpgl/cardMerge/cardMergeBody.jsp</result>
+			<result name="change">				/pages/eam2/kpgl/cardChange/cardChangeBody.jsp</result>
+			<!-- iframe card body -->
+			<result name="cardBodyHouse">		/pages/eam2/kpgl/cardCommon/cardBodyHouse.jsp</result>
+			<result name="cardBodyAsset">		/pages/eam2/kpgl/cardCommon/cardBodyAsset.jsp</result>
+			<result name="cardBodyGround">		/pages/eam2/kpgl/cardCommon/cardBodyGround.jsp</result>
+			<result name="cardBodyProject">		/pages/eam2/kpgl/cardCommon/cardBodyProject.jsp</result>
+			<result name="cardBodyInvestHouse">	/pages/eam2/kpgl/cardCommon/cardBodyInvestHouse.jsp</result>
+			<result name="cardBodyInvestGround">/pages/eam2/kpgl/cardCommon/cardBodyInvestGround.jsp</result>
+			<result name="cardBodyTraffic">		/pages/eam2/kpgl/cardCommon/cardBodyTraffic.jsp</result>
+			<result name="cardBodyFixture">		/pages/eam2/kpgl/cardCommon/cardBodyFixture.jsp</result>
+			<result name="cardBodyAssetChange">	/pages/eam2/kpgl/cardCommon/cardBodyAssetChange.jsp</result>
+			<result name="cardBodyLongWait">	/pages/eam2/kpgl/cardCommon/cardBodyLongWait.jsp</result>
+			<result name="cardBodyFitment">		/pages/eam2/kpgl/cardCommon/cardBodyFitment.jsp</result>
+		</action>
+		
+		<!-- card tree -->
+		<action name="cardTree_*" method="{1}" class="com.tansun.eam2.kpgl.action.CardQueryAction">
+			<result name="tree">				/pages/eam2/kpgl/cardTree/tree4Card.jsp</result>
+		</action>
+		
+		<!-- card query -->
+		<action name="cardQuery_*" method="{1}" class="com.tansun.eam2.kpgl.action.CardQueryAction">
+			<result name="init">				/pages/eam2/kpgl/cardQuery/cardQuery.jsp</result>
+			<result name="advancedInit">		/pages/eam2/kpgl/cardQuery/advancedQuery.jsp</result>
+			<result name="cardInfo">            /pages/eam2/kpgl/cardQuery/CardinfoMain.jsp</result>
+			<result name="cardModify">          /pages/eam2/kpgl/cardModify/cardinfoModifyMain.jsp</result>
+			<result name="cardRecond">          /pages/eam2/kpgl/cardModify/cardinfoModifyRecond.jsp</result>
+			<result name="cardInfoRecord">      /pages/eam2/kpgl/cardQuery/cardInfoRecord.jsp</result>
+			<result name="cardInfoAsset">       /pages/eam2/kpgl/cardQuery/cardInfoAsset.jsp</result>
+			<result name="cardBodyHouse">		/pages/eam2/kpgl/cardCommon/cardBodyHouse.jsp</result>
+			<result name="cardBodyAsset">		/pages/eam2/kpgl/cardCommon/cardBodyAsset.jsp</result>
+			<result name="cardBodyGround">		/pages/eam2/kpgl/cardCommon/cardBodyGround.jsp</result>
+			<result name="cardBodyProject">		/pages/eam2/kpgl/cardCommon/cardBodyProject.jsp</result>
+			<result name="cardBodyInvestHouse">	/pages/eam2/kpgl/cardCommon/cardBodyInvestHouse.jsp</result>
+			<result name="cardBodyInvestGround">/pages/eam2/kpgl/cardCommon/cardBodyInvestGround.jsp</result>
+			<result name="cardBodyTraffic">		/pages/eam2/kpgl/cardCommon/cardBodyTraffic.jsp</result>
+			<result name="cardBodyFixture">		/pages/eam2/kpgl/cardCommon/cardBodyFixture.jsp</result>
+			<result name="cardBodyAssetChange">	/pages/eam2/kpgl/cardCommon/cardBodyAssetChange.jsp</result>
+			<result name="cardBodyLongWait">	/pages/eam2/kpgl/cardCommon/cardBodyLongWait.jsp</result>
+			<result name="cardBodyFitment">		/pages/eam2/kpgl/cardCommon/cardBodyFitment.jsp</result>
+			<result name="openFirst"> 			/pages/eam2/kpgl/cardQuery/firstBranch.jsp</result>
+		</action>
+		
+		<!-- card batch -->
+		<action name="cardBatch_*" method="{1}" class="com.tansun.eam2.kpgl.action.CardBatchAction">
+			<result name="batchReduce">			/pages/eam2/kpgl/cardReduce/reduceMethodList.jsp</result>
+			<result name="batchDevalue">		/pages/eam2/kpgl/cardDevalue/devalueMethodList.jsp</result>
+			<result name="batchChange">			/pages/eam2/kpgl/cardChange/cardChangeBody.jsp</result>
+		</action>
+
+	</package>
+	<include file="com/tansun/eam2/zyzc/workflow/buy/action/kpgl_workflow.xml"/>
+</struts>

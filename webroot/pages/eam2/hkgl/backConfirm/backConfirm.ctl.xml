@@ -1,0 +1,90 @@
+<?xml version="1.0"  encoding="UTF-8"?>
+<!DOCTYPE form-config SYSTEM "dynamic-form.dtd">
+<form-config>
+    <state-group>
+        <state id="signTodo">
+        	<component id="biaoti" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="blbman" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="blbm" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="lxdh" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="jhcd" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="dzje" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="dzrq" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="hkr" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="hkdbh" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="jzdh" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="hkdzt" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="zjly" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="qrxx" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="MEETING_DEPT" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="DRAFT_DEPT" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="REMARK" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="HKQRXX" renderType="normal" userId="" roleId="" deptId="" />
+        	<component id="CONHK" renderType="normal" userId="" roleId="" deptId="" />
+        	<component id="TXQRD" renderType="normal" userId="" roleId="" deptId="" />
+        </state>
+        <state id="signDid">
+        	<component id="biaoti" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="blbman" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="blbm" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="lxdh" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="jhcd" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="dzje" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="dzrq" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="hkr" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="hkdbh" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="jzdh" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="hkdzt" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="zjly" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="qrxx" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="MEETING_DEPT" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="DRAFT_DEPT" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="REMARK" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="HKQRXX" renderType="normal" userId="" roleId="" deptId="" />
+        	<component id="CONHK" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="TXQRD" renderType="disable" userId="" roleId="" deptId="" />
+        </state>
+        <state id="signEnd">
+        	<component id="biaoti" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="blbman" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="blbm" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="lxdh" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="jhcd" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="dzje" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="dzrq" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="hkr" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="hkdbh" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="jzdh" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="hkdzt" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="zjly" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="qrxx" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="MEETING_DEPT" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="DRAFT_DEPT" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="REMARK" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="HKQRXX" renderType="normal" userId="" roleId="" deptId="" />
+        	<component id="CONHK" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="TXQRD" renderType="disable" userId="" roleId="" deptId="" />
+        </state>
+        <state id="readonly">
+        	<component id="biaoti" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="blbman" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="blbm" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="lxdh" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="jhcd" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="dzje" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="dzrq" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="hkr" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="hkdbh" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="jzdh" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="hkdzt" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="zjly" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="qrxx" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="MEETING_DEPT" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="DRAFT_DEPT" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="REMARK" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="HKQRXX" renderType="normal" userId="" roleId="" deptId="" />
+        	<component id="CONHK" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="TXQRD" renderType="disable" userId="" roleId="" deptId="" />
+        </state>
+    </state-group>
+</form-config>

@@ -1,0 +1,846 @@
+<?xml version="1.0"  encoding="UTF-8"?>
+<!DOCTYPE form-config SYSTEM "dynamic-form.dtd">
+<form-config>
+    <state-group>
+        <state id="拟稿">
+            <component id="tijiaoButton" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="blyjButton" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="jygdzcListButton" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="czzcListButton" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="qitaListButton" renderType="normal" userId="" roleId="" deptId="" />
+        	<component id="gbianhao" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="hczwButton" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="gslxh" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="viewWordButtons" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="createWordButtons" renderType="normal" userId="" roleId="" deptId="" />
+        	<!-- 下面是输入域 -->
+        	<component id="czxmmc" renderType="normal" userId="" roleId="" deptId="" />
+        	<component id="bianhao" renderType="normal" userId="" roleId="" deptId="" />
+        	<component id="jhcd" renderType="normal" userId="" roleId="" deptId="" />
+        	<component id="ngrq" renderType="normal" userId="" roleId="" deptId="" />
+        	<component id="ngbmmc" renderType="normal" userId="" roleId="" deptId="" />
+        	<component id="ngrxm" renderType="normal" userId="" roleId="" deptId="" />
+        	<component id="lxdh" renderType="normal" userId="" roleId="" deptId="" />
+        	<component id="hqbmvalue" renderType="normal" userId="" roleId="" deptId="" />
+        	<component id="buttonTd_huiqian" renderType="normal" userId="" roleId="" deptId="" />
+<!-- 业务类型 --><component id="tzywlx" renderType="normal" userId="" roleId="" deptId="" />
+<!-- 投资申报方式 --><component id="czsbfs" renderType="normal" userId="" roleId="" deptId="" />
+<!-- 方案类别 --><component id="CFalb" renderType="normal" userId="" roleId="" deptId="" />
+        	<component id="sqfyzje" renderType="normal" userId="" roleId="" deptId="" />
+        	<component id="sdfyzje" renderType="normal" userId="" roleId="" deptId="" />
+        	<component id="sbrq" renderType="normal" userId="" roleId="" deptId="" />
+        	<component id="slxh" renderType="normal" userId="" roleId="" deptId="" />
+        	<!-- 实体信息 -->
+        	<component id="czstcztz.tzfs" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="czstcztz.tzje" renderType="normal" 	userId="" roleId="" deptId="" />
+            <component id="czstcztz.czfs" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="czstcztz.czje" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="xzstButton" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="zcbh" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="stmc" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="viewGqgcButton" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="viewZzqkButton" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="stscsf" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="bgdz" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="strs" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="zmtz" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="CWtgljg" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="czygsnsqk" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="zyyw" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="sjbg_file_Button_vy" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="sjbg_file_Button_vn" renderType="disable" userId="" roleId="" deptId="" />
+            <!-- 最近一个月未经审计的报表的主要数据 -->
+            <component id="zzc" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="fuzhai" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="guben" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="jzc" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="shouru" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="jlr" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="LEADER" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="OPERATION_GROUP" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="MEETING_DEPT" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="DRAFT_DEPT" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="beizhu" renderType="normal" userId="" roleId="" deptId="" />
+        </state>
+        <state id="内控组审核">
+            <component id="tijiaoButton" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="blyjButton" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="jygdzcListButton" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="czzcListButton" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="qitaListButton" renderType="normal" userId="" roleId="" deptId="" />
+        	<component id="gbianhao" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="hczwButton" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="gslxh" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="viewWordButtons" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="createWordButtons" renderType="normal" userId="" roleId="" deptId="" />
+        	<!-- 下面是输入域 -->
+        	<component id="czxmmc" renderType="normal" userId="" roleId="" deptId="" />
+        	<component id="bianhao" renderType="normal" userId="" roleId="" deptId="" />
+        	<component id="jhcd" renderType="normal" userId="" roleId="" deptId="" />
+        	<component id="ngrq" renderType="normal" userId="" roleId="" deptId="" />
+        	<component id="ngbmmc" renderType="normal" userId="" roleId="" deptId="" />
+        	<component id="ngrxm" renderType="normal" userId="" roleId="" deptId="" />
+        	<component id="lxdh" renderType="normal" userId="" roleId="" deptId="" />
+        	<component id="hqbmvalue" renderType="normal" userId="" roleId="" deptId="" />
+        	<component id="buttonTd_huiqian" renderType="normal" userId="" roleId="" deptId="" />
+<!-- 业务类型 --><component id="tzywlx" renderType="normal" userId="" roleId="" deptId="" />
+<!-- 投资申报方式 --><component id="czsbfs" renderType="normal" userId="" roleId="" deptId="" />
+<!-- 方案类别 --><component id="CFalb" renderType="normal" userId="" roleId="" deptId="" />
+        	<component id="sqfyzje" renderType="normal" userId="" roleId="" deptId="" />
+        	<component id="sdfyzje" renderType="normal" userId="" roleId="" deptId="" />
+        	<component id="sbrq" renderType="normal" userId="" roleId="" deptId="" />
+        	<component id="slxh" renderType="normal" userId="" roleId="" deptId="" />
+        	<!-- 实体信息 -->
+        	<component id="czstcztz.tzfs" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="czstcztz.tzje" renderType="normal" 	userId="" roleId="" deptId="" />
+            <component id="czstcztz.czfs" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="czstcztz.czje" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="xzstButton" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="zcbh" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="stmc" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="viewGqgcButton" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="viewZzqkButton" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="stscsf" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="bgdz" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="strs" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="zmtz" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="CWtgljg" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="czygsnsqk" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="zyyw" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="sjbg_file_Button_vy" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="sjbg_file_Button_vn" renderType="disable" userId="" roleId="" deptId="" />
+            <!-- 最近一个月未经审计的报表的主要数据 -->
+            <component id="zzc" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="fuzhai" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="guben" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="jzc" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="shouru" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="jlr" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="LEADER" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="OPERATION_GROUP" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="MEETING_DEPT" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="DRAFT_DEPT" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="beizhu" renderType="normal" userId="" roleId="" deptId="" />
+        </state>
+        <state id="组审核">
+            <component id="tijiaoButton" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="blyjButton" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="jygdzcListButton" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="czzcListButton" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="qitaListButton" renderType="normal" userId="" roleId="" deptId="" />
+        	<component id="gbianhao" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="hczwButton" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="gslxh" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="viewWordButtons" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="createWordButtons" renderType="normal" userId="" roleId="" deptId="" />
+        	<!-- 下面是输入域 -->
+        	<component id="czxmmc" renderType="normal" userId="" roleId="" deptId="" />
+        	<component id="bianhao" renderType="normal" userId="" roleId="" deptId="" />
+        	<component id="jhcd" renderType="normal" userId="" roleId="" deptId="" />
+        	<component id="ngrq" renderType="normal" userId="" roleId="" deptId="" />
+        	<component id="ngbmmc" renderType="normal" userId="" roleId="" deptId="" />
+        	<component id="ngrxm" renderType="normal" userId="" roleId="" deptId="" />
+        	<component id="lxdh" renderType="normal" userId="" roleId="" deptId="" />
+        	<component id="hqbmvalue" renderType="normal" userId="" roleId="" deptId="" />
+        	<component id="buttonTd_huiqian" renderType="normal" userId="" roleId="" deptId="" />
+<!-- 业务类型 --><component id="tzywlx" renderType="normal" userId="" roleId="" deptId="" />
+<!-- 投资申报方式 --><component id="czsbfs" renderType="normal" userId="" roleId="" deptId="" />
+<!-- 方案类别 --><component id="CFalb" renderType="normal" userId="" roleId="" deptId="" />
+        	<component id="sqfyzje" renderType="normal" userId="" roleId="" deptId="" />
+        	<component id="sdfyzje" renderType="normal" userId="" roleId="" deptId="" />
+        	<component id="sbrq" renderType="normal" userId="" roleId="" deptId="" />
+        	<component id="slxh" renderType="normal" userId="" roleId="" deptId="" />
+        	<!-- 实体信息 -->
+        	<component id="czstcztz.tzfs" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="czstcztz.tzje" renderType="normal" 	userId="" roleId="" deptId="" />
+            <component id="czstcztz.czfs" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="czstcztz.czje" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="xzstButton" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="zcbh" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="stmc" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="viewGqgcButton" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="viewZzqkButton" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="stscsf" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="bgdz" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="strs" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="zmtz" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="CWtgljg" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="czygsnsqk" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="zyyw" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="sjbg_file_Button_vy" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="sjbg_file_Button_vn" renderType="disable" userId="" roleId="" deptId="" />
+            <!-- 最近一个月未经审计的报表的主要数据 -->
+            <component id="zzc" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="fuzhai" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="guben" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="jzc" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="shouru" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="jlr" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="LEADER" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="OPERATION_GROUP" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="MEETING_DEPT" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="DRAFT_DEPT" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="beizhu" renderType="normal" userId="" roleId="" deptId="" />
+        </state>
+        <state id="部门领导审批">
+            <component id="tijiaoButton" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="blyjButton" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="jygdzcListButton" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="czzcListButton" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="qitaListButton" renderType="normal" userId="" roleId="" deptId="" />
+        	<component id="gbianhao" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="hczwButton" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="gslxh" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="viewWordButtons" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="createWordButtons" renderType="normal" userId="" roleId="" deptId="" />
+        	<!-- 下面是输入域 -->
+        	<component id="czxmmc" renderType="normal" userId="" roleId="" deptId="" />
+        	<component id="bianhao" renderType="normal" userId="" roleId="" deptId="" />
+        	<component id="jhcd" renderType="normal" userId="" roleId="" deptId="" />
+        	<component id="ngrq" renderType="normal" userId="" roleId="" deptId="" />
+        	<component id="ngbmmc" renderType="normal" userId="" roleId="" deptId="" />
+        	<component id="ngrxm" renderType="normal" userId="" roleId="" deptId="" />
+        	<component id="lxdh" renderType="normal" userId="" roleId="" deptId="" />
+        	<component id="hqbmvalue" renderType="normal" userId="" roleId="" deptId="" />
+        	<component id="buttonTd_huiqian" renderType="normal" userId="" roleId="" deptId="" />
+<!-- 业务类型 --><component id="tzywlx" renderType="normal" userId="" roleId="" deptId="" />
+<!-- 投资申报方式 --><component id="czsbfs" renderType="normal" userId="" roleId="" deptId="" />
+<!-- 方案类别 --><component id="CFalb" renderType="normal" userId="" roleId="" deptId="" />
+        	<component id="sqfyzje" renderType="normal" userId="" roleId="" deptId="" />
+        	<component id="sdfyzje" renderType="normal" userId="" roleId="" deptId="" />
+        	<component id="sbrq" renderType="normal" userId="" roleId="" deptId="" />
+        	<component id="slxh" renderType="normal" userId="" roleId="" deptId="" />
+        	<!-- 实体信息 -->
+        	<component id="czstcztz.tzfs" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="czstcztz.tzje" renderType="normal" 	userId="" roleId="" deptId="" />
+            <component id="czstcztz.czfs" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="czstcztz.czje" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="xzstButton" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="zcbh" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="stmc" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="viewGqgcButton" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="viewZzqkButton" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="stscsf" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="bgdz" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="strs" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="zmtz" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="CWtgljg" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="czygsnsqk" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="zyyw" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="sjbg_file_Button_vy" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="sjbg_file_Button_vn" renderType="disable" userId="" roleId="" deptId="" />
+            <!-- 最近一个月未经审计的报表的主要数据 -->
+            <component id="zzc" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="fuzhai" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="guben" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="jzc" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="shouru" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="jlr" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="LEADER" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="OPERATION_GROUP" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="MEETING_DEPT" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="DRAFT_DEPT" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="beizhu" renderType="normal" userId="" roleId="" deptId="" />
+        </state>
+        <state id="拟稿部门综合处理">
+            <component id="tijiaoButton" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="blyjButton" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="jygdzcListButton" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="czzcListButton" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="qitaListButton" renderType="normal" userId="" roleId="" deptId="" />
+        	<component id="gbianhao" renderType="normal" userId="" roleId="" deptId="" />
+        	<component id="hczwButton" renderType="normal" userId="" roleId="" deptId="" />
+        	<component id="gslxh" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="viewWordButtons" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="createWordButtons" renderType="normal" userId="" roleId="" deptId="" />
+        	<!-- 下面是输入域 -->
+        	<component id="czxmmc" renderType="normal" userId="" roleId="" deptId="" />
+        	<component id="bianhao" renderType="normal" userId="" roleId="" deptId="" />
+        	<component id="jhcd" renderType="normal" userId="" roleId="" deptId="" />
+        	<component id="ngrq" renderType="normal" userId="" roleId="" deptId="" />
+        	<component id="ngbmmc" renderType="normal" userId="" roleId="" deptId="" />
+        	<component id="ngrxm" renderType="normal" userId="" roleId="" deptId="" />
+        	<component id="lxdh" renderType="normal" userId="" roleId="" deptId="" />
+        	<component id="hqbmvalue" renderType="normal" userId="" roleId="" deptId="" />
+        	<component id="buttonTd_huiqian" renderType="normal" userId="" roleId="" deptId="" />
+<!-- 业务类型 --><component id="tzywlx" renderType="normal" userId="" roleId="" deptId="" />
+<!-- 投资申报方式 --><component id="czsbfs" renderType="normal" userId="" roleId="" deptId="" />
+<!-- 方案类别 --><component id="CFalb" renderType="normal" userId="" roleId="" deptId="" />
+        	<component id="sqfyzje" renderType="normal" userId="" roleId="" deptId="" />
+        	<component id="sdfyzje" renderType="normal" userId="" roleId="" deptId="" />
+        	<component id="sbrq" renderType="normal" userId="" roleId="" deptId="" />
+        	<component id="slxh" renderType="normal" userId="" roleId="" deptId="" />
+        	<!-- 实体信息 -->
+        	<component id="czstcztz.tzfs" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="czstcztz.tzje" renderType="normal" 	userId="" roleId="" deptId="" />
+            <component id="czstcztz.czfs" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="czstcztz.czje" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="xzstButton" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="zcbh" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="stmc" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="viewGqgcButton" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="viewZzqkButton" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="stscsf" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="bgdz" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="strs" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="zmtz" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="CWtgljg" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="czygsnsqk" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="zyyw" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="sjbg_file_Button_vy" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="sjbg_file_Button_vn" renderType="disable" userId="" roleId="" deptId="" />
+            <!-- 最近一个月未经审计的报表的主要数据 -->
+            <component id="zzc" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="fuzhai" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="guben" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="jzc" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="shouru" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="jlr" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="LEADER" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="OPERATION_GROUP" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="MEETING_DEPT" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="DRAFT_DEPT" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="beizhu" renderType="normal" userId="" roleId="" deptId="" />
+        </state>
+        <state id="项目受理">
+            <component id="tijiaoButton" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="blyjButton" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="jygdzcListButton" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="czzcListButton" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="qitaListButton" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="gbianhao" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="hczwButton" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="gslxh" renderType="normal" userId="" roleId="" deptId="" />
+        	<component id="viewWordButtons" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="createWordButtons" renderType="disable" userId="" roleId="" deptId="" />
+        	<!-- 下面是输入域 -->
+        	<component id="czxmmc" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="bianhao" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="jhcd" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="ngrq" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="ngbmmc" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="ngrxm" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="lxdh" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="hqbmvalue" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="buttonTd_huiqian" renderType="disable" userId="" roleId="" deptId="" />
+<!-- 业务类型 --><component id="tzywlx" renderType="disable" userId="" roleId="" deptId="" />
+<!-- 投资申报方式 --><component id="czsbfs" renderType="disable" userId="" roleId="" deptId="" />
+<!-- 方案类别 --><component id="CFalb" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="sqfyzje" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="sdfyzje" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="sbrq" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="slxh" renderType="disable" userId="" roleId="" deptId="" />
+        	<!-- 实体信息 -->
+        	<component id="czstcztz.tzfs" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="czstcztz.tzje" renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="czstcztz.czfs" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="czstcztz.czje" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="xzstButton" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="zcbh" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="stmc" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="viewGqgcButton" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="viewZzqkButton" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="stscsf" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="bgdz" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="strs" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="zmtz" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="CWtgljg" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="czygsnsqk" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="zyyw" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="sjbg_file_Button_vy" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="sjbg_file_Button_vn" renderType="normal" userId="" roleId="" deptId="" />
+            <!-- 最近一个月未经审计的报表的主要数据 -->
+            <component id="zzc" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="fuzhai" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="guben" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="jzc" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="shouru" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="jlr" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="LEADER" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="OPERATION_GROUP" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="MEETING_DEPT" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="DRAFT_DEPT" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="beizhu" renderType="disable" userId="" roleId="" deptId="" />
+        </state>
+        <state id="业务运营组处理">
+            <component id="tijiaoButton" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="blyjButton" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="jygdzcListButton" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="czzcListButton" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="qitaListButton" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="gbianhao" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="hczwButton" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="gslxh" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="viewWordButtons" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="createWordButtons" renderType="disable" userId="" roleId="" deptId="" />
+        	<!-- 下面是输入域 -->
+        	<component id="czxmmc" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="bianhao" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="jhcd" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="ngrq" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="ngbmmc" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="ngrxm" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="lxdh" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="hqbmvalue" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="buttonTd_huiqian" renderType="disable" userId="" roleId="" deptId="" />
+<!-- 业务类型 --><component id="tzywlx" renderType="disable" userId="" roleId="" deptId="" />
+<!-- 投资申报方式 --><component id="czsbfs" renderType="disable" userId="" roleId="" deptId="" />
+<!-- 方案类别 --><component id="CFalb" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="sqfyzje" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="sdfyzje" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="sbrq" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="slxh" renderType="disable" userId="" roleId="" deptId="" />
+        	<!-- 实体信息 -->
+        	<component id="czstcztz.tzfs" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="czstcztz.tzje" renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="czstcztz.czfs" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="czstcztz.czje" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="xzstButton" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="zcbh" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="stmc" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="viewGqgcButton" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="viewZzqkButton" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="stscsf" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="bgdz" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="strs" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="zmtz" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="CWtgljg" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="czygsnsqk" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="zyyw" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="sjbg_file_Button_vy" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="sjbg_file_Button_vn" renderType="normal" userId="" roleId="" deptId="" />
+            <!-- 最近一个月未经审计的报表的主要数据 -->
+            <component id="zzc" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="fuzhai" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="guben" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="jzc" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="shouru" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="jlr" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="LEADER" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="OPERATION_GROUP" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="MEETING_DEPT" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="DRAFT_DEPT" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="beizhu" renderType="disable" userId="" roleId="" deptId="" />
+        </state>
+        <state id="公司领导批示">
+            <component id="tijiaoButton" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="blyjButton" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="jygdzcListButton" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="czzcListButton" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="qitaListButton" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="gbianhao" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="hczwButton" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="gslxh" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="viewWordButtons" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="createWordButtons" renderType="normal" userId="" roleId="" deptId="" />
+        	<!-- 下面是输入域 -->
+        	<component id="czxmmc" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="bianhao" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="jhcd" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="ngrq" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="ngbmmc" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="ngrxm" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="lxdh" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="hqbmvalue" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="buttonTd_huiqian" renderType="disable" userId="" roleId="" deptId="" />
+<!-- 业务类型 --><component id="tzywlx" renderType="disable" userId="" roleId="" deptId="" />
+<!-- 投资申报方式 --><component id="czsbfs" renderType="disable" userId="" roleId="" deptId="" />
+<!-- 方案类别 --><component id="CFalb" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="sqfyzje" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="sdfyzje" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="sbrq" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="slxh" renderType="disable" userId="" roleId="" deptId="" />
+        	<!-- 实体信息 -->
+        	<component id="czstcztz.tzfs" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="czstcztz.tzje" renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="czstcztz.czfs" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="czstcztz.czje" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="xzstButton" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="zcbh" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="stmc" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="viewGqgcButton" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="viewZzqkButton" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="stscsf" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="bgdz" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="strs" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="zmtz" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="CWtgljg" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="czygsnsqk" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="zyyw" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="sjbg_file_Button_vy" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="sjbg_file_Button_vn" renderType="normal" userId="" roleId="" deptId="" />
+            <!-- 最近一个月未经审计的报表的主要数据 -->
+            <component id="zzc" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="fuzhai" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="guben" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="jzc" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="shouru" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="jlr" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="LEADER" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="OPERATION_GROUP" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="MEETING_DEPT" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="DRAFT_DEPT" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="beizhu" renderType="disable" userId="" roleId="" deptId="" />
+        </state>
+        <state id="readonly">
+            <component id="tijiaoButton" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="blyjButton" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="jygdzcListButton" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="czzcListButton" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="qitaListButton" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="gbianhao" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="hczwButton" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="gslxh" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="viewWordButtons" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="createWordButtons" renderType="disable" userId="" roleId="" deptId="" />
+        	<!-- 下面是输入域 -->
+        	<component id="czxmmc" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="bianhao" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="jhcd" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="ngrq" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="ngbmmc" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="ngrxm" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="lxdh" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="hqbmvalue" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="buttonTd_huiqian" renderType="disable" userId="" roleId="" deptId="" />
+<!-- 业务类型 --><component id="tzywlx" renderType="disable" userId="" roleId="" deptId="" />
+<!-- 投资申报方式 --><component id="czsbfs" renderType="disable" userId="" roleId="" deptId="" />
+<!-- 方案类别 --><component id="CFalb" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="sqfyzje" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="sdfyzje" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="sbrq" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="slxh" renderType="disable" userId="" roleId="" deptId="" />
+        	<!-- 实体信息 -->
+        	<component id="czstcztz.tzfs" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="czstcztz.tzje" renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="czstcztz.czfs" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="czstcztz.czje" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="xzstButton" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="zcbh" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="stmc" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="viewGqgcButton" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="viewZzqkButton" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="stscsf" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="bgdz" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="strs" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="zmtz" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="CWtgljg" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="czygsnsqk" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="zyyw" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="sjbg_file_Button_vy" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="sjbg_file_Button_vn" renderType="normal" userId="" roleId="" deptId="" />
+            <!-- 最近一个月未经审计的报表的主要数据 -->
+            <component id="zzc" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="fuzhai" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="guben" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="jzc" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="shouru" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="jlr" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="LEADER" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="OPERATION_GROUP" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="MEETING_DEPT" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="DRAFT_DEPT" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="beizhu" renderType="disable" userId="" roleId="" deptId="" />
+        </state>
+        <state id="did">
+            <component id="tijiaoButton" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="blyjButton" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="jygdzcListButton" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="czzcListButton" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="qitaListButton" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="gbianhao" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="hczwButton" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="gslxh" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="viewWordButtons" renderType="normal" userId="" roleId="" deptId="" />
+        	<component id="createWordButtons" renderType="disable" userId="" roleId="" deptId="" />
+        	<!-- 下面是输入域 -->
+        	<component id="czxmmc" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="bianhao" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="jhcd" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="ngrq" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="ngbmmc" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="ngrxm" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="lxdh" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="hqbmvalue" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="buttonTd_huiqian" renderType="disable" userId="" roleId="" deptId="" />
+<!-- 业务类型 --><component id="tzywlx" renderType="disable" userId="" roleId="" deptId="" />
+<!-- 投资申报方式 --><component id="czsbfs" renderType="disable" userId="" roleId="" deptId="" />
+<!-- 方案类别 --><component id="CFalb" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="sqfyzje" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="sdfyzje" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="sbrq" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="slxh" renderType="disable" userId="" roleId="" deptId="" />
+        	<!-- 实体信息 -->
+        	<component id="czstcztz.tzfs" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="czstcztz.tzje" renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="czstcztz.czfs" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="czstcztz.czje" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="xzstButton" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="zcbh" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="stmc" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="viewGqgcButton" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="viewZzqkButton" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="stscsf" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="bgdz" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="strs" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="zmtz" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="CWtgljg" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="czygsnsqk" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="zyyw" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="sjbg_file_Button_vy" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="sjbg_file_Button_vn" renderType="normal" userId="" roleId="" deptId="" />
+            <!-- 最近一个月未经审计的报表的主要数据 -->
+            <component id="zzc" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="fuzhai" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="guben" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="jzc" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="shouru" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="jlr" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="LEADER" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="OPERATION_GROUP" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="MEETING_DEPT" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="DRAFT_DEPT" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="beizhu" renderType="disable" userId="" roleId="" deptId="" />
+        </state>
+        <state id="end">
+            <component id="tijiaoButton" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="blyjButton" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="jygdzcListButton" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="czzcListButton" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="qitaListButton" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="gbianhao" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="hczwButton" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="gslxh" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="viewWordButtons" renderType="normal" userId="" roleId="" deptId="" />
+        	<component id="createWordButtons" renderType="disable" userId="" roleId="" deptId="" />
+        	<!-- 下面是输入域 -->
+        	<component id="czxmmc" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="bianhao" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="jhcd" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="ngrq" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="ngbmmc" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="ngrxm" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="lxdh" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="hqbmvalue" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="buttonTd_huiqian" renderType="disable" userId="" roleId="" deptId="" />
+<!-- 业务类型 --><component id="tzywlx" renderType="disable" userId="" roleId="" deptId="" />
+<!-- 投资申报方式 --><component id="czsbfs" renderType="disable" userId="" roleId="" deptId="" />
+<!-- 方案类别 --><component id="CFalb" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="sqfyzje" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="sdfyzje" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="sbrq" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="slxh" renderType="disable" userId="" roleId="" deptId="" />
+        	<!-- 实体信息 -->
+        	<component id="czstcztz.tzfs" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="czstcztz.tzje" renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="czstcztz.czfs" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="czstcztz.czje" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="xzstButton" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="zcbh" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="stmc" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="viewGqgcButton" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="viewZzqkButton" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="stscsf" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="bgdz" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="strs" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="zmtz" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="CWtgljg" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="czygsnsqk" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="zyyw" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="sjbg_file_Button_vy" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="sjbg_file_Button_vn" renderType="normal" userId="" roleId="" deptId="" />
+            <!-- 最近一个月未经审计的报表的主要数据 -->
+            <component id="zzc" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="fuzhai" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="guben" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="jzc" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="shouru" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="jlr" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="LEADER" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="OPERATION_GROUP" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="MEETING_DEPT" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="DRAFT_DEPT" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="beizhu" renderType="disable" userId="" roleId="" deptId="" />
+        </state>
+        <state id="signTodo">
+            <component id="tijiaoButton" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="blyjButton" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="jygdzcListButton" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="czzcListButton" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="qitaListButton" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="gbianhao" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="hczwButton" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="gslxh" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="viewWordButtons" renderType="normal" userId="" roleId="" deptId="" />
+        	<component id="createWordButtons" renderType="disable" userId="" roleId="" deptId="" />
+        	<!-- 下面是输入域 -->
+        	<component id="czxmmc" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="bianhao" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="jhcd" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="ngrq" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="ngbmmc" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="ngrxm" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="lxdh" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="hqbmvalue" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="buttonTd_huiqian" renderType="disable" userId="" roleId="" deptId="" />
+<!-- 业务类型 --><component id="tzywlx" renderType="disable" userId="" roleId="" deptId="" />
+<!-- 投资申报方式 --><component id="czsbfs" renderType="disable" userId="" roleId="" deptId="" />
+<!-- 方案类别 --><component id="CFalb" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="sqfyzje" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="sdfyzje" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="sbrq" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="slxh" renderType="disable" userId="" roleId="" deptId="" />
+        	<!-- 实体信息 -->
+        	<component id="czstcztz.tzfs" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="czstcztz.tzje" renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="czstcztz.czfs" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="czstcztz.czje" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="xzstButton" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="zcbh" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="stmc" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="viewGqgcButton" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="viewZzqkButton" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="stscsf" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="bgdz" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="strs" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="zmtz" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="CWtgljg" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="czygsnsqk" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="zyyw" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="sjbg_file_Button_vy" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="sjbg_file_Button_vn" renderType="normal" userId="" roleId="" deptId="" />
+            <!-- 最近一个月未经审计的报表的主要数据 -->
+            <component id="zzc" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="fuzhai" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="guben" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="jzc" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="shouru" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="jlr" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="LEADER" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="OPERATION_GROUP" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="MEETING_DEPT" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="DRAFT_DEPT" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="beizhu" renderType="disable" userId="" roleId="" deptId="" />
+        </state>
+        <state id="signDid">
+            <component id="tijiaoButton" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="blyjButton" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="jygdzcListButton" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="czzcListButton" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="qitaListButton" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="gbianhao" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="hczwButton" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="gslxh" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="viewWordButtons" renderType="normal" userId="" roleId="" deptId="" />
+        	<component id="createWordButtons" renderType="disable" userId="" roleId="" deptId="" />
+        	<!-- 下面是输入域 -->
+        	<component id="czxmmc" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="bianhao" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="jhcd" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="ngrq" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="ngbmmc" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="ngrxm" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="lxdh" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="hqbmvalue" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="buttonTd_huiqian" renderType="disable" userId="" roleId="" deptId="" />
+<!-- 业务类型 --><component id="tzywlx" renderType="disable" userId="" roleId="" deptId="" />
+<!-- 投资申报方式 --><component id="czsbfs" renderType="disable" userId="" roleId="" deptId="" />
+<!-- 方案类别 --><component id="CFalb" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="sqfyzje" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="sdfyzje" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="sbrq" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="slxh" renderType="disable" userId="" roleId="" deptId="" />
+        	<!-- 实体信息 -->
+        	<component id="czstcztz.tzfs" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="czstcztz.tzje" renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="czstcztz.czfs" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="czstcztz.czje" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="xzstButton" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="zcbh" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="stmc" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="viewGqgcButton" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="viewZzqkButton" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="stscsf" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="bgdz" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="strs" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="zmtz" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="CWtgljg" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="czygsnsqk" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="zyyw" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="sjbg_file_Button_vy" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="sjbg_file_Button_vn" renderType="normal" userId="" roleId="" deptId="" />
+            <!-- 最近一个月未经审计的报表的主要数据 -->
+            <component id="zzc" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="fuzhai" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="guben" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="jzc" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="shouru" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="jlr" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="LEADER" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="OPERATION_GROUP" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="MEETING_DEPT" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="DRAFT_DEPT" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="beizhu" renderType="disable" userId="" roleId="" deptId="" />
+        </state>
+        <state id="signEnd">
+            <component id="tijiaoButton" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="blyjButton" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="jygdzcListButton" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="czzcListButton" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="qitaListButton" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="gbianhao" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="hczwButton" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="gslxh" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="viewWordButtons" renderType="normal" userId="" roleId="" deptId="" />
+        	<component id="createWordButtons" renderType="disable" userId="" roleId="" deptId="" />
+        	<!-- 下面是输入域 -->
+        	<component id="czxmmc" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="bianhao" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="jhcd" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="ngrq" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="ngbmmc" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="ngrxm" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="lxdh" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="hqbmvalue" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="buttonTd_huiqian" renderType="disable" userId="" roleId="" deptId="" />
+<!-- 业务类型 --><component id="tzywlx" renderType="disable" userId="" roleId="" deptId="" />
+<!-- 投资申报方式 --><component id="czsbfs" renderType="disable" userId="" roleId="" deptId="" />
+<!-- 方案类别 --><component id="CFalb" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="sqfyzje" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="sdfyzje" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="sbrq" renderType="disable" userId="" roleId="" deptId="" />
+        	<component id="slxh" renderType="disable" userId="" roleId="" deptId="" />
+        	<!-- 实体信息 -->
+        	<component id="czstcztz.tzfs" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="czstcztz.tzje" renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="czstcztz.czfs" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="czstcztz.czje" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="xzstButton" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="zcbh" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="stmc" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="viewGqgcButton" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="viewZzqkButton" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="stscsf" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="bgdz" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="strs" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="zmtz" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="CWtgljg" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="czygsnsqk" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="zyyw" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="sjbg_file_Button_vy" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="sjbg_file_Button_vn" renderType="normal" userId="" roleId="" deptId="" />
+            <!-- 最近一个月未经审计的报表的主要数据 -->
+            <component id="zzc" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="fuzhai" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="guben" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="jzc" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="shouru" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="jlr" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="LEADER" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="OPERATION_GROUP" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="MEETING_DEPT" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="DRAFT_DEPT" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="beizhu" renderType="disable" userId="" roleId="" deptId="" />
+        </state>
+    </state-group>
+</form-config>

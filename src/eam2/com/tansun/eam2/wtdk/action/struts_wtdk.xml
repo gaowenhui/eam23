@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<constant name="struts.ui.theme" value="simple"/>
+	<constant name="struts.devMode" value="true" />
+	
+	<package name="wtdk" namespace="/wtdk" extends="default">
+		<!-- wtdk index -->
+		<action name="index">
+			<result>/pages/eam2/wtdk/index.jsp</result>
+		</action>
+		
+		<!-- customers query -->
+		<action name="customersQuery_*" method="{1}" class="com.tansun.eam2.wtdk.action.CustomersQueryAction">
+			<result name="init">/pages/eam2/wtdk/customersQuery/customersQuery.jsp</result>
+			<result name="custInfo">/pages/eam2/wtdk/customersQuery/customersDetail.jsp</result>
+		</action>
+		
+		<!-- funcCust query -->
+		<action name="funcCustQuery_*" method="{1}" class="com.tansun.eam2.wtdk.action.FuncCustQueryAction">
+			<result name="init">/pages/eam2/wtdk/funcCustQuery/funcCustQuery.jsp</result>
+			<result name="custInfo">/pages/eam2/wtdk/funcCustQuery/funcCustDetail.jsp</result>
+		</action>
+		
+		<!-- loansCust query -->
+		<action name="loansCustQuery_*" method="{1}" class="com.tansun.eam2.wtdk.action.LoansCustQueryAction">
+			<result name="init">/pages/eam2/wtdk/loansCustQuery/loansCustQuery.jsp</result>
+			<result name="custInfo">/pages/eam2/wtdk/loansCustQuery/loansCustDetail.jsp</result>
+		</action>
+		
+		<!-- func query -->
+		<action name="funcQuery_*" method="{1}" class="com.tansun.eam2.wtdk.action.FuncQueryAction">
+			<result name="init">/pages/eam2/wtdk/funcQuery/funcQuery.jsp</result>
+			<result name="funcInfo">/pages/eam2/wtdk/funcQuery/funcDetail.jsp</result>
+		</action>
+		
+		<!-- loans query -->
+		<action name="loansQuery_*" method="{1}" class="com.tansun.eam2.wtdk.action.LoansQueryAction">
+			<result name="init">/pages/eam2/wtdk/loansQuery/loansQuery.jsp</result>
+			<result name="loansInfo">/pages/eam2/wtdk/loansQuery/loansDetail.jsp</result>
+			<result name="loansRisk">/pages/eam2/wtdk/loansQuery/loansRiskDetail.jsp</result>
+			<result name="loansAndFunc">/pages/eam2/wtdk/loansQuery/loansRelateToFuncList.jsp</result>
+			<result name="findFunc">/pages/eam2/wtdk/funcQuery/funcQuery.jsp</result>
+			<result name="newEntity">/pages/eam2/stgl/zixunshiti/shitizichanList.jsp</result>
+			<result name="dizhiyawu">/pages/eam2/wtdk/loansQuery/dizhiyawu.jsp</result>
+			<result name="zhuzhixinxi">/pages/eam2/wtdk/loansQuery/chuzhixinxi.jsp</result>
+			<result name="loansInfoNew">/pages/eam2/wtdk/loansQuery/xiangxi.jsp</result>
+			<result name="jibenxinxi">/pages/eam2/wtdk/loansQuery/jibenxinxi.jsp</result>
+			<result name="daikuanbenjinmingxi">/pages/eam2/wtdk/loansQuery/daikuanbenjinmingxi.jsp</result>
+			<result name="guanlianjijin">/pages/eam2/wtdk/loansQuery/guanlianjijin.jsp</result>
+			<result name="relateAdd">/pages/eam2/wtdk/loansQuery/loansRelateToFunc.jsp</result>
+		</action>
+		
+		<!-- risk query -->
+		<action name="riskQuery_*" method="{1}" class="com.tansun.eam2.wtdk.action.RiskQueryAction">
+			<result name="init">/pages/eam2/wtdk/riskQuery/riskQuery.jsp</result>
+			<result name="riskInfo">/pages/eam2/wtdk/loansQuery/loansRiskDetail.jsp</result>
+		</action>
+		
+		<!-- per org query -->
+		<action name="personQuery_*" method="{1}" class="com.tansun.eam2.wtdk.action.PersonQueryAction">
+			<result name="perInit">/pages/eam2/wtdk/personQuery/perQuery.jsp</result>
+			<result name="orgInit">/pages/eam2/wtdk/personQuery/orgQuery.jsp</result>
+			<result name="addPerson">/pages/eam2/wtdk/personQuery/perAdd.jsp</result>
+		</action>
+		
+		<!-- func back -->
+		<action name="funcBack_*" method="{1}" class="com.tansun.eam2.wtdk.action.FuncBackAction">
+			<!-- <result name="tomodify" type="chain">
+				<param name="actionName">funcBack_modifyHead</param>
+				<param name="namespace">/wtdk</param>
+			</result> -->
+			<result name="toWorkflow" type='chain'>
+      			<param name="actionName">funcbackWorkflow_toResult</param>
+            	<param name="namespace">/wtdkWorkflow</param>
+      		</result>
+      		<result name="tomodify" type='chain'>
+      			<param name="actionName">funcbackWorkflow_toDraft</param>
+            	<param name="namespace">/wtdkWorkflow</param>
+      		</result>
+			<result name="biaodan">/pages/eam2/wtdk/funcBack/funcBackHead.jsp</result>
+			<result name="bodyInfo">/pages/eam2/wtdk/funcBack/funcBackBody.jsp</result>
+			<result name="choose">/pages/eam2/wtdk/funcBack/LnFind.jsp</result>
+			<result name="openBatchChoose">/pages/eam2/wtdk/funcBack/LnFind.jsp</result>
+			<result name="openBatchOperate">/pages/eam2/wtdk/funcBack/batchOperate.jsp</result>
+			<result name="funcQueryDetail">/pages/eam2/wtdk/funcBack/funcBackDetail.jsp</result>
+		</action>
+		
+		<!-- end info -->
+		<action name="endInfo_*" method="{1}" class="com.tansun.eam2.wtdk.action.EndInfoAction">
+			<!-- <result name="tomodify" type="chain">
+				<param name="actionName">endInfo_modifyHead</param>
+				<param name="namespace">/wtdk</param>
+			</result> -->
+			<result name="toWorkflow" type='chain'>
+      			<param name="actionName">endinfoWorkflow_toResult</param>
+            	<param name="namespace">/wtdkWorkflow</param>
+      		</result>
+      		<result name="tomodify" type='chain'>
+      			<param name="actionName">endinfoWorkflow_toDraft</param>
+            	<param name="namespace">/wtdkWorkflow</param>
+      		</result>
+			<result name="biaodan">/pages/eam2/wtdk/endInfo/endInfoHead.jsp</result>
+			<result name="bodyInfo">/pages/eam2/wtdk/endInfo/endInfoBody.jsp</result>
+			<result name="choose">/pages/eam2/wtdk/funcQuery/funcQuery.jsp</result>
+			<result name="openBatchChoose">/pages/eam2/wtdk/funcQuery/funcQuery.jsp</result>
+			<result name="openBatchOperate">/pages/eam2/wtdk/endInfo/batchOperate.jsp</result>
+			<result name="endQueryDetail">/pages/eam2/wtdk/endInfo/endInfoDetail.jsp</result>
+			<result name="openRelateQuery">/pages/eam2/wtdk/endInfo/relateQuery.jsp</result>
+		</action>
+	</package>
+	<include file="com/tansun/eam2/zyzc/workflow/buy/action/wtdk_workflow.xml"/>
+</struts>

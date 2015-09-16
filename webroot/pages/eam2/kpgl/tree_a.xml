@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<tree id="0">
+	<item text="工作台" id="workflow" >
+			<item text="待办事宜" id="workflow1" ><userdata name="link">workflow/userTask_findMyTodo.do?subSystem=</userdata></item>
+			<item text="已办事宜" id="workflow2" ><userdata name="link">did/userDid_findDids.do?subSystem=</userdata></item>
+			<item text="办结事宜" id="workflow3" ><userdata name="link">end/userEnd_findEnds.do?subSystem=</userdata></item>
+			<item text="作废事宜" id="workflow4" ><userdata name="link">abandon/userAbandon_findAbandons.do?subSystem=</userdata></item>
+			<item text="草稿箱" id="workflow5" ><userdata name="link">draft/userDraft_findDrafts.do?subSystem=</userdata></item>
+		</item>
+	<item text="卡片管理" id="scrap" open="1">
+		
+		<item text="卡片查询"  id="cardList" ><userdata name="link">kpgl/cardQuery_init.do?isQuery=true</userdata></item>
+		<item text="卡片新增" id="cardadd" ><userdata name="link">kpgl/cardHead_newHead.do?sheetType=add&amp;pdk=kpgl_kpzj</userdata></item>
+		<item text="卡片减少" id="reduce" ><userdata name="link">kpgl/cardHead_newHead.do?sheetType=reduce&amp;pdk=kpgl_kpjs</userdata></item>
+		<item text="卡片修改" id="amend" ><userdata name="link">kpgl/cardHead_newHead.do?sheetType=modify&amp;pdk=kpgl_kpxg</userdata></item>
+		<item text="卡片变动" id="change" ><userdata name="link">kpgl/cardHead_newHead.do?sheetType=change&amp;pdk=kpgl_kpbd</userdata></item>
+		<item text="卡片减值" id="devalue" ><userdata name="link">kpgl/cardHead_newHead.do?sheetType=devalue&amp;pdk=kpgl_kpjz</userdata></item>
+		<item text="卡片调配" id="allocate" ><userdata name="link">kpgl/cardHead_newHead.do?sheetType=allocate&amp;pdk=kpgl_kptp</userdata></item>
+		<item text="卡片拆分" id="split" ><userdata name="link">kpgl/cardHead_newHead.do?sheetType=split&amp;pdk=kpgl_kpcf</userdata></item>
+		<item text="卡片合并" id="merge" ><userdata name="link">kpgl/cardHead_newHead.do?sheetType=merge&amp;pdk=kpgl_kphb</userdata></item>
+		<!-- <item text="日志查询" id="log" ><userdata name="link">kpgl/card_list.do</userdata></item>	 -->
+	</item>
+</tree> 

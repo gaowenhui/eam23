@@ -1,0 +1,140 @@
+﻿<?xml version='1.0' encoding='UTF-8'?>
+<tree id="0">
+	<item text="工作台" id="workflow">
+		<item text="待办事宜" id="workflow1">
+			<userdata name="link">
+				workflow/userTask_findMyTodo.do?subSystem=
+			</userdata>
+		</item>
+		<item text="已办事宜" id="workflow2">
+			<userdata name="link">
+				did/userDid_findDids.do?subSystem=
+			</userdata>
+		</item>
+		<item text="办结事宜" id="workflow3">
+			<userdata name="link">
+				end/userEnd_findEnds.do?subSystem=
+			</userdata>
+		</item>
+		<item text="作废事宜" id="workflow4">
+			<userdata name="link">
+				abandon/userAbandon_findAbandons.do?subSystem=
+			</userdata>
+		</item>
+		<item text="草稿箱" id="workflow5">
+			<userdata name="link">
+				draft/userDraft_findDrafts.do?subSystem=
+			</userdata>
+		</item>
+	</item>
+	<item text="资产及日常管理" id="scrap">
+		<item text="资产查询" id="assetList">
+			<userdata name="link">
+				jygdzc/AssetQuery_init.do?sheettype=query
+			</userdata>
+		</item>
+		<item text="资产新增" id="assetadd">
+			<userdata name="link">
+				jygdzc/AssetManageHead_newHead.do?sheettype=add&amp;pdk=jyzc_add
+			</userdata>
+		</item>
+		<item text="资产变动" id="change">
+			<userdata name="link">
+				jygdzc/AssetManageHead_newHead.do?sheettype=change&amp;pdk=jyzc_change
+			</userdata>
+		</item>
+		<item text="盘点管理" id="pandian">
+			<userdata name="link">
+				jygdzc/AssetManageHead_newHead.do?sheettype=check&amp;pdk=jyzc_check
+			</userdata>
+		</item>
+		<item text="盘点管理(代理机构)" id="pandiandaili">
+			<userdata name="link">
+				jygdzc/AssetManageHead_newHead.do?sheettype=agentCheck&amp;pdk=jyzc_check_agent
+			</userdata>
+		</item>
+		<item text="日常管理" id="richang">
+			<userdata name="link">
+				jygdzc/AssetManageHead_newHead.do?sheettype=manage&amp;pdk=jyzc_manager
+			</userdata>
+		</item>
+		<item text="日常管理(代理机构)" id="daili">
+			<userdata name="link">
+				jygdzc/AssetManageHead_newHead.do?sheettype=agentManage&amp;pdk=jyzc_manager_agent
+			</userdata>
+		</item>
+		<item text="经营性固产报废" id="baofei">
+			<userdata name="link">
+				jygdzc/AssetManageHead_newHead.do?sheettype=scrap&amp;pdk=jyzc_scrapt
+			</userdata>
+		</item>
+		<item text="经营性固产报废(代理机构)" id="adad">
+			<userdata name="link">
+				jygdzc/AssetManageHead_newHead.do?sheettype=agentScrap&amp;pdk=jyzc_scrapt_agent
+			</userdata>
+		</item>
+	</item>
+	<item text="经营租赁管理" id="jyzl">
+		<item text="经营租赁查询" id="zlcx">
+			<userdata name="link">
+				zltb/IntentionQuery_init.do?sheettype=tenancy
+			</userdata>
+		</item>
+		<item text="经营租赁业务" id="zlxz">
+			<userdata name="link">
+				zltb/IntentionManageHead_newHead.do?sheettype=tenancy&amp;pdk=jyzc_tenancy
+			</userdata>
+		</item>
+		<item text="经营租赁业务(代理机构)" id="zldl">
+			<userdata name="link">
+				zltb/IntentionManageHead_newHead.do?sheettype=agentTenancy&amp;pdk=jyzc_tenancy_agent
+			</userdata>
+		</item>
+	</item>
+	<item text="合同管理" id="ht">
+		<item text="合同查询" id="htcx">
+			<userdata name="link">
+				htqs/ContractQuery_init.do?sheettype=contract
+			</userdata>
+		</item>
+		<item text="合同维护" id="htgl">
+			<userdata name="link">
+				htqs/ContractManageHead_newHead.do?sheettype=contract&amp;pdk=jyzc_contract
+			</userdata>
+		</item>
+		<item text="合同维护(代理机构)" id="dlhtgl">
+			<userdata name="link">
+				htqs/ContractManageHead_newHead.do?sheettype=agentContract&amp;pdk=jyzc_contract_agent
+			</userdata>
+		</item>
+	</item>
+	<item text="清算管理" id="qs">
+		<item text="清算查询" id="qscx">
+			<userdata name="link">
+				qs/liquidateQuery_init.do?sheettype=liquidate
+			</userdata>
+		</item>
+		<item text="租赁清算" id="zlqs">
+			<userdata name="link">
+				qs/LiquidateHead_newHead.do?sheettype=liquidate&amp;pdk=jyzc_liquidate
+			</userdata>
+		</item>
+		<item text="租赁清算(代理机构)" id="dlqs">
+			<userdata name="link">
+				qs/LiquidateHead_newHead.do?sheettype=liquidate1&amp;pdk=jyzc_liquidate_agent
+			</userdata>
+		</item>
+	</item>
+	<item text="投保管理" id="bd">
+		<item text="投保申请查询" id="bdcx">
+			<userdata name="link">
+				zltb/IntentionQuery_init.do?sheettype=assurance
+			</userdata>
+		</item>
+		<item text="固产投保" id="bdxz">
+			<userdata name="link">
+				zltb/IntentionManageHead_newHead.do?sheettype=assurance&amp;pdk=jyzc_assurance
+			</userdata>
+		</item>
+	</item>
+</tree>

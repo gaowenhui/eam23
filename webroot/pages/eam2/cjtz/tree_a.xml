@@ -1,0 +1,14 @@
+﻿<?xml version='1.0' encoding='UTF-8'?>
+<tree id="0">
+	<item text="承继投资管理" id="scrap" open="1">
+		<item text="承继投资审批"  id="assetList" ><userdata name="link">cjtz/czCztzfaXxAction_newHead.do</userdata></item>
+		<item text="安排审批待办" id="reduce" ><userdata name="link">zccz/dealToDo_init.do?fenlei=0</userdata></item>
+		<item text="会后跟踪" id="assetadd" ><userdata name="link">zccz/dealTrace1Head_newHead.do?xmlx=1</userdata></item>
+	</item>
+	<item text="处理单状态" id="docState" open="1">
+		<item text="待办事宜" id="toDo" ><userdata name="link">wait-transact.html</userdata></item>
+		<item text="已办事宜" id="done" ><userdata name="link">already-transact.html</userdata></item>
+		<item text="办结事宜" id="doOver" ><userdata name="link">finish-transact.html</userdata></item>
+		<item text="草稿箱" id="draft" ><userdata name="link">draft-box.html</userdata></item>
+	</item>
+</tree> 

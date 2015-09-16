@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	
+	<constant name="struts.devMode" value="true"/>
+
+	<package name="wnb" namespace="/wnb" extends="default">
+		<action name="index">
+			<result>/pages/eam2/zccz/index.jsp</result>
+		</action>
+		
+		
+		<!-- 万能表列表查询 -->
+      	<action name="wnbList_*"  method="{1}" class="com.tansun.eam2.zccz.action.WNBListAction">
+      		<result name="tomodify" type="chain">
+				<param name="actionName">wnbList_modify</param>
+				<param name="namespace">/wnb</param>
+			</result>
+       		<result name="list1">/pages/eam2/zccz/wnb/wnblist1.jsp</result>
+       		<result name="list">/pages/eam2/zccz/wnb/wnblist.jsp</result>
+       		<result name="add">/pages/eam2/zccz/wnb/wnbAdd.jsp</result>
+       	</action>
+      	
+	</package>
+	
+</struts>

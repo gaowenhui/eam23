@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <package name="zcczperWorkflow" namespace="/zcczperWorkflow" extends="default">
+        <interceptors>
+    		<interceptor name="counterSignInterceptor" class="com.tansun.eam2.common.workflow.counterSign.action.CounterSignInterceptor"></interceptor>
+    	</interceptors>
+        <action name="zcczperWorkflow_*" method="{1}" class="com.tansun.eam2.zyzc.workflow.buy.action.ZcczPerWorkflowAction">
+            <result name="newDraftResult" type='chain'>
+      			<param name="actionName">personDealHead_newHead</param>
+            	<param name="namespace">/zccz</param>
+      		</result>
+      		<result name="toDraftResult" type='chain'>
+      			<param name="actionName">personDealHead_toModify</param>
+            	<param name="namespace">/zccz</param>
+      		</result>
+      		<result name="newDraft" type='chain'>
+      			<param name="actionName">zcczperWorkflow_newDraft</param>
+            	<param name="namespace">/zcczperWorkflow</param>
+      		</result>
+      		<result name="saveDraft" type='chain'>
+      			<param name="actionName">zcczperWorkflow_saveDraft</param>
+            	<param name="namespace">/zcczperWorkflow</param>
+      		</result>
+      		<result name="saveTodo" type='chain'>
+      			<param name="actionName">zcczperWorkflow_saveTodo</param>
+            	<param name="namespace">/zcczperWorkflow</param>
+      		</result>
+      		<result name="draftCommit" type='chain'>
+      			<param name="actionName">zcczperWorkflow_draftCommit</param>
+            	<param name="namespace">/zcczperWorkflow</param>
+      		</result>
+      		<result name="draftCommitResult">
+      			/pages/rdp4j/workflow/task/todo.jsp
+      		</result>
+      		<result name="todoResult" type='chain'>
+      			<param name="actionName">personDealHead_toModify</param>
+            	<param name="namespace">/zccz</param>
+      		</result>
+      		<result name="getParticipationListResult" type='chain'>
+      			<param name="actionName">dept_getValue</param>
+            	<param name="namespace">/dept</param>
+      		</result>
+      		<result name="completeTaskResult">
+      			/pages/rdp4j/workflow/task/todo.jsp
+      		</result>
+      		<result name="completeTask" type='chain'>
+      			<param name="actionName">zcczperWorkflow_completeTask</param>
+            	<param name="namespace">/zcczperWorkflow</param>
+      		</result>
+      		<result name="abandonPiResult" type='chain'>
+      			<param name="actionName">userAbandon_findAbandons</param>
+            	<param name="namespace">/abandon</param>
+      		</result>
+      		<result name="endPiResult" type='chain'>
+      			<param name="actionName">userEnd_findEnds</param>
+            	<param name="namespace">/end</param>
+      		</result>
+      		<result name="endViewResult" type='chain'>
+      			<param name="actionName">xmshAction_viewSummarySuggestions</param>
+            	<param name="namespace">/zccz</param>
+      		</result>
+      		<result name="endViewResult2" type='chain'>
+      			<param name="actionName">personDealHead_toModify</param>
+            	<param name="namespace">/zccz</param>
+      		</result>
+      		<result name="xmslTodoResult" type='chain'>
+      			<param name="actionName">bldAction_showStayazBLD</param>
+            	<param name="namespace">/zccz</param>
+      		</result>
+      		<result name="xmslDidResult" type='chain'>
+      			<param name="actionName">personDealHead_toModify</param>
+            	<param name="namespace">/zccz</param>
+      		</result>
+      		<result name="hgscTodoResult" type='chain'>
+      			<param name="actionName">xmshAction_modifyShInfo</param>
+            	<param name="namespace">/zccz</param>
+      		</result>
+      		<result name="hgscDidResult" type='chain'>
+      			<param name="actionName">bldAction_showStayazBLD</param>
+            	<param name="namespace">/zccz</param>
+      		</result>
+      		<result name="hgscToXmslTodoResult" type='chain'>
+      			<param name="actionName">personDealHead_toModify</param>
+            	<param name="namespace">/zccz</param>
+      		</result>
+      		<result name="hyzzTodoResult" type='chain'>
+      			<param name="actionName">xmshAction_modifyShInfo</param>
+            	<param name="namespace">/zccz</param>
+      		</result>
+      		<result name="hyzzDidResult" type='chain'>
+      			<param name="actionName">xmshAction_modifyShInfo</param>
+            	<param name="namespace">/zccz</param>
+      		</result>
+      		<result name="shTodoResult" type='chain'>
+      			<param name="actionName">xmshAction_viewSummarySuggestions</param>
+            	<param name="namespace">/zccz</param>
+      		</result>
+      		<result name="shDidResult" type='chain'>
+      			<param name="actionName">xmshAction_modifyShInfo</param>
+            	<param name="namespace">/zccz</param>
+      		</result>
+      		<result name="spDidResult" type='chain'>
+      			<param name="actionName">xmshAction_viewSummarySuggestions</param>
+            	<param name="namespace">/zccz</param>
+      		</result>
+      		<result name="didResult" type='chain'>
+      			<param name="actionName">personDealHead_toModify</param>
+            	<param name="namespace">/zccz</param>
+      		</result>
+      		<result name="abandonViewResult" type='chain'>
+      			<param name="actionName">personDealHead_toModify</param>
+            	<param name="namespace">/zccz</param>
+      		</result>
+      		<result name="commitToXmsl" type='chain'>
+      			<param name="actionName">zcczperWorkflow_commitToXmsl</param>
+            	<param name="namespace">/zcczperWorkflow</param>
+      		</result>
+      		<result name="hgscCommit" type='chain'>
+      			<param name="actionName">zcczperWorkflow_hgscCommit</param>
+            	<param name="namespace">/zcczperWorkflow</param>
+      		</result>      		
+      		<!-- 传阅配置 -->
+      		<result name="circulation" type='chain'>
+      			<param name="actionName">zcczperWorkflow_circulation</param>
+            	<param name="namespace">/zcczperWorkflow</param>
+      		</result>
+      		<result name="circulationPage" type="chain">
+      			<param name="actionName">${circulationPageTag}</param>
+      			<param name="namespace">/zccz</param>
+      			<param name="headId">${headId}</param>
+      		</result>
+      		<result name="taskHisGraphResult">/pages/rdp4j/workflow/task/taskHisGraph.jsp</result>
+      		<result name="taskHisGraphResult4EAM1">/pages/rdp4j/workflow/task/taskHisGraph4EAM1.jsp</result>
+      		<interceptor-ref name="appdefault"></interceptor-ref>
+      		<interceptor-ref name="counterSignInterceptor">
+      			<param name="includeMethods">todo</param>
+      		</interceptor-ref>
+        </action>
+    </package>
+</struts>

@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <package name="cjtzWorkflow" namespace="/cjtzWorkflow" extends="default">
+        <interceptors>
+    		<interceptor name="counterSignInterceptor" class="com.tansun.eam2.common.workflow.counterSign.action.CounterSignInterceptor"></interceptor>
+    	</interceptors>
+        <action name="cjtz_sqja_Workflow_*" method="{1}" class="com.tansun.eam2.zyzc.workflow.buy.action.CjtzWorkflowAction">
+            <result name="newDraftResult" type='chain'>
+      			<param name="actionName">dealTrace2_addHead</param>
+            	<param name="namespace">/cjtz</param>
+      		</result>
+      		<result name="toDraftResult" type='chain'>
+      			<param name="actionName">dealTrace2_modifyHead</param>
+            	<param name="namespace">/cjtz</param>
+      		</result>
+      		<result name="newDraft" type='chain'>
+      			<param name="actionName">cjtz_sqja_Workflow_newDraft</param>
+            	<param name="namespace">/cjtzWorkflow</param>
+      		</result>
+      		<result name="saveDraft" type='chain'>
+      			<param name="actionName">cjtz_sqja_Workflow_saveDraft</param>
+            	<param name="namespace">/cjtzWorkflow</param>
+      		</result>
+      		<result name="saveTodo" type='chain'>
+      			<param name="actionName">cjtz_sqja_Workflow_saveTodo</param>
+            	<param name="namespace">/cjtzWorkflow</param>
+      		</result>
+      		<result name="draftCommit" type='chain'>
+      			<param name="actionName">cjtz_sqja_Workflow_draftCommit</param>
+            	<param name="namespace">/cjtzWorkflow</param>
+      		</result>
+      		<result name="draftCommitResult">
+      			/pages/rdp4j/workflow/task/todo.jsp
+      		</result>
+      		<result name="todoResult" type='chain'>
+      			<param name="actionName">dealTrace2_modifyHead</param>
+            	<param name="namespace">/cjtz</param>
+      		</result>
+      		<result name="getParticipationListResult" type='chain'>
+      			<param name="actionName">dept_getValue</param>
+            	<param name="namespace">/dept</param>
+      		</result>
+      		<result name="completeTaskResult">
+      			/pages/rdp4j/workflow/task/todo.jsp
+      		</result>
+      		<result name="completeTask" type='chain'>
+      			<param name="actionName">cjtz_sqja_Workflow_completeTask</param>
+            	<param name="namespace">/cjtzWorkflow</param>
+      		</result>
+      		<result name="abandonPiResult" type='chain'>
+      			<param name="actionName">userAbandon_findAbandons</param>
+            	<param name="namespace">/abandon</param>
+      		</result>
+      		<result name="abandonViewResult" type='chain'>
+      			<param name="actionName">dealTrace2_modifyHead</param>
+            	<param name="namespace">/cjtz</param>
+      		</result>
+      		<result name="endPiResult" type='chain'>
+      			<param name="actionName">userEnd_findEnds</param>
+            	<param name="namespace">/end</param>
+      		</result>
+      		<result name="endViewResult" type='chain'>
+      			<param name="actionName">dealTrace2_modifyHead</param>
+            	<param name="namespace">/cjtz</param>
+      		</result>
+      		<result name="didResult" type='chain'>
+      			<param name="actionName">dealTrace2_modifyHead</param>
+            	<param name="namespace">/cjtz</param>
+      		</result>
+      		<result name="circulation" type='chain'>
+      			<param name="actionName">cjtz_sqja_Workflow_circulation</param>
+            	<param name="namespace">/cjtzWorkflow</param>
+      		</result>
+      		<result name="circulationResult" type='chain'>
+      			<param name="actionName">dealTrace2_modifyHead</param>
+            	<param name="namespace">/cjtz</param>
+      		</result>
+      		<result name="taskHisGraphResult">/pages/rdp4j/workflow/task/taskHisGraph.jsp</result>
+      		<interceptor-ref name="appdefault"></interceptor-ref>
+      		<interceptor-ref name="counterSignInterceptor">
+      			<param name="includeMethods">todo</param>
+      		</interceptor-ref>
+        </action>
+        <action name="cjtz_duban_Workflow_*" method="{1}" class="com.tansun.eam2.zyzc.workflow.buy.action.CjtzWorkflowAction">
+            <result name="newDraftResult" type='chain'>
+      			<param name="actionName">supervision_addHead</param>
+            	<param name="namespace">/cjtz</param>
+      		</result>
+      		<result name="toDraftResult" type='chain'>
+      			<param name="actionName">supervision_modifyHead</param>
+            	<param name="namespace">/cjtz</param>
+      		</result>
+      		<result name="newDraft" type='chain'>
+      			<param name="actionName">cjtz_duban_Workflow_newDraft</param>
+            	<param name="namespace">/cjtzWorkflow</param>
+      		</result>
+      		<result name="saveDraft" type='chain'>
+      			<param name="actionName">cjtz_duban_Workflow_saveDraft</param>
+            	<param name="namespace">/cjtzWorkflow</param>
+      		</result>
+      		<result name="saveTodo" type='chain'>
+      			<param name="actionName">cjtz_duban_Workflow_saveTodo</param>
+            	<param name="namespace">/cjtzWorkflow</param>
+      		</result>
+      		<result name="draftCommit" type='chain'>
+      			<param name="actionName">cjtz_duban_Workflow_draftCommit</param>
+            	<param name="namespace">/cjtzWorkflow</param>
+      		</result>
+      		<result name="draftCommitResult">
+      			/pages/rdp4j/workflow/task/todo.jsp
+      		</result>
+      		<result name="todoResult" type='chain'>
+      			<param name="actionName">supervision_modifyHead</param>
+            	<param name="namespace">/cjtz</param>
+      		</result>
+      		<result name="getParticipationListResult" type='chain'>
+      			<param name="actionName">dept_getValue</param>
+            	<param name="namespace">/dept</param>
+      		</result>
+      		<result name="completeTaskResult">
+      			/pages/rdp4j/workflow/task/todo.jsp
+      		</result>
+      		<result name="completeTask" type='chain'>
+      			<param name="actionName">cjtz_duban_Workflow_completeTask</param>
+            	<param name="namespace">/cjtzWorkflow</param>
+      		</result>
+      		<result name="abandonPiResult" type='chain'>
+      			<param name="actionName">userAbandon_findAbandons</param>
+            	<param name="namespace">/abandon</param>
+      		</result>
+      		<result name="abandonViewResult" type='chain'>
+      			<param name="actionName">supervision_modifyHead</param>
+            	<param name="namespace">/cjtz</param>
+      		</result>
+      		<result name="endPiResult" type='chain'>
+      			<param name="actionName">userEnd_findEnds</param>
+            	<param name="namespace">/end</param>
+      		</result>
+      		<result name="endViewResult" type='chain'>
+      			<param name="actionName">supervision_modifyHead</param>
+            	<param name="namespace">/cjtz</param>
+      		</result>
+      		<result name="didResult" type='chain'>
+      			<param name="actionName">supervision_modifyHead</param>
+            	<param name="namespace">/cjtz</param>
+      		</result>
+      		<result name="circulation" type='chain'>
+      			<param name="actionName">cjtz_duban_Workflow_circulation</param>
+            	<param name="namespace">/cjtzWorkflow</param>
+      		</result>
+      		<result name="circulationResult" type='chain'>
+      			<param name="actionName">supervision_modifyHead</param>
+            	<param name="namespace">/cjtz</param>
+      		</result>
+      		<result name="msczhclTodoResult" type='chain'>
+      			<param name="actionName">supervision2_modifyHead</param>
+            	<param name="namespace">/cjtz</param>
+      		</result>
+      		<result name="msczhclDidResult" type='chain'>
+      			<param name="actionName">supervision_modifyHead</param>
+            	<param name="namespace">/cjtz</param>
+      		</result>
+      		<result name="blbmzhclTodoResult" type='chain'>
+      			<param name="actionName">supervision_modifyHead</param>
+            	<param name="namespace">/cjtz</param>
+      		</result>
+      		<result name="blbmzhclDidResult" type='chain'>
+      			<param name="actionName">supervision2_modifyHead</param>
+            	<param name="namespace">/cjtz</param>
+      		</result>
+      		<result name="msczhclCommit" type='chain'>
+      			<param name="actionName">cjtz_duban_Workflow_msczhclCommit</param>
+            	<param name="namespace">/cjtzWorkflow</param>
+      		</result>      		
+      		<result name="taskHisGraphResult">/pages/rdp4j/workflow/task/taskHisGraph.jsp</result>
+      		<interceptor-ref name="appdefault"></interceptor-ref>
+      		<interceptor-ref name="counterSignInterceptor">
+      			<param name="includeMethods">todo</param>
+      		</interceptor-ref>
+        </action>
+        <action name="cjtzspWorkflow_*" method="{1}" class="com.tansun.eam2.zyzc.workflow.buy.action.CjtzWorkflowAction">
+            <result name="newDraftResult" type='chain'>
+      			<param name="actionName">czCztzfaXxAction_addHead</param>
+            	<param name="namespace">/cjtz</param>
+      		</result>
+      		<result name="toDraftResult" type='chain'>
+      			<param name="actionName">czCztzfaXxAction_modifyHead</param>
+            	<param name="namespace">/cjtz</param>
+      		</result>
+      		<result name="newDraft" type='chain'>
+      			<param name="actionName">cjtzspWorkflow_newDraft</param>
+            	<param name="namespace">/cjtzWorkflow</param>
+      		</result>
+      		<result name="saveDraft" type='chain'>
+      			<param name="actionName">cjtzspWorkflow_saveDraft</param>
+            	<param name="namespace">/cjtzWorkflow</param>
+      		</result>
+      		<result name="saveTodo" type='chain'>
+      			<param name="actionName">cjtzspWorkflow_saveTodo</param>
+            	<param name="namespace">/cjtzWorkflow</param>
+      		</result>
+      		<result name="draftCommit" type='chain'>
+      			<param name="actionName">cjtzspWorkflow_draftCommit</param>
+            	<param name="namespace">/cjtzWorkflow</param>
+      		</result>
+      		<result name="draftCommitResult" >
+      			/pages/rdp4j/workflow/task/todo.jsp
+      		</result>
+      		<result name="todoResult" type='chain'>
+      			<param name="actionName">czCztzfaXxAction_modifyHead</param>
+            	<param name="namespace">/cjtz</param>
+      		</result>
+      		<result name="getParticipationListResult" type='chain'>
+      			<param name="actionName">dept_getValue</param>
+            	<param name="namespace">/dept</param>
+      		</result>
+      		<result name="completeTaskResult">
+      			/pages/rdp4j/workflow/task/todo.jsp
+      		</result>
+      		<result name="completeTask" type='chain'>
+      			<param name="actionName">cjtzspWorkflow_completeTask</param>
+            	<param name="namespace">/cjtzWorkflow</param>
+      		</result>
+      		<result name="abandonPiResult" type='chain'>
+      			<param name="actionName">userAbandon_findAbandons</param>
+            	<param name="namespace">/abandon</param>
+      		</result>
+      		<result name="abandonViewResult" type='chain'>
+      			<param name="actionName">czCztzfaXxAction_modifyHead</param>
+            	<param name="namespace">/cjtz</param>
+      		</result>
+      		<result name="endPiResult" type='chain'>
+      			<param name="actionName">userEnd_findEnds</param>
+            	<param name="namespace">/end</param>
+      		</result>
+      		<result name="endViewResult" type='chain'>
+      			<param name="actionName">czCztzfaXxAction_modifyHead</param>
+            	<param name="namespace">/cjtz</param>
+      		</result>
+      		<result name="didResult" type='chain'>
+      			<param name="actionName">czCztzfaXxAction_modifyHead</param>
+            	<param name="namespace">/cjtz</param>
+      		</result>
+      		<result name="circulation" type='chain'>
+      			<param name="actionName">cjtzspWorkflow_circulation</param>
+            	<param name="namespace">/cjtzWorkflow</param>
+      		</result>
+      		<result name="circulationResult" type='chain'>
+      			<param name="actionName">czCztzfaXxAction_modifyHead</param>
+            	<param name="namespace">/cjtz</param>
+      		</result>
+      		<result name="xmslTodoResult" type='chain'>
+      			<param name="actionName">xmshAction_modifyShInfo</param>
+            	<param name="namespace">/zccz</param>
+      		</result>
+      		<result name="xmslDidResult" type='chain'>
+      			<param name="actionName">czCztzfaXxAction_modifyHead</param>
+            	<param name="namespace">/cjtz</param>
+      		</result>
+      		<result name="hyzzTodoResult" type='chain'>
+      			<param name="actionName">xmshAction_modifyShInfo</param>
+            	<param name="namespace">/zccz</param>
+      		</result>
+      		<result name="hyzzDidResult" type='chain'>
+      			<param name="actionName">xmshAction_modifyShInfo</param>
+            	<param name="namespace">/zccz</param>
+      		</result>
+      		<result name="hzspyjTodoResult" type='chain'>
+      			<param name="actionName">xmshAction_viewSummarySuggestions</param>
+            	<param name="namespace">/zccz</param>
+      		</result>
+      		<result name="hzspyjDidResult" type='chain'>
+      			<param name="actionName">xmshAction_viewSummarySuggestions</param>
+            	<param name="namespace">/zccz</param>
+      		</result>      		
+      		<result name="msczhclCommit" type='chain'>
+      			<param name="actionName">cjtzspWorkflow_msczhclCommit</param>
+            	<param name="namespace">/cjtzWorkflow</param>
+      		</result>
+      		<result name="taskHisGraphResult">/pages/rdp4j/workflow/task/taskHisGraph.jsp</result>
+      		<interceptor-ref name="appdefault"></interceptor-ref>
+      		<interceptor-ref name="counterSignInterceptor">
+      			<param name="includeMethods">todo</param>
+      		</interceptor-ref>
+        </action>
+    </package>
+</struts>

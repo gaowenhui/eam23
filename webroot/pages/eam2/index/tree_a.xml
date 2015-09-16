@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='utf-8'?>
+<tree id="0">
+	<item text="自用资产" id="assetOwn" open="1" call="1" select="1">
+		<item text="工作台" id="workflow" >
+			<item text="待办事宜" id="workflow1" ><userdata name="link">workflow/userTask_findMyTodo.do?subSystem=</userdata></item>
+			<item text="已办事宜" id="workflow2" ><userdata name="link">did/userDid_findDids.do?subSystem=</userdata></item>
+			<item text="办结事宜" id="workflow3" ><userdata name="link">end/userEnd_findEnds.do?subSystem=</userdata></item>
+			<item text="作废事宜" id="workflow4" ><userdata name="link">abandon/userAbandon_findAbandons.do?subSystem=</userdata></item>
+			<item text="草稿箱" id="workflow5" ><userdata name="link">draft/userDraft_findDrafts.do?subSystem=</userdata></item>
+		</item>
+		<item text="采购管理" id="purchase" >
+			<item text="本部资产采购申请" id="lowPurchase" ><userdata name="link">zyzc/ZCManageHead_newHead.do?sheettype=purchase&amp;pdk=zyzc_purchase</userdata></item>
+			<item text="采购物品查询" id="purchaserStateQuery" ><userdata name="link">zyzc/ZCQuery_init.do?sheettype=purchase</userdata></item>
+		</item>
+		<item text="库存管理" id="stock" >
+			<item text="物品入库申请" id="toStockByItem" ><userdata name="link">zyzc/ZCManageHead_newHead.do?sheettype=tostock&amp;pdk=zyzc_tostock</userdata></item>
+			<item text="验收物品查询" id="stockStateQuery" ><userdata name="link">zyzc/ZCQuery_init.do?sheettype=inStock</userdata></item>
+		</item>
+		<item text="台账管理" id="account">
+			<item text="库存台账" id="fixStoAcc" ><userdata name="link">zyzc/ZCBookQuery_queryBySelectCondition.do?zctzlx=kcgdzc</userdata></item>
+			<item text="实物台账" id="itemAccount" >
+				<item text="固定资产" id="fixItemAcc" ><userdata name="link">zyzc/ZCBookQuery_queryBySelectCondition.do?zctzlx=swgdzc</userdata></item>
+				<item text="低值品" id="lowItemAcc" ><userdata name="link">zyzc/ZCBookQuery_queryBySelectCondition.do?zctzlx=swdzzc</userdata></item>
+			</item>		
+		</item>
+		<item text="领用管理" id="draw" >
+			<item text="个人领用申请" id="drawApply" ><userdata name="link">zyzc/ZCManageHead_newHead.do?sheettype=personal_comsuming</userdata></item>
+			<item text="部门领用申请" id="dept_drawApply" ><userdata name="link">zyzc/ZCManageHead_newHead.do?sheettype=dept_comsuming&amp;pdk=zyzc_consuming</userdata></item>
+			<item text="领用查询" id="drawQuery" ><userdata name="link">zyzc/ZCQuery_init.do?sheettype=personal_comsuming</userdata></item>
+		</item>
+		<item text="借用管理" id="borrow" >
+			<item text="个人借用申请" id="personal_borrowApply" ><userdata name="link">zyzc/ZCManageHead_newHead.do?sheettype=personal_borrow</userdata></item>
+			<item text="部门借用申请" id="borrowApply" ><userdata name="link">zyzc/ZCManageHead_newHead.do?sheettype=dept_borrow&amp;pdk=zyzc_borrow</userdata></item>
+			<item text="续借申请" id="goodsRenew" ><userdata name="link">zyzc/ZCManageHead_newHead.do?sheettype=reborrow&amp;pdk=zyzc_reborrow</userdata></item>
+			<item text="借用查询" id="borrowQuery" ><userdata name="link">zyzc/ZCQuery_init.do?sheettype=personal_borrow</userdata></item>						
+		</item>
+		<item text="盘点管理" id="check">
+			<item text="批次查询" id="batchQuery" ><userdata name="link">zyzc/BatchQuery_init.do</userdata></item>
+			<item text="批次新增" id="batchAdd" ><userdata name="link">zyzc/BatchAdd_init.do</userdata></item>
+			<item text="盘库审批" id="inventory_approve" ><userdata name="link">zyzc/ZCManageHead_newHead.do?sheettype=tocheckstock&amp;pdk=zyzc_tocheckstock</userdata></item>
+			<item text="盘点审批" id="check_approve" ><userdata name="link">zyzc/ZCManageHead_newHead.do?sheettype=tocheckobject&amp;pdk=zyzc_tocheckobject</userdata></item>
+			<item text="盘盈盘亏" id="inventory_check_detail" ><userdata name="link">zyzc/ToCheck_init.do</userdata></item>
+		</item>
+		<item text="物品更换" id="changeItem"><userdata name="link">zyzc/ZCManageHead_newHead.do?sheettype=goodchange&amp;pdk=zyzc_change</userdata></item>
+		<item text="物品维修" id="repairItem"><userdata name="link">zyzc/ZCManageHead_newHead.do?sheettype=gooddeploy&amp;pdk=zyzc_deploy</userdata></item>
+		<item text="物品续保" id="renewalItem"><userdata name="link">zyzc/ZCManageHead_newHead.do?sheettype=goodrenewal&amp;pdk=zyzc_renewal</userdata></item>
+		<item text="物品归还" id="goodsReturn" ><userdata name="link">zyzc/ZCManageHead_newHead.do?sheettype=goodreturn</userdata></item>
+		<item text="资产查询" id="zcQueryItem" ><userdata name="link">zyzc/ZCQuery_init.do</userdata></item>
+		<item text="物品分类配置" id="goodsMaintain" ><userdata name="link">zyzc/DicAppAssetType_findFL.do</userdata></item>
+		<item text="报废管理" id="scrap">
+			<item text="报废申请" id="scrapApply" ><userdata name="link">zyzc/ZCManageHead_newHead.do?sheettype=discard&amp;pdk=zyzc_discard</userdata></item>
+			<item text="报废查询" id="scrapQuery" ><userdata name="link">zyzc/ZCQuery_init.do?sheettype=discardQuery</userdata></item>
+		</item>
+	</item>
+</tree> 

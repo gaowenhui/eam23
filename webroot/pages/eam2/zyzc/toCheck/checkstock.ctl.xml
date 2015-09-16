@@ -1,0 +1,193 @@
+<?xml version="1.0"  encoding="UTF-8"?>
+<!DOCTYPE form-config SYSTEM "dynamic-form.dtd">
+<form-config>
+    <state-group>
+        <state id="拟稿">
+	        <component id="title" renderType="normal" userId="" roleId="" deptId="" />
+	        <component id="bianhao11" renderType="normal" userId="" roleId="" deptId="" />
+	        <component id="ngrq" renderType="readonly" userId="" roleId="" deptId="" />
+	        <component id="pdrq" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="ngrmc" renderType="readonly" userId="" roleId="" deptId="" />
+            <component id="ngbmbh" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="jhcd" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="ldxh" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="DRAFT_DEPT" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="InStockButtonControl" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="assetList" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="blyj_reason_list" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="file_list" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="completeButton" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="shengcheng" renderType="disable" userId="" roleId="" deptId="" />
+        </state>
+        <state id="实物管理员审核">
+            <component id="title" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="bianhao11" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="ngrq" renderType="readonly" userId="" roleId="" deptId="" />
+	        <component id="pdrq" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="ngrmc" renderType="readonly" userId="" roleId="" deptId="" />
+            <component id="ngbmbh" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="jhcd" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="ldxh" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="DRAFT_DEPT" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="InStockButtonControl" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="assetList" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="blyj_reason_list" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="file_list" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="completeButton" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="shengcheng" renderType="disable" userId="" roleId="" deptId="" />
+        </state>
+        <state id="部门领导审批">
+            <component id="title" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="bianhao11" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="ngrq" renderType="readonly" userId="" roleId="" deptId="" />
+	        <component id="pdrq" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="ngrmc" renderType="readonly" userId="" roleId="" deptId="" />
+            <component id="ngbmbh" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="jhcd" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="ldxh" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="DRAFT_DEPT" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="InStockButtonControl" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="assetList" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="blyj_reason_list" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="file_list" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="completeButton" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="shengcheng" renderType="normal" userId="" roleId="" deptId="" />
+        </state>
+        <state id="组审核">
+            <component id="title" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="bianhao11" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="ngrq" renderType="readonly" userId="" roleId="" deptId="" />
+	        <component id="pdrq" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="ngrmc" renderType="readonly" userId="" roleId="" deptId="" />
+            <component id="ngbmbh" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="jhcd" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="ldxh" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="DRAFT_DEPT" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="InStockButtonControl" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="assetList" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="blyj_reason_list" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="file_list" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="completeButton" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="shengcheng" renderType="disable" userId="" roleId="" deptId="" />
+        </state>
+        <state id="账管处理">
+            <component id="title" renderType="readonly" userId="" roleId="" deptId="" />
+            <component id="bianhao11" renderType="readonly" userId="" roleId="" deptId="" />
+            <component id="ngrq" renderType="readonly" userId="" roleId="" deptId="" />
+	        <component id="pdrq" renderType="readonly" userId="" roleId="" deptId="" />
+            <component id="ngrmc" renderType="readonly" userId="" roleId="" deptId="" />
+            <component id="ngbmbh" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="jhcd" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="ldxh" renderType="readonly" userId="" roleId="" deptId="" />
+            <component id="DRAFT_DEPT" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="InStockButtonControl" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="assetList" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="blyj_reason_list" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="file_list" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="completeButton" renderType="normal" userId="" roleId="" deptId="" />
+            <component id="shengcheng" renderType="normal" userId="" roleId="" deptId="" />
+        </state>
+        <state id="readonly">
+            <component id="title" renderType="readonly" userId="" roleId="" deptId="" />
+            <component id="bianhao11" renderType="readonly" userId="" roleId="" deptId="" />
+            <component id="ngrq" renderType="readonly" userId="" roleId="" deptId="" />
+	        <component id="pdrq" renderType="readonly" userId="" roleId="" deptId="" />
+            <component id="ngrmc" renderType="readonly" userId="" roleId="" deptId="" />
+            <component id="ngbmbh" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="jhcd" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="ldxh" renderType="readonly" userId="" roleId="" deptId="" />
+            <component id="DRAFT_DEPT" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="InStockButtonControl" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="assetList" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="blyj_reason_list" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="file_list" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="completeButton" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="shengcheng" renderType="disable" userId="" roleId="" deptId="" />
+        </state>
+        <state id="signTodo">
+            <component id="title" renderType="readonly" userId="" roleId="" deptId="" />
+            <component id="bianhao11" renderType="readonly" userId="" roleId="" deptId="" />
+            <component id="ngrq" renderType="readonly" userId="" roleId="" deptId="" />
+	        <component id="pdrq" renderType="readonly" userId="" roleId="" deptId="" />
+            <component id="ngrmc" renderType="readonly" userId="" roleId="" deptId="" />
+            <component id="ngbmbh" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="jhcd" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="ldxh" renderType="readonly" userId="" roleId="" deptId="" />
+            <component id="DRAFT_DEPT" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="InStockButtonControl" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="assetList" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="blyj_reason_list" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="file_list" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="completeButton" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="shengcheng" renderType="disable" userId="" roleId="" deptId="" />
+        </state>
+        <state id="signDid">
+            <component id="title" renderType="readonly" userId="" roleId="" deptId="" />
+            <component id="bianhao11" renderType="readonly" userId="" roleId="" deptId="" />
+            <component id="ngrq" renderType="readonly" userId="" roleId="" deptId="" />
+	        <component id="pdrq" renderType="readonly" userId="" roleId="" deptId="" />
+            <component id="ngrmc" renderType="readonly" userId="" roleId="" deptId="" />
+            <component id="ngbmbh" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="jhcd" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="ldxh" renderType="readonly" userId="" roleId="" deptId="" />
+            <component id="DRAFT_DEPT" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="InStockButtonControl" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="assetList" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="blyj_reason_list" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="file_list" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="completeButton" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="shengcheng" renderType="disable" userId="" roleId="" deptId="" />
+        </state>
+        <state id="signEnd">
+            <component id="title" renderType="readonly" userId="" roleId="" deptId="" />
+            <component id="bianhao11" renderType="readonly" userId="" roleId="" deptId="" />
+            <component id="ngrq" renderType="readonly" userId="" roleId="" deptId="" />
+	        <component id="pdrq" renderType="readonly" userId="" roleId="" deptId="" />
+            <component id="ngrmc" renderType="readonly" userId="" roleId="" deptId="" />
+            <component id="ngbmbh" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="jhcd" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="ldxh" renderType="readonly" userId="" roleId="" deptId="" />
+            <component id="DRAFT_DEPT" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="InStockButtonControl" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="assetList" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="blyj_reason_list" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="file_list" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="completeButton" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="shengcheng" renderType="disable" userId="" roleId="" deptId="" />
+        </state>
+        <state id="end">
+            <component id="title" renderType="readonly" userId="" roleId="" deptId="" />
+            <component id="bianhao11" renderType="readonly" userId="" roleId="" deptId="" />
+            <component id="ngrq" renderType="readonly" userId="" roleId="" deptId="" />
+	        <component id="pdrq" renderType="readonly" userId="" roleId="" deptId="" />
+            <component id="ngrmc" renderType="readonly" userId="" roleId="" deptId="" />
+            <component id="ngbmbh" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="jhcd" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="ldxh" renderType="readonly" userId="" roleId="" deptId="" />
+            <component id="DRAFT_DEPT" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="InStockButtonControl" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="assetList" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="blyj_reason_list" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="file_list" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="completeButton" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="shengcheng" renderType="disable" userId="" roleId="" deptId="" />
+        </state>
+         <state id="did">
+            <component id="title" renderType="readonly" userId="" roleId="" deptId="" />
+            <component id="bianhao11" renderType="readonly" userId="" roleId="" deptId="" />
+            <component id="ngrq" renderType="readonly" userId="" roleId="" deptId="" />
+	        <component id="pdrq" renderType="readonly" userId="" roleId="" deptId="" />
+            <component id="ngrmc" renderType="readonly" userId="" roleId="" deptId="" />
+            <component id="ngbmbh" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="jhcd" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="ldxh" renderType="readonly" userId="" roleId="" deptId="" />
+            <component id="DRAFT_DEPT" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="InStockButtonControl" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="assetList" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="blyj_reason_list" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="file_list" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="completeButton" renderType="disable" userId="" roleId="" deptId="" />
+            <component id="shengcheng" renderType="disable" userId="" roleId="" deptId="" />
+        </state>
+    </state-group>
+</form-config>

@@ -1,0 +1,24 @@
+<PUBLIC:ATTACH EVENT="onmouseover" ONEVENT="lightit();"/> 
+
+<PUBLIC:ATTACH EVENT="onmouseout" ONEVENT="darkit();"/> 
+
+<SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript"> 
+
+<!-- 
+function lightit() 
+{ 
+this.style.backgroundColor="#FFCC99";
+//this.style.backgroundImage ="url('../../images/btn_hover.gif')"; 
+this.style.color='#0000FF';
+} 
+function darkit() 
+{ 
+this.style.backgroundColor="#E3ECFA";
+//this.style.backgroundImage ="url('../../images/btn.gif')"; 
+this.style.color='#222222';
+
+} 
+
+//--> 
+
+</SCRIPT> 

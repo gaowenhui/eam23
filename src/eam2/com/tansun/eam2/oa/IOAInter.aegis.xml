@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mappings>
+	<mapping>
+		<method name="getEAMBLYJ">
+			<parameter index="0" mappedName="userid" />
+			<parameter index="1" mappedName="labname" />
+			<parameter index="2" mappedName="beginnum" />
+			<parameter index="3" mappedName="endnum" />
+			<parameter index="4" mappedName="keyword" />
+			<parameter index="5" mappedName="docstatus" />
+		</method>
+		<method name="startEAMFlow">
+			<parameter index="0" mappedName="OAmsgid" />
+			<parameter index="1" mappedName="ngr" />
+			<parameter index="2" mappedName="ngbm" />
+			<parameter index="3" mappedName="ngrq" />
+			<parameter index="4" mappedName="title" />
+			<parameter index="5" mappedName="flowname" />
+			<parameter index="6" mappedName="url" />
+			<parameter index="7" mappedName="bz" />
+			<parameter index="8" mappedName="blyj_title" />
+			<parameter index="9" mappedName="blyj_wh" />
+			<parameter index="10" mappedName="blyj_ngr" />
+			<parameter index="11" mappedName="blyj_ngrq" />
+			<parameter index="12" mappedName="blyj_mkmc" />
+			<parameter index="13" mappedName="blyj_lcmc" />
+			<parameter index="14" mappedName="sendUserName" />
+			<parameter index="15" mappedName="workflowid" />
+		</method>
+		<method name="queryEAMFlow">
+			<parameter index="0" mappedName="lcid" />
+		</method>
+		<method name="finishEAMFlow">
+			<parameter index="0" mappedName="lcid" />
+			<parameter index="1" mappedName="lczt" />
+			<parameter index="2" mappedName="ngyj" />
+			<parameter index="3" mappedName="qfyj" />
+			<parameter index="4" mappedName="hqyj" />
+			<parameter index="5" mappedName="hgyj" />
+			<parameter index="6" mappedName="jdyj" />
+			<parameter index="7" mappedName="bz" />
+		</method>
+        <method name="token">
+			<parameter index="0" mappedName="command" />
+			<parameter index="1" mappedName="tokenSN" />
+            <parameter index="2" mappedName="useUser" />
+			<parameter index="3" mappedName="loginname" />
+			<parameter index="4" mappedName="auth" />
+			<parameter index="5" mappedName="status" />
+			<parameter index="6" mappedName="expireDate" />
+		</method>
+	</mapping>
+</mappings>

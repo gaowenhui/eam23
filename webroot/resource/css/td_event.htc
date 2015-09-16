@@ -1,0 +1,15 @@
+<PUBLIC:ATTACH EVENT="onclick" ONEVENT="doOnClick();"/>
+ 
+<SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript"> 
+
+<!-- 
+
+function doOnClick() 
+{    
+       this.children.item(0).focus(); 
+}
+ 
+ 
+//--> 
+
+</SCRIPT> 

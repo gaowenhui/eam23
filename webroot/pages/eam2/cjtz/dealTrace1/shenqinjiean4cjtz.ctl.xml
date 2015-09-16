@@ -1,0 +1,182 @@
+<?xml version="1.0"  encoding="UTF-8"?>
+<!DOCTYPE form-config SYSTEM "dynamic-form.dtd">
+<form-config>
+    <state-group>
+        <state id="拟稿">
+        	<component id="biaoti"  			renderType="normal" 	userId="" roleId="" deptId="" />
+	        <component id="chengson" 			renderType="normal" 	userId="" roleId="" deptId="" />
+	        <component id="jhcd" 				renderType="normal" 	userId="" roleId="" deptId="" />
+            <component id="lxdh" 				renderType="normal" 	userId="" roleId="" deptId="" />
+            <component id="beizhu" 				renderType="normal" 	userId="" roleId="" deptId="" />
+            <component id="DRAFT_DEPT"  		renderType="normal" 	userId="" roleId="" deptId="" />
+            <component id="CHECK_DEPT"  		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="blyj_reason_list"  	renderType="normal" 	userId="" roleId="" deptId="" />
+            <component id="file_list"  		  	renderType="normal" 	userId="" roleId="" deptId="" />
+            <component id="bianhao_button"   	renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="banjie" 				renderType="disable" userId="" roleId="" deptId="" />
+            <component id="xinjianzhengwen" 	renderType="normal" userId="" roleId="" deptId="" />
+            <component id="chakanzhengwen" 		renderType="disable" userId="" roleId="" deptId="" />
+            <component id="hechengzhengwen"		renderType="disable" userId="" roleId="" deptId="" />
+        </state>
+        <state id="组审核">
+        	<component id="biaoti"  			renderType="normal" 	userId="" roleId="" deptId="" />
+	        <component id="chengson" 			renderType="normal" 	userId="" roleId="" deptId="" />
+	        <component id="jhcd" 				renderType="normal" 	userId="" roleId="" deptId="" />
+            <component id="lxdh" 				renderType="normal" 	userId="" roleId="" deptId="" />
+            <component id="beizhu" 				renderType="normal" 	userId="" roleId="" deptId="" />
+            <component id="DRAFT_DEPT"  		renderType="normal" 	userId="" roleId="" deptId="" />
+            <component id="CHECK_DEPT"  		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="blyj_reason_list"  	renderType="normal" 	userId="" roleId="" deptId="" />
+            <component id="file_list"  		  	renderType="normal" 	userId="" roleId="" deptId="" />
+            <component id="bianhao_button"   	renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="banjie" 				renderType="disable" userId="" roleId="" deptId="" />
+            <component id="xinjianzhengwen" 	renderType="normal" userId="" roleId="" deptId="" />
+            <component id="chakanzhengwen" 		renderType="normal" userId="" roleId="" deptId="" />
+            <component id="hechengzhengwen"		renderType="disable" userId="" roleId="" deptId="" />
+        </state>
+        <state id="部门领导审核">
+        	<component id="biaoti"  			renderType="normal" 	userId="" roleId="" deptId="" />
+	        <component id="chengson" 			renderType="normal" 	userId="" roleId="" deptId="" />
+	        <component id="jhcd" 				renderType="normal" 	userId="" roleId="" deptId="" />
+            <component id="lxdh" 				renderType="normal" 	userId="" roleId="" deptId="" />
+            <component id="beizhu" 				renderType="normal" 	userId="" roleId="" deptId="" />
+            <component id="DRAFT_DEPT"  		renderType="normal" 	userId="" roleId="" deptId="" />
+            <component id="CHECK_DEPT"  		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="blyj_reason_list"  	renderType="normal" 	userId="" roleId="" deptId="" />
+            <component id="file_list"  		  	renderType="normal" 	userId="" roleId="" deptId="" />
+            <component id="bianhao_button"   	renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="banjie" 				renderType="disable" userId="" roleId="" deptId="" />
+            <component id="xinjianzhengwen" 	renderType="normal" userId="" roleId="" deptId="" />
+            <component id="chakanzhengwen" 		renderType="normal" userId="" roleId="" deptId="" />
+            <component id="hechengzhengwen"		renderType="disable" userId="" roleId="" deptId="" />
+        </state>
+        <state id="拟稿部门综合处理">
+        	<component id="biaoti"  			renderType="normal" 	userId="" roleId="" deptId="" />
+	        <component id="chengson" 			renderType="normal" 	userId="" roleId="" deptId="" />
+	        <component id="jhcd" 				renderType="normal" 	userId="" roleId="" deptId="" />
+            <component id="lxdh" 				renderType="normal" 	userId="" roleId="" deptId="" />
+            <component id="beizhu" 				renderType="normal" 	userId="" roleId="" deptId="" />
+            <component id="DRAFT_DEPT"  		renderType="normal" 	userId="" roleId="" deptId="" />
+            <component id="CHECK_DEPT"  		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="blyj_reason_list"  	renderType="normal" 	userId="" roleId="" deptId="" />
+            <component id="file_list"  		  	renderType="normal" 	userId="" roleId="" deptId="" />
+            <component id="bianhao_button"   	renderType="normal" 	userId="" roleId="" deptId="" />
+            <component id="banjie" 				renderType="disable" userId="" roleId="" deptId="" />
+            <component id="xinjianzhengwen" 	renderType="normal" userId="" roleId="" deptId="" />
+            <component id="chakanzhengwen" 		renderType="normal" userId="" roleId="" deptId="" />
+            <component id="hechengzhengwen"		renderType="normal" userId="" roleId="" deptId="" />
+        </state>
+        <state id="秘书处处理">
+        	<component id="biaoti"  			renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="chengson" 			renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="jhcd" 				renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="lxdh" 				renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="beizhu" 				renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="DRAFT_DEPT"  		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="CHECK_DEPT"  		renderType="normal" 	userId="" roleId="" deptId="" />
+            <component id="blyj_reason_list"  	renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="file_list"  		  	renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="bianhao_button"   	renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="banjie" 				renderType="normal" userId="" roleId="" deptId="" />
+            <component id="xinjianzhengwen" 	renderType="disable" userId="" roleId="" deptId="" />
+            <component id="chakanzhengwen" 		renderType="normal" userId="" roleId="" deptId="" />
+            <component id="hechengzhengwen"		renderType="disable" userId="" roleId="" deptId="" />
+        </state>
+        <state id="readonly">
+        	<component id="biaoti"  			renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="chengson" 			renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="jhcd" 				renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="lxdh" 				renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="beizhu" 				renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="DRAFT_DEPT"  		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="CHECK_DEPT"  		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="blyj_reason_list"  	renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="file_list"  		  	renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="bianhao_button"   	renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="banjie" 				renderType="disable" userId="" roleId="" deptId="" />
+            <component id="xinjianzhengwen" 	renderType="disable" userId="" roleId="" deptId="" />
+            <component id="chakanzhengwen" 		renderType="disable" userId="" roleId="" deptId="" />
+            <component id="hechengzhengwen"		renderType="disable" userId="" roleId="" deptId="" />
+        </state>
+        <state id="did">
+        	<component id="biaoti"  			renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="chengson" 			renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="jhcd" 				renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="lxdh" 				renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="beizhu" 				renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="DRAFT_DEPT"  		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="CHECK_DEPT"  		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="blyj_reason_list"  	renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="file_list"  		  	renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="bianhao_button"   	renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="banjie" 				renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="xinjianzhengwen" 	renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="chakanzhengwen" 		renderType="normal" 	userId="" roleId="" deptId="" />
+            <component id="hechengzhengwen"		renderType="disable"	userId="" roleId="" deptId="" />
+        </state>
+        <state id="end">
+        	<component id="biaoti"  			renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="chengson" 			renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="jhcd" 				renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="lxdh" 				renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="beizhu" 				renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="DRAFT_DEPT"  		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="CHECK_DEPT"  		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="blyj_reason_list"  	renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="file_list"  		  	renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="bianhao_button"   	renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="banjie" 				renderType="disable" userId="" roleId="" deptId="" />
+            <component id="xinjianzhengwen" 	renderType="disable" userId="" roleId="" deptId="" />
+            <component id="chakanzhengwen" 		renderType="disable" userId="" roleId="" deptId="" />
+            <component id="hechengzhengwen"		renderType="disable" userId="" roleId="" deptId="" />
+        </state>
+        <state id="signTodo">
+        	<component id="biaoti"  			renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="chengson" 			renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="jhcd" 				renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="lxdh" 				renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="beizhu" 				renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="DRAFT_DEPT"  		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="CHECK_DEPT"  		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="blyj_reason_list"  	renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="file_list"  		  	renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="bianhao_button"   	renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="banjie" 				renderType="disable" userId="" roleId="" deptId="" />
+            <component id="xinjianzhengwen" 	renderType="disable" userId="" roleId="" deptId="" />
+            <component id="chakanzhengwen" 		renderType="disable" userId="" roleId="" deptId="" />
+            <component id="hechengzhengwen"		renderType="disable" userId="" roleId="" deptId="" />
+        </state>
+        <state id="signDid">
+        	<component id="biaoti"  			renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="chengson" 			renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="jhcd" 				renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="lxdh" 				renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="beizhu" 				renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="DRAFT_DEPT"  		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="CHECK_DEPT"  		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="blyj_reason_list"  	renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="file_list"  		  	renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="bianhao_button"   	renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="banjie" 				renderType="disable" userId="" roleId="" deptId="" />
+            <component id="xinjianzhengwen" 	renderType="disable" userId="" roleId="" deptId="" />
+            <component id="chakanzhengwen" 		renderType="disable" userId="" roleId="" deptId="" />
+            <component id="hechengzhengwen"		renderType="disable" userId="" roleId="" deptId="" />
+        </state>
+        <state id="signEnd">
+        	<component id="biaoti"  			renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="chengson" 			renderType="disable" 	userId="" roleId="" deptId="" />
+	        <component id="jhcd" 				renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="lxdh" 				renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="beizhu" 				renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="DRAFT_DEPT"  		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="CHECK_DEPT"  		renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="blyj_reason_list"  	renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="file_list"  		  	renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="bianhao_button"   	renderType="disable" 	userId="" roleId="" deptId="" />
+            <component id="banjie" 				renderType="disable" userId="" roleId="" deptId="" />
+            <component id="xinjianzhengwen" 	renderType="disable" userId="" roleId="" deptId="" />
+            <component id="chakanzhengwen" 		renderType="disable" userId="" roleId="" deptId="" />
+            <component id="hechengzhengwen"		renderType="disable" userId="" roleId="" deptId="" />
+        </state>
+    </state-group>
+</form-config>

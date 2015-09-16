@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<tree id="0">
+	 <item text="债权管理" id="entity" open="1" >
+	    <item text="债权信息维护" id="inqure" ><userdata name="link">zqgl/debt_debtList.do</userdata></item>
+		<item text="外部实体维护" id="capitalAddReduce" ><userdata name="link">zqgl/outEntity_outEntityList.do?zixunType=10</userdata></item>
+	</item>
+</tree> 

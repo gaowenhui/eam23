@@ -1,0 +1,48 @@
+delete from p_t_user where tid>9000 and tid<9999 ;
+delete from p_t_role where tid>9000 and tid<9999 ;
+delete from p_t_user_l_role where tid>9000 and tid<9999 ;
+
+insert into p_t_user(tid,login_id,username,password,sys_update_time) values(9001,'nigaoren1','拟稿人1','password',sysdate);
+insert into p_t_user(tid,login_id,username,password,sys_update_time) values(9002,'nigaoren1','拟稿人2','password',sysdate);
+insert into p_t_user(tid,login_id,username,password,sys_update_time) values(9003,'zuzhang1','组长1','password',sysdate);
+insert into p_t_user(tid,login_id,username,password,sys_update_time) values(9004,'zuzhang2','组长2','password',sysdate);
+insert into p_t_user(tid,login_id,username,password,sys_update_time) values(9005,'zuzhang2','综合1','password',sysdate);
+insert into p_t_user(tid,login_id,username,password,sys_update_time) values(9006,'zuzhang2','综合2','password',sysdate);
+insert into p_t_user(tid,login_id,username,password,sys_update_time) values(9007,'nigaoren1','部门领导1','password',sysdate);
+insert into p_t_user(tid,login_id,username,password,sys_update_time) values(9008,'nigaoren1','部门领导2','password',sysdate);
+insert into p_t_user(tid,login_id,username,password,sys_update_time) values(9009,'yewuzurenyuan1','业务组人员1','password',sysdate);
+insert into p_t_user(tid,login_id,username,password,sys_update_time) values(9010,'yewuzurenyuan2','业务组人员2','password',sysdate);
+insert into p_t_user(tid,login_id,username,password,sys_update_time) values(9011,'huiqianzonghe1','会签综合1','password',sysdate);
+insert into p_t_user(tid,login_id,username,password,sys_update_time) values(9012,'huiqianzonghe2','会签综合2','password',sysdate);
+insert into p_t_user(tid,login_id,username,password,sys_update_time) values(9013,'gongsilingdao1','公司领导1','password',sysdate);
+insert into p_t_user(tid,login_id,username,password,sys_update_time) values(9014,'gongsilingdao2','公司领导2','password',sysdate);
+insert into p_t_user(tid,login_id,username,password,sys_update_time) values(9015,'huiqianrenyuan1','会签人员1','password',sysdate);
+insert into p_t_user(tid,login_id,username,password,sys_update_time) values(9016,'huiqianrenyuan2','会签人员2','password',sysdate);
+insert into p_t_user(tid,login_id,username,password,sys_update_time) values(9017,'huiqianrenyuan3','会签人员3','password',sysdate);
+
+insert into p_t_role(tid,role_name,role_desc,sys_update_time) values(9001,'nigao','拟稿',sysdate);
+insert into p_t_role(tid,role_name,role_desc,sys_update_time) values(9002,'zuzhang','组长',sysdate);
+insert into p_t_role(tid,role_name,role_desc,sys_update_time) values(9003,'zonghe','综合',sysdate);
+insert into p_t_role(tid,role_name,role_desc,sys_update_time) values(9004,'bumenlingdao','部门领导',sysdate);
+insert into p_t_role(tid,role_name,role_desc,sys_update_time) values(9005,'yewuyunyingzu','业务运营组',sysdate);
+insert into p_t_role(tid,role_name,role_desc,sys_update_time) values(9006,'gongsilingdao','公司领导',sysdate);
+insert into p_t_role(tid,role_name,role_desc,sys_update_time) values(9007,'huiqianzonghe','会签综合',sysdate);
+insert into p_t_role(tid,role_name,role_desc,sys_update_time) values(9008,'huiqianrenyuan','会签人员',sysdate);
+
+insert into p_t_user_l_role (tid,user_id,role_id,sys_update_time)  values(9001,9001,9001,sysdate);
+insert into p_t_user_l_role (tid,user_id,role_id,sys_update_time)  values(9002,9002,9001,sysdate);
+insert into p_t_user_l_role (tid,user_id,role_id,sys_update_time)  values(9003,9003,9002,sysdate);
+insert into p_t_user_l_role (tid,user_id,role_id,sys_update_time)  values(9004,9004,9002,sysdate);
+insert into p_t_user_l_role (tid,user_id,role_id,sys_update_time)  values(9005,9005,9003,sysdate);
+insert into p_t_user_l_role (tid,user_id,role_id,sys_update_time)  values(9006,9006,9003,sysdate);
+insert into p_t_user_l_role (tid,user_id,role_id,sys_update_time)  values(9007,9007,9004,sysdate);
+insert into p_t_user_l_role (tid,user_id,role_id,sys_update_time)  values(9008,9008,9004,sysdate);
+insert into p_t_user_l_role (tid,user_id,role_id,sys_update_time)  values(9009,9009,9005,sysdate);
+insert into p_t_user_l_role (tid,user_id,role_id,sys_update_time)  values(9010,9010,9005,sysdate);
+insert into p_t_user_l_role (tid,user_id,role_id,sys_update_time)  values(9011,9011,9006,sysdate);
+insert into p_t_user_l_role (tid,user_id,role_id,sys_update_time)  values(9012,9012,9006,sysdate);
+insert into p_t_user_l_role (tid,user_id,role_id,sys_update_time)  values(9013,9013,9007,sysdate);
+insert into p_t_user_l_role (tid,user_id,role_id,sys_update_time)  values(9014,9014,9007,sysdate);
+insert into p_t_user_l_role (tid,user_id,role_id,sys_update_time)  values(9015,9015,9008,sysdate);
+insert into p_t_user_l_role (tid,user_id,role_id,sys_update_time)  values(9016,9016,9008,sysdate);
+insert into p_t_user_l_role (tid,user_id,role_id,sys_update_time)  values(9017,9017,9008,sysdate);

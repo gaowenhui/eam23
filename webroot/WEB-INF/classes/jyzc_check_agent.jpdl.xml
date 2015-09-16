@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<process name="jyzc_check_agent" xmlns="http://jbpm.org/4.4/jpdl">
+	
+	<start g="59,261,48,48" name="start">
+		<transition g="-53,-17" name="开始" to="拟稿"/>
+	</start>
+
+	<task assignee="#{assignee}" g="150,258,92,52" name="拟稿">
+		<transition g="-53,-17" name="建银实业综合处理" to="建银实业综合处理"/>
+		<transition g="-53,-17" name="backto建银实业综合处理" to="建银实业综合处理"/>
+		<transition g="-83,-17" name="作废" to="结束">
+		   <event-listener class="com.tansun.eam2.jygdzc.listener.ReleaseZzjzNumEventListener"/>
+			<event-listener class="com.tansun.eam2.common.workflow.listener.AbandonEventListener"/>
+		</transition>
+	</task>
+
+	<task g="304,258,151,52" name="建银实业综合处理">
+		<transition g="-53,-17" name="建银实业综合处理" to="建银实业综合处理"/>
+		<transition g="-53,-17" name="拟稿" to="拟稿"/>
+		<transition g="-53,-17" name="建银实业经办人处理" to="建银实业经办人处理"/>
+		<transition g="-141,-22" name="建银实业部门领导审核" to="建银实业部门领导审核"/>
+      	<transition g="-165,-22" name="建银实业分管公司领导审核" to="建银实业分管公司领导审核"/>
+      	<transition g="-141,-22" name="业务管理部门综合处理" to="业务管理部门综合处理"/>
+		<transition g="-53,-17" name="backto拟稿" to="拟稿"/>
+		<transition g="-53,-17" name="backto建银实业经办人处理" to="建银实业经办人处理"/>
+		<transition g="-53,-17" name="backto建银实业综合处理" to="建银实业综合处理"/>
+		<transition g="-53,-17" name="backto建银实业部门领导审核" to="建银实业部门领导审核"/>
+		<transition g="-53,-17" name="backto建银实业分管公司领导审核" to="建银实业分管公司领导审核"/>
+		<transition g="-53,-17" name="backto业务管理部门综合处理" to="业务管理部门综合处理"/>
+		<transition g="-53,-17" name="流程办结" to="结束">
+			<event-listener class="com.tansun.eam2.common.workflow.listener.EndEventListener"/>
+		</transition>
+	</task>
+
+	<task g="115,144,158,50" name="建银实业经办人处理">
+		<transition g="-53,-17" name="建银实业经办人处理" to="建银实业经办人处理"/>
+		<transition g="-53,-17" name="建银实业综合处理" to="建银实业综合处理"/>
+		<transition g="-53,-17" name="建银实业部门领导审核" to="建银实业部门领导审核"/>
+		<transition g="-53,-17" name="建银实业分管公司领导审核" to="建银实业分管公司领导审核"/>
+		<transition g="-53,-17" name="backto建银实业综合处理" to="建银实业综合处理"/>
+		<transition g="-53,-17" name="backto建银实业部门领导审核" to="建银实业部门领导审核"/>
+		<transition g="-53,-17" name="backto建银实业分管公司领导审核" to="建银实业分管公司领导审核"/>
+		<transition g="-53,-17" name="backto建银实业经办人处理" to="建银实业经办人处理"/>
+	</task>
+
+	<task g="492,144,169,55" name="建银实业部门领导审核">
+		<transition g="-53,-17" name="建银实业部门领导审核" to="建银实业部门领导审核"/>
+		<transition g="-53,-17" name="建银实业经办人处理" to="建银实业经办人处理"/>
+		<transition g="-53,-17" name="建银实业分管公司领导审核" to="建银实业分管公司领导审核"/>
+		<transition g="-53,-17" name="backto建银实业经办人处理" to="建银实业经办人处理"/>
+		<transition g="-53,-17" name="backto建银实业分管公司领导审核" to="建银实业分管公司领导审核"/>
+		<transition g="-53,-17" name="backto建银实业部门领导审核" to="建银实业部门领导审核"/>
+		<transition g="-53,-17" name="backto建银实业综合处理" to="建银实业综合处理"/>
+      <transition g="-117,-22" name="建银实业综合处理" to="建银实业综合处理"/>
+	</task>
+
+	<task g="278,31,199,51" name="建银实业分管公司领导审核">
+		<transition g="-53,-17" name="建银实业分管公司领导审核" to="建银实业分管公司领导审核"/>
+		<transition g="-53,-17" name="建银实业经办人处理" to="建银实业经办人处理"/>
+		<transition g="-53,-17" name="建银实业部门领导审核" to="建银实业部门领导审核"/>
+		<transition g="-53,-17" name="backto建银实业经办人处理" to="建银实业经办人处理"/>
+		<transition g="-53,-17" name="backto建银实业部门领导审核" to="建银实业部门领导审核"/>
+		<transition g="-53,-17" name="backto建银实业分管公司领导审核" to="建银实业分管公司领导审核"/>
+		<transition g="-53,-17" name="backto建银实业综合处理" to="建银实业综合处理"/>
+      <transition g="-117,-22" name="建银实业综合处理" to="建银实业综合处理"/>
+	</task>
+
+	<task g="533,362,135,52" name="业务管理组处理">
+		<transition g="-53,-17" name="业务管理组处理" to="业务管理组处理"/>
+		<transition g="-53,-17" name="业务管理部门领导审核" to="业务管理部门领导审核"/>
+		<transition g="-53,-17" name="业务管理部门综合确认" to="业务管理部门综合处理"/>
+		<transition g="-53,-17" name="backto业务管理部门领导审核" to="业务管理部门领导审核"/>
+		<transition g="-53,-17" name="backto业务管理部门综合处理" to="业务管理部门综合处理"/>
+		<transition g="-53,-17" name="backto业务管理组处理" to="业务管理组处理"/>
+	</task>
+
+	<task g="522,574,165,50" name="业务管理部门领导审核">
+		<transition g="-53,-17" name="业务管理部门领导审核" to="业务管理部门领导审核"/>
+		<transition g="-53,-17" name="业务管理组处理" to="业务管理组处理"/>
+		<transition g="-53,-17" name="业务管理部门综合处理" to="业务管理部门综合处理"/>
+		<transition g="-53,-17" name="backto业务管理组处理" to="业务管理组处理"/>
+		<transition g="-53,-17" name="backto业务管理部门综合处理" to="业务管理部门综合处理"/>
+		<transition g="-51,-43" name="backto业务管理部门领导审核" to="业务管理部门领导审核"/>
+	</task>
+
+	<task g="300,463,161,50" name="业务管理部门综合处理">
+		<transition g="-44,-15" name="业务管理部门综合处理" to="业务管理部门综合处理"/>
+		<transition g="-53,-17" name="业务管理组处理" to="业务管理组处理"/>
+		<transition g="-53,-17" name="业务管理部门领导审核" to="业务管理部门领导审核"/>
+		<transition g="-53,-17" name="业务运营组处理" to="业务运营组处理"/>
+		<transition g="-53,-17" name="backto业务管理组处理" to="业务管理组处理"/>
+		<transition g="-53,-17" name="backto业务管理部门领导审核" to="业务管理部门领导审核"/>
+		<transition g="-53,-17" name="backto业务运营组处理" to="业务运营组处理"/>
+		<transition g="-53,-17" name="backto业务运营组处理" to="业务运营组处理"/>
+		<transition g="-53,-17" name="backto业务管理部门综合处理" to="业务管理部门综合处理"/>
+		<transition g="-53,-17" name="backto建银实业综合处理" to="建银实业综合处理"/>
+		<transition g="-53,-17" name="流程办结" to="结束">
+			<event-listener class="com.tansun.eam2.common.workflow.listener.EndEventListener"/>
+		</transition>
+      <transition g="-117,-22" name="建银实业综合处理" to="建银实业综合处理"/>
+	</task>
+	
+	<task g="319,614,126,52" name="业务运营组处理">
+		<transition g="-53,-17" name="业务运营组处理" to="业务运营组处理"/>
+		<transition g="-53,-17" name="业务管理部门综合处理" to="业务管理部门综合处理"/>
+		<transition g="-53,-17" name="公司领导批示" to="公司领导批示"/>
+		<transition g="-53,-17" name="backto业务管理部门综合处理" to="业务管理部门综合处理"/>
+		<transition g="-53,-17" name="backto公司领导批示" to="公司领导批示"/>
+		<transition g="-53,-17" name="backto业务运营组处理" to="业务运营组处理"/>
+	</task>
+
+	<task g="326,772,116,52" name="公司领导批示">
+		<transition g="-206,284" name="公司领导批示" to="公司领导批示"/>
+		<transition g="-53,-17" name="业务运营组处理" to="业务运营组处理"/>
+		<transition g="-53,-17" name="backto业务运营组处理" to="业务运营组处理"/>
+	</task>
+	
+	<end g="170,467,48,48" name="结束"/>
+	<migrate-instances versions="1..x"/>
+</process>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<process name="cjtz_assetdisposalsubproc" xmlns="http://jbpm.org/4.4/jpdl">
+	<description>
+		添加监听器：
+			com.tansun.eam2.zccz.listener.HYNGTJEventListener_跟新会议状态为上会中、跟新会议中的项目状态为上会中
+			com.tansun.eam2.zccz.listener.HYHYAPEventListener_跟新会议中项目状态为主持人提交意见中
+			com.tansun.eam2.zccz.listener.HYZCSPEventListener_跟新会议中的项目为意见汇总中
+			com.tansun.eam2.zccz.listener.HYYJHZEventListener_跟新会议状态为会议纪要整理中
+			com.tansun.eam2.zccz.listener.HYHYGZEventListener_跟新会议状态为上会完毕、会议中项目状态为上会完毕
+	</description>
+	<start g="382,33,48,48" name="start">
+      <transition g="-54,-63" name="开始" to="会议组织"/>
+	</start>
+   <task g="361,137,92,52" name="会议组织">
+      <transition g="-126,-83" name="部门领导审核" to="部门领导审核">
+      	<event-listener class="com.tansun.eam2.zccz.listener.HYNGTJEventListener"/>
+      </transition>
+      <transition g="-83,-17" name="作废" to="结束">
+      	<event-listener class="com.tansun.eam2.zccz.listener.HYLCZFEventListener"/>
+		<event-listener class="com.tansun.eam2.common.workflow.listener.AbandonEventListener"/>
+	  </transition>
+      <transition g="-109,67" name="backto部门领导审核" to="部门领导审核"/>
+      <transition g="-109,67" name="会议组织" to="会议组织"/>
+   </task>
+   <task g="361,263,92,52" name="部门领导审核">
+      <transition g="-109,67" name="部门领导审核" to="部门领导审核"/>
+      <transition g="-134,-85" name="业务运营组处理" to="业务运营组处理"/>
+      <transition g="-109,67" name="会议组织" to="会议组织"/>
+      <transition g="-126,-83" name="backto会议组织" to="会议组织"/>
+      <transition g="-109,67" name="backto部门领导审核" to="部门领导审核"/>
+      <transition g="-134,-85" name="backto业务运营组处理" to="业务运营组处理"/>
+   </task>
+   <task g="350,403,113,52" name="业务运营组处理">
+	  <transition g="-134,-85" name="业务运营组处理" to="业务运营组处理"/>
+      <transition g="146,-12" name="主持人确认" to="主持人确认"/>
+      <transition g="-108,-76" name="安排会议" to="安排会议"/>
+      <transition g="-141,75" name="部门领导审核" to="部门领导审核"/>
+      <transition g="-109,67" name="backto部门领导审核" to="部门领导审核"/>
+      <transition g="-134,-85" name="backto业务运营组处理" to="业务运营组处理"/>
+      <transition g="-134,-85" name="backto主持人确认" to="主持人确认"/>
+      <transition g="-134,-85" name="backto安排会议" to="安排会议"/>
+   </task>
+   <task g="551,403,92,52" name="主持人确认">
+      <transition g="147,17" name="业务运营组处理" to="业务运营组处理"/>
+      <transition g="-134,-85" name="backto业务运营组处理" to="业务运营组处理"/>
+   </task>
+   <task g="361,531,92,52" name="安排会议">
+      <transition g="-108,-82" name="主持人审批" to="主持人审批">
+      	<event-listener class="com.tansun.eam2.zccz.listener.HYHYAPEventListener"/>
+      </transition>
+      <transition g="-149,68" name="业务运营组处理" to="业务运营组处理"/>
+      <transition g="-134,-85" name="backto业务运营组处理" to="业务运营组处理"/>
+   </task>
+   <task g="360,651,92,52" name="主持人审批">
+      <transition g="-108,-65" name="整理会议纪要" to="整理会议纪要">
+      	<event-listener class="com.tansun.eam2.zccz.listener.HYZCSPEventListener"/>
+      	<event-listener class="com.tansun.eam2.zccz.listener.HYYJHZEventListener"/>
+      </transition>
+   </task>
+   <task g="362,792,92,52" name="整理会议纪要">
+      <transition g="-147,-68" name="整理会议纪要结束" to="结束">
+      	<event-listener class="com.tansun.eam2.zccz.listener.HYHYGZEventListener"/>
+      	<event-listener class="com.tansun.eam2.common.workflow.listener.EndEventListener"/>
+	  </transition>
+   </task>
+   <end g="383,910,48,48" name="结束"/>
+   <migrate-instances versions="1..x"/>
+</process>

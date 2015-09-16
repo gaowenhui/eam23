@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="priv" namespace="/priv" extends="default">
+		<action name="role_*" method="{1}" class="com.tansun.rdp4j.generalapps.privileges.action.RoleAction">
+		   <result name="rolelist"  >/pages/rdp4j/generalapps/priv/rolelist.jsp</result>
+			<result name="add" type="freemarker">/pages/rdp4j/generalapps/priv/roleadd.jsp</result>
+			<result name="addSub" type="redirect">/priv/role_list.do</result>
+			<result name="edit" type="freemarker">/pages/rdp4j/generalapps/priv/roleedit.jsp</result>
+			<result name="editSub" type="redirect">/priv/role_list.do</result>
+			<result name="editFunc" type="freemarker">/pages/rdp4j/generalapps/priv/roleeditfun.jsp</result>
+			<result name="sublist" type="freemarker">/pages/rdp4j/generalapps/priv/rolesublist.jsp</result>
+			<result name="deleterole" >/pages/rdp4j/generalapps/priv/close.jsp</result>
+			<result name="query"  >/pages/rdp4j/generalapps/funcgroup/listfunctionres.jsp</result>
+			<result name="listuser"  >/pages/rdp4j/generalapps/priv/rolelistuser.jsp</result>
+		</action>
+	</package>
+</struts>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	
+	<constant name="struts.devMode" value="true"/>
+
+	<package name="cjtz" namespace="/cjtz" extends="default">
+		<action name="index">
+			<result>/pages/eam2/cjtz/index.jsp</result>
+		</action>
+		
+		<!-- 承继业务投资 -->
+	    <action name="czCztzfaXxAction_*"  method="{1}" class="com.tansun.eam2.cjtz.action.CzCztzfaXxAction">
+	    <!-- 	<result name="tomodify" type="chain">
+				<param name="actionName">czCztzfaXxAction_modifyHead</param>
+				<param name="namespace">/cjtz</param>
+			</result> -->
+			<result name="toWorkflow" type='chain'>
+      			<param name="actionName">cjtzspWorkflow_toResult</param>
+            	<param name="namespace">/cjtzWorkflow</param>
+      		</result>
+      		<result name="tomodify" type='chain'>
+      			<param name="actionName">cjtzspWorkflow_toDraft</param>
+            	<param name="namespace">/cjtzWorkflow</param>
+      		</result>
+	   		<result name="showCzCztzfaXx">/pages/eam2/cjtz/investment/inherit-investment-List.jsp</result>
+	   		<result name="showCjtzCld">/pages/eam2/zccz/appAdvice/cjtz_jibenxinxi.jsp</result>
+	   		<result name="showZcxx">/pages/eam2/cjtz/investment/investment_zc.jsp</result>
+      		<result name="showCldxx">/pages/eam2/cjtz/investment/investment_cld.jsp</result>
+	    </action>
+	    <action name="CzZcXxAction_*"  method="{1}" class="com.tansun.eam2.cjtz.action.CzZcXxAction">
+	   		<result name="showAddAsset">/pages/eam2/cjtz/investment/manageInfo.jsp</result>
+	   		<result name="showAddAsset2">/pages/eam2/cjtz/investment/tenancyInfo.jsp</result>
+	    </action>	 
+	    <action name="dealTrace2_*"  method="{1}" class="com.tansun.eam2.cjtz.action.DealTrace2Action">
+			<result name="toWorkflow" type='chain'>
+      			<param name="actionName">cjtz_sqja_Workflow_toResult</param>
+            	<param name="namespace">/cjtzWorkflow</param>
+      		</result>
+      		<result name="tomodify" type='chain'>
+      			<param name="actionName">cjtz_sqja_Workflow_toDraft</param>
+            	<param name="namespace">/cjtzWorkflow</param>
+      		</result>
+	   		<!-- <result name="addHead" type="chain">
+				<param name="actionName">dealTrace2_modifyHead</param>
+				<param name="namespace">/cjtz</param>
+			</result> -->
+	   		<result name="addHead">				/pages/eam2/cjtz/dealTrace1/shenqinjiean4cjtz.jsp</result>
+	   		<result name="zxqk">				/pages/eam2/cjtz/dealTrace1/zxqk4cjtz.jsp</result>
+	   		<result name="disposeItemInfo">		/pages/eam2/cjtz/dealTrace1/dispose_item.jsp</result>
+	   		<result name="zhixingqingkuang">	/pages/eam2/cjtz/dealTrace1/zhixingqingkuang.jsp</result>
+	    </action>
+	    <action name="supervision_*"  method="{1}" class="com.tansun.eam2.cjtz.action.SupervisionAction">
+	   		<!--  <result name="tomodify" type="chain">
+				<param name="actionName">supervision_modifyHead</param>
+				<param name="namespace">/cjtz</param>
+			</result>-->
+			<result name="toWorkflow" type='chain'>
+      			<param name="actionName">cjtz_duban_Workflow_toResult</param>
+            	<param name="namespace">/cjtzWorkflow</param>
+      		</result>
+      		<result name="tomodify" type='chain'>
+      			<param name="actionName">cjtz_duban_Workflow_toDraft</param>
+            	<param name="namespace">/cjtzWorkflow</param>
+      		</result>
+	   	<!-- <result name="addHead" type="chain">
+				<param name="actionName">supervision_modifyHead</param>
+				<param name="namespace">/cjtz</param>
+			</result> -->	
+	   		<result name="addHead">				/pages/eam2/cjtz/dealTrace1/duban4cjtz.jsp</result>
+	   		<result name="zhixingqingkuang">	/pages/eam2/cjtz/dealTrace1/zhixingqingkuang.jsp</result>
+	    </action>
+	    <action name="supervision2_*"  method="{1}" class="com.tansun.eam2.cjtz.action.SupervisionAction">
+	   		<!--  <result name="tomodify" type="chain">
+				<param name="actionName">supervision_modifyHead</param>
+				<param name="namespace">/cjtz</param>
+			</result>-->
+			<result name="toWorkflow" type='chain'>
+      			<param name="actionName">cjtz_duban_Workflow_toResult</param>
+            	<param name="namespace">/cjtzWorkflow</param>
+      		</result>
+      		<result name="tomodify" type='chain'>
+      			<param name="actionName">cjtz_duban_Workflow_toDraft</param>
+            	<param name="namespace">/cjtzWorkflow</param>
+      		</result>
+	   	<!-- 	<result name="addHead" type="chain">
+				<param name="actionName">supervision2_modifyHead</param>
+				<param name="namespace">/cjtz</param>
+			</result> -->
+	   		<result name="addHead">				/pages/eam2/cjtz/dealTrace1/duban4bld.jsp</result>
+	    </action>
+	    
+	    <action name="cjtzBodyAction_*" method="{1}" class="com.tansun.eam2.cjtz.action.CjtzBodyAction">
+	    	<result>/cjtz/czCztzfaXxAction_newHead.do</result>
+	    </action>
+	</package>
+	<include file="com/tansun/eam2/zyzc/workflow/buy/action/cjtz_workflow.xml"/>
+</struts>

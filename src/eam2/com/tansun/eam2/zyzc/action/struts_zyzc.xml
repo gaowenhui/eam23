@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="zyzc" namespace="/zyzc" extends="default">
+		<action name="index">
+			<result>/pages/eam2/zyzc/default.jsp</result>
+		</action>
+		
+		<!-- zichanchaxun 资产查询 start -->
+		<action name="ZCQuery_*" method="{1}" class="com.tansun.eam2.zyzc.action.ZCQueryAction">
+			<result name="init">/pages/eam2/zyzc/zcQuery/zcquery.jsp</result>
+			<result name="query">/pages/eam2/zyzc/zcQuery/zcquery.jsp</result>
+			<result name="zcManage">/pages/eam2/zyzc/zcManage/zcManageMainPage.jsp</result>
+			<result name="zcManageadd">/pages/eam2/zyzc/zcManage/addGoods.jsp</result>
+			<result name="returnZcManagePage">/pages/eam2/zyzc/zcManage/addGoods.jsp</result>
+			<result name="viewGoodDetailPage">/pages/eam2/zyzc/zcManage/viewGoods.jsp</result>
+			<result name="modGoodDetailPage">/pages/eam2/zyzc/zcManage/modifyGoods.jsp</result>
+			<result name="purchase">/pages/eam2/zyzc/goodPurchase/addPurchaseGoods.jsp</result>
+			<result name="purchaseGoodQuery">/pages/eam2/zyzc/goodPurchase/purchaseGoodsQuery.jsp</result>
+			<result name="addOtherGoods">/pages/eam2/zyzc/goodPurchase/addOtherGoods.jsp</result>
+			<result name="addStockGoods">/pages/eam2/zyzc/stock/addStockGoods.jsp</result>
+			<result name="manualAddGoods">/pages/eam2/zyzc/stock/manualAddGoods.jsp</result>
+			<result name="addGoodsFromPurchase">/pages/eam2/zyzc/stock/addGoodsFromPurchase.jsp</result>
+			<result name="stockGoodsQuery">/pages/eam2/zyzc/stock/stockGoodsQuery.jsp</result>
+			<result name="tocheckobject">/pages/eam2/zyzc/toCheck/checkObjectquery.jsp</result>
+			<result name="tocheckstock">/pages/eam2/zyzc/toCheck/stockGoodsQuery.jsp</result>
+			<result name="personal_comsuming">/pages/eam2/zyzc/consuming/addConsumingGoods.jsp</result>
+			<result name="dept_comsuming">/pages/eam2/zyzc/consuming/addConsumingGoods.jsp</result>
+			<result name="comsumingQuery">/pages/eam2/zyzc/consuming/consumingGoodsQuery.jsp</result>
+			<result name="personal_borrow">/pages/eam2/zyzc/borrow/addBorrowGoods.jsp</result>
+			<result name="borrowQuery">/pages/eam2/zyzc/borrow/borrowGoodsQuery.jsp</result>
+			<result name="dept_borrow">/pages/eam2/zyzc/borrow/addBorrowGoods.jsp</result>
+			<result name="reborrow">/pages/eam2/zyzc/borrow/addReBorrowGoods.jsp</result>
+			<result name="gooddeploy">/pages/eam2/zyzc/goodDeploy/addGoodsDeploy.jsp</result>
+			<result name="deployGoodQuery">/pages/eam2/zyzc/goodDeploy/deployGoodsQuery.jsp</result>
+			<result name="goodrenewal">/pages/eam2/zyzc/goodRenewal/addGoodsRenewal.jsp</result>
+			<result name="addDiscard">/pages/eam2/zyzc/discard/addDiscardGoodsQuery.jsp</result>
+			<result name="discardQuery">/pages/eam2/zyzc/discard/discardQuery.jsp</result>
+			<result name="goodreturn">/pages/eam2/zyzc/goodReturn/addReturnGood.jsp</result>
+			<result name="goodchange_before">/pages/eam2/zyzc/goodChange/addExchangeGoods.jsp</result>
+			<result name="goodchange_after">/pages/eam2/zyzc/goodChange/addAfterExchangeGoods.jsp</result>
+			<result name="modifyGoodDetail">/pages/eam2/zyzc/zcManage/modifyGoods.jsp</result>
+			<result name="xubaoinit">/pages/eam2/zyzc/goodRenewal/xubaoinit.jsp</result>
+		</action>
+		
+		<action name="ZCDetail_*" method="{1}" class="com.tansun.eam2.zyzc.action.ZCDetailAction">
+			<result name="view">/pages/eam2/zyzc/</result>
+		</action>
+		<!-- zichanchaxun 资产查询 end -->
+		
+		<!-- biaotou 表头 start -->
+		<action name="ZCManageHead_*" method="{1}" class="com.tansun.eam2.zyzc.action.ZCManageHeadAction">
+		 	<result name="modify" type="chain">
+				<param name="actionName">ZCManageHead_modifyHead</param>
+				<param name="namespace">/zyzc</param>
+			</result> 
+			<result name="toWorkflow" type='chain'>
+      			<param name="actionName">zyzcWorkflow_toResult</param>
+            	<param name="namespace">/zyzcWorkflow</param>
+      		</result>
+      		<result name="tomodify" type='chain'>
+      			<param name="actionName">zyzcWorkflow_toDraft</param>
+            	<param name="namespace">/zyzcWorkflow</param>
+      		</result>
+			<result name="purchase">/pages/eam2/zyzc/goodPurchase/purchaseHead.jsp</result>
+			<result name="tostock">/pages/eam2/zyzc/stock/inStock.jsp</result>
+			<result name="dept_comsuming">/pages/eam2/zyzc/consuming/deptApplyHead.jsp</result>
+			<result name="personal_comsuming">/pages/eam2/zyzc/consuming/personApplyHead.jsp</result>
+		    <result name="dept_borrow">/pages/eam2/zyzc/borrow/deptBorrowHead.jsp</result>
+			<result name="personal_borrow">/pages/eam2/zyzc/borrow/personBorrowHead.jsp</result>
+			<result name="reborrow">/pages/eam2/zyzc/borrow/reborrowApply.jsp</result>
+			<result name="tocheckobject">/pages/eam2/zyzc/toCheck/checkObjectHead.jsp</result>
+			<result name="tocheckstock">/pages/eam2/zyzc/toCheck/checkStockHead.jsp</result>
+			<result name="goodreturn">/pages/eam2/zyzc/goodReturn/backStockHead.jsp</result>
+			<result name="gooddeploy">/pages/eam2/zyzc/goodDeploy/gooddeploy.jsp</result>
+			<result name="goodchange">/pages/eam2/zyzc/goodChange/exchangeHead.jsp</result>
+			<result name="goodrenewal">/pages/eam2/zyzc/goodRenewal/contInsuranceHead.jsp</result>
+			<result name="discard">/pages/eam2/zyzc/discard/discardHead.jsp</result>
+		</action>
+		<!-- biaotou 表头 end -->
+		
+		<!-- 表体 -->
+		<action name="ZCManageBody_*" method="{1}" class="com.tansun.eam2.zyzc.action.ZCManageBodyAction">
+			<result name="tomodify" type="chain">
+				<param name="actionName">ZCManageHead_modifyHead</param>
+				<param name="namespace">/zyzc</param>
+			</result>
+			<result name="purchase">/pages/eam2/zyzc/goodPurchase/modifyGoods.jsp</result>
+			<result name="purchase_add">/pages/eam2/zyzc/goodPurchase/purchaseAddBody.jsp</result>
+			<result name="purchase_edit">/pages/eam2/zyzc/goodPurchase/purchaseEditBody.jsp</result>
+			<result name="purchase_view_body">/pages/eam2/zyzc/goodPurchase/viewGoods.jsp</result>
+			<result name="addOtherGoods">/pages/eam2/zyzc/goodPurchase/addOtherGoods.jsp</result>
+			<result name="tostock_edit">/pages/eam2/zyzc/stock/modifyGoods.jsp</result>
+			<result name="manualAddGoods">/pages/eam2/zyzc/stock/manualAddGoods.jsp</result>
+			<result name="tostock_view_body">/pages/eam2/zyzc/goodPurchase/viewGoods.jsp</result>
+			<result name="zcBook_lowValue_view">/pages/eam2/zyzc/discard/viewGoods.jsp</result>
+			<result name="zcBook_swtz_view">/pages/eam2/zyzc/discard/viewGoods.jsp</result>
+			<result name="zcBook_kctz_view">/pages/eam2/zyzc/discard/viewGoods.jsp</result>
+			<result name="zcBook_consuming_view">/pages/eam2/zyzc/discard/viewGoods.jsp</result>
+			<result name="personal_comsuming">/pages/eam2/zyzc/consuming/personalModifyGoods.jsp</result>
+			<result name="personalComsumingPage">/pages/eam2/zyzc/consuming/addPersonalConsumingGoods.jsp</result>
+			<result name="personal_comsuming_edit">/pages/eam2/zyzc/consuming/zyzcdetail.jsp</result>
+			<result name="personal_comsuming_view">/pages/eam2/zyzc/consuming/viewPersonalConsumingGoods.jsp</result>
+			<result name="dept_comsuming">/pages/eam2/zyzc/consuming/modifyGoods.jsp</result>
+			<result name="dept_comsuming_view">/pages/eam2/zyzc/consuming/viewDeptConsumingGoods.jsp</result>
+			<result name="dept_comsuming_addZcbh">/pages/eam2/zyzc/consuming/generZcbh.jsp</result>
+			<result name="personal_borrow">/pages/eam2/zyzc/borrow/personalModifyGoods.jsp</result>
+			<result name="personal_borrow_view">/pages/eam2/zyzc/borrow/viewPersonalBorrowGoods.jsp</result>
+			<result name="personBorrowPage">/pages/eam2/zyzc/borrow/addPersonalBorrowGoods.jsp</result>
+			<result name="dept_borrow">/pages/eam2/zyzc/borrow/modifyGoods.jsp</result>
+			<result name="dept_borrow_view">/pages/eam2/zyzc/borrow/viewDeptBorrowGoods.jsp</result>
+			<result name="dept_borrow_addZcbh">/pages/eam2/zyzc/borrow/generZcbh.jsp</result>
+			<result name="reborrow">/pages/eam2/zyzc/borrow/modifyReborrowGoods.jsp</result>
+			<result name="reborrow_view">/pages/eam2/zyzc/borrow/viewReBorrowGoods.jsp</result>
+			<result name="tocheckstock">/pages/eam2/zyzc/toCheck/modifyGoods.jsp</result>
+			<result name="tocheckstock_view">/pages/eam2/zyzc/toCheck/viewPKGoods.jsp</result>
+			<result name="tocheckobject_view">/pages/eam2/zyzc/toCheck/viewPDGoods.jsp</result>
+			<result name="goodchange_before">/pages/eam2/zyzc/goodChange/modifyGoods.jsp</result>
+			<result name="goodchange_before_view">/pages/eam2/zyzc/goodChange/viewBeforeChangeGoods.jsp</result>
+			<result name="goodchange_after">/pages/eam2/zyzc/goodChange/modifyGoods.jsp</result>
+			<result name="goodchange_after_view">/pages/eam2/zyzc/goodChange/viewAfterChangeGoods.jsp</result>
+			<result name="gooddeploy">/pages/eam2/zyzc/goodDeploy/modifyGoods.jsp</result>
+			<result name="gooddeploy_view">/pages/eam2/zyzc/goodDeploy/viewDeployGoods.jsp</result>
+			<result name="goodrenewal">/pages/eam2/zyzc/goodRenewal/modifyGoods.jsp</result>
+			<result name="goodrenewal_view">/pages/eam2/zyzc/discard/viewGoods.jsp</result>
+			<result name="goodreturn">/pages/eam2/zyzc/goodReturn/modifyGoods.jsp</result>
+			<result name="tokenQuery">/pages/eam2/zyzc/token/tokenQuery.jsp</result>
+			<result name="goodreturn_view">/pages/eam2/zyzc/discard/viewGoods.jsp</result>
+			<result name="discard">/pages/eam2/zyzc/discard/editBody.jsp</result>
+			<result name="discard_view">/pages/eam2/zyzc/discard/viewGoods.jsp</result>
+			<result name="searchDetail">/pages/eam2/zyzc/goodRenewal/searchDetail.jsp</result>
+		</action>
+		<!-- 表体 -->
+		
+		<!-- zichantaizhang 台账  start -->
+		<action name="ZCBookQuery_*" method="{1}" class="com.tansun.eam2.zyzc.action.ZCBookQueryAction">
+			<result name="cggdzc_init">/pages/eam2/zyzc/accountManagement/purchaseLedger/FixedAssetsHead.jsp</result>
+			<result name="cgdzzc_init">/pages/eam2/zyzc/accountManagement/purchaseLedger/LowValueHead.jsp</result>
+			<result name="cgyhzc_init">/pages/eam2/zyzc/accountManagement/purchaseLedger/ConsumablesHead.jsp</result>
+			<result name="kcgdzc_init">/pages/eam2/zyzc/accountManagement/inventoryLedger/FixedAssetsHead.jsp</result>
+			<result name="kcdzzc_init">/pages/eam2/zyzc/accountManagement/inventoryLedger/LowValueHead.jsp</result>
+			<result name="kcyhzc_init">/pages/eam2/zyzc/accountManagement/inventoryLedger/ConsumablesHead.jsp</result>
+			<result name="swgdzc_init">/pages/eam2/zyzc/accountManagement/realLedger/FixedAssetsHead.jsp</result>
+			<result name="swdzzc_init">/pages/eam2/zyzc/accountManagement/realLedger/LowValueHead.jsp</result>
+			<result name="cggdzc_query">/pages/eam2/zyzc/accountManagement/purchaseLedger/FixedAssetsHead.jsp</result>
+			<result name="cgdzzc_query">/pages/eam2/zyzc/accountManagement/purchaseLedger/LowValueHead.jsp</result>
+			<result name="cgyhzc_query">/pages/eam2/zyzc/accountManagement/purchaseLedger/ConsumablesHead.jsp</result>
+			<result name="kcgdzc_query">/pages/eam2/zyzc/accountManagement/inventoryLedger/FixedAssetsHead.jsp</result>
+			<result name="kcdzzc_query">/pages/eam2/zyzc/accountManagement/inventoryLedger/LowValueHead.jsp</result>
+			<result name="kcyhzc_query">/pages/eam2/zyzc/accountManagement/inventoryLedger/ConsumablesHead.jsp</result>
+			<result name="swgdzc_query">/pages/eam2/zyzc/accountManagement/realLedger/FixedAssetsHead.jsp</result>
+			<result name="swdzzc_query">/pages/eam2/zyzc/accountManagement/realLedger/LowValueHead.jsp</result>
+			<result name="kcgdzc_queryBySelectCondition">/pages/eam2/zyzc/accountManagement/inventoryLedger/FixedAssetsHead.jsp</result>
+			<result name="swgdzc_queryBySelectCondition">/pages/eam2/zyzc/accountManagement/realLedger/FixedAssetsHead.jsp</result>
+			<result name="swdzzc_queryBySelectCondition">/pages/eam2/zyzc/accountManagement/realLedger/LowValueHead.jsp</result>
+			<result name="swyhzc_queryBySelectCondition">/pages/eam2/zyzc/accountManagement/realLedger/ConsumablesHead.jsp</result>
+		</action>
+		
+		<action name="ZCBookManage_*" method="{1}" class="com.tansun.eam2.zyzc.action.ZCBookManageAction">
+			<result name="addSuccess">/pages/eam2/zyzc/accountManagement/inventoryLedger/InventoryLedgerAdd.jsp</result>
+			<result name="saveSuccess">/pages/eam2/zyzc/accountManagement/inventoryLedger/FixedAssetsHead.jsp</result>
+			<result name="zcBook_add">/pages/eam2/zyzc/zcbook/addbook.jsp</result>
+			<result name="zcBook">/pages/eam2/zyzc/zcbook/addbook.jsp</result>
+			<result name="zcBook_modify">/pages/eam2/zyzc/zcbook/addbook.jsp</result>
+			<result name="zcBook_view">/pages/eam2/zyzc/zcbook/addbook.jsp</result>
+			<result name="viewRecord">/pages/eam2/zyzc/accountManagement/inventoryLedger/InventoryLedgerAdd.jsp</result>
+			<result name="modifyRecord">/pages/eam2/zyzc/accountManagement/inventoryLedger/InventoryLedgerAdd.jsp</result>
+		</action>
+		<!-- zichantaizhang 台账  end -->
+		
+		<!-- panyingpankui 盘点  start -->
+		<action name="ToCheck_*" method="{1}" class="com.tansun.eam2.zyzc.action.ToCheckAction">
+			<result name="tocheckobject">/pages/eam2/zyzc/toCheck/PDModifyGoods.jsp</result>
+			<result name="tocheckobjectadd">/pages/eam2/zyzc/toCheck/addPYGoods.jsp</result>
+			<result name="tocheckstock">/pages/eam2/zyzc/toCheck/PKModifyGoods.jsp</result>
+			<result name="tocheckstockadd">/pages/eam2/zyzc/toCheck/addPYGoods.jsp</result>
+			<result name="viewDetailFromPdxx">/pages/eam2/zyzc/toCheck/viewGoods.jsp</result>
+			<result name="initCheckStockPage">/pages/eam2/zyzc/toCheck/checkStockHead.jsp</result>
+			<result name="refreshJqgridTable">/pages/eam2/zyzc/toCheck/checkStockHead.jsp</result>
+			<result name="initPYPKPage">/pages/eam2/zyzc/toCheck/panYingPanKui.jsp</result>
+			<result name="openModifyPage">/pages/eam2/zyzc/toCheck/editPYPK.jsp</result>
+		</action>
+		<action name="BatchQuery_*" method="{1}" class="com.tansun.eam2.zyzc.action.BatchQueryAction">
+			<result name="initQueryPage">/pages/eam2/zyzc/toCheck/batchQuery.jsp</result>
+		</action>
+		<action name="BatchAdd_*" method="{1}" class="com.tansun.eam2.zyzc.action.BatchAddAction">
+			<result name="initAddPage">/pages/eam2/zyzc/toCheck/batchAdd.jsp</result>
+			<result name="returnAddPage">/pages/eam2/zyzc/toCheck/batchAdd.jsp</result>
+		</action>	
+		<action name="BatchSelect_*" method="{1}" class="com.tansun.eam2.zyzc.action.BatchSelectAction">
+			<result name="initSubPage0">/pages/eam2/zyzc/toCheck/AddPKXX.jsp</result>
+			<result name="initSubPage1">/pages/eam2/zyzc/toCheck/AddXX.jsp</result>
+			<result name="returnAddPage">/pages/eam2/zyzc/toCheck/batchAdd.jsp</result>
+		</action>	
+		<!-- panyingpankui 盘点  end -->
+		
+		<!-- caigouguanli 采购管理 start -->
+		<action name="BuyApplyHead_*" method="{1}" class="com.tansun.eam2.zyzc.action.BuyApplyHeadAction">
+       		<result name="init">/pages/eam2/zyzc/purchase/BuyApplyHead.jsp</result>
+       		<result name="saveHeadSuccess">/pages/eam2/zyzc/purchase/BuyApplyHead.jsp</result>
+       		<result name="toWorkflow" type='chain'>
+      			<param name="actionName">buyWorkflow_toResult</param>
+            	<param name="namespace">/buyWorkflow</param>
+      		</result>
+      		<result name="tomodify" type='chain'>
+      			<param name="actionName">buyWorkflow_toDraft</param>
+            	<param name="namespace">/buyWorkflow</param>
+      		</result>
+      	</action>
+      	
+      	<action name="BuyApplyBody_*" method="{1}" class="com.tansun.eam2.zyzc.action.BuyApplyBodyAction">
+       		<result name="addBody">/pages/eam2/zyzc/purchase/BuyApplyBody.jsp</result>
+       		<result name="modifySuccess">/pages/eam2/zyzc/purchase/BuyApplyBody.jsp</result>
+      		<result name="saveBodySuccess">/pages/eam2/zyzc/purchase/BuyApplyBody.jsp</result>
+      		<result name="deleteBodyRecordsSuccess">/pages/eam2/zyzc/purchase/BuyApplyHead.jsp</result>
+      	</action>
+		<!-- caigouguanli 采购管理 end -->
+		
+		<!-- 物品分类配置 -->
+		<action name="DicAppAssetType_*" method="{1}" class="com.tansun.eam2.zyzc.action.DicAppAssetTypeAction">
+       		<result name="initPage">/pages/eam2/zyzc/goodsMaintain/dicAppAssetType.jsp</result>
+       		<result name="delFlSuccess">/pages/eam2/zyzc/goodsMaintain/dicAppAssetType.jsp</result>
+      	</action>
+      	<!-- 物品分类配置 -->
+      	
+      	<!-- 物品归还 -->
+      	<action name="goodReturn_*" method="{1}" class="com.tansun.eam2.zyzc.action.GoodReturnAction">
+      		<result name="init">/pages/eam2/zyzc/goodReturn/addReturnGood.jsp</result>
+      		<result name="newHead">/pages/eam2/zyzc/goodReturn/backStockHead.jsp</result>
+      	</action>
+      	<!-- 物品归还 -->
+      	
+      	<!-- 盘点Excel导入 -->
+      	<action name="ImportExcelToOrcl_*" method="{1}" class="com.tansun.eam2.zyzc.action.ImportExcelToOrcl">
+      	</action>
+      	<!-- 盘点Excel导入 -->
+	</package>
+	<include file="com/tansun/eam2/zyzc/workflow/buy/action/zyzc_workflow.xml"/>
+</struts>

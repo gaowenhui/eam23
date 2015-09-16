@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<tree id="0">
+	
+	<item text="回款管理" id="scrap" open="1">
+		<item text="回款单"  id="hkdadd" ><userdata name="link">hkgl/returnMoney_add.do?pdk=hkgl_huikuandan</userdata></item>
+		<item text="回款单查询" id="hkdquery" ><userdata name="link">hkgl/returnMoney_query.do</userdata></item>
+		<item text="确认单" id="qrdadd" ><userdata name="link">hkgl/returnMoney_newHead.do</userdata></item>
+	</item>
+			<item text="处理单状态" id="workflow" >
+			<item text="待办事宜" id="workflow1" ><userdata name="link">workflow/userTask_findMyTodo.do?subSystem=</userdata></item>
+			<item text="已办事宜" id="workflow2" ><userdata name="link">did/userDid_findDids.do?subSystem=</userdata></item>
+			<item text="办结事宜" id="workflow3" ><userdata name="link">end/userEnd_findEnds.do?subSystem=</userdata></item>
+			<item text="作废事宜" id="workflow4" ><userdata name="link">abandon/userAbandon_findAbandons.do?subSystem=</userdata></item>
+			<item text="草稿箱" id="workflow5" ><userdata name="link">draft/userDraft_findDrafts.do?subSystem=</userdata></item>
+		</item>
+</tree> 

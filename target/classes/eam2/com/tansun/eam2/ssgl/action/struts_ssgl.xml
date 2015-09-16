@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<constant name="struts.ui.theme" value="simple" />
+	<constant name="struts.devMode" value="true" />
+	<package name="ssgl" namespace="/ssgl" extends="default">
+		<action name="index">
+			<result>/pages/eam2/ssgl/index.jsp</result>
+		</action>
+
+		<action name="lawsuit_*" method="{1}"
+			class="com.tansun.eam2.ssgl.action.SsglAction">
+			<result name="query">
+				/pages/eam2/ssgl/lawsuit/lawsuit_query.jsp
+			</result>
+			<result name="add">
+				/pages/eam2/ssgl/lawsuit/lawsuit_add.jsp
+			</result>
+			<result name="log">
+				/pages/eam2/ssgl/lawsuit/lawsuit_log.jsp
+			</result>
+			<result name="index">
+				/pages/eam2/ssgl/lawsuit/lawsuit_add.jsp
+			</result>
+
+			<result name="tomodify" type="chain">
+				<param name="actionName">lawsuit_modifyHead</param>
+				<param name="namespace">/ssgl</param>
+			</result>
+			
+			
+		</action>
+		<action name="pro_*" method="{1}"
+			class="com.tansun.eam2.ssgl.action.SsglProAction">
+			<result name="add">
+				/pages/eam2/ssgl/lawsuit/lawsuit_add.jsp
+			</result>
+			<result name="update">
+				/pages/eam2/ssgl/lawsuit/lawsuit_query.jsp
+			</result>
+			<result name="pro">
+				/pages/eam2/ssgl/lawsuit/lawsuit_pro.jsp
+			</result>
+		</action>
+	</package>
+</struts>

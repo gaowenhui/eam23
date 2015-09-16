@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+  	<constant name="struts.devMode" value="true" />
+  	<constant name="struts.ui.theme" value="simple"/>
+	
+	<!-- 风险信息 -->
+	
+	<package name="zltb" namespace="/zltb" extends="default">
+		<!-- 经营租赁查询 -->
+		<action name="IntentionQuery_*"  method="{1}" class="com.tansun.eam2.jygdzc.action.IntentionQueryAction">
+			<result name="assurance">/pages/eam2/jygdzc/assurance/assuranceQuery.jsp</result>
+			<result name="tenancy">/pages/eam2/jygdzc/tenancy/tenancyQuery.jsp</result>
+		</action>
+		<action name="IntentionLedger_*"  method="{1}" class="com.tansun.eam2.jygdzc.action.IntentionLedgerAction">
+			<result name="tenancyLedger">/pages/eam2/jygdzc/tenancy/tenancyLedger.jsp</result>
+		</action>
+		<!-- 表头相关 -->
+		<action name="IntentionManageHead_*"  method="{1}" class="com.tansun.eam2.jygdzc.action.IntentionManageHeadAction">
+			<!--<result name="tomodify" type="chain">
+				<param name="actionName">IntentionManageHead_modify</param>
+				<param name="namespace">/zltb</param>
+			</result>  -->
+			<result name="toWorkflow" type='chain'>
+      			<param name="actionName">zltbWorkflow_toResult</param>
+            	<param name="namespace">/zltbWorkflow</param>
+      		</result>
+      		<result name="tomodify" type='chain'>
+      			<param name="actionName">zltbWorkflow_toDraft</param>
+            	<param name="namespace">/zltbWorkflow</param>
+      		</result> 
+			<result name="tenancy" >/pages/eam2/jygdzc/tenancy/tenancy.jsp</result>
+			<result name="agentTenancy">/pages/eam2/jygdzc/tenancy/agentTenancy.jsp</result>
+			<result name="assurance">/pages/eam2/jygdzc/assurance/assurance.jsp</result>
+		</action>
+		<!-- 表体相关 -->
+		<action name="IntentionManageBody_*"  method="{1}" class="com.tansun.eam2.jygdzc.action.IntentionManageBodyAction">
+			<result name="tomodify" type="chain">
+				<param name="actionName">IntentionManageBody_modify</param>
+				<param name="namespace">/zltb</param>
+			</result>
+			<result name="assuranceInfo" >/pages/eam2/jygdzc/assurance/assuranceInfo.jsp</result>
+			<result name="tenancy" >/pages/eam2/jygdzc/tenancy/tenancy.jsp</result>
+			<result name="tenancyList" >/pages/eam2/jygdzc/tenancy/tenancyList.jsp</result>
+			<result name="tenancyInfo" >/pages/eam2/jygdzc/tenancy/tenancyInfo.jsp</result>
+			<result name="agentTenancy">/pages/eam2/jygdzc/tenancy/agentTenancy.jsp</result>
+			<result name="assurance">/pages/eam2/jygdzc/assurance/assurance.jsp</result>
+		</action>
+	</package>
+	<include file="com/tansun/eam2/zyzc/workflow/buy/action/zltb_workflow.xml"/>
+</struts>

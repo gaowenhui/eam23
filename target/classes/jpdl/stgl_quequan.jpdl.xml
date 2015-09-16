@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<process name="stgl_quequan" xmlns="http://jbpm.org/4.4/jpdl">
+
+	<start g="280,39,48,48" name="start">
+		<transition g="-53,-17" name="开始" to="拟稿"/>
+	</start>
+
+	<task assignee="#{assignee}" g="240,138,128,52" name="拟稿">
+		<transition g="-53,-17" name="组审核" to="组审核"/>
+		<transition g="-53,-17" name="部门领导审核" to="部门领导审核"/>
+		<transition g="-53,-17" name="拟稿部门综合处理" to="拟稿部门综合处理"/>
+		<transition g="-53,-17" name="backto组审核" to="组审核"/>
+		<transition g="-53,-17" name="backto部门领导审核" to="部门领导审核"/>
+		<transition g="-32,28" name="backto拟稿部门综合处理" to="拟稿部门综合处理"/>
+		<transition g="-83,-17" name="作废" to="结束">
+			<event-listener class="com.tansun.eam2.stgl.listener.ReleaseZzjzNumEventListener"/>
+			<event-listener class="com.tansun.eam2.common.workflow.listener.AbandonEventListener"/>
+		</transition>
+	</task>
+
+	<task g="114,261,128,52" name="组审核">
+		<transition g="-53,-17" name="组审核" to="组审核"/>
+		<transition g="-53,-17" name="拟稿" to="拟稿"/>
+		<transition g="-53,-17" name="部门领导审核" to="部门领导审核"/>
+		<transition g="-53,-17" name="拟稿部门综合处理" to="拟稿部门综合处理"/>
+		<transition g="-53,-17" name="backto拟稿" to="拟稿"/>
+		<transition g="-53,-17" name="backto部门领导审核" to="部门领导审核"/>
+		<transition g="-53,-17" name="backto拟稿部门综合处理" to="拟稿部门综合处理"/>
+		<transition g="-53,-17" name="backto组审核" to="组审核"/>
+	</task>
+
+	<task g="366,261,128,52" name="部门领导审核">
+		<transition g="-53,-17" name="部门领导审核" to="部门领导审核"/>
+		<transition g="-53,-17" name="拟稿" to="拟稿"/>
+		<transition g="-53,-17" name="组审核" to="组审核"/>
+		<transition g="-53,-17" name="拟稿部门综合处理" to="拟稿部门综合处理"/>
+		<transition g="-53,-17" name="backto拟稿" to="拟稿"/>
+		<transition g="-53,-17" name="backto组审核" to="组审核"/>
+		<transition g="-53,-17" name="backto拟稿部门综合处理" to="拟稿部门综合处理"/>
+		<transition g="-53,-17" name="backto部门领导审核" to="部门领导审核"/>
+	</task>
+
+	<task g="229,406,150,52" name="拟稿部门综合处理">
+		<transition g="-53,-17" name="拟稿部门综合处理" to="拟稿部门综合处理"/>
+		<transition g="-53,-17" name="拟稿" to="拟稿"/>
+		<transition g="-53,-17" name="组审核" to="组审核"/>
+		<transition g="-53,-17" name="部门领导审核" to="部门领导审核"/>
+		<transition g="-53,-17" name="业务运营组处理" to="业务运营组处理"/>
+		<transition g="-53,-17" name="承办部门综合处理" to="承办部门综合处理"/>
+		<transition g="-53,-17" name="经办人处理" to="经办人处理"/>
+		<transition g="-53,-17" name="backto拟稿" to="拟稿"/>
+		<transition g="-53,-17" name="backto组审核" to="组审核"/>
+		<transition g="-53,-17" name="backto部门领导审核" to="部门领导审核"/>
+		<transition g="-53,-17" name="backto业务运营组处理" to="业务运营组处理"/>
+		<transition g="-53,-17" name="backto承办部门综合处理" to="承办部门综合处理"/>
+		<transition g="-53,-17" name="backto经办人处理" to="经办人处理"/>
+	</task>
+	
+	<task g="537,261,148,52" name="承办部门综合处理">
+		<transition g="-53,-17" name="承办部门综合处理" to="承办部门综合处理"/>
+		<transition g="-53,-17" name="承办部门组处理" to="承办部门组处理"/>
+		<transition g="-53,-17" name="承办部门负责人审批" to="承办部门负责人审批"/>
+		<transition g="-53,-17" name="拟稿部门综合处理" to="拟稿部门综合处理"/>
+		<transition g="-53,-17" name="backto承办部门组处理" to="承办部门组处理"/>
+		<transition g="-53,-17" name="backto承办部门负责人审批" to="承办部门负责人审批"/>
+		<transition g="-53,-17" name="backto拟稿部门综合处理" to="拟稿部门综合处理"/>
+	</task>
+	
+	<task g="458,138,148,52" name="承办部门组处理">
+		<transition g="-53,-17" name="承办部门组处理" to="承办部门组处理"/>
+		<transition g="-53,-17" name="承办部门综合处理" to="承办部门综合处理"/>
+		<transition g="-53,-17" name="承办部门负责人审批" to="承办部门负责人审批"/>
+		<transition g="-53,-17" name="backto承办部门综合处理" to="承办部门综合处理"/>
+		<transition g="-53,-17" name="backto承办部门负责人审批" to="承办部门负责人审批"/>
+		<transition g="-53,-17" name="backto承办部门组处理" to="承办部门组处理"/>
+	</task>
+	
+	<task g="625,138,148,52" name="承办部门负责人审批">
+		<transition g="-53,-17" name="承办部门负责人审批" to="承办部门负责人审批"/>
+		<transition g="-53,-17" name="承办部门组处理" to="承办部门组处理"/>
+		<transition g="-53,-17" name="承办部门综合处理" to="承办部门综合处理"/>
+		<transition g="-53,-17" name="backto承办部门组处理" to="承办部门组处理"/>
+		<transition g="-53,-17" name="backto承办部门综合处理" to="承办部门综合处理"/>
+		<transition g="-55,-15" name="backto承办部门负责人审批" to="承办部门负责人审批"/>
+	</task>
+	
+	<task g="537,499,148,52" name="经办人处理">
+		<transition g="-53,-17" name="经办人处理" to="经办人处理"/>
+		<transition g="-53,-17" name="拟稿部门综合处理" to="拟稿部门综合处理"/>
+		<transition g="-53,-17" name="backto拟稿部门综合处理" to="拟稿部门综合处理"/>
+		<transition g="-53,-17" name="流程办结" to="结束">
+			<event-listener class="com.tansun.eam2.common.workflow.listener.EndEventListener"/>
+		</transition>
+	</task>
+	
+	<task g="547,406,128,52" name="业务运营组处理">
+		<transition g="-53,-17" name="业务运营组处理" to="业务运营组处理"/>
+		<transition g="-53,-17" name="拟稿部门综合处理" to="拟稿部门综合处理"/>
+		<transition g="-53,-17" name="公司领导批示" to="公司领导批示"/>
+		<transition g="-53,-17" name="backto拟稿部门综合处理" to="拟稿部门综合处理"/>
+		<transition g="-53,-17" name="backto公司领导批示" to="公司领导批示"/>
+		<transition g="-53,-17" name="backto业务运营组处理" to="业务运营组处理"/>
+	</task>
+
+	<task g="749,406,128,52" name="公司领导批示">
+		<transition g="-53,-17" name="业务运营组处理" to="业务运营组处理"/>
+		<transition g="-53,-17" name="backto业务运营组处理" to="业务运营组处理"/>
+	</task>
+	
+	<end g="280,501,48,48" name="结束"/>
+	<migrate-instances versions="1..x"/>
+</process>

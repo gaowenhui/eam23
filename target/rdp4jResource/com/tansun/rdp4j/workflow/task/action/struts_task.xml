@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <package name="userTask" namespace="/workflow" extends="default">
+        <action name="userTask_*" method="{1}" class="com.tansun.rdp4j.workflow.task.action.UserTaskAction">
+            <result name="todoTasks">/pages/rdp4j/workflow/task/todoTasks.jsp</result>
+            <result name="historyActiveTasks">/pages/rdp4j/workflow/task/historyActiveTasks.jsp</result>
+            <result name="historyEndedTasks">/pages/rdp4j/workflow/task/historyEndedTasks.jsp</result>
+            <result name="drafts">/pages/rdp4j/workflow/task/drafts.jsp</result>
+            <result name="deployPD">/pages/rdp4j/workflow/task/deployPD.jsp</result>
+            <result name="todoList">/pages/rdp4j/workflow/task/todo.jsp</result>
+            <result name="participationList" type='chain'>
+      			<param name="actionName">dept_getValue</param>
+            	<param name="namespace">/dept</param>
+      		</result>
+        </action>
+    </package>
+</struts>

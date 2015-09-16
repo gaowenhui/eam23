@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src/common"/>
+	<classpathentry kind="src" path="src/generalapps"/>
+	<classpathentry kind="src" path="src/query"/>
+	<classpathentry kind="src" path="src/report"/>
+	<classpathentry kind="src" path="src/workflow"/>
+	<classpathentry kind="src" path="src/dynamicform"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="com.genuitec.eclipse.j2eedt.core.J2EE14_CONTAINER"/>
+	<classpathentry kind="output" path="webroot/WEB-INF/classes"/>
+</classpath>

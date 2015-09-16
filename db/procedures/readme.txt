@@ -1,0 +1,2 @@
+eam2文件夹下的文件要在eam2用户下执行
+erp授权sql.sql在dba用户下执行

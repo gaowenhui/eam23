@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<constant name="struts.ui.theme" value="simple"/>
+	<constant name="struts.devMode" value="true" />
+	
+	<package name="jiekou" namespace="/jiekou" extends="default">
+
+		<!-- card send2erp 新增-->
+		<action name="send2ERP4ADD_*" 			method="{1}" class="com.tansun.eam2.jiekou.erp.action.EERCardAddAction">
+			<result name="success">				/pages/eam2/kpgl/cardAdd/cardAddHead.jsp</result>
+		</action>
+		<!-- card send2erp 变动-->
+		<action name="send2ERP4CHANGE_*"		method="{1}" class="com.tansun.eam2.jiekou.erp.action.ERPCardChangeAction">
+			<result name="success">				/pages/eam2/kpgl/cardChange/cardChangeHead.jsp</result>
+		</action>
+		<!-- card send2erp 减值-->
+		<action name="send2ERP4CommonJz_*" 		method="{1}" class="com.tansun.eam2.jiekou.erp.action.ERPZcCommonJzAction">
+			<result name="success">				/pages/eam2/kpgl/cardDevalue/cardDevalueHead.jsp</result>
+		</action>
+		<!-- card send2erp 减少-->
+		<action name="send2ERP4REDUCE_*" 		method="{1}" class="com.tansun.eam2.jiekou.erp.action.ERPCardReduceAction">
+			<result name="success">				/pages/eam2/kpgl/cardReduce/cardReduceHead.jsp</result>
+		</action>
+		<!-- card send2erp 拆分-->
+		<action name="send2ERP4SPLIT_*" 		method="{1}" class="com.tansun.eam2.jiekou.erp.action.ERPCardSplitAction">
+			<result name="success">				/pages/eam2/kpgl/cardSplit/cardSplitHead.jsp</result>
+		</action>
+		<!-- card send2erp 合并-->
+		<action name="send2ERP4COALITION_*"		method="{1}" class="com.tansun.eam2.jiekou.erp.action.ERPCardCoalitionAction">
+			<result name="success">				/pages/eam2/kpgl/cardMerge/cardMergeHead.jsp</result>
+		</action>
+		<!-- card 生成台账-->
+		<action name="createBook4Card_*"		method="{1}" class="com.tansun.eam2.jiekou.erp.action.ERPCreateBook4CardAction">
+		</action>
+		
+		
+		
+		<!-- asset send2erp 日常管理-->
+		<action name="send2ERP4RCGL_*" 			method="{1}" class="com.tansun.eam2.jiekou.erp.action.ERPZcQuequanAction">
+			<result name="success">				/pages/eam2/jygdzc/asset/assetManage.jsp</result>
+		</action>
+	</package>
+</struts>

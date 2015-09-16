@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+    <package name="quequan" namespace="/quequan" extends="default">
+      <action name="quequan_*"  method="{1}" class="com.tansun.eam.quequan.action.ETCldAction">
+     		<result name="add">/pages/rdp4j/eam/quequan/quequan_add.jsp</result>
+     		<result name="edit">/pages/rdp4j/eam/quequan/quequan_edit.jsp</result>
+     		<result name="choiceUser">/pages/rdp4j/eam/quequan/choiceUser.jsp</result>
+			<result name="joinChoiceUser">/pages/rdp4j/eam/quequan/joinChoiceUser.jsp</result>
+			<result name="toHistory">/pages/rdp4j/eam/quequan/historyTask.jsp</result>   
+			<result name="next">/pages/rdp4j/eam/quequan/quequan_next.jsp</result>   
+			<result name="list" type='redirect'>/workflow/userTask_findTodoTasks.do</result>
+			<result name="list1" type='redirect'>/blank.jsp</result>   
+			<result name="taskManage"  type='redirect'>/workflow/userTask_findTodoTasks.do</result>   
+			<result name="huiqian" >/pages/rdp4j/eam/quequan/quequan_huiqian.jsp</result>   
+			<result name="selecthuiqian" >/pages/rdp4j/eam/quequan/quequan_selecthuiqian.jsp</result>
+			<result name="huiqianhis" >/pages/rdp4j/eam/quequan/quequan_huiqianhis.jsp</result>
+			<result name="huiqianhis" >/pages/rdp4j/eam/quequan/quequan_huiqianhis.jsp</result>
+			<result name="myTask" type='redirect'>/workflow/userTask_findTodoTasks.do</result>
+      </action>
+    </package>
+</struts>

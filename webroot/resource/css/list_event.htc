@@ -1,0 +1,38 @@
+<PUBLIC:ATTACH EVENT="onmouseover" ONEVENT="doOnmouseover();"/> 
+
+<PUBLIC:ATTACH EVENT="onmouseout" ONEVENT="doOnmouseout();"/> 
+
+<PUBLIC:ATTACH EVENT="onclick" ONEVENT="doClick();"/> 
+
+<SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript"> 
+
+<!-- 
+var iCurRow;
+function doClick() 
+{     
+    iCurRow=this;
+    for(i=0;i<this.parentElement.rows.length;i++)
+    {
+	this.parentElement.rows[i].style.backgroundColor ='#FFFFFF';	
+    }
+    this.style.backgroundColor='#A4C2F4'; 
+} 
+
+function doOnmouseover() 
+{ 
+   if(iCurRow!=this)
+   {
+       this.style.backgroundColor='#FFD886'; 
+   }
+
+} 
+function doOnmouseout() 
+{ 
+   if(iCurRow!=this)
+   {
+        this.style.backgroundColor='#FFFFFF'; 
+   }
+} 
+//--> 
+
+</SCRIPT> 

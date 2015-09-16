@@ -1,0 +1,57 @@
+body {
+	background: #F7F7F7
+	font-size:11pt;
+	color: #000000;
+	font-family: "宋体", "Trebuchet MS", "MS Shell Dlg", "Helvetica", "Arial", "verdana",;
+
+	 
+}
+
+.dtree {
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #666;
+	white-space: nowrap;
+}
+.dtree img {
+	border: 0px;
+	vertical-align: middle;
+}
+.dtree a {
+	color: #333;
+	text-decoration: none;
+}
+.dtree a.node, .dtree a.nodeSel {
+	white-space: nowrap;
+	padding: 1px 2px 1px 2px;
+}
+.dtree a.node:hover, .dtree a.nodeSel:hover {
+	color: #333;
+	text-decoration: underline;
+}
+.dtree a.nodeSel {
+	background-color: #c0d2ec;
+}
+.dtree .clip {
+	overflow: hidden;
+}
+ml:link {
+	font-size: 9pt;
+	color: #009966;
+	text-decoration: none;
+	line-height: 150%;
+	cursor: hand;
+}
+ml:visited {
+	font-size: 9pt;
+	text-decoration: none;
+	color: #0000FF; 
+	line-height: 150%;
+	cursor: hand;
+}
+ml:hover {
+	font-size: 9pt;
+	color: #00CCFF;
+	line-height: 150%;
+	cursor: hand;
+}

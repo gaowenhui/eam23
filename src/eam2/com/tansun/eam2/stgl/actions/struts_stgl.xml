@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+	<package name="stgl" namespace="/stgl" extends="default">
+		<action name="index">
+			<result>/pages/eam2/stgl/index.jsp</result>
+		</action>		
+      	<action name="weihu_*"  method="{1}" class="com.tansun.eam2.stgl.actions.CEMEntityMaintainAction">
+       		<result name="weihuQueryInit">/pages/eam2/stgl/zixunshiti/entity_List.jsp</result>
+        <!-- 实体 start -->	
+       		<result name="newEntity">/pages/eam2/stgl/zixunshiti/entityInfoAlter.jsp</result>
+        <!--  基本信息 start -->
+       		<result name="jiben">/pages/eam2/stgl/zixunshiti/popBasicInfo_list.jsp</result>    
+       	<!--  人员处置 start -->
+       		<result name="renyuan">/pages/eam2/stgl/zixunshiti/personMainList.jsp</result> 
+       		<result name="personList">/pages/eam2/stgl/zixunshiti/pop/popPerson_List.jsp</result>
+       		<result name="personList1">/pages/eam2/stgl/zixunshiti/pop/popPerson_List1.jsp</result>
+       	<!-- //高管人员 start -->
+       		<result name="gaoguan">/pages/eam2/stgl/zixunshiti/exectivesMainList.jsp</result>  
+       		<result name="exectivesList">/pages/eam2/stgl/zixunshiti/pop/popExectives_List.jsp</result>
+       	<!--  //实体股权结构 start -->
+       		<result name="guquan">/pages/eam2/stgl/zixunshiti/shareholderMainList.jsp</result> 
+       		<result name="shareholderList">/pages/eam2/stgl/zixunshiti/pop/popShareholder_List.jsp</result>
+       	<!--  //实体大事记 start -->
+       		<result name="dashiji">/pages/eam2/stgl/zixunshiti/greatAffairMainList.jsp</result>  
+       		<result name="affairList">/pages/eam2/stgl/zixunshiti/pop/popAffair_List.jsp</result>
+       	<!--  //实体财务报表信息 start -->
+       		<result name="caiwu">/pages/eam2/stgl/zixunshiti/reportFormMainList.jsp</result>  
+      	    <result name="reportList">/pages/eam2/stgl/zixunshiti/pop/popReport_List.jsp</result>
+       	<!--  //实体资产信息 start -->
+       		<result name="zichan">/pages/eam2/stgl/zixunshiti/shitizichanList.jsp</result>  
+       		<!-- 现金 -->
+       		<result name="cashList">/pages/eam2/stgl/zixunshiti/pop/popCash_List.jsp</result>
+       		<!-- 土地 -->
+       		<result name="landList">/pages/eam2/stgl/zixunshiti/pop/popLand_List.jsp</result>
+       		<!-- 房屋 -->
+       		<result name="houseList">/pages/eam2/stgl/zixunshiti/pop/popHouse_List.jsp</result>
+       		<!-- 机器设备 -->
+       		<result name="machineList">/pages/eam2/stgl/zixunshiti/pop/popMachine_List.jsp</result>
+       		<!-- 交通运输 -->
+       		<result name="trafficList">/pages/eam2/stgl/zixunshiti/pop/popTraffic_List.jsp</result>
+       		<!-- 对外投资 -->
+       		<result name="investList">/pages/eam2/stgl/zixunshiti/pop/popInvest_List.jsp</result>
+       		<!-- 其它资产 -->
+       		<result name="otherList">/pages/eam2/stgl/zixunshiti/pop/popOther_List.jsp</result>
+       		
+       		<!--  //流程信息 start -->
+       		<result name="liucheng">/pages/eam2/stgl/zixunshiti/processMainList.jsp</result>  
+       		<!--  //处置信息 start -->
+       		<result name="chuzhi">/pages/eam2/stgl/zixunshiti/disposalInfoList.jsp</result>  
+			<!--  //日志信息 start -->
+			<result name="rizhi">/pages/eam2/stgl/zixunshiti/logInfoList.jsp</result>  
+			<!--  //相关审批费用信息 start -->
+			<result name="feiyong">/pages/eam2/stgl/zixunshiti/costMainList.jsp</result> 
+			<!--  //相关附件信息 start -->
+			<result name="fujian">/pages/eam2/stgl/zixunshiti/fileList.jsp</result> 
+      
+      <!--  //弹出评估信息页面 start -->
+			<result name="newZcPgXx">/pages/eam2/stgl/zixunshiti/pop/popEvaluating/popEvaluatingInfo.jsp</result>  
+      
+	  <!-- 非实体 start -->	
+			<result name="newNonEntity">/pages/eam2/stgl/feizixunshiti/entity_info_alter.jsp</result>
+			<result name="nonBasic">/pages/eam2/stgl/feizixunshiti/popBasicInfo_list.jsp</result>
+			<result name="nonProjectList">/pages/eam2/stgl/feizixunshiti/pop/popProject_list.jsp</result>
+			
+			<!--  人员处置 start -->
+       		<result name="nonrenyuan">/pages/eam2/stgl/feizixunshiti/nonPersonMainList.jsp</result> 
+       		<result name="nonKnowList">/pages/eam2/stgl/feizixunshiti/pop/popKnow_List.jsp</result>
+       		<result name="nonPutList">/pages/eam2/stgl/feizixunshiti/pop/popPut_List.jsp</result>
+       		
+       		<!-- //文章及公张存放情况 start -->
+       		<result name="nonkeep">/pages/eam2/stgl/feizixunshiti/nonKeepMainList.jsp</result>  
+       		<result name="nonkeepList">/pages/eam2/stgl/feizixunshiti/pop/popKeep_list.jsp</result>
+       		
+       	<!--  //债务债权情况 start -->
+       		<result name="debtList">/pages/eam2/stgl/feizixunshiti/nonDebtMainList.jsp</result> 
+       		<!--  //主要债权start -->
+       		<result name="newClaimsInfo">/pages/eam2/stgl/feizixunshiti/pop/popCreditor_List.jsp</result>
+       		<!--  //主要债务start -->
+       		<result name="newDebtInfo">/pages/eam2/stgl/feizixunshiti/pop/popDebt_List.jsp</result>
+       		<!--  //税款缴纳start -->
+       		<result name="newTaxInfo">/pages/eam2/stgl/feizixunshiti/pop/popTax_List.jsp</result>
+       		
+       	<!--  //诉讼情况 start -->
+       		<result name="getLitigationList">/pages/eam2/stgl/feizixunshiti/nonLitigationMainList.jsp</result>  
+       	<!--  //实体资产信息 start -->
+       		<result name="nonzichan">/pages/eam2/stgl/feizixunshiti/nonShitizichanList.jsp</result>  
+       		<!-- 现金 -->
+       		<result name="nonCashList">/pages/eam2/stgl/feizixunshiti/pop/popCash_List.jsp</result>
+       		<!-- 土地 -->
+       		<result name="nonLandList">/pages/eam2/stgl/feizixunshiti/pop/popLand_List.jsp</result>
+       		<!-- 房屋 -->
+       		<result name="nonHouseList">/pages/eam2/stgl/feizixunshiti/pop/popHouse_List.jsp</result>
+       		<!-- 机器设备 -->
+       		<result name="nonMachineList">/pages/eam2/stgl/feizixunshiti/pop/popMachine_List.jsp</result>
+       		<!-- 交通运输 -->
+       		<result name="nonTrafficList">/pages/eam2/stgl/feizixunshiti/pop/popTraffic_List.jsp</result>
+       		<!-- 对外投资 -->
+       		<result name="nonInvestList">/pages/eam2/stgl/feizixunshiti/pop/popInvest_List.jsp</result>
+       		<!-- 其它资产 -->
+       		<result name="nonOtherList">/pages/eam2/stgl/feizixunshiti/pop/popOther_List.jsp</result>
+       		
+       		
+       	<!--  //流程信息 start -->
+       		<result name="nonliucheng">/pages/eam2/stgl/feizixunshiti/nonProcessMainList.jsp</result>  
+       	<!--  //处置信息 start -->
+       		<result name="nonchuzhi">/pages/eam2/stgl/feizixunshiti/nonDisposalInfoList.jsp</result>  
+      	<!--  //相关附件 start -->
+       		<result name="nonfujian">/pages/eam2/stgl/feizixunshiti/nonfileList.jsp</result>  
+		<!--  //日志信息 start -->
+			<result name="nonrizhi">/pages/eam2/stgl/feizixunshiti/nonLogInfoList.jsp</result>
+		<!--  //费用信息 start -->
+			<result name="nonfeiyong">/pages/eam2/stgl/feizixunshiti/costMainList.jsp</result>  
+	</action>	
+		
+      	<!-- 增资减资（表头） -->
+      	<action name="zengjianzi_*"  method="{1}" class="com.tansun.eam2.stgl.actions.CEMIncReducCapitalHeadAction">
+       		<result name="start">/pages/eam2/stgl/zengjianzi/zengjianzi.jsp</result> 
+       		<!-- <result name="tomodify" type="chain">
+				<param name="actionName">zengjianzi_modifyHead</param>
+				<param name="namespace">/stgl</param>
+			</result> -->
+			<result name="toWorkflow" type='chain'>
+      			<param name="actionName">zjzWorkflow_toResult</param>
+            	<param name="namespace">/stglWorkflow</param>
+      		</result>
+      		<result name="tomodify" type='chain'>
+      			<param name="actionName">zjzWorkflow_toDraft</param>
+            	<param name="namespace">/stglWorkflow</param>
+      		</result>
+      	</action>
+      	<!-- 增资减资2（表头） -->
+      	<action name="zengjianzi2_*"  method="{1}" class="com.tansun.eam2.stgl.actions.CEMIncReducCapitalHeadAction2">
+       		<result name="start">/pages/eam2/stgl/zengjianzi2/zengjianzi.jsp</result> 
+       		 <!--<result name="tomodify" type="chain">
+				<param name="actionName">zengjianzi2_modifyHead</param>
+				<param name="namespace">/stgl</param>
+			</result> -->
+			<result name="toWorkflow" type='chain'>
+      			<param name="actionName">zjz2Workflow_toResult</param>
+            	<param name="namespace">/stglWorkflow</param>
+      		</result>
+      		<result name="tomodify" type='chain'>
+      			<param name="actionName">zjz2Workflow_toDraft</param>
+            	<param name="namespace">/stglWorkflow</param>
+      		</result>
+      	</action>
+      	<!--  用工计划（表头） -->
+      	<action name="yonggongjihua_*"  method="{1}" class="com.tansun.eam2.stgl.actions.CEMStaffRecruitPlanHeadAction">
+       		<result name="start">/pages/eam2/stgl/yonggongjihua/laborPlan.jsp</result> 
+			<result name="toWorkflow" type='chain'>
+      			<param name="actionName">ygjhWorkflow_toResult</param>
+            	<param name="namespace">/stglWorkflow</param>
+      		</result>
+      		<result name="tomodify" type='chain'>
+      			<param name="actionName">ygjhWorkflow_toDraft</param>
+            	<param name="namespace">/stglWorkflow</param>
+      		</result>
+      	</action>
+      	
+      	<!-- 用工计划（表体） -->
+      	<action name="yonggongjihuaBody_*"  method="{1}" class="com.tansun.eam2.stgl.actions.CEMStaffRecruitPlanBodyAction">
+       		<result name="newRecruitStaff">/pages/eam2/stgl/yonggongjihua/laborPlanInfo.jsp</result>   
+      	</action>
+      	
+      	<!-- 法人代表（表头） -->     	
+ 	    <action name="faren_*"  method="{1}" class="com.tansun.eam2.stgl.actions.CEMLegalRepChangeHeadAction">
+       		<result name="start">/pages/eam2/stgl/farendaibiao/legalRepChange.jsp</result> 
+			<result name="toWorkflow" type='chain'>
+      			<param name="actionName">frdbWorkflow_toResult</param>
+            	<param name="namespace">/stglWorkflow</param>
+      		</result>
+      		<result name="tomodify" type='chain'>
+      			<param name="actionName">frdbWorkflow_toDraft</param>
+            	<param name="namespace">/stglWorkflow</param>
+      		</result>
+      	</action>
+      	
+      	<!-- 法人代表（表体） --> 
+      	<action name="farenBody_*"  method="{1}" class="com.tansun.eam2.stgl.actions.CEMLegalRepChangeBodyAction">
+      		<result name="toModify" type="chain">
+				<param name="actionName">farenBody_modifyChangeRep</param>
+				<param name="namespace">/stgl</param>
+			</result> 
+       		<result name="newChangeRep">/pages/eam2/stgl/farendaibiao/legalRepresentativeDetail.jsp</result>       		
+      	</action> 
+      	
+      	<!-- 法人代表2（表头） -->     	
+ 	    <action name="faren2_*"  method="{1}" class="com.tansun.eam2.stgl.actions.CEMLegalRepChangeHeadAction2">
+       		<result name="start">/pages/eam2/stgl/farendaibiao2/legalRepChange.jsp</result> 
+			<result name="toWorkflow" type='chain'>
+      			<param name="actionName">frdb2Workflow_toResult</param>
+            	<param name="namespace">/stglWorkflow</param>
+      		</result>
+      		<result name="tomodify" type='chain'>
+      			<param name="actionName">frdb2Workflow_toDraft</param>
+            	<param name="namespace">/stglWorkflow</param>
+      		</result>
+      	</action>
+      	
+      	<!-- 法人代表2（表体） --> 
+      	<action name="farenBody2_*"  method="{1}" class="com.tansun.eam2.stgl.actions.CEMLegalRepChangeBodyAction2">
+      		<result name="toModify" type="chain">
+				<param name="actionName">farenBody_modifyChangeRep</param>
+				<param name="namespace">/stgl</param>
+			</result> 
+       		<result name="newChangeRep">/pages/eam2/stgl/farendaibiao2/legalRepresentativeDetail.jsp</result>       		
+      	</action>      	
+
+		<!-- 重大财务事项（表头） --> 
+      	<action name="caiwu_*"  method="{1}" class="com.tansun.eam2.stgl.actions.CEMSigFinancialMatterHeadAction">
+       		<result name="start">/pages/eam2/stgl/caiwu/sigFinancialMatter.jsp</result> 
+       		<!-- <result name="tomodify" type="chain">
+				<param name="actionName">caiwu_modifyHead</param>
+				<param name="namespace">/stgl</param>
+			</result> -->
+			<result name="toWorkflow" type='chain'>
+      			<param name="actionName">zdcwWorkflow_toResult</param>
+            	<param name="namespace">/stglWorkflow</param>
+      		</result>
+      		<result name="tomodify" type='chain'>
+      			<param name="actionName">zdcwWorkflow_toDraft</param>
+            	<param name="namespace">/stglWorkflow</param>
+      		</result>
+      	</action>
+      	<!-- 重大财务事项2（表头） --> 
+      	<action name="caiwu2_*"  method="{1}" class="com.tansun.eam2.stgl.actions.CEMSigFinancialMatterHeadAction2">
+       		<result name="start">/pages/eam2/stgl/caiwu2/sigFinancialMatter.jsp</result> 
+       		<!-- <result name="tomodify" type="chain">
+				<param name="actionName">caiwu_modifyHead</param>
+				<param name="namespace">/stgl</param>
+			</result> -->
+			<result name="toWorkflow" type='chain'>
+      			<param name="actionName">zdcw2Workflow_toResult</param>
+            	<param name="namespace">/stglWorkflow</param>
+      		</result>
+      		<result name="tomodify" type='chain'>
+      			<param name="actionName">zdcw2Workflow_toDraft</param>
+            	<param name="namespace">/stglWorkflow</param>
+      		</result>
+      	</action>
+      	
+      	<!-- 确权（表头） --> 
+      	<action name="quequan_*"  method="{1}" class="com.tansun.eam2.stgl.actions.CEMIndeedRightHeadAction">
+       		<result name="start">/pages/eam2/stgl/quequan/indeedRight.jsp</result> 
+       		<!-- <result name="tomodify" type="chain">
+				<param name="actionName">quequan_modifyHead</param>
+				<param name="namespace">/stgl</param>
+			</result> -->
+			<result name="toWorkflow" type='chain'>
+      			<param name="actionName">qqWorkflow_toResult</param>
+            	<param name="namespace">/stglWorkflow</param>
+      		</result>
+      		<result name="tomodify" type='chain'>
+      			<param name="actionName">qqWorkflow_toDraft</param>
+            	<param name="namespace">/stglWorkflow</param>
+      		</result>
+      	</action>
+      	<!-- 确权2（表头） --> 
+      	<action name="quequan2_*"  method="{1}" class="com.tansun.eam2.stgl.actions.CEMIndeedRightHeadAction2">
+       		<result name="start">/pages/eam2/stgl/quequan2/indeedRight.jsp</result> 
+       		<!-- <result name="tomodify" type="chain">
+				<param name="actionName">quequan_modifyHead</param>
+				<param name="namespace">/stgl</param>
+			</result> -->
+			<result name="toWorkflow" type='chain'>
+      			<param name="actionName">qq2Workflow_toResult</param>
+            	<param name="namespace">/stglWorkflow</param>
+      		</result>
+      		<result name="tomodify" type='chain'>
+      			<param name="actionName">qq2Workflow_toDraft</param>
+            	<param name="namespace">/stglWorkflow</param>
+      		</result>
+      	</action>
+
+      	
+      	<!-- 实体改制（表头） --> 
+      	 <action name="gaizhi_*"  method="{1}" class="com.tansun.eam2.stgl.actions.CEMChangeSystemHeadAction">
+       		<result name="start">/pages/eam2/stgl/gaizhi/changeSystem.jsp</result> 
+			<result name="toWorkflow" type='chain'>
+      			<param name="actionName">stgzWorkflow_toResult</param>
+            	<param name="namespace">/stglWorkflow</param>
+      		</result>
+      		<result name="tomodify" type='chain'>
+      			<param name="actionName">stgzWorkflow_toDraft</param>
+            	<param name="namespace">/stglWorkflow</param>
+      		</result>
+      	</action>
+      	
+      	<action name="chuzhi_*"  method="{1}" class="com.tansun.eam2.stgl.actions.NCEMEntityMaintainAction">
+       		<result name="start">/pages/eam2/stgl/feizixunshiti/nonConsultantEntity.jsp</result>
+       		<result name="newEntity">/pages/eam2/stgl/feizixunshiti/entity-info-alter.jsp</result>       		
+      	</action>
+        <!--人员查询 -->
+      	<action name="renyuanchaxun_*"  method="{1}" class="com.tansun.eam2.stgl.actions.NCEMStaffQueryAction">
+       		<result name="start">/pages/eam2/stgl/renyuanchaxun/summaryPersont.jsp</result>       		
+       		
+      	</action>
+      	<!--资产查询 -->
+      	<action name="chuzhizichan_*"  method="{1}" class="com.tansun.eam2.stgl.actions.NCEMAssetQueryAction">
+       		<result name="start">/pages/eam2/stgl/zichanchaxun/summaryAsset.jsp</result>       		
+      	</action>
+      	<!--债权债务查询 -->
+      	<action name="zhaiquanzhaiwu_*"  method="{1}" class="com.tansun.eam2.stgl.actions.NCEMClaimsDebtQueryAction">
+       		<result name="start">/pages/eam2/stgl/zhaiquanzhaiwu/summary_debt_claims_List.jsp</result>       		
+      	</action>
+      	
+      	<!-- 其他事项（表头） -->
+      	<action name="qita_*"  method="{1}" class="com.tansun.eam2.stgl.actions.NCEMOtherMatterHeadAction">
+       		<result name="start">/pages/eam2/stgl/qitashixiang/otherMatter.jsp</result> 
+			<result name="toWorkflow" type='chain'>
+      			<param name="actionName">qtWorkflow_toResult</param>
+            	<param name="namespace">/stglWorkflow</param>
+      		</result>
+      		<result name="tomodify" type='chain'>
+      			<param name="actionName">qtWorkflow_toDraft</param>
+            	<param name="namespace">/stglWorkflow</param>
+      		</result>
+      	</action>
+      	
+      	 <!-- 处理单中选择实体 -->
+      	<action name="xuanshiti_*"  method="{1}" class="com.tansun.eam2.stgl.actions.EMRelatedEntityDisplayAction">
+      		<result name="viewStock">/pages/eam2/stgl/xuanzeshiti/shareholder_list.jsp</result> 
+      		<result name="toTree">/pages/eam2/stgl/tree/tree4Jygl.jsp</result>
+      	</action>
+		
+	</package>
+	<include file="com/tansun/eam2/zyzc/workflow/buy/action/stgl_workflow.xml"/>
+</struts>

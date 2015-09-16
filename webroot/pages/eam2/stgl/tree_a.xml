@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<tree id="0">
+	<item text="工作台" id="workflow" >
+		<item text="待办事宜" id="workflow1" ><userdata name="link">workflow/userTask_findMyTodo.do?subSystem=</userdata></item>
+		<item text="已办事宜" id="workflow2" ><userdata name="link">did/userDid_findDids.do?subSystem=</userdata></item>
+		<item text="办结事宜" id="workflow3" ><userdata name="link">end/userEnd_findEnds.do?subSystem=</userdata></item>
+		<item text="作废事宜" id="workflow4" ><userdata name="link">abandon/userAbandon_findAbandons.do?subSystem=</userdata></item>
+		<item text="草稿箱" id="workflow5" ><userdata name="link">draft/userDraft_findDrafts.do?subSystem=</userdata></item>
+	</item>
+	<item text="咨询类实体管理" id="entity" open="1" >
+	    <item text="实体查询及维护" id="inqure" ><userdata name="link">stgl/weihu_listEntities.do?zixunType=0</userdata></item>
+		<item text="增资减资" id="capitalAddReduce" ><userdata name="link">stgl/zengjianzi_newHead.do?zixunType=0&amp;pdk=stgl_zengjianzi</userdata></item>
+		<item text="用工计划" id="plan" ><userdata name="link">stgl/yonggongjihua_newHead.do?zixunType=0&amp;pdk=stgl_yonggongjihua</userdata></item>
+		<item text="法人代表变更" id="legalPerson" ><userdata name="link">stgl/faren_newHead.do?zixunType=0&amp;pdk=stgl_farendaibiao</userdata></item>
+		<item text="重大财务事项" id="finance" ><userdata name="link">stgl/caiwu_newHead.do?zixunType=0&amp;pdk=stgl_caiwu</userdata></item>
+		<item text="确权审批" id="approve" ><userdata name="link">stgl/quequan_newHead.do?zixunType=0&amp;pdk=stgl_quequan</userdata></item>
+	</item>
+	<item text="非咨询持续经营类实体管理" id="nonEntity" open="1" >
+	    <item text="实体查询及维护" id="nonInqure" ><userdata name="link">stgl/weihu_listEntities.do?zixunType=3</userdata></item>
+		<item text="增资减资" id="nonCapitalAddReduce" ><userdata name="link">stgl/zengjianzi2_newHead.do?zixunType=3&amp;pdk=stgl_fcx_zjz</userdata></item>
+		<item text="法人代表变更" id="nonLegalPerson" ><userdata name="link">stgl/faren2_newHead.do?zixunType=3&amp;pdk=stgl_fcx_frdbbg</userdata></item>
+		<item text="重大财务事项" id="nonFinance" ><userdata name="link">stgl/caiwu2_newHead.do?zixunType=3&amp;pdk=stgl_fcx_zdcwsx</userdata></item>
+		<item text="确权审批" id="nonApprove" ><userdata name="link">stgl/quequan2_newHead.do?zixunType=3&amp;pdk=stgl_fcx_quequan</userdata></item>
+		<item text="企业改制" id="nonChangeSystem" ><userdata name="link">stgl/gaizhi_newHead.do?zixunType=3&amp;pdk=stgl_gaizhi</userdata></item>		
+	</item>
+   <item text="非咨询处置类实体管理"  id="disposed_entity" open="1" >
+	  <item text="实体查询及维护" id="disposed_inqure" ><userdata name="link">stgl/weihu_listEntities.do?zixunType=1</userdata></item>
+		<item text="人员信息查询" id="summary_person" ><userdata name="link">stgl/renyuanchaxun_listStaff.do?zixunType=1</userdata></item>
+		<item text="资产信息查询" id="summary_asset" ><userdata name="link">stgl/chuzhizichan_listAssets.do?zixunType=1</userdata></item>
+		<item text="债权债务信息查询" id="summary_debt_claims" ><userdata name="link">stgl/zhaiquanzhaiwu_listClaimsDebt.do?zixunType=1</userdata></item>
+		<item text="其他事项审批" id="qianbao" ><userdata name="link">stgl/qita_newHead.do?zixunType=1&amp;pdk=stgl_qita</userdata></item>
+	</item>
+</tree>

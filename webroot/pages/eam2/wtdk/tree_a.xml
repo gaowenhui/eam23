@@ -1,0 +1,77 @@
+﻿<?xml version='1.0' encoding='UTF-8'?>
+<tree id="0">
+   	<item text="工作台" id="workflow" >
+		<item text="待办事宜" id="workflow1" >
+			<userdata name="link">workflow/userTask_findMyTodo.do?subSystem=</userdata>
+		</item>
+		<item text="已办事宜" id="workflow2" >
+			<userdata name="link">did/userDid_findDids.do?subSystem=</userdata>
+		</item>
+		<item text="办结事宜" id="workflow3" >
+			<userdata name="link">end/userEnd_findEnds.do?subSystem=</userdata>
+		</item>
+		<item text="作废事宜" id="workflow4" >
+			<userdata name="link">abandon/userAbandon_findAbandons.do?subSystem=</userdata>
+		</item>
+		<item text="草稿箱" id="workflow5" >
+			<userdata name="link">draft/userDraft_findDrafts.do?subSystem=</userdata>
+		</item>
+	</item>
+    <item text="委托贷款管理" id="consignLoans" >
+		<!-- <item text="客户查询" id="customersQuery">
+			<userdata name="link">wtdk/customersQuery_init.do</userdata>
+		</item> -->
+		<item text="贷款账户查询" id="loansAccuntQuery">
+        	<userdata name="link">wtdk/loansQuery_init.do</userdata>
+		</item>
+		<item text="基金帐户查询" id="funcAccuntQuery">
+        	<userdata name="link">wtdk/funcQuery_init.do</userdata>
+		</item>
+		<item text="贷款客户查询" id="loansCustQuery">
+			<userdata name="link">wtdk/loansCustQuery_init.do</userdata>
+		</item>
+		<item text="基金客户查询" id="funcCustQuery">
+			<userdata name="link">wtdk/funcCustQuery_init.do</userdata>
+		</item>
+		<item text="委贷风险分类查询" id="riskQuery">
+        	<userdata name="link">wtdk/riskQuery_init.do</userdata>
+		</item>
+		<item text="贷款机构联系方式" id="loansAgnciesRelatePerson">
+        	<userdata name="link">wtdk/personQuery_perInit.do</userdata>
+		</item>
+		<item text="终止委托贷款委托代理" id="ddd">
+        	<userdata name="link">wtdk/endInfo_newHead.do?pdk=wtdk_endInfo</userdata>
+		</item>
+		<item text="基金退回审批" id="sss">
+        	<userdata name="link">wtdk/funcBack_newHead.do?pdk=wtdk_funcBack</userdata>
+		</item>
+	</item>
+	<item text="代理帐总账" id="generalLedger"  >
+		<item text="多科目查询(同比查询)" id="a">
+       		<userdata name="link">http://10.10.4.202/cognos8/cgi-bin/cognos.cgi?b_action=xts.run&amp;m=portal/report-viewer.xts&amp;ui.action=run&amp;ui.object=%2fcontent%2fpackage%5b%40name%3d%27jic_edw20060630%27%5d%2ffolder%5b%40name%3d%27%e5%a7%94%e6%89%98%e8%b4%b7%e6%ac%be%e6%8a%a5%e8%a1%a8%27%5d%2freport%5b%40name%3d%27%e5%a7%94%e8%b4%b7%ef%bc%8d%e5%a4%9a%e7%a7%91%e7%9b%ae%e6%9f%a5%e8%af%a2(%e5%90%8c%e6%af%94%e6%9f%a5%e8%af%a2)%27%5d</userdata>
+       	</item>
+       	<item text="多科目查询(余额查询)" id="b">
+       		<userdata name="link">http://10.10.4.202/cognos8/cgi-bin/cognos.cgi?b_action=xts.run&amp;m=portal/report-viewer.xts&amp;ui.action=run&amp;ui.object=%2fcontent%2fpackage%5b%40name%3d%27jic_edw20060630%27%5d%2ffolder%5b%40name%3d%27%e5%a7%94%e6%89%98%e8%b4%b7%e6%ac%be%e6%8a%a5%e8%a1%a8%27%5d%2freport%5b%40name%3d%27%e5%a7%94%e8%b4%b7%ef%bc%8d%e5%a4%9a%e7%a7%91%e7%9b%ae%e6%9f%a5%e8%af%a2(%e4%bd%99%e9%a2%9d%e6%9f%a5%e8%af%a2)dai%27%5d</userdata>
+       	</item>
+       	<item text="折算人民币报表查询(余额,同比)" id="renminbibaobiaochaxun">
+       		<userdata name="link">http://10.10.4.202/cognos8/cgi-bin/cognos.cgi?b_action=xts.run&amp;m=portal/report-viewer.xts&amp;ui.action=run&amp;ui.object=%2fcontent%2fpackage%5b%40name%3d%27jic_edw20060630%27%5d%2ffolder%5b%40name%3d%27%e5%a7%94%e6%89%98%e8%b4%b7%e6%ac%be%e6%8a%a5%e8%a1%a8%27%5d%2freport%5b%40name%3d%27%e5%a7%94%e8%b4%b7%ef%bc%8d%e6%8a%98%e7%ae%97%e4%ba%ba%e6%b0%91%e5%b8%81%e6%8a%a5%e8%a1%a8%e6%9f%a5%e8%af%a2%e5%90%88%e5%b9%b6%ef%bc%88%e4%bd%99%e9%a2%9d%e6%9f%a5%e8%af%a2%e4%b8%8e%e5%90%8c%e6%af%94%e6%9f%a5%e8%af%a2%e5%90%88%e5%b9%b6%ef%bc%89%27%5d</userdata>
+       	</item>
+	</item>
+	<item text="代理帐总账(财会部)" id="caiwubu" >
+		<item text="行际多科目查询 委贷记账(同比查询)" id="e">
+       		<userdata name="link">http://10.10.4.202/cognos8/cgi-bin/cognos.cgi?b_action=xts.run&amp;m=portal/report-viewer.xts&amp;ui.action=run&amp;ui.object=%2fcontent%2fpackage%5b%40name%3d%27jic_edw20060630%27%5d%2freport%5b%40name%3d%27%e8%a1%8c%e9%99%85%e5%a4%9a%e7%a7%91%e7%9b%ae%e6%9f%a5%e8%af%a2dai%e5%a7%94%e8%b4%b7%e8%ae%b0%e8%b4%a6%ef%bc%88%e5%90%8c%e6%af%94%e6%9f%a5%e8%af%a2%ef%bc%89%27%5d</userdata>
+       	</item>
+       	<item text="行际多科目查询(同比查询)" id="f">
+       		<userdata name="link">http://10.10.4.202/cognos8/cgi-bin/cognos.cgi?b_action=xts.run&amp;m=portal/report-viewer.xts&amp;ui.action=run&amp;ui.object=%2fcontent%2fpackage%5b%40name%3d%27jic_edw20060630%27%5d%2freport%5b%40name%3d%27%e8%a1%8c%e9%99%85%e5%a4%9a%e7%a7%91%e7%9b%ae%e6%9f%a5%e8%af%a2dai%ef%bc%88%e5%90%8c%e6%af%94%e6%9f%a5%e8%af%a2%ef%bc%89%27%5d</userdata>
+       	</item>
+      	<item text="行际多科目查询(余额)" id="g">
+       		<userdata name="link">http://10.10.4.202/cognos8/cgi-bin/cognos.cgi?b_action=xts.run&amp;m=portal/report-viewer.xts&amp;ui.action=run&amp;ui.object=%2fcontent%2fpackage%5b%40name%3d%27jic_edw20060630%27%5d%2freport%5b%40name%3d%27%e8%a1%8c%e9%99%85%e5%a4%9a%e7%a7%91%e7%9b%ae%e6%9f%a5%e8%af%a2dai%ef%bc%88%e4%bd%99%e9%a2%9d%ef%bc%89%27%5d</userdata>
+       	</item>
+       	<item text="代理账总账行际多科目查询(同比查询)" id="h">
+       		<userdata name="link">http://10.10.4.202/cognos8/cgi-bin/cognos.cgi?b_action=xts.run&amp;m=portal/report-viewer.xts&amp;ui.action=run&amp;ui.object=%2fcontent%2fpackage%5b%40name%3d%27jic_edw20060630%27%5d%2freport%5b%40name%3d%27%e4%bb%a3%e7%90%86%e8%b4%a6%e6%80%bb%e8%b4%a6%e8%a1%8c%e9%99%85%e5%a4%9a%e7%a7%91%e7%9b%ae%e6%9f%a5%e8%af%a2dai%ef%bc%88%e5%90%8c%e6%af%94%e6%9f%a5%e8%af%a2%ef%bc%89%27%5d</userdata>
+       	</item>
+       	<item text="行际多科目查询 委贷330(同比查询)" id="i">
+       		<userdata name="link">http://10.10.4.202/cognos8/cgi-bin/cognos.cgi?b_action=xts.run&amp;m=portal/report-viewer.xts&amp;ui.action=run&amp;ui.object=%2fcontent%2fpackage%5b%40name%3d%27jic_edw20060630%27%5d%2freport%5b%40name%3d%27%e8%a1%8c%e9%99%85%e5%a4%9a%e7%a7%91%e7%9b%ae%e6%9f%a5%e8%af%a2dai%e5%a7%94%e8%b4%b7330%ef%bc%88%e5%90%8c%e6%af%94%e6%9f%a5%e8%af%a2%ef%bc%89%27%5d</userdata>
+       	</item>
+	</item>
+</tree>

@@ -1,0 +1,275 @@
+<HTML><HEAD><TITLE>PopCalendar Millennium, By Liming(Victor) Weng</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=UTF-8">
+<STYLE type=text/css>A:link {
+	TEXT-DECORATION: none
+}
+A:visited {
+	TEXT-DECORATION: none
+}
+TD {
+	VERTICAL-ALIGN: middle; TEXT-ALIGN: center
+}
+.CalHead {
+	FONT: bold 8pt Arial; COLOR: white
+}
+.CalCell {
+	FONT: 8pt Arial; CURSOR: hand
+}
+.HeadBtn {
+	FONT: 10pt Fixedsys; VERTICAL-ALIGN: middle; WIDTH: 18px; HEIGHT: 22px
+}
+.HeadBox {
+	FONT-WEIGHT: normal; FONT-SIZE: 10pt; VERTICAL-ALIGN: middle; LINE-HEIGHT: normal; FONT-STYLE: normal; FONT-VARIANT: normal
+}
+.Today {
+	FONT: bold 10pt Arial; COLOR: white
+}
+</STYLE>
+
+<META content="MSHTML 6.00.2800.1106" name=GENERATOR></HEAD>
+<BODY leftMargin=0 topMargin=0 marginheight="0" marginwidth="0">
+<SCRIPT>
+<!-- Begin Configurable Part
+var giStartYear = 1900;
+var giEndYear = 2050;
+var giCellWidth = 16;
+var gMonths = new Array("01","02","03","04","05","06","07","08","09","10","11","12");
+var gcOtherDay = "gray";
+var gcToggle = "yellow";
+var gcBG = "#dddddd";
+var gcTodayBG = "white";
+var gcFrame = "teal";
+var gcHead = "white";
+var gcWeekend = "red";
+var gcWorkday = "black";
+var gcCalBG = "#6699cc";
+//-- End Configurable Part -->
+
+<!-- Begin Non-editable part
+/****************************************************************************
+ PopCalendar Millennium (emailware), by Liming(Victor) Weng
+ Version 1.1        Release date: 2001.1.21           Email: popcal@yahoo.com
+Notice:
+ 1. Thanks to my wife Yang Liu who contributes to this development a lot.
+ 2. This emailware is free only for non-commercial use, and must mail me first!
+ 3. For any commercial use, contact me to pay a small amount of license fee.
+ 4. Please respect my hard work. Any usage of or modification to this script without
+ the authorization from the author may be accused for a reimbursement up to USD$10,000 !!!
+*****************************************************************************/
+var gcTemp = gcBG;
+var gdCurDate = new Date();
+var giYear = gdCurDate.getFullYear();
+var giMonth = gdCurDate.getMonth()+1;
+var giDay = gdCurDate.getDate();
+var tbMonSelect, tbYearSelect;
+var gCellSet = new Array;
+var gfPop = parent.document.getElementById(self.name);
+var gdCtrl = new Object;
+
+//****************************************************************************
+// Here, you could modify the date format as you need !
+//****************************************************************************
+function fSetDate(iYear, iMonth, iDay){
+  
+  var sDay="";
+  
+  if(iDay<10)
+  {
+    sDay="0"+iDay;
+  }
+  else
+  {
+     sDay=iDay;
+  }
+  gdCtrl.value = iYear+"-"+gMonths[iMonth-1]+"-"+sDay; // <--Modify this
+  gfPop.style.visibility = "hidden";
+}
+
+//****************************************************************************
+// Param: popCtrl is the widget beyond which you want popup this calendar;
+//        dateCtrl is the widget into which you want to put the selected date;
+//****************************************************************************
+function fPopCalendar(popCtrl, dateCtrl, anEvent){
+  anEvent.cancelBubble=true;
+  gdCtrl = parent.document.getElementById(dateCtrl);
+  var pc = parent.document.getElementById(popCtrl);
+  fSetYearMon(giYear, giMonth);
+  var point = fGetXY(pc);
+  with (gfPop.style) {
+  	left = point.x-1;
+	top  = point.y+pc.offsetHeight+1;
+	visibility = "visible";
+  }
+}
+
+function Point(iX, iY){
+	this.x = iX;
+	this.y = iY;
+}
+
+function fGetXY(aTag){
+  var pt = new Point(aTag.offsetLeft, aTag.offsetTop);
+  do {
+  	aTag = aTag.offsetParent;
+  	pt.x += aTag.offsetLeft;
+  	pt.y += aTag.offsetTop;
+  } while(aTag.tagName!="BODY");
+  return pt;
+}
+
+function fSetSelected(aCell){
+  var iOffset = 0;
+  var iYear = parseInt(tbSelYear.value);
+  var iMonth = parseInt(tbSelMonth.value);
+
+  aCell.bgColor = gcBG;
+  with (aCell.firstChild){
+  	var iDate = parseInt(innerHTML);
+  	if (style.color==gcOtherDay)
+		iOffset = (id<10)?-1:1;
+	iMonth += iOffset;
+	if (iMonth<1) {
+		iYear--;
+		iMonth = 12;
+	}else if (iMonth>12){
+		iYear++;
+		iMonth = 1;
+	}
+  }
+
+  fSetDate(iYear, iMonth, iDate);
+}
+
+function fBuildCal(iYear, iMonth) {
+  var aMonth=new Array();
+  for(i=1;i<7;i++)
+  	aMonth[i]=new Array(i);
+
+  var dCalDate=new Date(iYear, iMonth-1, 1);
+  var iDayOfFirst=dCalDate.getDay();
+  var iDaysInMonth=new Date(iYear, iMonth, 0).getDate();
+  var iOffsetLast=new Date(iYear, iMonth-1, 0).getDate()-iDayOfFirst+1;
+  var iDate = 1;
+  var iNext = 1;
+
+  for (d = 0; d < 7; d++)
+	aMonth[1][d] = (d<iDayOfFirst)?-(iOffsetLast+d):iDate++;
+  for (w = 2; w < 7; w++)
+  	for (d = 0; d < 7; d++)
+		aMonth[w][d] = (iDate<=iDaysInMonth)?iDate++:-(iNext++);
+  return aMonth;
+}
+
+function fDrawCal(iCellWidth) {
+  var WeekDay = new Array("日","一","二","三","四","五","六");
+  var styleTD = " width='"+iCellWidth+"' ";            //Coded by Liming Weng(Victor Won)  email:victorwon@netease.com
+
+  with (document) {
+	write("<tr>");
+	for(i=0; i<7; i++)
+		write("<td class='CalHead' "+styleTD+">" + WeekDay[i] + "</td>");
+	write("</tr>");
+
+  	for (w = 1; w < 7; w++) {
+		write("<tr>");
+		for (d = 0; d < 7; d++) {
+			write("<td class='CalCell' "+styleTD+" onMouseOver='gcTemp=this.bgColor;this.bgColor=gcToggle;this.bgColor=gcToggle' onMouseOut='this.bgColor=gcTemp;this.bgColor=gcTemp' onclick='fSetSelected(this)'>");
+			write("<A href='#null' onfocus='this.blur();'>00</A></td>")
+		}
+		write("</tr>");
+	}
+  }
+}
+
+function fUpdateCal(iYear, iMonth) {
+  myMonth = fBuildCal(iYear, iMonth);
+  var i = 0;
+  var iDate = 0;
+  for (w = 0; w < 6; w++)
+	for (d = 0; d < 7; d++)
+		with (gCellSet[(7*w)+d]) {
+			id = i++;
+			if (myMonth[w+1][d]<0) {
+				style.color = gcOtherDay;
+				innerHTML = -myMonth[w+1][d];
+				iDate = 0;
+			}else{
+				style.color = ((d==0)||(d==6))?gcWeekend:gcWorkday;
+				innerHTML = myMonth[w+1][d];
+				iDate++;
+			}
+			parentNode.bgColor = ((iYear==giYear)&&(iMonth==giMonth)&&(iDate==giDay))?gcTodayBG:gcBG;
+			parentNode.bgColor = parentNode.bgColor;
+		}
+}
+
+function fSetYearMon(iYear, iMon){
+  tbSelMonth.options[iMon-1].selected = true;
+  if (iYear>giEndYear) iYear=giEndYear;
+  if (iYear<giStartYear) iYear=giStartYear;
+  tbSelYear.options[iYear-giStartYear].selected = true;
+  fUpdateCal(iYear, iMon);
+}
+
+function fPrevMonth(){
+  var iMon = tbSelMonth.value;
+  var iYear = tbSelYear.value;
+
+  if (--iMon<1) {
+	  iMon = 12;
+	  iYear--;
+  }
+
+  fSetYearMon(iYear, iMon);
+}
+
+function fNextMonth(){
+  var iMon = tbSelMonth.value;
+  var iYear = tbSelYear.value;
+
+  if (++iMon>12) {
+	  iMon = 1;
+	  iYear++;
+  }
+
+  fSetYearMon(iYear, iMon);
+}
+
+with (document) {
+  write("<table id='popTable' bgcolor='"+gcCalBG+"' cellspacing='0' cellpadding='3' border='0'><TR>");
+  write("<td align='center'><input type='button' value='<' class='HeadBtn' onClick='fPrevMonth()'>");
+  
+  write("&nbsp;<SELECT id='tbYearSelect' class='HeadBox' onChange='fUpdateCal(tbSelYear.value, tbSelMonth.value)' Victor='Won'>");
+  for(i=giStartYear;i<=giEndYear;i++)
+  {
+	write("<OPTION value='"+i+"'>"+i+"</OPTION>");
+  }
+  write("</SELECT>");
+  
+  write("<select id='tbMonSelect' class='HeadBox' onChange='fUpdateCal(tbSelYear.value, tbSelMonth.value)' Victor='Won'>");
+  for (i=0; i<12; i++)
+  {
+	write("<option value='"+(i+1)+"'>"+gMonths[i]+"</option>");
+  }
+  write("</SELECT>");
+  
+  write("&nbsp;<input type='button' value='>' class='HeadBtn' onclick='fNextMonth()'>");
+  write("</td></TR><TR><td align='center'>");
+  write("<DIV style='background-color:"+gcFrame+";width:"+((giCellWidth+6)*7+2)+"px;'><table border='0' cellpadding='2' >");
+  tbSelMonth = getElementById("tbMonSelect");
+  tbSelYear = getElementById("tbYearSelect");
+  fDrawCal(giCellWidth);
+  gCellSet = getElementsByTagName("A"); 
+  fSetYearMon(giYear, giMonth);
+  write("</table></DIV></td></TR><TR><TD align='center'>");
+  write("<A href='#null' class='Today' onclick='fSetDate(giYear,giMonth,giDay); this.blur();' onMouseOver='gcTemp=this.style.color;this.style.color=gcToggle' onMouseOut='this.style.color=gcTemp'>今天 :&nbsp;"+giYear+"/"+gMonths[giMonth-1]+"/"+giDay+"</A>");
+  write("&nbsp;<A href='#null' class='Today' onclick='parent.document.getElementById(\"popFrame\").style.visibility=\"hidden\"'>关闭</A>");
+  
+  write("</TD></TR></TD></TR><TR></TR></TABLE>");
+  
+  gfPop.width = getElementById("popTable").offsetWidth;
+  gfPop.height = getElementById("popTable").offsetHeight;
+}
+// End -- Coded by Liming Weng, email: victorwon@netease.com -->
+</SCRIPT>
+</BODY></HTML>

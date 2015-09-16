@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+  	<constant name="struts.devMode" value="true" />
+	<package name="jygdzc" namespace="/jygdzc" extends="default">
+		<action name="index">
+			<result>/pages/eam2/jygdzc/index.jsp</result>
+		</action>
+		<!-- 资产查询 -->
+		<action name="AssetQuery_*"  method="{1}" class="com.tansun.eam2.jygdzc.action.AssetQueryAction">
+			<result name="query">/pages/eam2/jygdzc/asset/assetQuery.jsp</result>
+			<result name="queryForZccz">/pages/eam2/zccz/assetDeal/assetQueryForZccz.jsp</result>
+			<result name="assetQuery">/pages/eam2/jygdzc/asset/assetQuery.jsp</result>
+			<result name="assurance">/pages/eam2/jygdzc/assurance/assetQuery.jsp</result>
+			<result name="toTree">/pages/eam2/jygdzc/tree/tree4Jygl.jsp</result>
+			<result name="checkQuery">/pages/eam2/jygdzc/asset/checkQuery.jsp</result>
+			<result name="buildingInfohcpg">/pages/eam2/jygdzc/asset/AssetInfo/aeRealEstate.jsp</result>
+			<result name="vehicleInfohcpg">/pages/eam2/jygdzc/asset/AssetInfo/aeVehicle.jsp</result>
+			<result name="elseInfohcpg">/pages/eam2/jygdzc/asset/AssetInfo/AeMachineEquipment.jsp</result>
+			
+		</action>
+		<!-- 表头相关 -->
+		<action name="AssetManageHead_*"  method="{1}" class="com.tansun.eam2.jygdzc.action.AssetManageHeadAction">
+			<!-- <result name="tomodify" type="chain">
+				<param name="actionName">AssetManageHead_modifyHead</param>
+				<param name="namespace">/jygdzc</param>
+			</result>  -->
+			<result name="toWorkflow" type='chain'>
+      			<param name="actionName">jygdzcWorkflow_toResult</param>
+            	<param name="namespace">/jygdzcWorkflow</param>
+      		</result>
+      		<result name="tomodify" type='chain'>
+      			<param name="actionName">jygdzcWorkflow_toDraft</param>
+            	<param name="namespace">/jygdzcWorkflow</param>
+      		</result>
+			<result name="add" >/pages/eam2/jygdzc/asset/assetAdd.jsp</result>
+			<result name="change">/pages/eam2/jygdzc/asset/assetChange.jsp</result>
+			<result name="check">/pages/eam2/jygdzc/asset/assetCheck.jsp</result>
+			<result name="agentCheck">/pages/eam2/jygdzc/asset/agentCheck.jsp</result>
+			<result name="scrap">/pages/eam2/jygdzc/asset/assetScrap.jsp</result>
+			<result name="agentScrap">/pages/eam2/jygdzc/asset/agentScrapt.jsp</result>
+			<result name="manage">/pages/eam2/jygdzc/asset/assetManage.jsp</result>
+			<result name="agentManage">/pages/eam2/jygdzc/asset/agentManage.jsp</result>
+		</action>
+		<!-- 表体相关 -->
+		<action name="AssetManageBody_*"  method="{1}" class="com.tansun.eam2.jygdzc.action.AssetManageBodyAction">
+		   <result name="tomodify" type="chain">
+				<param name="actionName">AssetManageBody_modifyBody</param>
+				<param name="namespace">/jygdzc</param>
+			</result> 
+			<result name="assetInfo">/pages/eam2/jygdzc/asset/assetInfo.jsp</result>
+			<result name="addInfo">/pages/eam2/jygdzc/asset/addInfo.jsp</result>
+			<result name="main">/pages/eam2/jygdzc/asset/Info/main.jsp</result>
+			<result name="card">/pages/eam2/jygdzc/asset/Info/card.jsp</result>
+			<result name="deal">/pages/eam2/jygdzc/asset/Info/deal.jsp</result>
+			<result name="cost">/pages/eam2/jygdzc/asset/Info/cost.jsp</result>
+			<result name="investmentInfo">/pages/eam2/jygdzc/asset/Info/investment.jsp</result>
+			<result name="changeHistory">/pages/eam2/jygdzc/asset/Info/change.jsp</result>
+			<result name="flow">/pages/eam2/jygdzc/asset/Info/flow.jsp</result>
+			<result name="entrust">/pages/eam2/jygdzc/asset/Info/entrust.jsp</result>
+			<result name="attachment">/pages/eam2/jygdzc/asset/Info/attachment.jsp</result>
+			<result name="vehicle">/pages/eam2/jygdzc/asset/Info/vehicle.jsp</result>
+			<result name="building">/pages/eam2/jygdzc/asset/Info/building.jsp</result>
+			<result name="else">/pages/eam2/jygdzc/asset/Info/else.jsp</result>
+			<result name="risk">/pages/eam2/jygdzc/asset/Info/risk.jsp</result>
+			<result name="rent">/pages/eam2/jygdzc/asset/Info/rent.jsp</result>
+			<result name="manageInfo" >/pages/eam2/jygdzc/asset/manageInfo.jsp</result>
+			<result name="add" type="redirect">jygdzc/AssetManageHead_modifHead.do</result>
+			<result name="check">/pages/eam2/jygdzc/asset/assetCheck.jsp</result>
+			<result name="agentCheck">/pages/eam2/jygdzc/asset/substituteCheck.jsp</result>
+			<result name="scrap">/pages/eam2/jygdzc/asset/assetScrap.jsp</result>
+			<result name="agentScrap">/pages/eam2/jygdzc/asset/substituteScrap.jsp</result>
+			<result name="manage">/pages/eam2/jygdzc/asset/assetManage.jsp</result>
+			<result name="agentManage">/pages/eam2/jygdzc/asset/substituteManage.jsp</result>
+			<!-- ===========================查看资产============================= -->
+			<result name="assetXxInfo">/pages/eam2/jygdzc/asset/assetXxInfo.jsp</result>
+			<result name="mainInfo">/pages/eam2/jygdzc/asset/AssetInfo/main.jsp</result>
+			<result name="cardInfo">/pages/eam2/jygdzc/asset/AssetInfo/card.jsp</result>
+			<result name="costInfo">/pages/eam2/jygdzc/asset/AssetInfo/cost.jsp</result>
+			<result name="examineInfo">/pages/eam2/jygdzc/asset/AssetInfo/examine.jsp</result>
+			<result name="investment">/pages/eam2/jygdzc/asset/AssetInfo/investment.jsp</result>
+			<result name="changeHistoryInfo">/pages/eam2/jygdzc/asset/AssetInfo/change.jsp</result>
+			<result name="flowInfo">/pages/eam2/jygdzc/asset/AssetInfo/flow.jsp</result>
+			<result name="entrustInfo">/pages/eam2/jygdzc/asset/AssetInfo/entrust.jsp</result>
+			<result name="attachmentInfo">/pages/eam2/jygdzc/asset/AssetInfo/attachment.jsp</result>
+			<result name="vehicleInfo">/pages/eam2/jygdzc/asset/AssetInfo/vehicle.jsp</result>
+			<result name="buildingInfo">/pages/eam2/jygdzc/asset/AssetInfo/building.jsp</result>
+			<result name="elseInfo">/pages/eam2/jygdzc/asset/AssetInfo/else.jsp</result>
+			<result name="riskInfo">/pages/eam2/jygdzc/asset/AssetInfo/risk.jsp</result>
+			<result name="rentInfo">/pages/eam2/jygdzc/asset/AssetInfo/rent.jsp</result>
+			<result name="dealInfo">/pages/eam2/jygdzc/asset/AssetInfo/deal.jsp</result>
+			<!-- ===========================卡片查询（资产挂接卡片）============================= -->
+			<result name="cardQuery">/pages/eam2/jygdzc/asset/cardQuery.jsp</result>
+		</action>
+		<!-- add by lantianbo -->
+		<action name="JBHQuery_*"  method="{1}" class="com.tansun.eam2.jygdzc.action.JBHQueryAction">
+			<result name="query">/pages/eam2/jygdzc/asset/assetQuery.jsp</result>
+		</action>
+	</package>
+	<!-- 风险信息 -->
+	<package name="fxxx" namespace="/fxxx" extends="default">
+	<action name="AssetRisk_*"  method="{1}" class="com.tansun.eam2.jygdzc.action.AssetRiskAction">
+			<result name="tomodify" type="chain">
+				<param name="actionName">AssetRisk_modify</param>
+				<param name="namespace">/fxxx</param>
+			</result>
+			<result name="addRisk">/pages/eam2/jygdzc/asset/assetRisk.jsp</result>
+		</action>
+	</package>
+	
+	<include file="com/tansun/eam2/jygdzc/action/struts_zltb.xml"/>
+	<include file="com/tansun/eam2/jygdzc/action/struts_htqs.xml"/>
+	<include file="com/tansun/eam2/jygdzc/action/struts_liquidate.xml"/>
+	<include file="com/tansun/eam2/zyzc/workflow/buy/action/jygdzc_workflow.xml"/>
+</struts>

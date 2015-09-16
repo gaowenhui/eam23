@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<process name="zyzc_tostock" xmlns="http://jbpm.org/4.4/jpdl">
+	
+	<start g="467,41,48,48" name="start">
+		<transition g="-53,-17" name="开始" to="账管拟稿"/>
+	</start>
+
+	<task assignee="#{assignee}" g="430,106,122,52" name="账管拟稿">
+		<transition g="-83,-17" name="库管审核" to="库管审核"/>
+		<transition g="-83,-17" name="作废" to="end">
+			<event-listener class="com.tansun.eam2.zyzc.listener.Cancellation"/>
+			<event-listener class="com.tansun.eam2.common.workflow.listener.AbandonEventListener"/>
+		</transition>
+		<transition g="-83,-17" name="backto库管审核" to="库管审核"/>
+	</task>
+
+	<task g="432,210,117,48" name="库管审核">
+		<transition g="-83,-17" name="库管审核" to="库管审核"/>
+		<transition g="-83,-17" name="账管拟稿" to="账管拟稿"/>
+		<transition g="-83,-17" name="组审核" to="组审核"/>
+		<transition g="-83,-17" name="实物管理员审核" to="实物管理员审核"/>
+		<transition g="-83,-17" name="backto组审核" to="组审核"/>
+		<transition g="-83,-17" name="backto实物管理员审核" to="实物管理员审核"/>
+		<transition g="-83,-17" name="backto账管拟稿" to="账管拟稿"/>
+	</task>
+
+	<task g="236,210,141,48" name="实物管理员审核">
+		<transition g="-83,-17" name="实物管理员审核" to="实物管理员审核"/>
+		<transition g="-83,-17" name="组审核" to="组审核"/>
+		<transition g="-83,-17" name="库管审核" to="库管审核"/>
+		<transition g="-83,-17" name="backto组审核" to="组审核"/>
+		<transition g="-83,-17" name="backto库管审核" to="库管审核"/>
+	</task>
+
+	<task g="427,307,127,48" name="组审核">
+		<transition g="-83,-17" name="组审核" to="组审核"/>
+		<transition g="-83,-17" name="账管处理" to="账管处理"/>
+		<transition g="-83,-17" name="库管审核" to="库管审核"/>
+		<transition g="-83,-17" name="实物管理员审核" to="实物管理员审核"/>
+		<transition g="-83,-17" name="backto组审核" to="组审核"/>
+		<transition g="-83,-17" name="backto账管处理" to="账管处理"/>
+		<transition g="-83,-17" name="backto库管审核" to="库管审核"/>
+		<transition g="-83,-17" name="backto实物管理员审核" to="实物管理员审核"/>
+	</task>
+
+	<task g="435,406,112,48" name="账管处理">
+		<transition g="-83,-17" name="账管处理" to="账管处理"/>
+		<transition g="-83,-17" name="组审核" to="组审核"/>
+		<transition g="-83,-17" name="流程办结" to="end">
+			<event-listener class="com.tansun.eam2.common.workflow.listener.EndEventListener"/>
+		</transition>
+		<transition g="-83,-17" name="backto组审核" to="组审核"/>
+	</task>
+
+	<end g="467,488,48,48" name="end"/>
+	<migrate-instances versions="1..x"/>
+</process>

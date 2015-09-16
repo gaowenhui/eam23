@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context-3.0.xsd
+	http://www.springframework.org/schema/aop
+	http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+	http://www.springframework.org/schema/tx 
+	http://www.springframework.org/schema/tx/spring-tx-3.0.xsd">
+	
+			<!--0 1 0 ? * *     每天早上0：01触发  
+			 0 * 14 * * ?    每天从下午2点开始到2点59分每分钟一次触发  
+			"0 0 12 * * ?"     每天中午十二点触发  
+			"0 15 10 ? * *"     每天早上10：15触发  
+			"0 15 10 * * ?"     每天早上10：15触发  
+			"0 15 10 * * ? *"     每天早上10：15触发  
+			"0 15 10 * * ? 2005"     2005年的每天早上10：15触发  
+			"0 * 14 * * ?"     每天从下午2点开始到2点59分每分钟一次触发  
+			"0 0/5 14 * * ?"     每天从下午2点开始到2：55分结束每5分钟一次触发  
+			"0 0/5 14,18 * * ?"     每天的下午2点至2：55和6点至6点55分两个时间段内每5分钟一次触发  
+			"0 0-5 14 * * ?"     每天14:00至14:05每分钟一次触发  
+			"0 10,44 14 ? 3 WED"     三月的每周三的14：10和14：44触发  
+			"0 15 10 ? * MON-FRI"     每个周一、周二、周三、周四、周五的10：15触发  
+			"0 15 10 15 * ?"     每月15号的10：15触发  
+			"0 15 10 L * ?"     每月的最后一天的10：15触发  
+			"0 15 10 ? * 6L"     每月最后一个周五的10：15触发  
+			"0 15 10 ? * 6L"     每月最后一个周五的10：15触发  
+			"0 15 10 ? * 6L 2002-2005"     2002年至2005年的每月最后一个周五的10：15触发  
+			"0 15 10 ? * 6#3"     每月的第三个周五的10：15触发 
+			
+			-->
+			
+			
+			<!-- 
+			说明：
+			表达式 =  args[0] args[1] args[2] args[3] args[4] args[5] args[6]
+			含义   =    秒       分     小时    日       月      星期    年
+			
+			每一个局均可以有如下 的表达式，具体数值含义为：
+			一个具体的值，如0：就是从0开始，以此类推
+			*：就是每一秒、小时、年、天等
+			?: 站位符
+			一个跨度的值，如0-5:就是从0延续到5
+			一个定时间隔的值，如0/5:就是每相隔5秒、分、小时
+			，：就是枚举，以逗号组装的时间
+			L ：就是代表最后一个时间段
+			数值L：代表的是最后的某天，星期，月，年等
+			数值a#数值b：代表的是第b个a（天、星期、月、年）
+			
+			-->
+    <bean id="schedulerFactoryBean" class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+        <property name="triggers">
+            <list>
+                <ref bean="triggerZlwgTask" />
+                <ref bean="triggerZlwgStartTask" />
+                <ref bean="triggerZlwgEndTask" />
+                <ref bean="triggerBxTask" />
+                <ref bean="triggerBxStartTask" />
+                <ref bean="triggerBxEndTask" />
+                <ref bean="triggerTokenExpireTask" />
+                <ref bean="triggerZyZcRenewalExpireTask" />
+            </list>
+        </property>
+    </bean>
+	<!-- 委管合同到期日期提醒 -->
+    <bean id="zlwgTask" class="com.tansun.eam2.task.ContractZLWGTask">
+        <property name="message">
+            <value>编号为：“#1#”的合同将在#2#到期，请您关注。此消息为系统消息。</value>
+        </property>
+         <property name="loginnames">
+            <value>zhangchunyi,yanghuimin,fanying,xuzhaonian</value>
+        </property>
+    </bean>
+    <bean id="jobZlwgTask" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+        <property name="targetObject">
+            <ref bean="zlwgTask" />
+        </property>
+        <property name="targetMethod">
+            <value>timer</value>
+        </property>
+    </bean>
+    <bean id="triggerZlwgTask" class="org.springframework.scheduling.quartz.CronTriggerBean">
+        <property name="jobDetail">
+            <ref bean="jobZlwgTask" />
+        </property>
+        <property name="cronExpression">
+            <value>0 15 1 * * ?</value>
+        </property>
+    </bean>
+	<!-- 委管合同到期日期提醒  -->
+    <!-- 委管合同起始日期提醒 -->
+    <bean id="zlwgStartTask" class="com.tansun.eam2.task.ContractZLWGStartTask">
+        <property name="message">
+            <value>编号为：“#1#”的合同在#2#开始执行，请您关注。此消息为系统消息。</value>
+        </property>
+         <property name="loginnames">
+            <value>zhangchunyi,yanghuimin,fanying,xuzhaonian</value>
+        </property>
+    </bean>
+    <bean id="jobZlwgStartTask" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+        <property name="targetObject">
+            <ref bean="zlwgStartTask" />
+        </property>
+        <property name="targetMethod">
+            <value>timer</value>
+        </property>
+    </bean>
+    <bean id="triggerZlwgStartTask" class="org.springframework.scheduling.quartz.CronTriggerBean">
+        <property name="jobDetail">
+            <ref bean="jobZlwgStartTask" />
+        </property>
+        <property name="cronExpression">
+            <value>0 45 1 * * ?</value>
+        </property>
+    </bean>
+	<!-- 委管合同起始日期提醒  -->
+    <!-- 委管合同到期日期状态修改及提醒 -->
+    <bean id="zlwgEndTask" class="com.tansun.eam2.task.ContractZLWGEndTask">
+        <property name="message">
+            <value>编号为：“#1#”的合同在#2#执行结束，请您关注。此消息为系统消息。</value>
+        </property>
+         <property name="loginnames">
+            <value>zhangchunyi,yanghuimin,fanying,xuzhaonian</value>
+        </property>
+    </bean>
+    <bean id="jobZlwgEndTask" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+        <property name="targetObject">
+            <ref bean="zlwgEndTask" />
+        </property>
+        <property name="targetMethod">
+            <value>timer</value>
+        </property>
+    </bean>
+    <bean id="triggerZlwgEndTask" class="org.springframework.scheduling.quartz.CronTriggerBean">
+        <property name="jobDetail">
+            <ref bean="jobZlwgEndTask" />
+        </property>
+        <property name="cronExpression">
+            <value>0 40 1 * * ?</value>
+        </property>
+    </bean>
+	<!-- 委管合同到期日期状态修改及提醒  -->
+    <!-- 保险合同到期日期提醒 -->
+    <bean id="bxTask" class="com.tansun.eam2.task.ContractBXTask">
+        <property name="message">
+            <value>编号为：“#1#”的合同将在#2#到期，请您关注。此消息为系统消息。</value>
+        </property>
+         <property name="loginnames">
+            <value>zhangchunyi,yanghuimin,fanying,xuzhaonian</value>
+        </property>
+    </bean>
+    <bean id="jobBxTask" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+        <property name="targetObject">
+            <ref bean="bxTask" />
+        </property>
+        <property name="targetMethod">
+            <value>timer</value>
+        </property>
+    </bean>
+    <bean id="triggerBxTask" class="org.springframework.scheduling.quartz.CronTriggerBean">
+        <property name="jobDetail">
+            <ref bean="jobBxTask" />
+        </property>
+        <property name="cronExpression">
+            <value>0 0 1 * * ?</value>
+        </property>
+    </bean>
+	<!-- 保险合同到期日期提醒  -->
+     <!-- 保险合同到期日期状态修改及提醒 -->
+    <bean id="bxEndTask" class="com.tansun.eam2.task.ContractBXEndTask">
+        <property name="message">
+            <value>编号为：“#1#”的合同在#2#执行结束，请您关注。此消息为系统消息。</value>
+        </property>
+         <property name="loginnames">
+            <value>zhangchunyi,yanghuimin,fanying,xuzhaonian</value>
+        </property>
+    </bean>
+    <bean id="jobBxEndTask" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+        <property name="targetObject">
+            <ref bean="bxEndTask" />
+        </property>
+        <property name="targetMethod">
+            <value>timer</value>
+        </property>
+    </bean>
+    <bean id="triggerBxEndTask" class="org.springframework.scheduling.quartz.CronTriggerBean">
+        <property name="jobDetail">
+            <ref bean="jobBxEndTask" />
+        </property>
+        <property name="cronExpression">
+            <value>0 30 1 * * ?</value>
+        </property>
+    </bean>
+	<!-- 保险合同到期日期状态修改及提醒  -->
+    <!-- 保险合同起始日期状态修改及提醒 -->
+    <bean id="bxStartTask" class="com.tansun.eam2.task.ContractBXStartTask">
+        <property name="message">
+            <value>编号为：“#1#”的合同在#2#开始执行，请您关注。此消息为系统消息。</value>
+        </property>
+         <property name="loginnames">
+            <value>zhangchunyi,yanghuimin,fanying,xuzhaonian</value>
+        </property>
+    </bean>
+    <bean id="jobBxStartTask" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+        <property name="targetObject">
+            <ref bean="bxStartTask" />
+        </property>
+        <property name="targetMethod">
+            <value>timer</value>
+        </property>
+    </bean>
+    <bean id="triggerBxStartTask" class="org.springframework.scheduling.quartz.CronTriggerBean">
+        <property name="jobDetail">
+            <ref bean="jobBxStartTask" />
+        </property>
+        <property name="cronExpression">
+            <value>0 35 1 * * ?</value>
+        </property>
+    </bean>
+	<!-- 保险合同起始日期状态修改及提醒  -->
+
+    <!-- 令牌到期提醒 -->
+    <bean id="tokenExpireTask" class="com.tansun.eam2.task.TokenExpireTask">
+        <property name="message">
+            <value>编号为：“#1#”的令牌将在#2#失效，请您关注。此消息为系统消息。</value>
+        </property>
+         <property name="loginnames">
+            <value>qinxue</value>
+        </property>
+    </bean>
+    <bean id="jobTokenExpireTask" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+        <property name="targetObject">
+            <ref bean="tokenExpireTask" />
+        </property>
+        <property name="targetMethod">
+            <value>timer</value>
+        </property>
+    </bean>
+    <bean id="triggerTokenExpireTask" class="org.springframework.scheduling.quartz.CronTriggerBean">
+        <property name="jobDetail">
+            <ref bean="jobTokenExpireTask" />
+        </property>
+        <property name="cronExpression">
+            <value>0 50 1 * * ?</value>
+        </property>
+    </bean>
+	<!-- 令牌到期提醒  -->
+	
+	  <!-- 物品出保日期到期提醒 -->
+    <bean id="ZyZcRenewalExpireTask" class="com.tansun.eam2.task.ZyZcRenewalAlertTask">
+        <property name="message">
+            <value>编号为：“#1#”的物品将在#2#出保，请您关注。此消息为系统消息。</value>
+        </property>
+         <property name="loginnames">
+            <value>qinxue</value>
+        </property>
+    </bean>
+    <bean id="jobZyZcRenewalExpireTask" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+        <property name="targetObject">
+            <ref bean="ZyZcRenewalExpireTask" />
+        </property>
+        <property name="targetMethod">
+            <value>timer</value>
+        </property>
+    </bean>
+    <bean id="triggerZyZcRenewalExpireTask" class="org.springframework.scheduling.quartz.CronTriggerBean">
+        <property name="jobDetail">
+            <ref bean="jobZyZcRenewalExpireTask" />
+        </property>
+        <property name="cronExpression">
+            <value>0 0 2 * * ?</value>
+        </property>
+    </bean>
+    <!-- 物品出保日期到期提醒  -->
+</beans>

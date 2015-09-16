@@ -1,0 +1,19 @@
+<!ENTITY % Id "CDATA">
+<!ENTITY % RenderType "(normal|readonly|disable)">
+<!ENTITY % UserId "CDATA">
+<!ENTITY % RoleId "CDATA">
+<!ENTITY % DeptId "CDATA">
+
+<!ELEMENT form-config (state-group) >
+
+<!ELEMENT state-group (state*) >
+
+<!ELEMENT state (component*) >
+<!ATTLIST state         id               %Id;                #IMPLIED>
+
+<!ELEMENT component (#PCDATA) >
+<!ATTLIST component     id               %Id;                #IMPLIED>
+<!ATTLIST component     renderType       %RenderType;        #IMPLIED>
+<!ATTLIST component     userId           %UserId;            #IMPLIED>
+<!ATTLIST component     roleId           %RoleId;            #IMPLIED>
+<!ATTLIST component     deptId           %DeptId;            #IMPLIED>

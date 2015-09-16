@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <package name="zcczshWorkflow" namespace="/zcczshWorkflow" extends="default">
+        <action name="zcczshWorkflow_*" method="{1}" class="com.tansun.eam2.zyzc.workflow.buy.action.ZcczshanghuiWorkflow">
+            <result name="newDraftResult" type='chain'>
+      			<param name="actionName">dealToDo_addMeeting</param>
+            	<param name="namespace">/zccz</param>
+      		</result>
+      		<result name="toDraftResult" type='chain'>
+      			<param name="actionName">dealToDo_modifyMeeting</param>
+            	<param name="namespace">/zccz</param>
+      		</result>
+      		<result name="newDraft" type='chain'>
+      			<param name="actionName">zcczshWorkflow_newDraft</param>
+            	<param name="namespace">/zcczshWorkflow</param>
+      		</result>
+      		<result name="saveDraft" type='chain'>
+      			<param name="actionName">zcczshWorkflow_saveDraft</param>
+            	<param name="namespace">/zcczshWorkflow</param>
+      		</result>
+      		<result name="saveTodo" type='chain'>
+      			<param name="actionName">zcczshWorkflow_saveTodo</param>
+            	<param name="namespace">/zcczshWorkflow</param>
+      		</result>
+      		<result name="draftCommit" type='chain'>
+      			<param name="actionName">zcczshWorkflow_draftCommit</param>
+            	<param name="namespace">/zcczshWorkflow</param>
+      		</result>
+      		<result name="draftCommitResult">
+      			/pages/rdp4j/workflow/task/todo.jsp
+      		</result>
+      		<result name="todoResult" type='chain'>
+      			<param name="actionName">dealToDo_modifyMeeting</param>
+            	<param name="namespace">/zccz</param>
+      		</result>
+      		<result name="getParticipationListResult" type='chain'>
+      			<param name="actionName">dept_getValue</param>
+            	<param name="namespace">/dept</param>
+      		</result>
+      		<result name="completeTaskResult">
+      			/pages/rdp4j/workflow/task/todo.jsp
+      		</result>
+      		<result name="completeTask" type='chain'>
+      			<param name="actionName">zcczshWorkflow_completeTask</param>
+            	<param name="namespace">/zcczshWorkflow</param>
+      		</result>
+      		<result name="abandonPiResult" type='chain'>
+      			<param name="actionName">userAbandon_findAbandons</param>
+            	<param name="namespace">/abandon</param>
+      		</result>
+      		<result name="endPiResult" type='chain'>
+      			<param name="actionName">userEnd_findEnds</param>
+            	<param name="namespace">/end</param>
+      		</result>
+      		<result name="endViewResult" type='chain'>
+      			<param name="actionName">dealToDo_modifyMeeting</param>
+            	<param name="namespace">/zccz</param>
+      		</result>
+      		<result name="didResult" type='chain'>
+      			<param name="actionName">dealToDo_modifyMeeting</param>
+            	<param name="namespace">/zyzc</param>
+      		</result>
+      		<result name="zcrspTodoResult" type='chain'>
+      			<param name="actionName">dealToDo_czxmsp</param>
+            	<param name="namespace">/zccz</param>
+      		</result>
+      		<result name="zcrspDidResult" type='chain'>
+      			<param name="actionName">dealToDo_czxmsp</param>
+            	<param name="namespace">/zccz</param>
+      		</result>
+      		<result name="didResult" type='chain'>
+      			<param name="actionName">dealToDo_modifyMeeting</param>
+            	<param name="namespace">/zccz</param>
+      		</result>
+      		<result name="commitHuiZongYiJian" type='chain'>
+      			<param name="actionName">zcczshWorkflow_commitHuiZongYiJian</param>
+            	<param name="namespace">/zcczshWorkflow</param>
+      		</result>
+      		<result name="commitTozcrqr" type="chain">
+      			<param name="actionName">zcczshWorkflow_commitTozcrqr</param>
+            	<param name="namespace">/zcczshWorkflow</param>      		
+      		</result>
+      		<result name="commitTozcrsp" type="chain">
+      			<param name="actionName">zcczshWorkflow_commitTozcrsp</param>
+            	<param name="namespace">/zcczshWorkflow</param>      		
+      		</result>
+      		<result name="circulation" type='chain'>
+      			<param name="actionName">zcczshWorkflow_circulation</param>
+            	<param name="namespace">/zcczshWorkflow</param>
+      		</result>
+      		<result name="circulationResult" type='chain'>
+      			<param name="actionName">dealToDo_modifyMeeting</param>
+            	<param name="namespace">/zccz</param>
+      		</result>
+      		<result name="taskHisGraphResult">/pages/rdp4j/workflow/task/taskHisGraph.jsp</result>
+      		<result name="taskHisGraphResult4EAM1">/pages/rdp4j/workflow/task/taskHisGraph4EAM1.jsp</result>
+        </action>
+    </package>
+</struts>
