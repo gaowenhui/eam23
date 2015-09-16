@@ -18,6 +18,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <body>
   	<s:if test="#session.user != null">
     
+	
   		<jsp:forward page="/pages/eam2/index/mainpage.jsp" /> 
   	</s:if>
   	<s:else>

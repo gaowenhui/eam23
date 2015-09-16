@@ -10,6 +10,7 @@ import javax.crypto.NoSuchPaddingException;
 import javax.crypto.spec.SecretKeySpec;
 
 public class SymmetricAlgorithm {
+	//¸ßÎÄ»Ô 20150916
 	private String strKey = "&^%$*#@~";
 	private String info;
 
